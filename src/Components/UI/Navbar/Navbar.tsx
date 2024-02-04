@@ -30,8 +30,8 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className=" bg-white mb-5 py-3  border-gray-200 dark:border-gray-600 dark:bg-gray-900 shadow-md fixed top-0   lg:top-0 left-0 z-50 w-full ">
-        <div className="flex flex-wrap container mx-auto  justify-center items-center max-w-screen-xl px-4  font-bold text-md">
+      <nav className=" bg-white mb-5 py-3  font-semibold border-gray-200 dark:border-gray-600 dark:bg-gray-900 shadow-md fixed top-0   lg:top-0 left-0 z-50 w-full ">
+        <div className="flex flex-wrap container mx-auto  justify-center items-center max-w-screen-xl px-4   text-sm">
           <a
             href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse px-5"
@@ -115,7 +115,7 @@ export const Navbar = () => {
 
                 <div id="dropdownNavbar" className={dropDownClassName}>
                   <ul
-                    className=" text-md font-bold text-gray-700 dark:text-gray-200"
+                    className=" text-md font-semibold text-gray-700 dark:text-gray-200"
                     aria-labelledby="dropdownLargeButton"
                   >
                     <li>
@@ -220,7 +220,7 @@ export const Navbar = () => {
                   href="/#"
                   className="block py-2 px-3 lg:px-4 lg:py-2 md:hover:bg-gray-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-ui-purple md:hover:bg-ui-gray-100 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
-                  Contact
+                  Blog
                 </a>
               </li>
 

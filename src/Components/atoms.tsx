@@ -36,7 +36,7 @@ interface TitleProps {
 }
 export const Title = ({ title }: TitleProps) => (
   <div className="text-left ml-2 relative mb-10">
-    <h4 className="text-2xl md:text-3xl font-bold text-gray-800 uppercase tracking-wide">
+    <h4 className="text-2xl  font-bold text-gray-800 uppercase tracking-wide">
       {title}
     </h4>
     <div

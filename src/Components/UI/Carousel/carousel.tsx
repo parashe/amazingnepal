@@ -23,7 +23,7 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
   return (
     <div className="relative w-full ">
       <div
-        className="relative w-full h-[275px] lg:h-full lg:max-h-[800px] "
+        className="relative w-full h-[275px] lg:h-full lg:max-h-[700px] "
         data-carousel="static"
       >
         {slides.map((slide, index) => (
@@ -36,7 +36,7 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
           >
             <img
               src={slide}
-              className="lg:brightness-50 brightness-75 h-[275px]  lg:h-full lg:w-full lg:max-h-[800px] w-full object-fill aspect-[19/10] object-center rounded-lg shadow-md"
+              className="lg:brightness-50 brightness-75 h-[275px]  lg:h-full lg:w-full lg:max-h-[600px] w-full object-fill aspect-[19/10] object-center rounded-lg shadow-md"
               alt="slide"
             />
           </div>
@@ -107,19 +107,19 @@ export default CarouselLayout;
 const CarouselCard = () => {
   return (
     <>
-      <div className=" lg:h-full lg:max-h-[600px] opacity-75  px-10 py-10 lg:bg-white max-w-[650px]   max-h-[250px] bg-ui-third-theme border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className=" lg:h-full leading-relaxed lg:max-h-[500px] opacity-75  px-5 py-8 lg:bg-white max-w-[520px]   max-h-[250px] bg-ui-third-theme border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         {/* <a href="/#">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Noteworthy technology acquisitions 2021
           </h5>
         </a> */}
         <p className="text-center mb-3 pt-5  text-gray-900 lg:leading-10 ">
-          <span className=" font-bold lg:text-6xl text-black  lg:font-extrabold ">
+          <span className=" font-bold lg:text-5xl text-black  lg:font-extrabold ">
             <span className="text-ui-purple font-extrabold">Discover </span>
             stunning global destinations{" "}
             <span className="text-ui-purple"> with us.</span>{" "}
           </span>{" "}
-          <span className="hidden lg:block">
+          <span className="hidden lg:block text-xs leading-relaxed">
             Whether you seek{" "}
             <span className="text-ui-purple-dark font-bold">
               mountains, cultural landmarks, or thrilling adventures,{" "}
@@ -129,7 +129,7 @@ const CarouselCard = () => {
         </p>
         <Button
           onClick={() => {}}
-          className="px-6 py-4 bg-ui-purple hover:bg-ui-purple-dark text-white rounded-md "
+          className="px-6 py-3 text-sm font-medium bg-ui-purple hover:bg-ui-purple-dark text-white rounded-md "
         >
           Explore more
           <svg

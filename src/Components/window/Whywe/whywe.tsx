@@ -42,10 +42,10 @@ const Whywe = () => {
               alt={item.title}
             />
             <div>
-            <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
               {item.title}
             </h5>
-            <p className="mb-3 text-gray-600 dark:text-gray-300">
+            <p className="mb-3 text-xs text-gray-600 dark:text-gray-300">
               {item.description}
             </p>
             </div>

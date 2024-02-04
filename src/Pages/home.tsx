@@ -11,7 +11,7 @@ export const HomePage = () => {
   return (
     <>
     <Layout>
-      {/* <Carousel/> */}
+      <Carousel/>
 
      
       <Services/>

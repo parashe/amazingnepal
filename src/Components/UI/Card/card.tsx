@@ -17,30 +17,30 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   onclick,
 }) => {
   return (
-    <div className="w-full md:max-w-md   bg-white border-2 border-gray-100  rounded-lg shadow-lg cursor-pointer  shadow-ui-third-theme hover:shadow-sm hover:shadow-ui-light-pink dark:bg-gray-800 ">
+    <div className="w-full md:max-w-md  border-gray-100  bg-white border rounded-lg shadow-lg cursor-pointer  shadow-ui-third-theme hover:shadow-sm hover:shadow-ui-light-pink dark:bg-gray-800 ">
       <a href={readMoreLink} target="_blank" rel="noopener noreferrer">
         <img
-          className="aspect-[16/9] object-contain   w-full rounded-lg h-[220px]"
+          className="aspect-[16/9] object-contain   w-full rounded-lg max-h-[150px] p-2"
           src={imageUrl}
           alt=""
         />
       </a>
       <div className="p-5">
-        <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 leading-relaxed dark:text-white">
+        <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 leading-relaxed dark:text-white">
           {title}
         </h5>
 
-        <p className="mb-3 text-md text-justify p-3 text-gray-900 dark:text-gray-400">
+        <p className="mb-3 text-xs text-justify p-3 text-gray-900 dark:text-gray-400">
           {content}
         </p>
         <div className="text-center  ">
           <Button
             onClick={onclick}
-            className="px-5 py-3 bg-ui-purple hover:bg-ui-purple-dark text-white cursor-pointer"
+            className="px-3 py-2 rounded-md text-xs bg-ui-purple  font-medium hover:bg-ui-purple-dark text-white cursor-pointer"
           >
             See more
             <svg
-              className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+              className="rtl:rotate-180 w-3 h-3 ms-2"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -88,7 +88,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
   duration,
 }) => {
   return (
-    <div className="w-full md:max-w-md bg-white border-2 rounded-lg border-gray-100 shadow-lg cursor-pointer shadow-ui-third-theme hover:shadow-sm hover:shadow-ui-light-pink dark:bg-gray-800 relative">
+    <div className="w-full gap-x-5 md:max-w-md bg-white border rounded-lg border-gray-200 shadow-lg cursor-pointer shadow-ui-third-theme hover:shadow-sm hover:shadow-ui-light-pink dark:bg-gray-800 relative">
       <div className="w-full relative">
         <div className="relative z-50">
           <img
@@ -97,19 +97,19 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
             alt=""
           />
         </div>
-        <div className="text-center absolute top-0 left-0 mt-2 ml-0 rounded-l-full z-50 rounded-lg">
-          <p className="bg-ui-purple text-white px-4 py-2 text-sm font-semibold">
+        <div className="text-center absolute top-0 left-0  ml-0 rounded-l-full z-50 rounded-lg">
+          <p className="bg-ui-purple text-white px-4 py-2 text-xs font-semibold">
             {price}
           </p>
         </div>
       </div>
 
       <div className="p-5">
-        <h5 className="mb-0 text-xl font-bold tracking-tight text-gray-900 leading-relaxed dark:text-white">
+        <h5 className="mb-0 text-lg font-bold tracking-tight text-gray-900 leading-relaxed dark:text-white">
           {title}
         </h5>
         <div className="text-center flex flex-wrap">
-          <p className="mb-1  text-sm font-xs  px-3 text-gray-900 dark:text-gray-400">
+          <p className="mb-1  text-[10px]  px-3 text-gray-900 dark:text-gray-400">
             Price <span className="text-ui-purple font-bold">{price} </span>/
             Per Person
           </p>
@@ -123,7 +123,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
         <div className="pt-5">
           <Button
             onClick={onclick}
-            className="px-5 text-center  text-md font-bold py-3 bg-ui-third-theme text-ui-purple hover:bg-ui-third-theme-light cursor-pointer rounded-sm "
+            className="px-4 py-2 text-center  text-sm font-semibold  bg-ui-third-theme text-ui-purple hover:bg-ui-third-theme-light cursor-pointer rounded-sm "
           >
             View Details
           </Button>

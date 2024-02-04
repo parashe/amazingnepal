@@ -8,7 +8,7 @@ const Services: React.FC = () => {
     console.log("see more");
   };
   return (
-    <div className="mt-10 md:mt-28 container mx-auto">
+    <div className="mt-10 md:mt-16 container mx-auto">
       <Title title="Our Services" />
 
       {/* <div className="flex flex-wrap flex-1 gap-6 mt-5 md:mt-20  mx-auto p-3 "> */}

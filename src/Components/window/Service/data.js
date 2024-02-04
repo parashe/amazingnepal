@@ -10,7 +10,7 @@ export const servicesData = [
       service_id: 2,
       title: 'Travel Insurance ',
       imageUrl: '/assets/insurance.png', // Replace with actual image paths
-      content: 'Our Travel Insurance plans are crafted to provide you with robust coverage, whether you are exploring new destinations, going on a business trip, or planning a relaxing vacation. ',
+      content: 'Our Travel Insurance plans offer comprehensive coverage for your adventures, business trips,  leisure getaways or planning a relaxing vacation. ',
       readMoreLink: '/insurance',
     },
     {
