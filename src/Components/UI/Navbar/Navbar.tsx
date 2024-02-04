@@ -9,11 +9,11 @@ export const Navbar = () => {
     showlist ? "block" : "hidden"
   }`;
 
-  const dropDownClassName = `md:absolute font-normal  bg-gray-50 mx-auto lg:mt-3 md:px-5 md:py-5  w-full lg:max-w-[250px] md:bg-white py-3 divide-y divide-gray-100 rounded-lg md:shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ${
+  const dropDownClassName = `md:absolute font-normal  bg-gray-50 mx-auto lg:mt-3 md:px-5   w-full lg:max-w-[250px] md:bg-white py-3 divide-y divide-gray-100 rounded-lg md:shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ${
     showdropdown ? "block" : "hidden"
   }`;
 
-  const innerDropDownClassName = `md:absolute lg:left-[100%] bg-gray-50 mx-auto   md:px-5 md:py-5  w-full md:max-w-[250px] md:bg-white py-3 divide-y divide-gray-100 rounded-lg md:shadow w-44 dark:bg-gray-700 ${
+  const innerDropDownClassName = `md:absolute lg:left-[100%] bg-gray-50 mx-auto   md:px-5  w-full md:max-w-[250px] md:bg-white py-3 divide-y divide-gray-100 rounded-lg md:shadow w-44 dark:bg-gray-700 ${
     showInnerDropdown ? "block" : "hidden"
   }`;
 
@@ -31,7 +31,7 @@ export const Navbar = () => {
   return (
     <>
       <nav className=" bg-white mb-5 py-3  border-gray-200 dark:border-gray-600 dark:bg-gray-900 shadow-md fixed top-0   lg:top-0 left-0 z-50 w-full ">
-        <div className="flex flex-wrap container mx-auto  justify-center items-center max-w-screen-xl px-4 py-3 font-bold text-md">
+        <div className="flex flex-wrap container mx-auto  justify-center items-center max-w-screen-xl px-4  font-bold text-md">
           <a
             href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse px-5"

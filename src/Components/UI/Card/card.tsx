@@ -26,11 +26,11 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
         />
       </a>
       <div className="p-5">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 leading-relaxed dark:text-white">
+        <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 leading-relaxed dark:text-white">
           {title}
         </h5>
 
-        <p className="mb-3 font-normal text-justify p-3 text-gray-900 dark:text-gray-400">
+        <p className="mb-3 text-md text-justify p-3 text-gray-900 dark:text-gray-400">
           {content}
         </p>
         <div className="text-center  ">
@@ -105,16 +105,16 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
       </div>
 
       <div className="p-5">
-        <h5 className="mb-0 text-2xl font-bold tracking-tight text-gray-900 leading-relaxed dark:text-white">
+        <h5 className="mb-0 text-xl font-bold tracking-tight text-gray-900 leading-relaxed dark:text-white">
           {title}
         </h5>
         <div className="text-center flex flex-wrap">
-          <p className="mb-1  text-sm font-sm  px-3 text-gray-900 dark:text-gray-400">
+          <p className="mb-1  text-sm font-xs  px-3 text-gray-900 dark:text-gray-400">
             Price <span className="text-ui-purple font-bold">{price} </span>/
             Per Person
           </p>
 
-          <p className="mb-1  text-sm px-3 text-gray-900 dark:text-gray-400">
+          <p className="mb-1  text-xs px-3 text-gray-900 dark:text-gray-400">
             Duration:{" "}
             <span className="text-ui-purple font-bold">{duration}</span>
           </p>

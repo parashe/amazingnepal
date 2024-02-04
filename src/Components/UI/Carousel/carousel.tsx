@@ -23,7 +23,7 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
   return (
     <div className="relative w-full ">
       <div
-        className="relative w-full h-[275px] lg:h-full "
+        className="relative w-full h-[275px] lg:h-full lg:max-h-[800px] "
         data-carousel="static"
       >
         {slides.map((slide, index) => (
@@ -107,7 +107,7 @@ export default CarouselLayout;
 const CarouselCard = () => {
   return (
     <>
-      <div className=" lg:h-full opacity-75  px-10 py-10 lg:bg-white max-w-[650px]  lg:max-h-[800px] max-h-[250px] bg-ui-third-theme border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className=" lg:h-full lg:max-h-[600px] opacity-75  px-10 py-10 lg:bg-white max-w-[650px]   max-h-[250px] bg-ui-third-theme border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         {/* <a href="/#">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Noteworthy technology acquisitions 2021
