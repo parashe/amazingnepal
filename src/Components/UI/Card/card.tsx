@@ -81,14 +81,14 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
   return (
     <div className="w-full gap-x-5 md:max-w-sm  bg-white border rounded-lg border-gray-200 shadow-lg cursor-pointer shadow-ui-third-theme hover:shadow-sm hover:shadow-ui-light-pink dark:bg-gray-800 relative">
       <div className="w-full relative">
-        <div className="relative z-50">
+        <div className="relative ">
           <img
             className="aspect-[16/9] object-cover w-full rounded-lg h-[220px] brightness-75 "
             src={imageUrl[0]?.url}
             alt=""
           />
         </div>
-        <div className="text-center absolute top-0 left-0  ml-0 rounded-l-full z-50 rounded-lg">
+        <div className="text-center absolute top-0 left-0  ml-0 rounded-l-full  rounded-lg">
           <p className="bg-gradient-to-r from-pink-400 via-red-500 to-purple-500 text-white px-4 py-2 text-xs font-semibold">
             {price}
           </p>

@@ -27,7 +27,7 @@ const Whywe = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-pink-400 via-green-200 to-purple-500 opacity-100 dark:bg-gray-900">
+    <div className="bg-gradient-to-r from-pink-400 via-blue-200 to-purple-500 opacity-100 dark:bg-gray-900">
     <div className="mt-10 md:pt-28 md:pb-24 container mx-auto pt-5">
       <Title title="Why Choose Us ?" />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:pt-24 md:pb-24 w-full p-5">
