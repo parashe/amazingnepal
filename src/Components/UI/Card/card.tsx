@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../../atoms";
+import { CashIcon, ClockIcon } from "../../svg";
 
 interface ServiceCardProps {
   title: string;
@@ -17,7 +18,11 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   onclick,
 }) => {
   return (
-    <div className="w-full md:max-w-md  border-gray-100  bg-white border rounded-lg shadow-lg cursor-pointer  shadow-ui-third-theme hover:shadow-sm hover:shadow-ui-light-pink dark:bg-gray-800 ">
+    <div className="w-full  relative md:max-w-md z-100 border border-gray-100  bg-white  rounded-lg shadow-lg cursor-pointer  shadow-ui-third-theme hover:shadow-sm hover:shadow-ui-light-pink dark:bg-gray-800 ">
+      <div className="absolute top-0 right-0 bg-gradient-to-r from-pink-400 via-red-500 to-purple-500 text-white font-bold py-1 px-5 rounded-tr-lg rounded-bl-full transform hover:scale-105 transition-transform">
+        <span className="text-xs">Features</span>
+      </div>
+
       <a href={readMoreLink} target="_blank" rel="noopener noreferrer">
         <img
           className="aspect-[16/9] object-contain   w-full rounded-lg max-h-[150px] p-2"
@@ -36,24 +41,10 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
         <div className="text-center  ">
           <Button
             onClick={onclick}
-            className="px-3 py-2 rounded-md text-xs bg-ui-purple  font-medium hover:bg-ui-purple-dark text-white cursor-pointer"
+            className="px-4 py-2 rounded-sm text-xs bg-gradient-to-r from-pink-400 via-red-500 to-purple-500  font-medium hover:from-pink-600 hover:to-purple-600 transition duration-50 text-white cursor-pointer"
           >
             See more
-            <svg
-              className="rtl:rotate-180 w-3 h-3 ms-2"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 5h12m0 0L9 1m4 4L9 9"
-              />
-            </svg>
+          
           </Button>
         </div>
       </div>
@@ -88,7 +79,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
   duration,
 }) => {
   return (
-    <div className="w-full gap-x-5 md:max-w-md bg-white border rounded-lg border-gray-200 shadow-lg cursor-pointer shadow-ui-third-theme hover:shadow-sm hover:shadow-ui-light-pink dark:bg-gray-800 relative">
+    <div className="w-full gap-x-5 md:max-w-sm  bg-white border rounded-lg border-gray-200 shadow-lg cursor-pointer shadow-ui-third-theme hover:shadow-sm hover:shadow-ui-light-pink dark:bg-gray-800 relative">
       <div className="w-full relative">
         <div className="relative z-50">
           <img
@@ -98,7 +89,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
           />
         </div>
         <div className="text-center absolute top-0 left-0  ml-0 rounded-l-full z-50 rounded-lg">
-          <p className="bg-ui-purple text-white px-4 py-2 text-xs font-semibold">
+          <p className="bg-gradient-to-r from-pink-400 via-red-500 to-purple-500 text-white px-4 py-2 text-xs font-semibold">
             {price}
           </p>
         </div>
@@ -108,22 +99,26 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
         <h5 className="mb-0 text-lg font-bold tracking-tight text-gray-900 leading-relaxed dark:text-white">
           {title}
         </h5>
-        <div className="text-center flex flex-wrap">
-          <p className="mb-1  text-[10px]  px-3 text-gray-900 dark:text-gray-400">
-            Price <span className="text-ui-purple font-bold">{price} </span>/
-            Per Person
-          </p>
-
-          <p className="mb-1  text-xs px-3 text-gray-900 dark:text-gray-400">
-            Duration:{" "}
-            <span className="text-ui-purple font-bold">{duration}</span>
-          </p>
+        <div className="text-center flex flex-wrap justify-center p-3">
+          <div className="flex flex-wrap justify-center ">
+            <CashIcon color="#f9a8d4" className="w-4 h-4" />
+            <p className="mb-1  text-[10px]  px-3 text-gray-900 dark:text-gray-400">
+              <span className="text-ui-purple font-bold">{price} </span>/ Per
+              Person
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center ">
+            <ClockIcon color="#f9a8d4" className="w-3 h-3" />
+            <p className="mb-1  text-xs px-3 text-gray-900 dark:text-gray-400">
+              <span className="text-ui-purple font-bold">{duration}</span>
+            </p>
+          </div>
         </div>
 
         <div className="pt-5">
           <Button
             onClick={onclick}
-            className="px-4 py-2 text-center  text-sm font-semibold  bg-ui-third-theme text-ui-purple hover:bg-ui-third-theme-light cursor-pointer rounded-sm "
+            className="px-4 py-2 text-center  text-xs font-medium  bg-pink-50 text-ui-purple hover:bg-ui-third-theme-light cursor-pointer rounded-sm "
           >
             View Details
           </Button>

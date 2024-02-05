@@ -61,7 +61,8 @@ module.exports = {
 
       //theme color:
 
-      "ui-purple":"#5908DC",
+      "ui-purple":"#a855f7",
+      "ui-purple-400":"#c084fc",
       "ui-purple-light":"#8b5cf6",
       "ui-purple-dark":"#4b0082",
 
@@ -78,6 +79,7 @@ module.exports = {
      "ui-black-light":"rgba(0,0,0,0.5)",
 
      "ui-light-pink":"#FF81AE",
+     "ui-pink-100":"#fce7f3"
 
   
     },

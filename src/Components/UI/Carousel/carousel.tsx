@@ -31,12 +31,12 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
             key={index}
             className={`${
               index === activeSlide ? "block" : "hidden"
-            } duration-200 ease-linear`}
+            } duration-700 ease-out`}
             data-carousel-item={index === activeSlide ? "active" : ""}
           >
             <img
               src={slide}
-              className="lg:brightness-50 brightness-75 h-[275px]  lg:h-full lg:w-full lg:max-h-[600px] w-full object-fill aspect-[19/10] object-center rounded-lg shadow-md"
+              className="lg:brightness-50  h-[275px]  lg:h-full lg:w-full lg:max-h-[600px] w-full object-fill aspect-[19/10] object-center rounded-lg shadow-md"
               alt="slide"
             />
           </div>
@@ -95,7 +95,7 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
           </span>
         </button>
       </div>
-      <div className="hidden md:block absolute top-1/2 -translate-y-1/2 left-1/3 -translate-x-1/2">
+      <div className=" md:block absolute top-1/2 left-1/2  -translate-y-1/2 md:left-1/3 -translate-x-1/2">
         <CarouselCard />
       </div>
     </div>
@@ -107,17 +107,22 @@ export default CarouselLayout;
 const CarouselCard = () => {
   return (
     <>
-      <div className=" lg:h-full leading-relaxed lg:max-h-[500px] opacity-75  px-5 py-8 lg:bg-white max-w-[520px]   max-h-[250px] bg-ui-third-theme border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className=" w-[250px] md:w-full max-h-[250px] lg:h-full leading-relaxed md:max-h-[500px] opacity-65 md:opacity-75  px-5 py-8 lg:bg-white max-w-[520px] bg-ui-third-theme border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         {/* <a href="/#">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Noteworthy technology acquisitions 2021
           </h5>
         </a> */}
-        <p className="text-center mb-3 pt-5  text-gray-900 lg:leading-10 ">
+        <p className=" text-center leading-relaxed  mb-3 md:pt-5  text-gray-900 lg:leading-10  ">
           <span className=" font-bold lg:text-5xl text-black  lg:font-extrabold ">
-            <span className="text-ui-purple font-extrabold">Discover </span>
+            <span className=" bg-gradient-to-r from-pink-400 via-red-500 to-purple-500 inline-block text-transparent bg-clip-text font-extrabold">
+              Discover{" "}
+            </span>{" "}
             stunning global destinations{" "}
-            <span className="text-ui-purple"> with us.</span>{" "}
+            <span className="bg-gradient-to-r from-pink-400 via-red-500 to-purple-500 inline-block text-transparent bg-clip-text font-extrabold">
+              {" "}
+              with us.
+            </span>{" "}
           </span>{" "}
           <span className="hidden lg:block text-xs leading-relaxed">
             Whether you seek{" "}
@@ -129,7 +134,7 @@ const CarouselCard = () => {
         </p>
         <Button
           onClick={() => {}}
-          className="px-6 py-3 text-sm font-medium bg-ui-purple hover:bg-ui-purple-dark text-white rounded-md "
+          className="px-3 py-2 text-xs font-medium bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-sm hover:from-purple-600 hover:to-pink-500"
         >
           Explore more
           <svg
