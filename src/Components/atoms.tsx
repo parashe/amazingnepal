@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 
 interface Props {
   children: React.ReactNode;
@@ -43,5 +43,20 @@ export const Title = ({ title }: TitleProps) => (
       style={{ top: "1.5rem", transform: "translateY(50%)" }}
       className="h-2 w-16 absolute bottom-0 left-0 mt-3 bg-gradient-to-r from-transparent to-ui-purple bg-repeat-x bg-linear-gradient"
     ></div>
+  </div>
+);
+
+interface ModalProps extends PropsWithChildren {
+  onClose: () => void;
+}
+
+export const Modal: React.FC<ModalProps> = ({ onClose, children }) => (
+  <div
+    className="fixed bottom-0 left-0 right-0 top-0 z-[100] flex items-center justify-center bg-dark-000 bg-opacity-40"
+    onClick={onClose}
+  >
+    <div className="w-min" onClick={(e) => e.stopPropagation()}>
+      {children}
+    </div>
   </div>
 );

@@ -30,7 +30,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className=" bg-white mb-5 py-3  font-semibold border-gray-200 dark:border-gray-600 dark:bg-gray-900 shadow-md fixed top-0   lg:top-0 left-0 z-50 w-full ">
+      <nav className=" bg-white  py-3  font-semibold border-gray-200 dark:border-gray-600 dark:bg-gray-900 shadow-md  top-0   lg:top-0 left-0 z-50 md:z-0 w-full ">
         <div className="flex flex-wrap container mx-auto  justify-center items-center max-w-screen-xl px-4   text-sm">
           <a
             href="/"
