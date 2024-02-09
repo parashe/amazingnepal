@@ -28,33 +28,32 @@ const Whywe = () => {
 
   return (
     <div className="bg-gradient-to-r from-pink-400 via-blue-200 to-purple-500 opacity-100 dark:bg-gray-900">
-    <div className="mt-10 md:pt-28 md:pb-24 container mx-auto pt-5">
-      <Title title="Why Choose Us ?" />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:pt-24 md:pb-24 w-full p-5">
-        {data.map((item) => (
-          <div
-            key={item.id}
-            className="max-w-md items-center   flex justify-between p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700"
-          >
-            <img
-              className="rounded-lg mb-4 object-contain h-[200px] w-full"
-              src={item.imgUrl}
-              alt={item.title}
-            />
-            <div>
-            <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
-              {item.title}
-            </h5>
-            <p className="mb-3 text-xs text-gray-600 dark:text-gray-300">
-              {item.description}
-            </p>
+      <div className="mt-10 md:pt-28 md:pb-24 container mx-auto pt-5 ">
+        <Title title="Why Choose Us ?" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:pt-24 md:pb-24 w-full p-5">
+          {data.map((item) => (
+            <div
+              key={item.id}
+              className="max-w-md items-center   flex justify-between p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700"
+            >
+              <img
+                className="rounded-lg mb-4 object-contain h-[200px] w-full"
+                src={item.imgUrl}
+                alt={item.title}
+              />
+              <div>
+                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+                  {item.title}
+                </h5>
+                <p className="mb-3 text-xs text-gray-600 dark:text-gray-300">
+                  {item.description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
-  </div>
-  
   );
 };
 

@@ -25,6 +25,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 - React router dom
 - tailwind css for 
 - typescript
+-react-photo-view : this is for viewing photo
 
 
 

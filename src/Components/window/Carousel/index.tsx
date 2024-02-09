@@ -3,7 +3,7 @@ import CarouselLayout from "../../UI/Carousel/carousel";
 import data from "./data";
 export const Carousel = () => {
   return (
-    <div className="mt-16">
+    <div className="mx-auto">
   <CarouselLayout slides={data.slides} />
   </div>
   )
