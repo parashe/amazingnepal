@@ -1,15 +1,14 @@
-
-import React from 'react'
-import Layout from '../Components/layout'
-import DestinationDetails from '../Components/window/Destination/destinationDetails'
+import React from "react";
+import Layout from "../Components/layout";
 
 
-export const DestinationPage= () => {
+const DestinationPage = () => {
   return (
     <>
-    <Layout>
-    <DestinationDetails/>
-    </Layout>
+      <Layout>
+      <p>Parash</p>
+      </Layout>
     </>
-  )
-}
+  );
+};
+export default DestinationPage;

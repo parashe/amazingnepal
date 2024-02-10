@@ -1,4 +1,5 @@
 import React, { PropsWithChildren } from "react";
+import { Card } from "./UI/Card/card";
 
 // interface Props {
 //   children: React.ReactNode;
@@ -331,5 +332,23 @@ export const LoadingSkeleton = ({}) => {
 </div>
 
     </>
+  );
+};
+
+
+export const Address = () => {
+  const paragraph =
+    " text-sm p-3 text-center  cursor-pointer leading-normal text-gray-900 text-break-all ";
+  return (
+    <Card>
+      <div className="w-full p-5 ">
+      <h4 className="text-lg  font-bold text-gray-800 uppercase tracking-wide ">
+         Address
+        </h4>
+        <p className={paragraph}>15 Poplar Grove West Bromwich</p>
+        <p className={paragraph}>B70 6LB, Birmingham</p>
+        <p className={`${paragraph} font-bold `}>United Kingdom</p>
+      </div>
+    </Card>
   );
 };

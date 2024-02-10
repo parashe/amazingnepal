@@ -1,52 +1,16 @@
 import React from "react";
 import { Button } from "../../atoms";
 import { CashIcon, ClockIcon } from "../../svg";
+import { Link } from "react-router-dom";
 
 interface ServiceCardProps {
-  title: string;
-  imageUrl: string;
-  content: string;
-  readMoreLink: string;
-  onclick: () => void;
+  children?: React.ReactNode;
 }
 
-export const ServiceCard: React.FC<ServiceCardProps> = ({
-  title,
-  imageUrl,
-  content,
-  readMoreLink,
-  onclick,
-}) => {
+export const Card: React.FC<ServiceCardProps> = ({ children }) => {
   return (
-    <div className="w-full  relative md:max-w-md z-100 border border-gray-100  bg-white  rounded-lg shadow-lg cursor-pointer  shadow-ui-third-theme hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 ">
-      <div className="absolute top-0 right-0 bg-gradient-to-r from-pink-400 via-red-500 to-purple-500 text-white font-bold py-1 px-5 rounded-tr-lg rounded-bl-full transform hover:scale-105 transition-transform">
-        <span className="text-xs">Features</span>
-      </div>
-
-      <a href={readMoreLink} target="_blank" rel="noopener noreferrer">
-        <img
-          className="aspect-[16/9] object-contain   w-full rounded-lg max-h-[150px] p-2"
-          src={imageUrl}
-          alt=""
-        />
-      </a>
-      <div className="p-5">
-        <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 leading-relaxed dark:text-white">
-          {title}
-        </h5>
-
-        <p className="mb-3 text-xs text-justify p-3 text-gray-900 dark:text-gray-400">
-          {content}
-        </p>
-        <div className="text-center  ">
-          <Button
-            onClick={onclick}
-            className="px-4 py-2 rounded-sm text-xs bg-gradient-to-r from-pink-400 via-red-500 to-purple-500  font-medium hover:from-pink-600 hover:to-purple-600 transition duration-50 text-white cursor-pointer"
-          >
-            See more
-          </Button>
-        </div>
-      </div>
+    <div className="w-full relative  md:max-w-md  border border-gray-100  bg-white  rounded-lg shadow-lg cursor-pointer  shadow-ui-third-theme hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 ">
+      {children}
     </div>
   );
 };
@@ -57,7 +21,7 @@ type image = {
 };
 
 interface DestinationCardProps {
-  id: number;
+  destination_id: string;
   price: string;
   duration: string;
   included: string;
@@ -65,7 +29,7 @@ interface DestinationCardProps {
   imageUrl: image[];
   content?: string;
   readMoreLink?: string;
-  onclick: () => void;
+  onclick?: () => void;
 }
 
 export const DestinationCard: React.FC<DestinationCardProps> = ({
@@ -76,9 +40,11 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
   price,
   onclick,
   duration,
+  destination_id,
 }) => {
   return (
-    <div className="w-full gap-x-5 md:max-w-sm  bg-white border rounded-lg border-gray-200 shadow-lg cursor-pointer shadow-ui-third-theme hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 relative">
+    <Link to={`/destination/${destination_id}`}>
+    <div className="w-full  gap-x-5 md:max-w-sm  bg-white border rounded-lg border-gray-200 shadow-lg cursor-pointer shadow-ui-third-theme hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 relative">
       <div className="w-full relative">
         <div className="relative ">
           <img
@@ -89,7 +55,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
         </div>
         <div className="text-center absolute top-0 left-0  ml-0 rounded-l-full  rounded-lg">
           <p className="bg-gradient-to-r from-pink-400 via-red-500 to-purple-500 text-white px-4 py-2 text-xs font-semibold">
-          Nepal
+            Nepal
           </p>
         </div>
       </div>
@@ -98,7 +64,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
         <h5 className="mb-0 text-auto font-bold tracking-tight text-gray-900 leading-relaxed dark:text-white">
           {title}
         </h5>
-        <div className="text-center flex flex-wrap justify-center p-3">
+        <div className="text-justify flex flex-wrap justify-center py-3">
           <div className="flex flex-wrap justify-center ">
             <CashIcon color="#f9a8d4" className="w-4 h-4" />
             <p className="mb-1  text-[10px]  px-3 text-gray-900 dark:text-gray-400">
@@ -107,22 +73,23 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
             </p>
           </div>
           <div className="flex flex-wrap justify-center ">
-            <ClockIcon color="#f9a8d4" className="w-3 h-3" />
+            <ClockIcon color="#f9a8d4" className="w-2 h-2" />
             <p className="mb-1  text-xs px-3 text-gray-900 dark:text-gray-400">
               <span className="text-ui-purple font-bold">{duration}</span>
             </p>
           </div>
         </div>
 
-        <div className="pt-auto">
+        {/* <div className="pt-auto">
           <Button
             onClick={onclick}
             className="px-4 py-2 text-center  text-xs font-medium  bg-pink-50 text-ui-purple hover:bg-ui-third-theme-light cursor-pointer rounded-sm "
           >
             View Details
           </Button>
-        </div>
+        </div> */}
       </div>
     </div>
+    </Link>
   );
 };

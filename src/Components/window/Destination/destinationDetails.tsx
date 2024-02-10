@@ -2,81 +2,87 @@ import React, { useState } from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 
-import { Alert, Input, Spinner, TextArea } from "../../atoms";
+import { Alert, Input, LoadingSkeleton, Spinner, TextArea } from "../../atoms";
 import Destination from "./destination";
+import { useParams } from "react-router-dom";
+import { destinationData } from "./data";
 
 const DestinationDetails = () => {
-  const imageUrl = [
-    {
-      id: 1,
-      src: "/assets/destination/helicoptor.jpeg",
-      alt: "Helicoptor",
-    },
-    {
-      id: 2,
-      src: "/assets/destination/everest1.jpeg",
-      alt: "Everest",
-    },
-    {
-      id: 3,
-      src: "/assets/destination/everesthelicoptor.jpeg",
-      alt: "Everest by Helicoptor",
-    },
-    {
-      id: 4,
-      src: "/assets/destination/everest1.jpeg",
-      alt: "Everest",
-    },
-    {
-      id: 1,
-      src: "/assets/destination/helicoptor.jpeg",
-      alt: "Helicoptor",
-    },
-    {
-      id: 2,
-      src: "/assets/destination/everest1.jpeg",
-      alt: "Everest",
-    },
-  ];
+  const [showLoader, setShowLoader] = React.useState(true);
+  const { id } = useParams<{ id: string }>();
+
+  React.useEffect(() => {
+    // Set a timeout to hide the loader after 3 seconds
+    const timeoutId = setTimeout(() => {
+      setShowLoader(false);
+    }, 500);
+
+    // Clean up the timeout when the component unmounts
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
+  const destination = destinationData.find(
+    (destination) => destination.destination_id === id
+  ); // Find the corresponding service object
+
+  if (!destination) {
+    return <div>Destination not found</div>;
+  }
 
   return (
-    <div className="bg-gray-50 py-10">
-      <div className="container mx-auto  ">
-        <div className="flex flex-col md:flex-row  p-5 gap-1 ">
-          <div className=" py-5 md:py-10 md:w-4/5 bg-white ">
-            <ImageViewer
-              images={imageUrl}
-              title="Destination Details"
-              price="Rs.34500"
-            />
-            <div className="mt-5 md:mt-10  ">
-              <Information />
+    <>
+      {showLoader ? (
+        <>
+          <div className="container mx-auto py-2">
+            <LoadingSkeleton />
+          </div>
+        </>
+      ) : (
+        <div className="bg-gray-50 py-10">
+          <div className="container mx-auto  ">
+            <div className="flex flex-col md:flex-row  p-5 gap-1 ">
+              <div className=" py-5 md:py-10 md:w-4/5 bg-white ">
+                <ImageViewer
+                  images={destination.imageUrl}
+                  title={destination.title}
+                  price={destination.price}
+                />
+                <div className="mt-5 md:mt-10  ">
+                  <Information
+                    OverviewSubHeading={destination.OverviewSubHeading}
+                    OverviewDescription1={destination.OverviewDescription1}
+                    OverviewDescription2={destination.OverViewDescription2}
+                    listofHighlights={destination.listofHighlights}
+                  />
+                </div>
+              </div>
+
+              <>
+                <div className="w-full md:w-1/5 py-5 md:py-5 bg-white ">
+                  <Quote />
+                  <ContactPerson />
+                </div>
+              </>
             </div>
           </div>
-
-          <>
-            <div className="w-full md:w-1/5 py-5 md:py-5 bg-white ">
-              <Quote />
-              <ContactPerson />
-            </div>
-          </>
+          <div>
+            <Destination
+              title="Explore More Destinations"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 xxl:grid-cols-5 gap-2 md:pt-20 p-5"
+            />
+          </div>
         </div>
-      </div>
-      <div>
-        <Destination
-          title="Explore More Destinations"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 xxl:grid-cols-5 gap-2 md:pt-20 p-5"
-        />
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 
 export default DestinationDetails;
 
 interface Image {
-  src: string;
-  alt: string;
+  url: string;
   id: number;
 }
 
@@ -88,7 +94,7 @@ interface ImageViewProps {
 
 export const ImageViewer = ({ images, title, price }: ImageViewProps) => {
   const picture =
-    "lg:aspect-[10/9] bg-white w-full h-full cursor-pointer lg:object-cover p-1  shadow-sm   shrink-0 rounded-lg  lg:h-[200px] lg:max-w-[250px] lg:rounded-xl";
+    "lg:aspect-[10/9] bg-white w-full h-full cursor-pointer lg:object-cover p-1  shadow-sm   shrink-0 rounded-lg  lg:h-[250px] lg:max-w-[300px] lg:rounded-sm";
   return (
     <>
       <div className="text-center ml-2 relative mb-10">
@@ -110,10 +116,14 @@ export const ImageViewer = ({ images, title, price }: ImageViewProps) => {
       </div>
       <div className="w-full">
         <PhotoProvider>
-          <div className=" flex flex-wrap w-full justify-center ">
+          <div className=" flex  flex-wrap w-full justify-center ">
             {images.map((image, index) => (
-              <PhotoView key={image.id} src={image.src}>
-                <img src={image.src} alt={image.alt} className={picture} />
+              <PhotoView key={image.id} src={image.url}>
+                <img
+                  src={image.url}
+                  alt="Destination images"
+                  className={picture}
+                />
               </PhotoView>
             ))}
           </div>
@@ -123,28 +133,17 @@ export const ImageViewer = ({ images, title, price }: ImageViewProps) => {
   );
 };
 
-export const Information = () => {
+export const Information = ({
+  OverviewSubHeading,
+  OverviewDescription1,
+  OverviewDescription2,
+  listofHighlights,
+}: any) => {
   const [showOverview, setShowOverview] = useState(false);
 
   React.useEffect(() => {
     setShowOverview(true);
   }, []);
-
-  const OverviewSubHeading = "Highlights of the Annapurna Sanctuary Trek:";
-  const OverviewDescription1 =
-    "The Annapurna Sanctuary Trek is a spectacular 14 days trip on the southern face of Annapurna I, a pleasant hike through the landscape and culture of Nepal. This walk leads to the fabulous amphitheater of highlands also known as Annapurna Base Camp. The course passes through waterfalls, impressive villages, terraced farmland, lush rhododendron forests and remarkable mountain views before heading the steep Annapurna. This is a good time to witness the beautiful peaks of the Annapurna giants that surround the mountains of the basin in the Annapurna region of the imperative center. Furthermore, a trip to Annapurna Base Camp is synonymous with entertainment and fun, as well as an extraordinary view of Nepal's plant and cultural heritage. This is by far one of the most enjoyable walks through various ethnic groups' lifestyles as well as the types of woods, plants, trees, and wildlife.";
-  const OverViewDescription2 =
-    "The Annapurna Sanctuary is a high glacial basin located beneath a ring of eleven major peaks in Nepal. The Annapurna Sanctuary Trek takes you directly to the frozen heart of the Annapurna Range, a magnificent arena of rock and ice of epic proportions. The Annapurna Sanctuary Trek itinerary is designed for hikers who want to visit World Heritage sites and Poon Hill on their way to the Annapurna Base Camp in a relaxed manner. This allows enough time to admire the breathtaking peaks of all the Annapurna Giants that surround the Annapurna Basin Mountains from the center of the imperative, which includes Annapurna I, Hiunchuli, Annapurna II, Gangapurna, Annapurna III, Machhapuchhre, Annapurna IV, and others.";
-  const listofHighlights = [
-    "Discover the city of Kathmandu and its heritage sites.",
-    "Panoramic and close-up views of the Annapurna massif, explore the city of Pokhara on the shores of Lake.",
-    "Unimpeded sunrise and sunset view from Poon Hill, picturesque villages.",
-    "Experiencing the lifestyle and culture of Gurung and Magar people, who are very famous for Gorkha arm.",
-    "Walk the narrow, cobbled path in the valley and the remote villages.",
-    "Visit the old monastery, ancient tradition of the Gurung museum and waterfalls.",
-    "Panoramic mountain flight to and from Pokhara.",
-    "Walk through the dense forest of Rhododendron which is even more beautiful in the spring.",
-  ];
 
   const paragraph = `  shadow-md text-sm p-1 cursor-pointer font-semibold cursor-pointer leading-relaxed lg:leading-8 text-gray-900 hover:bg-gray-100`;
   return (
@@ -170,7 +169,7 @@ export const Information = () => {
           onClose={() => setShowOverview(false)}
           overviewSubHeading={OverviewSubHeading}
           overviewDescription1={OverviewDescription1}
-          overviewDescription2={OverViewDescription2}
+          overviewDescription2={OverviewDescription2}
           listofHighlights={listofHighlights}
           price="Rs. 1,00,000"
         />
@@ -388,7 +387,7 @@ const Overview: React.FC<ModalProps> = ({
   );
 };
 
-const ContactPerson = () => {
+export const ContactPerson = () => {
   const paragraph =
     "text-xs font-normal text-center leading-relaxed text-gray-500 text-break-all";
   return (

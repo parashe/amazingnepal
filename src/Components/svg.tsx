@@ -26,7 +26,7 @@ export const CashIcon = ({ className, color }: Props) => {
 };
 
 export const ClockIcon = ({ className, color }: Props) => {
-  const staticClassName = "w-4 h-4";
+  const staticClassName = "w-3 h-3";
   const finalClassName = className + " " + staticClassName;
   return (
     <>
