@@ -1,6 +1,6 @@
 import React from "react";
 import nepalRatings from "./data"; // Importing the dummy rating data
-import { Button, Modal, RatingStars } from "../../atoms";
+import {  Modal, RatingStars } from "../../atoms";
 import { CrossIcon } from "../../svg";
 
 const AboutRating = () => {

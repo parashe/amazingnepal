@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Title } from "../../atoms";
+import { LoadingSkeleton, Title } from "../../atoms";
 import { destinationData } from "./data";
 import { DestinationCard } from "../../UI/Card/card";
 
@@ -37,7 +37,20 @@ const Destination: React.FC<DestinationProps> = ({ className, title }) => {
 export default Destination;
 
 export const DestinationPageContent = () => {
+  const [showLoader, setShowLoader] = React.useState(true);
   const [searchQuery, setSearchQuery] = React.useState(""); // State to manage search query
+
+  React.useEffect(() => {
+    // Set a timeout to hide the loader after 3 seconds
+    const timeoutId = setTimeout(() => {
+      setShowLoader(false);
+    }, 500);
+
+    // Clean up the timeout when the component unmounts
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
 
   // Function to filter destination data based on search query
   const filterDestinations = () => {
@@ -55,51 +68,59 @@ export const DestinationPageContent = () => {
 
   return (
     <>
-      <div className="md:mt-10 container mx-auto ">
-        <div className="flex flex-wrap justify-center md:justify-between py-5 px-5">
-          <h4 className="text-2xl font-bold text-gray-800 uppercase tracking-wide py-5 md:w-1/2">
-            <span className="text-indigo-900s"> Explore </span>Our Top
-            Destinations
-          </h4>
+      {showLoader ? (
+        <>
+          <div className="container mx-auto py-2">
+            <LoadingSkeleton />
+          </div>
+        </>
+      ) : (
+        <div className="md:mt-10 container mx-auto ">
+          <div className="flex flex-wrap justify-center md:justify-between py-5 px-5">
+            <h4 className="text-2xl font-bold text-gray-800 uppercase tracking-wide py-5 md:w-1/2">
+              <span className="text-indigo-900s"> Explore </span>Our Top
+              Destinations
+            </h4>
 
-          <form className="md:w-1/4 md:mt-4">
-            <div className="relative">
-              <div className="absolute inset-y-0 start-0 flex items-center px-3 pointer-events-none">
-                <svg
-                  className="w-4 h-4 text-gray-500 dark:text-gray-400"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                  />
-                </svg>
+            <form className="md:w-1/4 md:mt-4">
+              <div className="relative">
+                <div className="absolute inset-y-0 start-0 flex items-center px-3 pointer-events-none">
+                  <svg
+                    className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Search destinations..."
+                  value={searchQuery}
+                  onChange={handleSearchInputChange}
+                  className="block w-full p-3 min-w-[300px]  max-w-[500px]  text-center px-10 text-sm text-gray-900 border border-gray-300 rounded-md bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  required
+                />
               </div>
-              <input
-                type="text"
-                placeholder="Search destinations..."
-                value={searchQuery}
-                onChange={handleSearchInputChange}
-                className="block w-full p-3 min-w-[300px]  max-w-[500px]  text-center px-10 text-sm text-gray-900 border border-gray-300 rounded-md bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                required
-              />
-            </div>
-          </form>
-        </div>
+            </form>
+          </div>
 
-        {/* Destination cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 xxl:grid-cols-4 gap-6 md:pt-10 px-5">
-          {filterDestinations().map((destination, index) => (
-            <DestinationCard key={index} {...destination} />
-          ))}
+          {/* Destination cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 xxl:grid-cols-4 gap-6 md:pt-10 px-5">
+            {filterDestinations().map((destination, index) => (
+              <DestinationCard key={index} {...destination} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };

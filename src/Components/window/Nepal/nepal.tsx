@@ -1,6 +1,5 @@
 import React from "react";
 import { BoldText, LoadingSkeleton } from "../../atoms";
-import { QuoteLeftIcon, QuoteRightIcon } from "../../svg";
 const Vision = () => {
   const row = "flex flex-col items-start gap-y-8 md:gap-y-20 lg:gap-y-32";
   const picture =

@@ -7,14 +7,14 @@ const Gallery = () => {
   return (
     <>
       <div className="container-xl mx-auto ">
-        <div className="text-center py-5">
+        {/* <div className="text-center py-5">
           <h4 className="text-2xl  font-bold text-gray-800 uppercase tracking-wide ">
             <span className="text-indigo-900 font-extrabold">
               Amazing Nepal
             </span>{" "}
             Photo Gallery
           </h4>
-        </div>
+        </div> */}
         <div className="w-full py-5">
           <PhotoProvider>
             <div className=" flex flex-wrap w-full justify-center ">

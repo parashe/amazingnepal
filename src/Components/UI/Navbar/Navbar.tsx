@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [showlist, setShowlist] = React.useState(false);
@@ -79,149 +80,37 @@ export const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="/#"
+                <Link
+                  to="/services"
                   className="block py-2 px-3 text-gray-900 lg:px-4 lg:py-2 md:hover:bg-gray-100 rounded md:hover:bg-transparent md:border-0 md:hover:text-ui-purple hover:bg-ui-gray-100 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   aria-current="page"
                 >
                   Services
-                </a>
-              </li>
-
-              <li>
-                <button
-                  id="dropdownNavbarLink"
-                  data-dropdown-toggle="dropdownNavbar"
-                  className="flex items-center lg:px-4 lg:py-2 md:hover:bg-gray-100 justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-ui-purple md:hover:bg-ui-gray-100 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                  onClick={handleDropdown}
-                >
-                  Nepal{" "}
-                  <svg
-                    className="w-2.5 h-2.5 ms-2.5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m1 1 4 4 4-4"
-                    />
-                  </svg>
-                </button>
-
-                <div id="dropdownNavbar" className={dropDownClassName}>
-                  <ul
-                    className=" text-md font-semibold text-gray-700 dark:text-gray-200"
-                    aria-labelledby="dropdownLargeButton"
-                  >
-                    <li>
-                      <a
-                        href="/#"
-                        className="block px-4 py-2 text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Dashboard
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/#"
-                        className="block px-4 py-2 text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Dashboard
-                      </a>
-                    </li>
-                    <li aria-labelledby="dropdownNavbarLink">
-                      <button
-                        id="doubleDropdownButton"
-                        data-dropdown-toggle="doubleDropdown"
-                        data-dropdown-placement="right-start"
-                        type="button"
-                        onClick={() => setShowInnerDropdown(!showInnerDropdown)}
-                        className="flex lg:justify-center px-5 py-2 items-center justify-between w-full text-gray-900  hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Dropdown
-                        <svg
-                          className="w-2.5 h-2.5 ms-2.5"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 10 6"
-                        >
-                          <path
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="m1 1 4 4 4-4"
-                          />
-                        </svg>
-                      </button>
-                      <div
-                        id="doubleDropdown"
-                        className={innerDropDownClassName}
-                      >
-                        <ul
-                          className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                          aria-labelledby="doubleDropdownButton"
-                        >
-                          <li>
-                            <a
-                              href="/#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                            >
-                              Overview
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="/#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                            >
-                              My downloads
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="/#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                            >
-                              Billing
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="/#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                            >
-                              Rewards
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <a
-                        href="/#"
-                        className="block px-4 py-2 lg:px-4 lg:py-2 md:hover:bg-gray-100 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Earnings
-                      </a>
-                    </li>
-                  </ul>
-               
-                </div>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/#"
+                <Link
+                  to="/destination"
                   className="block py-2 px-3 lg:px-4 lg:py-2 md:hover:bg-gray-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-ui-purple md:hover:bg-ui-gray-100 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
-                  Blog
-                </a>
+                  Top Destination
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/nepal"
+                  className="block py-2 px-3 lg:px-4 lg:py-2 md:hover:bg-gray-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-ui-purple md:hover:bg-ui-gray-100 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  Nepal
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/gallery"
+                  className="block py-2 px-3 lg:px-4 lg:py-2 md:hover:bg-gray-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-ui-purple md:hover:bg-ui-gray-100 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  Gallery
+                </Link>
               </li>
 
               <li>
@@ -232,21 +121,14 @@ export const Navbar = () => {
                   About Us
                 </a>
               </li>
+
               <li>
-                <a
-                  href="/#"
-                  className="block py-2 px-3 lg:px-4 lg:py-2 md:hover:bg-gray-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-ui-purple md:hover:bg-ui-gray-100 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/#"
+                <Link
+                to="/contact"
                   className="block py-2 px-3 lg:px-4 lg:py-2 md:hover:bg-gray-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-ui-purple md:hover:bg-ui-gray-100 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

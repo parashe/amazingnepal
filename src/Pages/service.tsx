@@ -1,17 +1,16 @@
+import React from "react";
+import Layout from "../Components/layout";
+import { Services } from "../Components/window/Service/service";
 
-import React from 'react'
-import Layout from '../Components/layout'
-
-import ServiceDetails from '../Components/window/Service/service'
-
-
-
-export const ServicePage= () => {
+const ServicePage = () => {
   return (
     <>
-    <Layout>
-    <ServiceDetails/>
-    </Layout>
+      <Layout>
+<Services/>
+
+      </Layout>
     </>
-  )
-}
+  );
+};
+
+export default ServicePage;

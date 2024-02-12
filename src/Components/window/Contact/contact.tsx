@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import { Address, Alert, Input, Spinner, TextArea, Title } from "../../atoms";
+import { Address, Alert, Input, Spinner, TextArea } from "../../atoms";
 import { ContactPerson } from "../Destination/destinationDetails";
 
 const Contact = () => {
   return (
     <div className="container mx-auto">
-        <div className="w-full h-full py-10 ">
-        <h4 className="text-xl  font-bold text-gray-900 uppercase tracking-wide">Contact 
-      
-     {" "}<span className="text-indigo-900">
-        Us</span></h4>
-        </div>
+      <div className="w-full h-full py-10 ">
+        <h4 className="text-xl  font-bold text-gray-900 uppercase tracking-wide">
+          Contact <span className="text-indigo-900">Us</span>
+        </h4>
+      </div>
       <div className="w-full  h-full flex  justify-center flex-col md:flex-row gap-3 py-2">
-      
         <div className="w-full lg:w-1/3 p-2">
           <ContactForm />
         </div>

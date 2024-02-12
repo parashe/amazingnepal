@@ -55,6 +55,10 @@ const DestinationDetails = () => {
                     OverviewDescription1={destination.OverviewDescription1}
                     OverviewDescription2={destination.OverViewDescription2}
                     listofHighlights={destination.listofHighlights}
+                    priceIncludes={destination.priceIncludes}
+                    priceExcludes={destination.priceExcludes}
+                    itinerary={destination.itinerary}
+                    usefulInformation={destination.usefulInformation}
                   />
                 </div>
               </div>
@@ -138,29 +142,83 @@ export const Information = ({
   OverviewDescription1,
   OverviewDescription2,
   listofHighlights,
+  priceIncludes,
+  priceExcludes,
+  itinerary,
+  usefulInformation,
 }: any) => {
   const [showOverview, setShowOverview] = useState(false);
+  const [showItinerary, setShowItinerary] = useState(false);
+  const [showPriceIncluded, setShowPriceIncluded] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
+
+  const handleClick = (type: string) => {
+    setShowOverview(false);
+    setShowItinerary(false);
+    setShowPriceIncluded(false);
+    setShowInfo(false);
+
+    switch (type) {
+      case "overview":
+        setShowOverview(true);
+        break;
+      case "itinerary":
+        setShowItinerary(true);
+        break;
+      case "priceIncluded":
+        setShowPriceIncluded(true);
+        break;
+      case "usefulInformation":
+        setShowInfo(true);
+        break;
+      default:
+        break;
+    }
+  };
 
   React.useEffect(() => {
     setShowOverview(true);
   }, []);
 
-  const paragraph = `  shadow-md text-sm p-1 cursor-pointer font-semibold cursor-pointer leading-relaxed lg:leading-8 text-gray-900 hover:bg-gray-100`;
+  const paragraph = `shadow-md text-sm p-1 cursor-pointer font-semibold cursor-pointer leading-relaxed lg:leading-8 text-gray-900 hover:bg-gray-100`;
   return (
     <>
-      <div className=" bg-white  border border-gray-100   ">
-        <div className="grid grid-cols-4 divide-x divide-ui-purple  ">
+      <div className="bg-white border  border-gray-100">
+        <div className="grid grid-cols-4 divide-x divide-ui-purple shadow-md">
           <p
-            className={`${paragraph}  ${
+            className={`${paragraph} ${
               showOverview ? "text-ui-purple border-b-2 border-ui-purple" : ""
             }`}
-            onClick={() => setShowOverview(!showOverview)}
+            onClick={() => handleClick("overview")}
           >
             Overview
           </p>
-          <p className={paragraph}>Itinerary</p>
-          <p className={paragraph}>Price & Included</p>
-          <p className={paragraph}>Useful Information</p>
+          <p
+            className={`${paragraph} ${
+              showItinerary ? "text-ui-purple border-b-2 border-ui-purple" : ""
+            }`}
+            onClick={() => handleClick("itinerary")}
+          >
+            Itinerary
+          </p>
+          <p
+            className={`${paragraph} ${
+              showPriceIncluded
+                ? "text-ui-purple border-b-2 border-ui-purple"
+                : ""
+            }`}
+            onClick={() => handleClick("priceIncluded")}
+          >
+            Price & Included
+          </p>
+          <p
+            className={`${paragraph} ${
+              showInfo ? "text-ui-purple border-b-2 border-ui-purple" : ""
+            }`}
+            onClick={() => handleClick("usefulInformation")}
+          >
+            Useful Information
+          </p>
         </div>
       </div>
 
@@ -171,7 +229,28 @@ export const Information = ({
           overviewDescription1={OverviewDescription1}
           overviewDescription2={OverviewDescription2}
           listofHighlights={listofHighlights}
-          price="Rs. 1,00,000"
+        />
+      )}
+
+      {showPriceIncluded && (
+        <PriceIncludedExcluded
+          onClose={() => setShowPriceIncluded(false)}
+          priceIncluded={priceIncludes}
+          priceExcluded={priceExcludes}
+        />
+      )}
+
+      {showItinerary && (
+        <IternaryContent
+          onClose={() => setShowItinerary(false)}
+          iternary={itinerary}
+        />
+      )}
+
+      {showInfo && (
+        <UsefulInformationContent
+          onClose={() => setShowInfo(false)}
+          usefulInformation={usefulInformation}
         />
       )}
     </>
@@ -343,7 +422,6 @@ interface ModalProps {
   overviewDescription1: string;
   overviewDescription2: string;
   listofHighlights: string[];
-  price: string;
 }
 
 const Overview: React.FC<ModalProps> = ({
@@ -351,7 +429,6 @@ const Overview: React.FC<ModalProps> = ({
   overviewDescription1,
   overviewDescription2,
   listofHighlights,
-  price,
 }) => {
   const paragraph =
     " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-500 text-break-all ";
@@ -368,12 +445,137 @@ const Overview: React.FC<ModalProps> = ({
             <p className={paragraph}>{overviewDescription1}</p>
             <p className={paragraph}>{overviewDescription2}</p>
             <div className="p-2 md:p-6 text-justify">
-              <h1 className="text-lg font-bold text-neutral-400">
+              <h1 className="text-lg font-bold text-gray-900">
                 {overviewSubHeading}
               </h1>
 
               <ul className="list-disc">
                 {listofHighlights.map((highlight, index) => (
+                  <li key={index} className={paragraph}>
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+interface PriceModalProps {
+  onClose: () => void;
+  priceIncluded: string[];
+  priceExcluded: string[];
+}
+
+const PriceIncludedExcluded: React.FC<PriceModalProps> = ({
+  onClose,
+  priceExcluded,
+  priceIncluded,
+}) => {
+  const paragraph =
+    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-500 text-break-all ";
+  return (
+    <div>
+      <div className="bg-white  py-5    h-full overflow-hidden transform transition-all ">
+        <div className="md:px-10 py-4 leading-relaxed">
+          <div className="text-center p-2 ">
+            <div className="p-2 md:p-6 text-justify">
+              <h1 className="text-lg font-bold text-gray-900">Included</h1>
+
+              <ul className="list-disc">
+                {priceIncluded.map((highlight, index) => (
+                  <li key={index} className={paragraph}>
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="p-2 md:p-6 text-justify">
+              <h1 className="text-lg font-bold text-gray-900">Excluded</h1>
+
+              <ul className="list-disc">
+                {priceExcluded.map((highlight, index) => (
+                  <li key={index} className={paragraph}>
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+type itenaryProps = {
+  day: string;
+  activity: string;
+};
+
+interface IternaryModalProps {
+  onClose: () => void;
+  iternary: itenaryProps[];
+}
+
+const IternaryContent: React.FC<IternaryModalProps> = ({
+  onClose,
+  iternary,
+}) => {
+  const paragraph =
+    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-500 text-break-all ";
+  return (
+    <div>
+      <div className="bg-white  py-5    h-full overflow-hidden transform transition-all ">
+        <div className="md:px-10 py-4 leading-relaxed">
+          <div className="text-center p-2 ">
+            <div className="p-2 md:p-6 text-justify">
+              <h1 className="text-lg font-bold text-gray-900">
+                Detail Itineries
+              </h1>
+
+              <ul className="list-disc">
+                {iternary.map((highlight, index) => (
+                  <li key={index} className={paragraph}>
+                    <span className="font-bold"> {highlight.day} </span> -{" "}
+                    {highlight.activity}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+interface UsefulModalProps {
+  onClose: () => void;
+  usefulInformation: string[];
+}
+
+const UsefulInformationContent: React.FC<UsefulModalProps> = ({
+  onClose,
+  usefulInformation,
+}) => {
+  const paragraph =
+    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-500 text-break-all ";
+  return (
+    <div>
+      <div className="bg-white  py-5    h-full overflow-hidden transform transition-all ">
+        <div className="md:px-10 py-4 leading-relaxed">
+          <div className="text-center p-2 ">
+            <div className="p-2 md:p-6 text-justify">
+              <h1 className="text-lg font-bold text-gray-900">
+                Detail Itineries
+              </h1>
+
+              <ul className="list-disc">
+                {usefulInformation.map((highlight, index) => (
                   <li key={index} className={paragraph}>
                     {highlight}
                   </li>

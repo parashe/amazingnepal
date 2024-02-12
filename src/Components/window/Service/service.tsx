@@ -53,7 +53,7 @@ export const Services: React.FC = () => {
   );
 };
 
-const ServiceDetails: React.FC = () => {
+export const ServiceDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>(); // Get the service_id parameter from the URL
   const service = servicesData.find((service) => service.service_id === id); // Find the corresponding service object
 
@@ -93,4 +93,4 @@ const ServiceDetails: React.FC = () => {
   );
 };
 
-export default ServiceDetails;
+
