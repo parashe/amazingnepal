@@ -8,6 +8,7 @@ import { ServiceDetailsPage } from "./Pages/servicedetails";
 import { ContactPage } from "./Pages/contact";
 import { GalleryPage } from "./Pages/gallery";
 import { DestinationPage } from "./Pages/destinationPage";
+import ServicePage from "./Pages/service";
 // import ServicePage from "./Pages/service";
 
 
@@ -25,7 +26,7 @@ function App() {
           <Route path="destination/:id" element={<DestinationDetailsPage />} />
           <Route path="nepal" element={<NepalPage />} />
           <Route path="services/:id" element={<ServiceDetailsPage />} />
-          {/* <Route path="service" element={<ServicePage />} /> */}
+          <Route path="service" element={<ServicePage />} />
           <Route path="gallery" element={<GalleryPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="*" element={<HomePage />} />

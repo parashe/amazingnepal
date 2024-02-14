@@ -1,7 +1,7 @@
 import React from "react";
 import { servicesData } from "./data";
 import { Card } from "../../UI/Card/card";
-import { Button, Title } from "../../atoms";
+import { Button, LoadingSkeleton, Title } from "../../atoms";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
@@ -40,7 +40,7 @@ export const Services: React.FC = () => {
               <div className="text-center  ">
                 <Button
                   onClick={() => handleOnClickSeeMore(service.service_id)}
-                  className="px-4 py-2 rounded-sm text-xs bg-gradient-to-r  from-pink-400 via-red-500 to-purple-500  font-medium hover:from-pink-600 hover:to-purple-600 transition duration-50 text-white cursor-pointer"
+                  className="px-4 py-2 rounded-sm text-xs bg-gradient-to-r   from-pink-400 via-red-500 to-purple-500  font-medium hover:from-pink-600 hover:to-purple-600 transition duration-50 text-white cursor-pointer"
                 >
                   See more
                 </Button>
@@ -54,6 +54,21 @@ export const Services: React.FC = () => {
 };
 
 export const ServiceDetails: React.FC = () => {
+
+  const [showLoader, setShowLoader] = React.useState(true);
+
+  React.useEffect(() => {
+    // Set a timeout to hide the loader after 3 seconds
+    const timeoutId = setTimeout(() => {
+      setShowLoader(false);
+    }, 500);
+
+    // Clean up the timeout when the component unmounts
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
   const { id } = useParams<{ id: string }>(); // Get the service_id parameter from the URL
   const service = servicesData.find((service) => service.service_id === id); // Find the corresponding service object
 
@@ -64,6 +79,15 @@ export const ServiceDetails: React.FC = () => {
   const paragraph = `text-sm p-1  font-normal  cursor-pointer cursor-pointer leading-relaxed lg:leading-relaxed text-gray-700 `;
 
   return (
+    <>
+    {showLoader ? (
+      <>
+      <div className="text-center">
+        <LoadingSkeleton/>
+        </div>
+      </>
+    ) : (
+
     <div className="container mx-auto px-4">
       <div className="w-full h-full text-justify py-8 md:py-10">
         <h4 className="text-xl font-bold text-gray-800 uppercase tracking-wide py-5">
@@ -90,6 +114,8 @@ export const ServiceDetails: React.FC = () => {
       <Services />{" "}
       {/* Uncomment if this is where you want to render the Services component */}
     </div>
+    )}
+    </>
   );
 };
 

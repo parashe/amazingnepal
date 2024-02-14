@@ -285,53 +285,81 @@ export const RatingStars = ({ rating }: RatingProps) => {
   );
 };
 
-
-
 export const BoldText: React.FC<React.PropsWithChildren> = ({ children }) => (
   <span className="font-bold text-ui-purple">{children}</span>
 );
 
-
-export const LoadingSkeleton = ({}) => {
+export const LoadingSkeleton = () => {
   return (
     <>
-  <div className="container mx-auto px-4 py-10">
-  <div className="mt-10 mb-10 w-full ">
-    <div className="w-full">
-      <div className="mb-4 h-2.5 w-48 rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
-      <div className="mb-2.5 h-2 max-w-[480px] rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
-      <div className="mb-2.5 h-2 max-w-[440px] rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
-      <div className="mb-2.5 h-2 max-w-[460px] rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
-      <div className="h-2 max-w-[360px] rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
-    </div>
+      <div className="container mx-auto px-4 py-10">
+        <div className="mt-10 mb-10 w-full ">
+          <div className="w-full">
+            <div className="mb-4 h-2.5 w-48 rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
+            <div className="mb-2.5 h-2 max-w-[480px] rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
+            <div className="mb-2.5 h-2 max-w-[440px] rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
+            <div className="mb-2.5 h-2 max-w-[460px] rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
+            <div className="h-2 max-w-[360px] rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
+          </div>
 
-    <div
-      role="status"
-      className="p-10 animate-pulse w-full text-center space-y-8 rtl:space-x-reverse md:flex md:items-center md:space-y-0 md:space-x-8"
-    >
-      <div className="flex items-center justify-center h-48 w-full sm:w-96 lg:h-72 lg:w-96 rounded bg-gradient-to-r from-gray-300 via-gray-400 to-gray-300 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700">
-        <svg
-          className="mx-auto h-10 w-full text-gray-200 dark:text-gray-600"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 20 18"
+          <div
+            role="status"
+            className="p-10 animate-pulse w-full text-center space-y-8 rtl:space-x-reverse md:flex md:items-center md:space-y-0 md:space-x-8"
+          >
+            <div className="flex items-center justify-center h-48 w-full sm:w-96 lg:h-72 lg:w-96 rounded bg-gradient-to-r from-gray-300 via-gray-400 to-gray-300 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700">
+              <svg
+                className="mx-auto h-10 w-full text-gray-200 dark:text-gray-600"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 18"
+              >
+                <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
+              </svg>
+            </div>
+          </div>
+
+          <div className="w-full">
+            <div className="mb-2.5 h-2 rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
+            <div className="mb-2.5 h-2 max-w-[440px] rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
+            <div className="mb-2.5 h-2 max-w-[460px] rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
+            <div className="h-2 max-w-[360px] rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export const GalleryLoadingSkeleton = () => {
+  return (
+    <div className="container mx-auto px-4 py-10">
+      <div className="mt-10 mb-10 w-full ">
+        <div className="w-full">
+          <div className="mb-4 h-2.5 w-48 rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>{" "}
+          <div className="h-2 max-w-[360px] rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
+        </div>
+
+        <div
+          role="status"
+          className="p-10 animate-pulse w-full text-center space-y-8 rtl:space-x-reverse md:flex md:items-center md:space-y-0 md:space-x-8"
         >
-          <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
-        </svg>
+          {/* Placeholder for image */}
+          <div className="flex items-center justify-center h-48 w-full sm:w-96 lg:h-72 lg:w-96 rounded bg-gradient-to-r from-gray-300 via-gray-400 to-gray-300 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700">
+            {/* Placeholder icon */}
+            <svg
+              className="mx-auto h-10 w-full text-gray-200 dark:text-gray-600"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 18"
+            >
+              <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div className="w-full">
-      <div className="mb-2.5 h-2 rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
-      <div className="mb-2.5 h-2 max-w-[440px] rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
-      <div className="mb-2.5 h-2 max-w-[460px] rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
-      <div className="h-2 max-w-[360px] rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-700"></div>
-    </div>
-  </div>
-</div>
-
-    </>
   );
 };
 
@@ -342,11 +370,11 @@ export const Address = () => {
   return (
     <Card>
       <div className="w-full p-5 ">
-      <h4 className="text-lg  font-bold text-gray-800 uppercase tracking-wide ">
-         Address
+        <h4 className="text-lg  font-bold text-gray-800 uppercase tracking-wide ">
+          Address
         </h4>
-        <p className={paragraph}>15 Poplar Grove West Bromwich</p>
-        <p className={paragraph}>B70 6LB, Birmingham</p>
+        <p className={paragraph}>15 High Street West Bromwich</p>
+        <p className={paragraph}>B70, Birmingham</p>
         <p className={`${paragraph} font-bold `}>United Kingdom</p>
       </div>
     </Card>

@@ -6,8 +6,7 @@ const ServicePage = () => {
   return (
     <>
       <Layout>
-<Services/>
-
+        <Services />
       </Layout>
     </>
   );

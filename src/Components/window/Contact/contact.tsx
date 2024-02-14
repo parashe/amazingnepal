@@ -1,20 +1,24 @@
 import React, { useState } from "react";
-import { Address, Alert, Input, Spinner, TextArea } from "../../atoms";
+import { Address, Alert, Input, Spinner, TextArea, Title } from "../../atoms";
 import { ContactPerson } from "../Destination/destinationDetails";
+import { AboutContent } from "../Rating/rating";
 
 const Contact = () => {
   return (
     <div className="container mx-auto">
       <div className="w-full h-full py-10 ">
-        <h4 className="text-xl  font-bold text-gray-900 uppercase tracking-wide">
-          Contact <span className="text-indigo-900">Us</span>
-        </h4>
+        <div className=" py-2 ">
+          <Title title="Contact Us" />
+        </div>
       </div>
-      <div className="w-full  h-full flex  justify-center flex-col md:flex-row gap-3 py-2">
-        <div className="w-full lg:w-1/3 p-2">
+      <div className="w-full  h-full   justify-center grid grid-cols-3 gap-3 py-2">
+        <div className="w-full p-2">
+          <AboutContent />
+        </div>
+        <div className="w-full  p-2">
           <ContactForm />
         </div>
-        <div className="w-full lg:w-auto  p-2 ">
+        <div className="w-full   p-2 lg:w- ">
           <Address />
           <ContactPerson />
         </div>
@@ -102,7 +106,7 @@ export const ContactForm = () => {
           </h4>
         </div>
         <div className="text-center p-2 w-full ">
-          <form className="max-w-sm mx-auto space-y-2 ">
+          <form className="max-w-md mx-auto space-y-2 ">
             <Input
               value={QuoteData.name}
               label="Your Name"
