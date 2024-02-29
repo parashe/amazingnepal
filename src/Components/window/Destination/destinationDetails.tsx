@@ -10,6 +10,26 @@ import { destinationData } from "./data";
 const DestinationDetails = () => {
   const [showLoader, setShowLoader] = React.useState(true);
   const { id } = useParams<{ id: string }>();
+  const [isFixed, setIsFixed] = useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const flexContent = document.querySelector(".flex-content");
+      if (flexContent) {
+        const flexContentBottom = flexContent.getBoundingClientRect().bottom;
+        if (window.scrollY > flexContentBottom) {
+          setIsFixed(true);
+        } else {
+          setIsFixed(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   React.useEffect(() => {
     // Set a timeout to hide the loader after 3 seconds
@@ -40,7 +60,7 @@ const DestinationDetails = () => {
           </div>
         </>
       ) : (
-        <div className="bg-gray-100 py-10">
+        <div className="flex-content bg-gray-100 ">
           <div className="container-xl mx-auto  ">
             <div className="flex flex-col md:flex-row  p-5 gap-1 ">
               <div className=" py-2 md:py-10 md:w-4/5 bg-white ">
@@ -64,10 +84,14 @@ const DestinationDetails = () => {
               </div>
 
               <>
-                <div className="w-full md:w-1/5 py-5 md:py-5 bg-white ">
-                  <Quote />
-                  <ContactPerson />
-                </div>
+                {!isFixed && (
+                  <div className="fixed top-1/5 z-[100] right-0 w-full md:w-1/5 py-5 md:py-5 bg-white mr-4 md:mr-0">
+                    <div className="text-right">
+                      <Quote />
+                      <ContactPerson />
+                    </div>
+                  </div>
+                )}
               </>
             </div>
           </div>
@@ -104,18 +128,20 @@ export const ImageViewer = ({ images, title, price }: ImageViewProps) => {
     <>
       <div className="text-center ml-2 relative mb-10">
         <div className="flex flex-wrap justify-around mb-2 ">
-          <h4 className="text-lg  font-bold text-gray-800 uppercase tracking-wide">
+          <h4 className="text-lg  font-black text-gray-800 uppercase tracking-wide">
             {title}
           </h4>
-          <div className="flex flex-wrap items-center justify-between ">
-            <p className="mb-1  px-3 text-gray-900 dark:text-gray-400">
-              <span className="text-ui-purple font-bold text-md">
-                £{price}{" "}
-              </span>
-              <span className="text-gray-500 font-normal text-xs">
-                / Per Person
-              </span>
-            </p>
+          <div className="flex items-center justify-between bg-gradient-to-r from-blue-400  to-pink-500 rounded-lg p-4 shadow-lg">
+            <div className="flex items-center">
+              <svg
+                className="w-6 h-6 fill-current text-white mr-2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" />
+              </svg>
+              <p className="mb-1 text-white text-lg font-bold">£{price}</p>
+            </div>
+            <p className="text-white text-sm font-normal">Per Person</p>
           </div>
         </div>
       </div>

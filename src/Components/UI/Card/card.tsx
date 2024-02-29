@@ -44,7 +44,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
   destination_id,
 }) => {
   return (
-    // <Link to={`/destination/${destination_id}`}>
+    <Link to={`/destination/${destination_id}`}>
     <div className="w-full  gap-x-5 md:max-w-sm  bg-white border rounded-lg border-gray-200 shadow-lg cursor-pointer shadow-ui-third-theme hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 relative">
       <div className="w-full relative">
         <div className="relative ">
@@ -80,18 +80,9 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
             </p>
           </div>
         </div>
-
-        {/* <div className="pt-auto">
-          <Button
-            onClick={onclick}
-            className="px-4 py-2 text-center  text-xs font-medium  bg-pink-50 text-ui-purple hover:bg-ui-third-theme-light cursor-pointer rounded-sm "
-          >
-            View Details
-          </Button>
-        </div> */}
       </div>
     </div>
-    // </Link>
+     </Link>
   );
 };
 
@@ -114,7 +105,7 @@ export const RecommendedCard: React.FC<RecommendedCardProps> = ({
       <div className="w-full relative">
         <div className="relative ">
           <img
-            className="aspect-[16/9] object-cover w-full rounded-xs h-full max-h-[300px] brightness-75 "
+            className="aspect-[16/9] object-cover w-full rounded-xs h-full min-h-[250px] max-h-[400px] brightness-75 "
             src={imageUrl}
             alt=""
           />
@@ -130,6 +121,9 @@ export const RecommendedCard: React.FC<RecommendedCardProps> = ({
             {description}
           </p>
         </div>
+        <button className="px-4 py-2 text-center  text-xs font-bold  bg-pink-50 text-pink-500 hover:bg-ui-third-theme-light cursor-pointer rounded-sm ">
+          View Details
+        </button>
       </div>
     </div>
     // </Link>
