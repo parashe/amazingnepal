@@ -6,6 +6,7 @@ import {Services} from '../Components/window/Service/service'
 import Whywe from '../Components/window/Whywe/whywe'
 import Destination from '../Components/window/Destination/destination'
 import Rating from '../Components/window/Rating/rating'
+import Recommended from '../Components/window/Recommended/recommended'
 
 
 export const HomePage = () => {
@@ -14,9 +15,10 @@ export const HomePage = () => {
     <Layout>
       <Carousel/>
 
-     
-      <Services/>
+{/*      
+      <Services/> */}
       <Destination/>
+      <Recommended/>
       <Whywe/>
       <Rating/>
     </Layout>

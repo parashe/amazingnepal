@@ -21,9 +21,9 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
   };
 
   return (
-    <div className="relative w-full ">
+    <div className="relative w-full  ">
       <div
-        className="relative w-full h-[275px] lg:h-full lg:max-h-[700px] "
+        className="relative w-full  h-[275px] lg:h-full lg:max-h-[700px] "
         data-carousel="static"
       >
         {slides.map((slide, index) => (
@@ -36,7 +36,7 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
           >
             <img
               src={slide}
-              className="lg:brightness-50  h-[275px]  lg:h-full lg:w-full lg:max-h-[600px] w-full object-fill aspect-[19/10] object-center rounded-lg shadow-md"
+              className="lg:brightness-50   h-[275px]  lg:h-full lg:w-full lg:max-h-[600px] w-full object-fill aspect-[19/10] object-center rounded-lg shadow-md"
               alt="slide"
             />
           </div>
@@ -110,7 +110,7 @@ const CarouselCard = () => {
       <div className=" w-[250px] md:w-full max-h-[250px] lg:h-full leading-relaxed md:max-h-[500px] opacity-65 md:opacity-75  px-5 py-8 lg:bg-white max-w-[520px] bg-ui-third-theme border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         {/* <a href="/#">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
+            Noteworthy technology acquisitions 2021 since th {}
           </h5>
         </a> */}
         <p className=" text-center leading-relaxed  mb-3 md:pt-5  text-gray-900 lg:leading-10  ">

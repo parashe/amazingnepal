@@ -22,32 +22,50 @@ const Gallery = () => {
     "lg:aspect-[10/9] bg-white w-full h-full cursor-pointer lg:object-cover p-1  shadow-sm   shrink-0 rounded-lg  lg:h-[300px] lg:max-w-[350px] lg:rounded-xl";
   return (
     <>
-       {showLoader ? (
+      {showLoader ? (
         <>
-        <div className="text-center">
-          <GalleryLoadingSkeleton/>
+          <div className="text-center">
+            <GalleryLoadingSkeleton />
           </div>
         </>
       ) : (
-      <div className="container-xl mx-auto  ">
-        <div className="w-full h-full py-10 lg:py-10 lg:px-10 ">
-          <div className=" py-2 lg:py-10">
-            <Title title="Amazing Nepal Photos" />
-          </div>
-
-          <div className="w-full py-5">
-            <PhotoProvider>
-              <div className=" flex flex-wrap w-full justify-center ">
-                {galleryData?.map((image, index) => (
-                  <PhotoView key={image.id} src={image.src}>
-                    <img src={image.src} alt={image.alt} className={picture} />
-                  </PhotoView>
-                ))}
+        <div className="container-xl mx-auto  ">
+          <div className="w-full h-full py-10 lg:py-10 lg:px-10 ">
+            <div className=" py-2 lg:py-10">
+              <div className="text-center mx-auto max-w-2xl gap-6  ">
+                <h2 className="text-5xl font-black text-black uppercase dark:text-white  ">
+                  <span className="bg-pink-500 inline-block text-transparent bg-clip-text font-black">
+                    EXPLORE{" "}
+                  </span>{" "}
+                  OUR STUNNING{" "}
+                  <span className="bg-pink-500 inline-block text-transparent bg-clip-text font-black">
+                    {" "}
+                    Gallery
+                  </span>
+                </h2>
+                <p className="text-gray-500 md:mt-3 dark:text-neutral-500">
+                Explore our mesmerizing gallery and lose yourself in a captivating array of stunning visuals, each more breathtaking than the last.
+                </p>
               </div>
-            </PhotoProvider>
+            </div>
+
+            <div className="w-full py-5">
+              <PhotoProvider>
+                <div className=" flex flex-wrap w-full justify-center ">
+                  {galleryData?.map((image, index) => (
+                    <PhotoView key={image.id} src={image.src}>
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className={picture}
+                      />
+                    </PhotoView>
+                  ))}
+                </div>
+              </PhotoProvider>
+            </div>
           </div>
         </div>
-      </div>
       )}
     </>
   );

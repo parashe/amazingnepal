@@ -1,24 +1,69 @@
 import React from "react";
 
-import { LoadingSkeleton, Title } from "../../atoms";
+import { Button, LoadingSkeleton, Title } from "../../atoms";
 import { destinationData } from "./data";
 import { DestinationCard } from "../../UI/Card/card";
+import { QuoteLeftIcon, QuoteRightIcon } from "../../svg";
+import { Link } from "react-router-dom";
+
 
 interface DestinationProps {
   className?: string;
   title?: string;
+  CalledFromPage?: boolean;
 }
-const Destination: React.FC<DestinationProps> = ({ className, title }) => {
+const Destination: React.FC<DestinationProps> = ({
+  className,
+  title,
+  CalledFromPage,
+}) => {
+
+
   const handleOnClickSeeMore = () => {
     console.log("see more");
+    
   };
 
   const staticClassName =
     "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 gap-6 md:pt-20 p-5";
   const finalClassName = className + " " + staticClassName;
   return (
-    <div className="mt-10 md:mt-28 container mx-auto">
-      <Title title={`${title ? title : "Our Top Destination"}`} />
+    <div className="mt-10 md:mt-20 container mx-auto">
+      {CalledFromPage ? (
+        <Title title={`${title ? title : "Our Top Destination"}`} />
+      ) : (
+        <div className="text-center mx-auto max-w-4xl gap-6">
+          <div className="flex items-center justify-center ">
+            <h2 className="text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
+              <span className=" font-black lg:text-4xl  text-pink-500 lg:font-extrabold ">
+                EXPLORE{" "}
+              </span>{" "}
+              <span>
+                THE UNPARALLELED{" "}
+                <span className=" font-black lg:text-4xl  text-pink-500 lg:font-extrabold ">
+                  BEAUTY{" "}
+                </span>{" "}
+                OF OUR {" "}
+                
+                  PREMIER{" "}
+             
+                <span className=" font-black lg:text-4xl  text-pink-500 lg:font-extrabold ">
+                DESTINATIONS{" "}
+                </span>{" "}
+                
+              </span>
+            </h2>
+          </div>
+
+          <p className="text-neutral-600 md:mt-3 text-sm dark:text-neutral-400">
+            Embark on an unforgettable journey through our meticulously curated
+            selection of top-tier destinations, where opulence seamlessly
+            intertwines with exhilarating adventure. Experience the epitome of
+            luxury as you traverse breathtaking landscapes, immerse yourself in
+            vibrant cultures, and create memories that will last a lifetime.
+          </p>
+        </div>
+      )}
 
       {/* <div className="flex flex-wrap flex-1 gap-6 mt-5 md:mt-20  mx-auto p-3 "> */}
       <div className={finalClassName}>
@@ -29,6 +74,16 @@ const Destination: React.FC<DestinationProps> = ({ className, title }) => {
             onclick={handleOnClickSeeMore}
           />
         ))}
+      </div>
+      <div className="text-center my-10">
+        <Link to="/destination" >
+        <button
+          className="mx-auto bg-pink-500 px-10 py-2 rounded-sm font-sm text-white hover:bg-pink-600 transition duration-300 uppercase"
+          onClick={handleOnClickSeeMore}
+        >
+          Explore All
+        </button>
+        </Link>
       </div>
     </div>
   );

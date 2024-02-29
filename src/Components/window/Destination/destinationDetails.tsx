@@ -40,10 +40,10 @@ const DestinationDetails = () => {
           </div>
         </>
       ) : (
-        <div className="bg-gray-50 py-10">
-          <div className="container mx-auto  ">
+        <div className="bg-gray-100 py-10">
+          <div className="container-xl mx-auto  ">
             <div className="flex flex-col md:flex-row  p-5 gap-1 ">
-              <div className=" py-5 md:py-10 md:w-4/5 bg-white ">
+              <div className=" py-2 md:py-10 md:w-4/5 bg-white ">
                 <ImageViewer
                   images={destination.imageUrl}
                   title={destination.title}
@@ -75,6 +75,7 @@ const DestinationDetails = () => {
             <Destination
               title="Explore More Destinations"
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 xxl:grid-cols-5 gap-2 md:pt-20 p-5"
+              CalledFromPage={true}
             />
           </div>
         </div>
@@ -98,7 +99,7 @@ interface ImageViewProps {
 
 export const ImageViewer = ({ images, title, price }: ImageViewProps) => {
   const picture =
-    "lg:aspect-[10/9] bg-white w-full h-full cursor-pointer lg:object-cover p-1  shadow-sm   shrink-0 rounded-lg  lg:h-[250px] lg:max-w-[300px] lg:rounded-sm";
+    "aspect-[16/9] bg-white w-full h-full cursor-pointer lg:object-cover p-1  shadow-sm  rounded-lg  lg:h-[300px] lg:max-w-[350px] ";
   return (
     <>
       <div className="text-center ml-2 relative mb-10">
@@ -118,9 +119,9 @@ export const ImageViewer = ({ images, title, price }: ImageViewProps) => {
           </div>
         </div>
       </div>
-      <div className="w-full">
+      <div className="">
         <PhotoProvider>
-          <div className=" flex  flex-wrap w-full justify-center ">
+          <div className="flex flex-wrap justify-center mx-auto">
             {images.map((image, index) => (
               <PhotoView key={image.id} src={image.url}>
                 <img
@@ -180,11 +181,11 @@ export const Information = ({
     setShowOverview(true);
   }, []);
 
-  const paragraph = `shadow-md text-sm p-1 cursor-pointer font-semibold cursor-pointer leading-relaxed lg:leading-8 text-gray-900 hover:bg-gray-100`;
+  const paragraph = ` font-bold md:p-3 shadow-md text-xs md:text-sm cursor-pointer  cursor-pointer leading-relaxed lg:leading-8 text-gray-900 hover:bg-gray-100`;
   return (
     <>
-      <div className="bg-white border  border-gray-100">
-        <div className="grid grid-cols-4 divide-x divide-ui-purple shadow-md">
+      <div className="bg-white md:p-4 ">
+        <div className="grid grid-cols-4 divide-x divide-ui-purple text-center">
           <p
             className={`${paragraph} ${
               showOverview ? "text-ui-purple border-b-2 border-ui-purple" : ""

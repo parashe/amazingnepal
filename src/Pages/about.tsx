@@ -1,17 +1,15 @@
 import React from "react";
 import Layout from "../Components/layout";
-import { Services } from "../Components/window/Service/service";
+import Whywe from "../Components/window/Whywe/whywe";
 import AboutRating from "../Components/window/Rating/rating";
 
-const ServicePage = () => {
+export const AboutPage = () => {
   return (
     <>
       <Layout>
-        <Services />
+        <Whywe />
         <AboutRating />
       </Layout>
     </>
   );
 };
-
-export default ServicePage;

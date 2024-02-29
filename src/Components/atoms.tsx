@@ -36,16 +36,18 @@ interface TitleProps {
   title: string;
 }
 export const Title = ({ title }: TitleProps) => (
-  <div className="text-left ml-2 relative mb-10">
-    <h4 className="text-2xl  font-bold text-gray-800 uppercase tracking-wide">
+  <div className="text-center relative mb-10">
+    <h4 className="text-3xl font-bold text-gray-800 uppercase tracking-wide">
       {title}
     </h4>
     <div
-      style={{ top: "1.5rem", transform: "translateY(50%)" }}
-      className="h-2 w-16 absolute bottom-0 left-0 mt-3 bg-gradient-to-r from-transparent to-ui-purple bg-repeat-x bg-linear-gradient"
+      style={{ top: "1.5rem", transform: "translateX(-50%)" }}
+      className="h-2 w-20 absolute bottom-0 left-1/2 mt-5 bg-pink-500"
     ></div>
   </div>
 );
+
+
 
 interface ModalProps extends PropsWithChildren {
   onClose: () => void;

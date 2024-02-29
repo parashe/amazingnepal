@@ -18,7 +18,7 @@ const Contact = () => {
         <div className="w-full  p-2">
           <ContactForm />
         </div>
-        <div className="w-full   p-2 lg:w- ">
+        <div className="w-full   p-2  ">
           <Address />
           <ContactPerson />
         </div>

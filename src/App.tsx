@@ -9,6 +9,8 @@ import { ContactPage } from "./Pages/contact";
 import { GalleryPage } from "./Pages/gallery";
 import { DestinationPage } from "./Pages/destinationPage";
 import ServicePage from "./Pages/service";
+import { About } from "./Components/window/About/about";
+import { AboutPage } from "./Pages/about";
 // import ServicePage from "./Pages/service";
 
 
@@ -29,6 +31,7 @@ function App() {
           <Route path="service" element={<ServicePage />} />
           <Route path="gallery" element={<GalleryPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="about" element={<AboutPage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
       </BrowserRouter>

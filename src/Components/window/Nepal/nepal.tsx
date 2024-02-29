@@ -40,14 +40,14 @@ const Vision = () => {
               >
                 <p>
                   {" "}
-                  <span className="text-indigo-900 font-extrabold leading-10">
+                  <span className="text-pink-500 font-extrabold leading-10">
                     Discover{" "}
                   </span>{" "}
                 
                   <span className=" font-extrabold">the Magic of</span> <br />
                 </p>
 
-                <span className="text-indigo-900 mb-0 ">Nepal</span>
+                <span className="text-pink-500 mb-0 ">Nepal</span>
               </h3>
 
               <p className="text-center mt-2 lg:mt-5 leading-relaxed font-normal text-sm lg:text-md text-neutral-500">

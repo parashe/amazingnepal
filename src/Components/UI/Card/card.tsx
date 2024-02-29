@@ -30,6 +30,7 @@ interface DestinationCardProps {
   content?: string;
   readMoreLink?: string;
   onclick?: () => void;
+  attraction?: string[];
 }
 
 export const DestinationCard: React.FC<DestinationCardProps> = ({
@@ -43,13 +44,13 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
   destination_id,
 }) => {
   return (
-    <Link to={`/destination/${destination_id}`}>
+    // <Link to={`/destination/${destination_id}`}>
     <div className="w-full  gap-x-5 md:max-w-sm  bg-white border rounded-lg border-gray-200 shadow-lg cursor-pointer shadow-ui-third-theme hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 relative">
       <div className="w-full relative">
         <div className="relative ">
           <img
             className="aspect-[16/9] object-cover w-full rounded-lg h-full max-h-[220px] brightness-75 "
-            src={imageUrl[0]?.url}
+            src={imageUrl && imageUrl[0]?.url}
             alt=""
           />
         </div>
@@ -90,6 +91,47 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
         </div> */}
       </div>
     </div>
-    </Link>
+    // </Link>
+  );
+};
+
+interface RecommendedCardProps {
+  place: string;
+  imageUrl: string;
+  description: string;
+  id: number;
+  onclick?: () => void;
+}
+
+export const RecommendedCard: React.FC<RecommendedCardProps> = ({
+  place,
+  imageUrl,
+  description,
+}) => {
+  return (
+    // <Link to={`/destination/${destination_id}`}>
+    <div className="w-full  gap-x-5 md:max-w-sm  bg-white border border-gray-200  rounded-xs  shadow-sm cursor-pointer hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 relative">
+      <div className="w-full relative">
+        <div className="relative ">
+          <img
+            className="aspect-[16/9] object-cover w-full rounded-xs h-full max-h-[300px] brightness-75 "
+            src={imageUrl}
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div className="p-5">
+        <h5 className="mb-0 text-auto font-bold tracking-tight text-black leading-relaxed dark:text-white">
+          {place}
+        </h5>
+        <div className="text-justify flex flex-wrap justify-center py-3">
+          <p className="mb-1 text-sm  px-3 text-gray-900 dark:text-gray-400 ">
+            {description}
+          </p>
+        </div>
+      </div>
+    </div>
+    // </Link>
   );
 };
