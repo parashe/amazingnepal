@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "../../atoms";
+import { Link } from "react-router-dom";
 
 interface CarouselProps {
   slides: string[];
@@ -23,8 +24,9 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
   return (
     <div className="relative w-full  ">
       <div
-        className="relative w-full  h-[275px] lg:h-full lg:max-h-[700px] "
+        className="relative w-full  h-[275px] lg:h-full lg:max-h-[700px]  transition duration-500"
         data-carousel="static"
+        data-carousel-auto="true"
       >
         {slides.map((slide, index) => (
           <div
@@ -48,7 +50,7 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
           data-carousel-prev
           onClick={prevSlide}
         >
-          <span className="inline-flex items-center justify-center  lg:w-12 lg:h-12 w-10 h-10 rounded-full bg-ui-purple dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <span className="inline-flex items-center justify-center  lg:w-12 lg:h-12 w-10 h-10 rounded-full bg-pink-500 dark:bg-gray-800/30 group-hover:bg-pink-600 dark:group-hover:bg-pink-600 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
             <svg
               className="lg:w-5 lg:h-5 w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
               aria-hidden="true"
@@ -75,7 +77,7 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
           data-carousel-next
           onClick={nextSlide}
         >
-          <span className="inline-flex  lg:w-12 lg:h-12 items-center justify-center w-10 h-10 rounded-full bg-ui-purple dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <span className="inline-flex  lg:w-12 lg:h-12 items-center justify-center w-10 h-10 rounded-full bg-pink-500 dark:bg-gray-800/30 group-hover:bg-pink-600 dark:group-hover:bg-pink-600 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
             <svg
               className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
               aria-hidden="true"
@@ -132,6 +134,7 @@ const CarouselCard = () => {
             we have the perfect journey for you.
           </span>
         </p>
+        <Link to="/destination">
         <Button
           onClick={() => {}}
           className="px-3 py-2 text-xs font-medium bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-sm hover:from-purple-600 hover:to-pink-500"
@@ -153,6 +156,7 @@ const CarouselCard = () => {
             />
           </svg>
         </Button>
+        </Link>
       </div>
     </>
   );
