@@ -25,28 +25,30 @@ const Destination: React.FC<DestinationProps> = ({
   return (
     <div className="mt-10 md:mt-20 container mx-auto">
       {CalledFromPage ? (
-        <Title title={`${title ? title : "Our Top Destination"}`} />
+       <h1 className="text-2xl lg:text-4xl font-black text-black uppercase dark:text-white leading-relaxed"> More Destinations</h1>
+
+
       ) : (
-        <div className="text-center mx-auto max-w-4xl gap-6">
+        <div className="text-center mx-auto w-full md:max-w-4xl gap-6">
           <div className="flex items-center justify-center ">
-            <h2 className="text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
-              <span className=" font-black lg:text-4xl  text-pink-500 lg:font-extrabold ">
+            <h2 className="text-2xl lg:text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
+              <span className=" font-black   text-pink-500 lg:font-extrabold ">
                 EXPLORE{" "}
               </span>{" "}
               <span>
                 THE UNPARALLELED{" "}
-                <span className=" font-black lg:text-4xl  text-pink-500 lg:font-extrabold ">
+                <span className=" font-black  text-pink-500 lg:font-extrabold ">
                   BEAUTY{" "}
                 </span>{" "}
                 OF OUR PREMIER{" "}
-                <span className=" font-black lg:text-4xl  text-pink-500 lg:font-extrabold ">
+                <span className=" font-black  text-pink-500 lg:font-extrabold ">
                   DESTINATIONS{" "}
                 </span>{" "}
               </span>
             </h2>
           </div>
 
-          <p className="text-neutral-600 md:mt-3 text-sm dark:text-neutral-400">
+          <p className="text-neutral-600 p-2 md:mt-3 text-xs dark:text-neutral-400">
             Embark on an unforgettable journey through our meticulously curated
             selection of top-tier destinations, where opulence seamlessly
             intertwines with exhilarating adventure. Experience the epitome of

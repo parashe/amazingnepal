@@ -41,9 +41,9 @@ const DestinationDetails = () => {
         </>
       ) : (
         <div className="flex-content ">
-          <div className="container-xl mx-auto   px-5  ">
+          <div className="container-xl mx-auto   md:px-5  ">
             <div className="flex flex-col md:flex-row  gap-1 ">
-              <div className="  px-5  md:w-4/5 bg-white ">
+              <div className="  md:px-5  md:w-4/5 bg-white ">
                 <ImageViewer
                   images={destination.imageUrl}
                   title={destination.title}

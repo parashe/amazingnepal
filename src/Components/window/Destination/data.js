@@ -14,7 +14,7 @@ export const destinationData = [
         url: "/assets/destination/gosaikunda.jpeg",
       },
       {
-        id: 1,
+        id: 11,
         url: "/assets/destination/helicoptor.jpeg",
         alt: "Helicoptor",
       },
@@ -34,12 +34,12 @@ export const destinationData = [
         alt: "Everest",
       },
       {
-        id: 1,
+        id: 15,
         url: "/assets/destination/helicoptor.jpeg",
         alt: "Helicoptor",
       },
       {
-        id: 2,
+        id: 24,
         url: "/assets/destination/everest1.jpeg",
         alt: "Everest",
       },

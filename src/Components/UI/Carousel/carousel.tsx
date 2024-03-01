@@ -50,7 +50,7 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
           data-carousel-prev
           onClick={prevSlide}
         >
-          <span className="inline-flex items-center justify-center  lg:w-12 lg:h-12 w-10 h-10 rounded-full bg-pink-500 dark:bg-gray-800/30 group-hover:bg-pink-600 dark:group-hover:bg-pink-600 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <span className="inline-flex items-center justify-center  lg:w-12 lg:h-12 w-10 h-10 rounded-full bg-pink-500 dark:bg-gray-800/30 group-hover:bg-pink-600 dark:group-hover:bg-pink-600 ">
             <svg
               className="lg:w-5 lg:h-5 w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
               aria-hidden="true"
@@ -60,9 +60,9 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M5 1 1 5l4 4"
               />
             </svg>
@@ -77,7 +77,7 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
           data-carousel-next
           onClick={nextSlide}
         >
-          <span className="inline-flex  lg:w-12 lg:h-12 items-center justify-center w-10 h-10 rounded-full bg-pink-500 dark:bg-gray-800/30 group-hover:bg-pink-600 dark:group-hover:bg-pink-600 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <span className="inline-flex  lg:w-12 lg:h-12 items-center justify-center w-10 h-10 rounded-full bg-pink-500 dark:bg-gray-800/30 group-hover:bg-pink-600 dark:group-hover:bg-pink-600 ">
             <svg
               className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
               aria-hidden="true"
@@ -87,9 +87,9 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="m1 9 4-4-4-4"
               />
             </svg>
@@ -117,7 +117,7 @@ const CarouselCard = () => {
         </a> */}
         <p className=" text-center leading-relaxed  mb-3 md:pt-5  text-gray-900 lg:leading-10  ">
           <span className=" font-bold lg:text-5xl text-black  lg:font-extrabold ">
-            <span className=" bg-gradient-to-r from-pink-400 via-red-500 to-purple-500 inline-block text-transparent bg-clip-text font-extrabold">
+            <span className=" bg-gradient-to-r from-blue-500 via-red-400 to-pink-500 inline-block text-transparent bg-clip-text font-extrabold">
               Discover{" "}
             </span>{" "}
             stunning global destinations{" "}
@@ -137,7 +137,7 @@ const CarouselCard = () => {
         <Link to="/destination">
         <Button
           onClick={() => {}}
-          className="px-3 py-2 text-xs font-medium bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-sm hover:from-purple-600 hover:to-pink-500"
+          className="px-3 py-2 text-xs uppercase font-bold rounded-sm bg-gradient-to-r from-blue-400 via-red-400 to-pink-500   hover:from-pink-600 hover:via-red-400 hover:to-blue-500 transition duration-50 text-white cursor-pointer"
         >
           Explore more
           <svg
@@ -149,9 +149,9 @@ const CarouselCard = () => {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M1 5h12m0 0L9 1m4 4L9 9"
             />
           </svg>

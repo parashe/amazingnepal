@@ -117,7 +117,7 @@ export const RecommendedCard: React.FC<RecommendedCardProps> = ({
               {description}
             </p>
           </div>
-          <button className="w-full  py-3 text-center uppercase  text-xs font-bold  bg-pink-500 text-white hover:bg-pink-600 transition duration-300 cursor-pointer rounded-sm ">
+          <button className="px-5 py-3 text-center uppercase  text-xs font-bold  bg-pink-50 text-pink-500 hover:bg-pink-100 transition duration-300 cursor-pointer rounded-sm ">
             View Details
           </button>
         </div>

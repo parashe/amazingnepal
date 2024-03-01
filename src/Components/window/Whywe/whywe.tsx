@@ -27,15 +27,15 @@ const Whywe = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-gray-50 via-blue-50 to-pink-50 opacity-100 dark:bg-gray-900">
+    <div className="bg-gradient-to-r from-gray-50  to-pink-50 opacity-100 dark:bg-gray-900">
       <div className="mt-0 md:pt-28 md:pb-24 container mx-auto pt-5 ">
         <div className="text-center mx-auto max-w-4xl gap-6">
           <div className="flex items-center justify-center ">
-            <h2 className="text-2xl md:text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
-              <span className=" font-black bg-gradient-to-r from-blue-400 via-red-400 to-pink-500 inline-block text-transparent bg-clip-text lg:text-4xl   lg:font-extrabold ">
-                WHY WE ARE THE BEST ?{" "}
+            <h2 className="text-2xl md:text-5xl font-black text-black uppercase dark:text-white leading-relaxed">
+              <span className=" font-black  inline-block bg-clip-text lg:text-4xl   lg:font-extrabold ">
+                WHY WE ARE THE  <span className="text-pink-500"> BEST ?</span>{" "}
               </span>
-              <p className="text-neutral-600 md:mt-3 p-2  text-xs md:text-sm dark:text-neutral-400">
+              <p className="text-neutral-600 md:mt-3 p-2  text-xs  dark:text-neutral-400">
                 {" "}
                we pride ourselves on delivering unparalleled travel experiences
                 that set us apart from the rest. Our dedication to excellence is

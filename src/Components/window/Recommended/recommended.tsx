@@ -25,7 +25,7 @@ const Recommended: React.FC<RecommendedProps> = ({
     <div className="mt-10 md:mt-20 container mx-auto">
       <Title title={`${title ? title : "WHERE TO GO IN NEPAL"}`} />
 
-      <p className="text-neutral-600 md:mt-3 text-sm dark:text-neutral-400">
+      <p className="text-neutral-600 md:mt-3 text-xs dark:text-neutral-400">
         Nepal's diverse regions offer an array of attractions, from the cultural
         wonders of the Himalayas to the stunning beauty of the Nepal.
       </p>
