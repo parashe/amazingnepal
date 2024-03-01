@@ -1,11 +1,9 @@
 import React from "react";
 
-import { Button, LoadingSkeleton, Title } from "../../atoms";
+import { LoadingSkeleton, Title } from "../../atoms";
 import { destinationData } from "./data";
 import { DestinationCard } from "../../UI/Card/card";
-import { QuoteLeftIcon, QuoteRightIcon } from "../../svg";
 import { Link } from "react-router-dom";
-
 
 interface DestinationProps {
   className?: string;
@@ -17,11 +15,8 @@ const Destination: React.FC<DestinationProps> = ({
   title,
   CalledFromPage,
 }) => {
-
-
   const handleOnClickSeeMore = () => {
     console.log("see more");
-    
   };
 
   const staticClassName =
@@ -43,14 +38,10 @@ const Destination: React.FC<DestinationProps> = ({
                 <span className=" font-black lg:text-4xl  text-pink-500 lg:font-extrabold ">
                   BEAUTY{" "}
                 </span>{" "}
-                OF OUR {" "}
-                
-                  PREMIER{" "}
-             
+                OF OUR PREMIER{" "}
                 <span className=" font-black lg:text-4xl  text-pink-500 lg:font-extrabold ">
-                DESTINATIONS{" "}
+                  DESTINATIONS{" "}
                 </span>{" "}
-                
               </span>
             </h2>
           </div>
@@ -76,9 +67,9 @@ const Destination: React.FC<DestinationProps> = ({
         ))}
       </div>
       <div className="text-center my-10">
-        <Link to="/destination" >
+        <Link to="/destination">
         <button
-          className="mx-auto bg-pink-500 px-10 py-2 rounded-sm font-sm text-white hover:bg-pink-600 transition duration-300 uppercase"
+          className="mx-auto bg-pink-500 px-10 py-2 rounded-sm font-bold text-white hover:bg-pink-600 transition duration-300 uppercase"
           onClick={handleOnClickSeeMore}
         >
           Explore All
@@ -130,16 +121,15 @@ export const DestinationPageContent = () => {
           </div>
         </>
       ) : (
-        <div className="md:mt-10 container mx-auto ">
-          <div className="flex flex-wrap justify-center md:justify-between py-5 px-5">
-            <h4 className="text-2xl font-bold text-gray-800 uppercase tracking-wide py-5 md:w-1/2">
-              <span className="text-indigo-900s"> Explore </span>Our Top
-              Destinations
+        <div className="md:mt-10 container mx-auto   ">
+          <div className=" mb-4 flex flex-wrap justify-center md:justify-between py-5 px-5 bg-gradient-to-r from-blue-400 via-red-400 to-pink-500">
+            <h4 className="text-2xl font-bold text-white uppercase tracking-wide py-5 md:w-1/2">
+              <span> Explore </span>Our Top Destinations
             </h4>
 
             <form className="md:w-1/4 md:mt-4">
               <div className="relative">
-                <div className="absolute inset-y-0 start-0 flex items-center px-3 pointer-events-none">
+                <div className="absolute inset-y-0 left-0 flex items-center pl-3">
                   <svg
                     className="w-4 h-4 text-gray-500 dark:text-gray-400"
                     aria-hidden="true"
@@ -149,10 +139,10 @@ export const DestinationPageContent = () => {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 19l-4-4m0-7a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
                     />
                   </svg>
                 </div>
@@ -161,7 +151,7 @@ export const DestinationPageContent = () => {
                   placeholder="Search destinations..."
                   value={searchQuery}
                   onChange={handleSearchInputChange}
-                  className="block w-full p-3 min-w-[300px]  max-w-[500px]  text-center px-10 text-sm text-gray-900 border border-gray-300 rounded-md bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="block w-full p-3 min-w-[300px] max-w-[500px] text-center text-sm text-gray-900 border border-gray-300 rounded-md bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   required
                 />
               </div>

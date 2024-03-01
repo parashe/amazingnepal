@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Button, LoadingSkeleton, Title } from "../../atoms";
-import { DestinationCard, RecommendedCard } from "../../UI/Card/card";
+import { Title } from "../../atoms";
+import {  RecommendedCard } from "../../UI/Card/card";
 import { recommendData } from "./data";
 
 interface RecommendedProps {

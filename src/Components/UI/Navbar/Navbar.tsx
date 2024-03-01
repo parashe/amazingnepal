@@ -8,7 +8,7 @@ export const Navbar = () => {
 
   const isActive = (path: string) => {
     return location.pathname === path
-      ? "bg-gray-100 text-ui-purple"
+      ? "bg-gray-100 text-pink-500"
       : "text-gray-900";
   };
 

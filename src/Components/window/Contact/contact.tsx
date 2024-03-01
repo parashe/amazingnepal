@@ -1,29 +1,65 @@
 import React, { useState } from "react";
-import { Address, Alert, Input, Spinner, TextArea, Title } from "../../atoms";
+import { Address, Alert, Input, LoadingSkeleton, Spinner, TextArea } from "../../atoms";
 import { ContactPerson } from "../Destination/destinationDetails";
-import { AboutContent } from "../Rating/rating";
 
 const Contact = () => {
+
+  const [showLoader, setShowLoader] = React.useState(true);
+
+  React.useEffect(() => {
+    // Set a timeout to hide the loader after 3 seconds
+    const timeoutId = setTimeout(() => {
+      setShowLoader(false);
+    }, 500);
+
+    // Clean up the timeout when the component unmounts
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
   return (
-    <div className="container mx-auto">
-      <div className="w-full h-full py-10 ">
-        <div className=" py-2 ">
-          <Title title="Contact Us" />
-        </div>
+    <>
+    {showLoader ? (
+      <div className="text-center">
+        <LoadingSkeleton />
       </div>
-      <div className="w-full  h-full   justify-center grid grid-cols-3 gap-3 py-2">
-        <div className="w-full p-2">
-          <AboutContent />
+    ) : (
+    <div className="container mx-auto ">
+      <div className="text-center mx-auto max-w-4xl gap-6 mb-5 md:mb-10">
+        <div className="flex items-center justify-center ">
+          <h2 className="text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
+            <span className=" font-black lg:text-4xl  text-black lg:font-extrabold ">
+              Contact 
+             {" "} <span className=" font-black lg:text-4xl  text-pink-500 lg:font-extrabold ">Us</span>
+            </span>
+          </h2>
         </div>
-        <div className="w-full  p-2">
-          <ContactForm />
+
+        <p className="text-neutral-600 md:mt-3 text-sm dark:text-neutral-400">
+        We'd love to hear from you! Get in touch with us using the information below. Please fill out the form below to contact us.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-3 py-2">
+        <div className="col-span-3 ">
+          <div className="w-full p-3 shadow-2xl">
+            <AboutContact />
+          </div>
+          <div className="w-full p-2">
+            <div className="flex flex-col md:flex-row ">
+              <Address />
+              <ContactPerson />
+            </div>
+          </div>
         </div>
-        <div className="w-full   p-2  ">
-          <Address />
-          <ContactPerson />
+        <div className="w-full cols-1 md:col-span-1">
+          <div className="w-full p-2 shadow-2xl">
+            <ContactForm />
+          </div>
         </div>
       </div>
     </div>
+    )}
+    </>
   );
 };
 
@@ -101,8 +137,8 @@ export const ContactForm = () => {
     <>
       <div className="w-full justify-center shadow-sm p-5 border rounded-lg  ">
         <div>
-          <h4 className="text-lg text-justify p-5 font-bold text-gray-800 uppercase tracking-wide py-5">
-            Create Message for Us
+          <h4 className="text-lg text-center p-5 font-bold text-pink-500 uppercase tracking-wide py-5">
+            Create Message 
           </h4>
         </div>
         <div className="text-center p-2 w-full ">
@@ -178,3 +214,65 @@ export const ContactForm = () => {
 };
 
 export default Contact;
+
+const AboutContact = () => {
+  const paragraph = `text-sm p-1  text-justify font-normal  cursor-pointer cursor-pointer leading-relaxed lg:leading-relaxed text-gray-700 `;
+
+  return (
+    <>
+      <div className="w-full h-full">
+        <div className="text-center">
+          <h4 className="text-lg  font-bold text-gray-800 uppercase tracking-wide py-5">
+            About Amazing Nepal
+          </h4>
+        </div>
+
+        <p className={paragraph}>
+          Welcome to Amazing Nepal, your gateway to exploring the breathtaking
+          beauty of the Himalayas and experiencing the rich cultural heritage of
+          Nepal. Based in the United Kingdom, Amazing Nepal is dedicated to
+          providing unparalleled tourism experiences that showcase the wonders
+          of this Himalayan nation.
+          <br />
+          <br />
+          At Amazing Nepal, we are passionate about sharing the magic of Nepal
+          with travelers from around the world. Our team at Amazing Nepal is
+          committed to delivering top-notch travel services, ensuring that every
+          journey with us is nothing short of extraordinary. From the majestic
+          peaks of the Himalayas to the vibrant streets of Kathmandu, Amazing
+          Nepal offers a wide range of meticulously crafted tours and
+          expeditions that cater to every traveler's preferences. Whether you're
+          seeking a thrilling trekking adventure, a cultural immersion
+          experience, or a spiritual journey, we have the perfect itinerary for
+          you.
+          <br />
+          <br />
+          Our team comprises experienced and enthusiastic leaders who are
+          experts in organizing tours, treks, and expeditions across Nepal. With
+          our in-depth knowledge of the region and dedication to customer
+          satisfaction, we guarantee an unforgettable travel experience for our
+          clients. At Amazing Nepal, we prioritize customer satisfaction above
+          all else. We provide personalized trip itineraries tailored to your
+          preferences, ensuring that every aspect of your journey exceeds your
+          expectations.
+          <br />
+          <br />
+          {/* <div className="  ">
+          <Button
+            onClick={handleClick}
+            className="px-6 py-2 rounded-sm text-xs bg-gradient-to-r from-pink-600 to-purple-500  font-medium hover:from-pink-600 hover:to-purple-600 transition duration-50 text-white cursor-pointer"
+          >
+            Read More
+          </Button>
+        </div> */}
+          {/* From arranging accommodations to organizing transportation, we take care
+        of every detail so that you can focus on enjoying your adventure.
+        Whether you're a seasoned traveler or embarking on your first trip to
+        Nepal, Amazing Nepal is here to make your travel dreams a reality.
+        Contact us today to start planning your unforgettable journey to the
+        Land of the Himalayas. */}
+        </p>
+      </div>
+    </>
+  );
+};

@@ -11,6 +11,7 @@ import { DestinationPage } from "./Pages/destinationPage";
 import ServicePage from "./Pages/service";
 import { About } from "./Components/window/About/about";
 import { AboutPage } from "./Pages/about";
+import { RecommendedDetailsPage } from "./Pages/recommendedDetails";
 // import ServicePage from "./Pages/service";
 
 
@@ -26,6 +27,7 @@ function App() {
           />
           <Route path="destination" element={<DestinationPage />} />
           <Route path="destination/:id" element={<DestinationDetailsPage />} />
+          <Route path="recommended/:id" element={<RecommendedDetailsPage/>} />
           <Route path="nepal" element={<NepalPage />} />
           <Route path="services/:id" element={<ServiceDetailsPage />} />
           <Route path="service" element={<ServicePage />} />

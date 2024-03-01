@@ -10,26 +10,6 @@ import { destinationData } from "./data";
 const DestinationDetails = () => {
   const [showLoader, setShowLoader] = React.useState(true);
   const { id } = useParams<{ id: string }>();
-  const [isFixed, setIsFixed] = useState(false);
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      const flexContent = document.querySelector(".flex-content");
-      if (flexContent) {
-        const flexContentBottom = flexContent.getBoundingClientRect().bottom;
-        if (window.scrollY > flexContentBottom) {
-          setIsFixed(true);
-        } else {
-          setIsFixed(false);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   React.useEffect(() => {
     // Set a timeout to hide the loader after 3 seconds
@@ -48,7 +28,7 @@ const DestinationDetails = () => {
   ); // Find the corresponding service object
 
   if (!destination) {
-    return <div>Destination not found</div>;
+    return <Alert message="Destination not found" type="error" />;
   }
 
   return (
@@ -60,10 +40,10 @@ const DestinationDetails = () => {
           </div>
         </>
       ) : (
-        <div className="flex-content bg-gray-100 ">
-          <div className="container-xl mx-auto  ">
-            <div className="flex flex-col md:flex-row  p-5 gap-1 ">
-              <div className=" py-2 md:py-10 md:w-4/5 bg-white ">
+        <div className="flex-content ">
+          <div className="container-xl mx-auto   px-5  ">
+            <div className="flex flex-col md:flex-row  gap-1 ">
+              <div className="  px-5  md:w-4/5 bg-white ">
                 <ImageViewer
                   images={destination.imageUrl}
                   title={destination.title}
@@ -84,14 +64,12 @@ const DestinationDetails = () => {
               </div>
 
               <>
-                {!isFixed && (
-                  <div className="fixed top-1/5 z-[100] right-0 w-full md:w-1/5 py-5 md:py-5 bg-white mr-4 md:mr-0">
-                    <div className="text-right">
-                      <Quote />
-                      <ContactPerson />
-                    </div>
+                <div className="md:w-1/5 ">
+                  <div className="text-right ">
+                    <Quote />
+                    <ContactPerson />
                   </div>
-                )}
+                </div>
               </>
             </div>
           </div>
@@ -126,25 +104,21 @@ export const ImageViewer = ({ images, title, price }: ImageViewProps) => {
     "aspect-[16/9] bg-white w-full h-full cursor-pointer lg:object-cover p-1  shadow-sm  rounded-lg  lg:h-[300px] lg:max-w-[350px] ";
   return (
     <>
-      <div className="text-center ml-2 relative mb-10">
-        <div className="flex flex-wrap justify-around mb-2 ">
-          <h4 className="text-lg  font-black text-gray-800 uppercase tracking-wide">
+      <div className="text-center ml-2 relative mb-10 bg-gradient-to-r from-blue-400 via-red-400 to-pink-500 py-3 md:py-5">
+        <div className="flex flex-wrap justify-around mb-2">
+          <h4 className="text-lg font-black text-white uppercase tracking-wide">
             {title}
           </h4>
-          <div className="flex items-center justify-between bg-gradient-to-r from-blue-400  to-pink-500 rounded-lg p-4 shadow-lg">
+          <div className="flex items-center justify-between  rounded-lg  ">
             <div className="flex items-center">
-              <svg
-                className="w-6 h-6 fill-current text-white mr-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" />
-              </svg>
-              <p className="mb-1 text-white text-lg font-bold">£{price}</p>
+              <p className="mb-1 text-white text-lg font-bold">£{price}</p>{" "}
+              &nbsp;
+              <p className="text-white text-sm font-normal">Per Person</p>
             </div>
-            <p className="text-white text-sm font-normal">Per Person</p>
           </div>
         </div>
       </div>
+
       <div className="">
         <PhotoProvider>
           <div className="flex flex-wrap justify-center mx-auto">
@@ -207,10 +181,10 @@ export const Information = ({
     setShowOverview(true);
   }, []);
 
-  const paragraph = ` font-bold md:p-3 shadow-md text-xs md:text-sm cursor-pointer  cursor-pointer leading-relaxed lg:leading-8 text-gray-900 hover:bg-gray-100`;
+  const paragraph = ` font-bold md:p-5  shadow-md   text-xs md:text-sm cursor-pointer  cursor-pointer leading-relaxed   hover:bg-gray-100`;
   return (
     <>
-      <div className="bg-white md:p-4 ">
+      <div className="bg-white md:p-4  ">
         <div className="grid grid-cols-4 divide-x divide-ui-purple text-center">
           <p
             className={`${paragraph} ${
@@ -357,9 +331,9 @@ export const Quote = () => {
   const heading = `text-lg uppercase cursor-pointer font-semibold cursor-pointer leading-relaxed lg:leading-8 text-gray-700 hover:bg-gray-100`;
   return (
     <>
-      <div className="w-full justify-center p-2 ">
+      <div className="w-full justify-center p-2 shadow-2xl ">
         <div>
-          <h1 className={`${heading} text-ui-purple text-justify p-2 `}>
+          <h1 className={`${heading} text-pink-500 text-center p-2 `}>
             Request a Quote
           </h1>
         </div>
@@ -458,7 +432,7 @@ const Overview: React.FC<ModalProps> = ({
   listofHighlights,
 }) => {
   const paragraph =
-    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-500 text-break-all ";
+    " text-sm p-3 text-justify  font-normal cursor-pointer leading-relaxed text-gray-500 text-break-all ";
   return (
     <div>
       <div className="bg-white  py-5    h-full overflow-hidden transform transition-all ">
@@ -618,22 +592,22 @@ const UsefulInformationContent: React.FC<UsefulModalProps> = ({
 
 export const ContactPerson = () => {
   const paragraph =
-    "text-xs font-normal text-center leading-relaxed text-gray-500 text-break-all";
+    "text-xs font-normal text-center leading-relaxed text-neutral-600 dark:text-gray-400 text-break-all";
   return (
     <>
-      <div className="w-full justify-center p-2 ">
-        <div className="w-full max-w-md bg-white  rounded-md shadow-lg dark:bg-gray-800 dark:border-gray-700">
+      <div className="w-full justify-center p-2   ">
+        <div className="w-full max-w-md bg-white shadow-xl  rounded-md  dark:bg-gray-800 dark:border-gray-700">
           <div className="flex flex-wrap justify-center p-5 pb-10">
             <img
               className="w-20 h-20 mb-3 rounded-full shadow-lg"
               src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
               alt="Contact Person"
             />
-            <div className="">
+            <div className="text-center">
               <p className={paragraph}>
                 Speak to a Nepal, the Himalayas & the best Tours Expert
               </p>
-              <h5 className="mb-1 text-xl font-medium  dark:text-white text-ui-purple">
+              <h5 className="mb-1 text-xl font-black  dark:text-white text-pink-500">
                 Bonnie Green
               </h5>
               <h3 className="mb-3  text-sm font-normal text-gray-900 dark:text-gray-400">

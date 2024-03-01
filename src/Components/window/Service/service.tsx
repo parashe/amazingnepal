@@ -33,13 +33,29 @@ export const Services: React.FC = () => {
         </div>
       ) : (
         <div className="mt-10 md:mt-16 container mx-auto">
-          <Title title="WHAT WE OFFER ? " />
+          <div className="flex items-center justify-center ">
+            <h3
+              className="text-3xl md:text-4xl max-w-4xl  font-extrabold  text-gray-900 "
+              style={{ lineHeight: "1.2" }}
+            >
+              <p>
+                {" "}
+                <span className="text-gray-800  uppercase font-extrabold leading-10">
+                  Our Services{" "}
+                </span>
+              </p>
 
+              <p className="text-neutral-600 md:mt-3 p-2  font-medium text-sm  dark:text-neutral-400">
+                Explore the wonders of Nepal with our diverse range of services
+                tailored to enhance your travel experience.
+              </p>
+            </h3>
+          </div>
           {/* <div className="flex flex-wrap flex-1 gap-6 mt-5 md:mt-20  mx-auto p-3 "> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:pt-20 p-5">
             {servicesData.map((service, index) => (
               <Card>
-                <div className="absolute top-0 right-0 bg-gradient-to-r from-pink-400 via-red-500 to-purple-500 text-white font-bold py-1 px-5 rounded-tr-lg rounded-bl-full transform hover:scale-105 transition-transform">
+                <div className="absolute top-0 right-0 bg-gradient-to-r from-blue-400 via-red-400 to-pink-500 text-white font-bold py-1 px-5 rounded-tr-lg rounded-bl-full transform hover:scale-105 transition-transform">
                   <span className="text-xs">Features</span>
                 </div>
 
@@ -60,9 +76,9 @@ export const Services: React.FC = () => {
                   <div className="text-center  ">
                     <Button
                       onClick={() => handleOnClickSeeMore(service.service_id)}
-                      className="px-4 py-2 rounded-sm text-xs bg-gradient-to-r   from-pink-400 via-red-500 to-purple-500  font-medium hover:from-pink-600 hover:to-purple-600 transition duration-50 text-white cursor-pointer"
+                      className="px-4 py-2 uppercase rounded-sm text-xs bg-gradient-to-r from-blue-400 via-red-400 to-pink-500  font-medium hover:from-pink-600 hover:via-red-400 hover:to-blue-500 transition duration-50 text-white cursor-pointer"
                     >
-                      See more
+                      Explore Details
                     </Button>
                   </div>
                 </div>
@@ -97,8 +113,6 @@ export const ServiceDetails: React.FC = () => {
     return <div>Service not found</div>;
   }
 
-  const paragraph = `text-sm p-1  font-normal  cursor-pointer cursor-pointer leading-relaxed lg:leading-relaxed text-gray-700 `;
-
   return (
     <>
       {showLoader ? (
@@ -110,30 +124,29 @@ export const ServiceDetails: React.FC = () => {
       ) : (
         <div className="container mx-auto px-4">
           <div className="w-full h-full text-justify py-8 md:py-10">
-            <h4 className="text-xl font-bold text-gray-800 uppercase tracking-wide py-5">
+            <h4 className="text-xl text-center  font-black  uppercase tracking-wide py-5 md:py-10">
               {service.title}
             </h4>
             <img
               src={service.imageUrl}
               alt={service.title}
-              className="aspect-[16/9] object-contain rounded-lg max-h-[250px] p-2"
+              className="object-contain w-full h-64 md:h-80 rounded-lg shadow-lg mb-8"
             />
-            <p className={paragraph}>{service.content}</p>
-            <div className="border-t-2 border-gray-300 my-8"></div>{" "}
-            {/* Divider */}
-            <h2 className="text-lg font-bold text-neutral-600 mb-4">
-              What We Assist With:
+            <p className="text-sm text-neutral-600 font-semibold leading-relaxed mb-6">
+              {service.content}
+            </p>
+            <hr className="border-t-2 border-gray-300 my-8" /> {/* Divider */}
+            <h2 className="text-xl font-black text-neutral-600 mb-4">
+              Our Areas of Assistance:
             </h2>
-            <ul className="list-disc pl-4">
+            <ul className="list-disc pl-6 text-sm text-gray-800">
               {service.detailsContent.map((detail, index) => (
-                <li className={paragraph} key={index}>
+                <li className="mb-2" key={index}>
                   {detail}
                 </li>
               ))}
             </ul>
           </div>
-          <Services />{" "}
-          {/* Uncomment if this is where you want to render the Services component */}
         </div>
       )}
     </>

@@ -1,16 +1,24 @@
+import React from "react";
+import Layout from "../Components/layout";
+import { DestinationPageContent } from "../Components/window/Destination/destination";
+import { Breadcrumb } from "../Components/window/Breadcrumb/breadcrumb";
 
-import React from 'react'
-import Layout from '../Components/layout'
-import { DestinationPageContent } from '../Components/window/Destination/destination'
+export const DestinationPage = () => {
+  const breadcrumbItems = [
+    {
+      label: "Destination",
+      href: "/destination",
+      imageUrl: "/assets/breadcrumb/breadcrumbdestination.webp",
+      alt: "Breadcrumb Destination",
+      description: "Explore all the destinations of Nepal",
+    },
+  ];
 
-
-
-export const DestinationPage= () => {
   return (
-    <>
     <Layout>
-    <DestinationPageContent/>
+      <Breadcrumb items={breadcrumbItems} />
+      <div className="container mx-auto px-4 py-10"></div>
+      <DestinationPageContent />
     </Layout>
-    </>
-  )
-}
+  );
+};

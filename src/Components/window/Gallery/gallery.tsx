@@ -43,7 +43,7 @@ const Gallery = () => {
                     Gallery
                   </span>
                 </h2>
-                <p className="text-gray-500 md:mt-3 dark:text-neutral-500">
+                <p className="text-gray-500 md:mt-3 dark:text-neutral-500 text-sm">
                 Explore our mesmerizing gallery and lose yourself in a captivating array of stunning visuals, each more breathtaking than the last.
                 </p>
               </div>

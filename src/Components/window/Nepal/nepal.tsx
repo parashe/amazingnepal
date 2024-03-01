@@ -26,33 +26,37 @@ const Vision = () => {
     <section className={linearSectionClassName}>
       {showLoader ? (
         <>
-        <div className="container mx-auto py-2">
-          <LoadingSkeleton/>
+          <div className="container mx-auto py-2">
+            <LoadingSkeleton />
           </div>
         </>
       ) : (
         <>
           <div className=" container mx-auto py-2">
-            <div className="py-10 text-center ">
-              <h3
-                className="text-5xl md:text-6xl font-extrabold uppercase  text-gray-900 space-y-10"
-                style={{ lineHeight: "1.2" }}
-              >
-                <p>
-                  {" "}
-                  <span className="text-pink-500 font-extrabold leading-10">
-                    Discover{" "}
-                  </span>{" "}
-                
-                  <span className=" font-extrabold">the Magic of</span> <br />
-                </p>
+            <div className="text-center mx-auto  gap-6 py-5">
+              <div className="flex items-center justify-center ">
+                <h3
+                  className="text-5xl md:text-6xl max-w-4xl  font-extrabold uppercase  text-gray-900 "
+                  style={{ lineHeight: "1.2" }}
+                >
+                  <p>
+                    {" "}
+                    <span className="text-pink-500 font-extrabold leading-10">
+                      Discover{" "}
+                    </span>{" "}
+                    <span className=" font-extrabold">the Magic of</span> <br />
+                  </p>
 
-                <span className="text-pink-500 mb-0 ">Nepal</span>
-              </h3>
+                  <span className="text-pink-500 mb-0 ">Nepal</span>
 
-              <p className="text-center mt-2 lg:mt-5 leading-relaxed font-normal text-sm lg:text-md text-neutral-500">
-                Unleash Your Spirit of Adventure in the Heart of the Himalayas
-              </p>
+                  <p className="text-neutral-600 md:mt-3 p-2  text-xs md:text-sm dark:text-neutral-400">
+                    Embrace the boundless allure of adventure as you journey
+                    into the majestic heart of the Himalayas. Here, amidst
+                    towering peaks and sweeping vistas, lies an invitation to
+                    awaken your spirit of exploration and discovery.
+                  </p>
+                </h3>
+              </div>
             </div>
 
             <div className="p-5 space-y-5 ">
@@ -219,5 +223,3 @@ const Vision = () => {
 };
 
 export default Vision;
-
-

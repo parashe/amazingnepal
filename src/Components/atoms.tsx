@@ -47,10 +47,8 @@ export const Title = ({ title }: TitleProps) => (
   </div>
 );
 
-
-
 interface ModalProps extends PropsWithChildren {
-  onClose: () => void;
+  onClose?: () => void;
 }
 
 export const Modal: React.FC<ModalProps> = ({ onClose, children }) => (
@@ -199,7 +197,7 @@ export const Alert: React.FC<AlertProps> = ({
                 <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
               </svg>
             )}
-            <span className="py-2 text-justify font-small text-xs sm:inline">
+            <span className="py-2 font-bold text-justify font-small text-xs sm:inline">
               {message}
             </span>
           </div>
@@ -365,20 +363,18 @@ export const GalleryLoadingSkeleton = () => {
   );
 };
 
-
 export const Address = () => {
   const paragraph =
     " text-sm p-3 text-center  cursor-pointer leading-normal text-gray-900 text-break-all ";
   return (
-    <Card>
+    <div className="mt-1 w-full relative h-full  md:max-w-md  border border-gray-100  bg-white  rounded-lg shadow-2xl cursor-pointer  hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 ">
       <div className="w-full p-5 ">
-        <h4 className="text-lg  font-bold text-gray-800 uppercase tracking-wide ">
+        <h4 className="text-lg  font-black text-pink-500 uppercase tracking-wide ">
           Address
         </h4>
-        <p className={paragraph}>15 High Street West Bromwich</p>
-        <p className={paragraph}>B70, Birmingham</p>
+        <p className={paragraph}> West Bromwich, Birmingham</p>
         <p className={`${paragraph} font-bold `}>United Kingdom</p>
       </div>
-    </Card>
+    </div>
   );
 };

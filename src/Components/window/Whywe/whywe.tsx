@@ -29,7 +29,23 @@ const Whywe = () => {
   return (
     <div className="bg-gradient-to-r from-gray-50 via-blue-50 to-pink-50 opacity-100 dark:bg-gray-900">
       <div className="mt-0 md:pt-28 md:pb-24 container mx-auto pt-5 ">
-        <Title title="Why Choose Us ?" />
+        <div className="text-center mx-auto max-w-4xl gap-6">
+          <div className="flex items-center justify-center ">
+            <h2 className="text-2xl md:text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
+              <span className=" font-black bg-gradient-to-r from-blue-400 via-red-400 to-pink-500 inline-block text-transparent bg-clip-text lg:text-4xl   lg:font-extrabold ">
+                WHY WE ARE THE BEST ?{" "}
+              </span>
+              <p className="text-neutral-600 md:mt-3 p-2  text-xs md:text-sm dark:text-neutral-400">
+                {" "}
+               we pride ourselves on delivering unparalleled travel experiences
+                that set us apart from the rest. Our dedication to excellence is
+                evident in every aspect of our service.
+              </p>
+            </h2>
+          </div>
+
+          <p className="text-neutral-600 md:mt-3 text-sm dark:text-neutral-400"></p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:pt-24 md:pb-24 w-full p-5">
           {data.map((item) => (
             <div
