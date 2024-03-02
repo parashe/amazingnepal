@@ -15,6 +15,9 @@ const ServicePage = () => {
       description: "Discover Our Offerings",
     },
   ];
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Layout>

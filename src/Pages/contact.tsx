@@ -18,6 +18,10 @@ export const ContactPage= () => {
       description: "Contact Us",
     },
   ];
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
 

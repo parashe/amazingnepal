@@ -13,6 +13,9 @@ export const DestinationDetailsPage = () => {
       description: "Explore more details",
     },
   ];
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Layout>

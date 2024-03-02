@@ -19,7 +19,9 @@ export const NepalPage= () => {
       description: "Our Pride of Nepal",
     },
   ];
-
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { LoadingSkeleton, Title } from "../../atoms";
+import { LoadingSkeleton } from "../../atoms";
 import { destinationData } from "./data";
 import { DestinationCard } from "../../UI/Card/card";
 import { Link } from "react-router-dom";

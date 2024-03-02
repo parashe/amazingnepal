@@ -15,6 +15,9 @@ export const RecommendedDetailsPage = () => {
     },
   ];
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Layout>
       <Breadcrumb items={breadcrumbItems} />

@@ -18,6 +18,10 @@ export const ServiceDetailsPage= () => {
       description: "Discover Our Service Details",
     },
   ];
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
     <Layout>
