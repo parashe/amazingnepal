@@ -5,7 +5,7 @@ import Whywe from "../Components/window/Whywe/whywe";
 import Destination from "../Components/window/Destination/destination";
 import Rating from "../Components/window/Rating/rating";
 import Recommended from "../Components/window/Recommended/recommended";
-import {  GalleryLoadingSkeleton, LoadingSkeleton } from "../Components/atoms";
+import { GalleryLoadingSkeleton, LoadingSkeleton } from "../Components/atoms";
 
 export const HomePage = () => {
   const [showLoader, setShowLoader] = React.useState(true);
@@ -43,6 +43,7 @@ export const HomePage = () => {
       <Services/> */}
           <Destination />
           <Recommended />
+          <div className="h-20"></div>
           <Whywe />
           <Rating />
         </Layout>

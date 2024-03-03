@@ -330,7 +330,6 @@ export const LoadingSkeleton = () => {
   );
 };
 
-
 export const GalleryLoadingSkeleton = () => {
   return (
     <div className="flex justify-center items-center h-screen">
@@ -364,7 +363,6 @@ export const GalleryLoadingSkeleton = () => {
     </div>
   );
 };
-
 
 export const Address = () => {
   const paragraph =

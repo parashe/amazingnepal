@@ -4,7 +4,6 @@ import Whywe from "../Components/window/Whywe/whywe";
 import AboutRating from "../Components/window/Rating/rating";
 
 export const AboutPage = () => {
-
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
