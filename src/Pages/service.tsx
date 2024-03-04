@@ -22,7 +22,9 @@ const ServicePage = () => {
     <>
       <Layout>
         <Breadcrumb items={breadcrumbItems} />
+        <div className="container mx-auto px-4 py-10"></div>
         <Services />
+        <div className="container mx-auto px-4 py-10"></div>
         <AboutRating />
       </Layout>
     </>

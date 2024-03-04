@@ -9,7 +9,6 @@ import { ContactPage } from "./Pages/contact";
 import { GalleryPage } from "./Pages/gallery";
 import { DestinationPage } from "./Pages/destinationPage";
 import ServicePage from "./Pages/service";
-import { About } from "./Components/window/About/about";
 import { AboutPage } from "./Pages/about";
 import { RecommendedDetailsPage } from "./Pages/recommendedDetails";
 // import ServicePage from "./Pages/service";

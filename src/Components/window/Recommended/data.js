@@ -6,22 +6,22 @@ export const recommendData = [
       "Bursting at the seams with ancient palaces, sacred temples, and colorful bazaars, Kathmandu boasts a rich cultural heritage.",
     imageUrl: "/assets/recommended/kathmandu.jpeg",
     attractions: [
-        {
-            id: 10,
-            place: "Kathmandu Durbar Square",
-            description:
-              "Kathmandu Durbar Square, nestled in the heart of Kathmandu city, stands as a testament to Nepal's rich cultural and historical legacy. This historic plaza, steeped in centuries of tradition, serves as a vibrant hub where the past seamlessly intertwines with the present. Adorned with a myriad of architectural marvels, Kathmandu Durbar Square mesmerizes visitors with its grandeur and charm. At the heart of Kathmandu Durbar Square lie majestic palaces, each bearing the imprint of ancient dynasties that once ruled the Kathmandu Valley. These palaces, with their intricate carvings and ornate facades, offer a glimpse into the opulent lifestyles of Nepal's erstwhile monarchs. Among them stands the imposing Hanuman Dhoka Palace, a sprawling complex that served as the royal residence of the Malla kings. Its sprawling courtyards and regal halls echo with tales of bygone eras, inviting visitors to immerse themselves in the splendor of Nepal's royal heritage.",
-            imageUrl: [
-              {
-                url: "/assets/recommended/kathmandu1.png",
-                id: 1,
-              },
-              {
-                url: "/assets/recommended/kathmandu2.jpeg",
-                id: 2,
-              },
-            ],
+      {
+        id: 10,
+        place: "Kathmandu Durbar Square",
+        description:
+          "Kathmandu Durbar Square, nestled in the heart of Kathmandu city, stands as a testament to Nepal's rich cultural and historical legacy. This historic plaza, steeped in centuries of tradition, serves as a vibrant hub where the past seamlessly intertwines with the present. Adorned with a myriad of architectural marvels, Kathmandu Durbar Square mesmerizes visitors with its grandeur and charm. At the heart of Kathmandu Durbar Square lie majestic palaces, each bearing the imprint of ancient dynasties that once ruled the Kathmandu Valley. These palaces, with their intricate carvings and ornate facades, offer a glimpse into the opulent lifestyles of Nepal's erstwhile monarchs. Among them stands the imposing Hanuman Dhoka Palace, a sprawling complex that served as the royal residence of the Malla kings. Its sprawling courtyards and regal halls echo with tales of bygone eras, inviting visitors to immerse themselves in the splendor of Nepal's royal heritage.",
+        imageUrl: [
+          {
+            url: "/assets/recommended/kathmandu1.png",
+            id: 1,
           },
+          {
+            url: "/assets/recommended/kathmandu2.jpeg",
+            id: 2,
+          },
+        ],
+      },
 
       {
         id: 8,
@@ -60,8 +60,6 @@ export const recommendData = [
           },
         ],
       },
-
-     
 
       {
         id: 11,
@@ -173,4 +171,16 @@ export const recommendData = [
       "Experience the serene ambiance of Lumbini, the birthplace of Lord Buddha, and immerse yourself in the spiritual essence of this sacred pilgrimage site.",
     imageUrl: "/assets/recommended/lumbini.jpeg",
   },
+  {
+    "id": 7,
+    "place": "Nagarkot",
+    "description": "Enjoy breathtaking views of the Himalayas from Nagarkot, a scenic hilltop destination known for its panoramic sunrise and sunset views.",
+    "imageUrl": "/assets/recommended/nagarkot.jpeg"
+  },
+  {
+    "id": 8,
+    "place": "Bandipur",
+    "description": "Experience the charm of Bandipur, a picturesque hilltop town renowned for its well-preserved Newari architecture and stunning mountain vistas.",
+    "imageUrl": "/assets/recommended/bandipur.jpeg"
+  }
 ];

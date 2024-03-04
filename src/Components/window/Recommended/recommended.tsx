@@ -19,7 +19,7 @@ const Recommended: React.FC<RecommendedProps> = ({
   };
 
   const staticClassName =
-    "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 gap-6 md:pt-20 p-5";
+    "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-4 gap-0 md:pt-20 p-5";
   const finalClassName = className + " " + staticClassName;
   return (
     <div className="mt-10 md:mt-20 container mx-auto">

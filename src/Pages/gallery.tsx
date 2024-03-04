@@ -1,15 +1,9 @@
+import React from "react";
+import Layout from "../Components/layout";
+import Gallery from "../Components/window/Gallery/gallery";
+import { Breadcrumb } from "../Components/window/Breadcrumb/breadcrumb";
 
-import React from 'react'
-import Layout from '../Components/layout'
-import Gallery from '../Components/window/Gallery/gallery'
-import { Breadcrumb } from '../Components/window/Breadcrumb/breadcrumb';
-
-
-
-
-
-export const GalleryPage= () => {
-
+export const GalleryPage = () => {
   const breadcrumbItems = [
     {
       label: "Gallery",
@@ -26,10 +20,11 @@ export const GalleryPage= () => {
 
   return (
     <>
-    <Layout>
-      <Breadcrumb items={breadcrumbItems} />
-<Gallery/>
-    </Layout>
+      <Layout>
+        <Breadcrumb items={breadcrumbItems} />
+        <div className="container mx-auto px-4 md:py-5"></div>
+        <Gallery />
+      </Layout>
     </>
-  )
-}
+  );
+};

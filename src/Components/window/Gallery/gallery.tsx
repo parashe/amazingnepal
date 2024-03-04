@@ -1,7 +1,7 @@
 import React from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import { galleryData } from "./data";
-import { GalleryLoadingSkeleton, Title } from "../../atoms";
+import { GalleryLoadingSkeleton } from "../../atoms";
 
 const Gallery = () => {
   const [showLoader, setShowLoader] = React.useState(true);

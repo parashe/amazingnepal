@@ -41,19 +41,19 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
 }) => {
   return (
     <Link to={`/destination/${destination_id}`}>
-      <div className="w-full  gap-x-5 md:max-w-sm  bg-white border rounded-lg border-gray-200 shadow-lg cursor-pointer shadow-ui-third-theme hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 relative">
+      <div className="w-full   md:max-w-sm  bg-white  rounded-lg  shadow-xl cursor-pointer  hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 relative">
         <div className="w-full relative">
           <div className="relative ">
             <img
-              className="aspect-[16/9] object-cover w-full rounded-lg h-full max-h-[220px] brightness-75 "
+              className="aspect-[16/9] object-cover w-full rounded-t-lg h-full  max-h-[220px] brightness-75 "
               src={imageUrl && imageUrl[0]?.url}
               alt=""
             />
           </div>
 
-          <div className="absolute top-0 left-0 ml-0 bg-pink-500  ">
-            <p className="text-white px-5 py-2 text-xs font-semibold">Nepal</p>
-          </div>
+          {/* <div className="absolute top-0 left-0 ml-0 bg-pink-500 rounded-lg shadow-lg">
+  <p className="text-white px-5 py-2 text-xs font-semibold">Nepal</p>
+</div> */}
         </div>
 
         <div className="p-5">
@@ -97,31 +97,32 @@ export const RecommendedCard: React.FC<RecommendedCardProps> = ({
 }) => {
   return (
     <Link to={`/recommended/${id}`}>
-      <div className="w-full  gap-x-5 md:max-w-sm  bg-white border border-gray-200  rounded-xs  shadow-sm cursor-pointer hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 relative">
-        <div className="w-full relative">
-          <div className="relative ">
-            <img
-              className="aspect-[16/9] object-cover w-full rounded-xs h-full min-h-[250px] max-h-[400px] brightness-75 "
-              src={imageUrl}
-              alt=""
-            />
-          </div>
-        </div>
-
-        <div className="p-5">
-          <h5 className="mb-0 text-auto font-bold tracking-tight text-black leading-relaxed dark:text-white">
-            {place}
-          </h5>
-          <div className="text-justify flex flex-wrap justify-center py-3">
-            <p className="mb-1 text-sm  px-3 text-gray-900 dark:text-gray-400 ">
-              {description}
-            </p>
-          </div>
-          <button className="px-5 py-3 text-center uppercase  text-xs font-bold  bg-pink-50 text-pink-500 hover:bg-pink-100 transition duration-300 cursor-pointer rounded-sm ">
+    <div className="relative w-full md:max-w-sm bg-white border border-gray-200 rounded-xs shadow-sm cursor-pointer overflow-hidden recommended-content">
+      <div className="relative">
+        <img
+          className="w-full h-full md:h-[400px] object-cover"
+          src={imageUrl}
+          alt=""
+        />
+        <div className="absolute inset-0 bg-black opacity-60"></div>
+      </div>
+      <div className="absolute inset-0 flex flex-col justify-end p-5">
+        <h5 className="mb-2 text-lg font-bold text-white uppercase tracking-tight leading-snug">
+          {place}
+        </h5>
+  
+        <div className="recommended-details px-3 py-3 transition-opacity duration-300 opacity-0 h-full absolute inset-0 top-1/3 bg-black bg-opacity-50">
+          <p className="mb-4 md:px-4 md:py-1 text-white text-sm  dark:text-gray-400">
+            {description}
+          </p>
+          <button className="px-5 py-3 text-center uppercase text-xs font-bold bg-pink-500 text-white hover:bg-pink-600 transition duration-300 cursor-pointer rounded-sm">
             View Details
           </button>
         </div>
       </div>
-    </Link>
+    </div>
+  </Link>
+  
+  
   );
 };

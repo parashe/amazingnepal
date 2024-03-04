@@ -5,7 +5,7 @@ import Whywe from "../Components/window/Whywe/whywe";
 import Destination from "../Components/window/Destination/destination";
 import Rating from "../Components/window/Rating/rating";
 import Recommended from "../Components/window/Recommended/recommended";
-import { GalleryLoadingSkeleton, LoadingSkeleton } from "../Components/atoms";
+import {  HomeLoadingSkeleton,} from "../Components/atoms";
 
 export const HomePage = () => {
   const [showLoader, setShowLoader] = React.useState(true);
@@ -14,7 +14,7 @@ export const HomePage = () => {
     // Set a timeout to hide the loader after 3 seconds
     const timeoutId = setTimeout(() => {
       setShowLoader(false);
-    }, 500);
+    }, 1000);
 
     // Clean up the timeout when the component unmounts
     return () => {
@@ -30,9 +30,9 @@ export const HomePage = () => {
     <>
       {showLoader ? (
         <>
-          <div className="text-center">
-            <GalleryLoadingSkeleton />
-            <LoadingSkeleton />
+          <div >
+           
+            <HomeLoadingSkeleton />
           </div>
         </>
       ) : (

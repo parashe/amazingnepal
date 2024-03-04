@@ -363,6 +363,42 @@ export const GalleryLoadingSkeleton = () => {
     </div>
   );
 };
+export const HomeLoadingSkeleton = () => {
+  return (
+    <div className="flex justify-center items-center h-screen">
+      <div className="container mx-auto px-4 py-10">
+        {/* Navbar Skeleton */}
+        <div className="flex justify-between items-center mb-8 md:mt-64">
+          <div className="w-full h-6 bg-gray-200 rounded-md animate-pulse"></div>
+         
+        </div>
+
+        {/* Slider Skeleton */}
+        <div className="mb-8">
+          <div className="w-full h-64 bg-gray-200 rounded-md animate-pulse"></div>
+        </div>
+
+        {/* Card Skeleton */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {[...Array(8)].map((_, index) => (
+            <div key={index} className="bg-white rounded-md shadow-md animate-pulse">
+              <div className="h-48 bg-gray-200 rounded-t-md"></div>
+              <div className="p-4 flex flex-col justify-center items-center space-y-2 ">
+                <div className="w-24 text-center h-4 bg-gray-200 rounded-md"></div>
+                {/* <div className="w-full h-3 bg-gray-200 rounded-md"></div> */}
+                <div className="flex gap-6 justify-between">
+                  <div className="w-12 h-4 bg-gray-200 rounded-md"></div>
+                  <div className="w-12 h-4 bg-gray-200 rounded-md"></div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 
 export const Address = () => {
   const paragraph =

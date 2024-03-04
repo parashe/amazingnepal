@@ -16,3 +16,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.recommended-content .recommended-details {
+  opacity: 0;
+}
+
+.recommended-content:hover .recommended-details {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+

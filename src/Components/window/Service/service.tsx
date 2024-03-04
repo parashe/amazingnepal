@@ -1,7 +1,7 @@
 import React from "react";
 import { servicesData } from "./data";
 import { Card } from "../../UI/Card/card";
-import { Button, LoadingSkeleton, Title } from "../../atoms";
+import { Button, LoadingSkeleton } from "../../atoms";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
