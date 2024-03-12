@@ -72,10 +72,6 @@ const Destination: React.FC<DestinationProps> = ({
               <ArrowRight color="white" className="w-6 h-6" />
             </button>
           </Link>
-       
-        <span className="hidden group-hover:inline-block cursor-pointer absolute top-0 left-0 w-full bg-pink-500 text-white text-xs px-2 py-1 rounded shadow-lg">
-          See All
-        </span>
         </div>
       </div>
       <div className={finalClassName}>
