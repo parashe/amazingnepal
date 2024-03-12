@@ -4,6 +4,7 @@ import { LoadingSkeleton } from "../../atoms";
 import { destinationData } from "./data";
 import { DestinationCard } from "../../UI/Card/card";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "../../svg";
 
 interface DestinationProps {
   className?: string;
@@ -25,11 +26,13 @@ const Destination: React.FC<DestinationProps> = ({
   return (
     <div className="mt-10 md:mt-20 container mx-auto">
       {CalledFromPage ? (
-       <h1 className="text-2xl lg:text-4xl font-black text-black uppercase dark:text-white leading-relaxed"> More Destinations</h1>
-
-
+        <h1 className="text-2xl lg:text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
+          {" "}
+          More Destinations
+        </h1>
       ) : (
         <div className="text-center mx-auto w-full md:max-w-4xl gap-6">
+          <div className="flex"></div>
           <div className="flex items-center justify-center ">
             <h2 className="text-2xl lg:text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
               <span className=" font-black   text-pink-500 lg:font-extrabold ">
@@ -59,6 +62,22 @@ const Destination: React.FC<DestinationProps> = ({
       )}
 
       {/* <div className="flex flex-wrap flex-1 gap-6 mt-5 md:mt-20  mx-auto p-3 "> */}
+      <div className="flex flex-row justify-end px-5">
+        <div className="text-center relative group ">
+          <Link to="/destination">
+            <button
+              className=" animate-bounce mx-auto bg-pink-500 rounded-full  px-3 py-3 font-bold text-white hover:bg-pink-600 transition duration-300 uppercase"
+              onClick={handleOnClickSeeMore}
+            >
+              <ArrowRight color="white" className="w-6 h-6" />
+            </button>
+          </Link>
+       
+        <span className="hidden group-hover:inline-block cursor-pointer absolute top-0 left-0 w-full bg-pink-500 text-white text-xs px-2 py-1 rounded shadow-lg">
+          See All
+        </span>
+        </div>
+      </div>
       <div className={finalClassName}>
         {destinationData.map((service, index) => (
           <DestinationCard
@@ -67,16 +86,6 @@ const Destination: React.FC<DestinationProps> = ({
             onclick={handleOnClickSeeMore}
           />
         ))}
-      </div>
-      <div className="text-center my-10">
-        <Link to="/destination">
-        <button
-          className="mx-auto bg-pink-500 px-10 py-2 rounded-sm font-bold text-white hover:bg-pink-600 transition duration-300 uppercase"
-          onClick={handleOnClickSeeMore}
-        >
-          Explore All
-        </button>
-        </Link>
       </div>
     </div>
   );

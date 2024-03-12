@@ -30,7 +30,7 @@ export const Navbar = () => {
           >
             <img
               src="/logo.png"
-              className="h-10 w-full object-contain"
+              className="h-10 rounded-sm  w-full object-contain"
               alt="Amazing Logo"
             />
           </Link>

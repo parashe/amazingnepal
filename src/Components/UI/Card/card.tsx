@@ -41,7 +41,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
 }) => {
   return (
     <Link to={`/destination/${destination_id}`}>
-      <div className="w-full   md:max-w-sm  bg-white  rounded-lg  shadow-xl cursor-pointer  hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 relative">
+      <div className="w-full   md:max-w-sm  bg-white  rounded-lg  shadow-lg cursor-pointer  hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 relative">
         <div className="w-full relative">
           <div className="relative ">
             <img

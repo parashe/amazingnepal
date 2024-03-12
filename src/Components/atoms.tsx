@@ -253,7 +253,7 @@ export const RatingStars = ({ rating }: RatingProps) => {
   const filledStars = Array.from({ length: rating }, (_, index) => (
     <svg
       key={index}
-      className="w-4 h-4 text-yellow-300 ms-1"
+      className="w-4 h-4 text-pink-500 ms-1"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"

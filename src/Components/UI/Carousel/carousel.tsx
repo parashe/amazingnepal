@@ -40,6 +40,7 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
               src={slide}
               className="lg:brightness-50   h-[275px]  lg:h-full lg:w-full lg:max-h-[600px] w-full object-fill aspect-[19/10] object-center rounded-lg shadow-md"
               alt="slide"
+              loading="lazy"
             />
           </div>
         ))}

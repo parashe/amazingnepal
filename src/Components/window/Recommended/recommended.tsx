@@ -1,7 +1,5 @@
 import React from "react";
-
-import { Title } from "../../atoms";
-import {  RecommendedCard } from "../../UI/Card/card";
+import { RecommendedCard } from "../../UI/Card/card";
 import { recommendData } from "./data";
 
 interface RecommendedProps {
@@ -23,12 +21,27 @@ const Recommended: React.FC<RecommendedProps> = ({
   const finalClassName = className + " " + staticClassName;
   return (
     <div className="mt-10 md:mt-20 container mx-auto">
-      <Title title={`${title ? title : "WHERE TO GO IN NEPAL"}`} />
+      <p className="text-neutral-600 md:mt-3 text-xs dark:text-neutral-400"></p>
+      <div className="text-center mx-auto w-full md:max-w-4xl gap-6">
+        <div className="flex"></div>
+        <div className="flex items-center justify-center "  >
+          <h2 className="text-2xl  lg:text-4xl  max-w-2xl font-black text-black uppercase dark:text-white leading-relaxed" style={{ lineHeight: "1.2" }}>
+            Top{" "}
+            <span className=" font-black   text-pink-500 ">
+              Attractions{" "} &nbsp;
+            </span>
+            to Experience In{" "}
+            <span className=" font-black  text-pink-500">
+              NEPAL{" "}
+            </span>{" "}
+          </h2>
+        </div>
 
-      <p className="text-neutral-600 md:mt-3 text-xs dark:text-neutral-400">
-        Nepal's diverse regions offer an array of attractions, from the cultural
-        wonders of the Himalayas to the stunning beauty of the Nepal.
-      </p>
+        <p className="text-neutral-600 p-2 md:mt-3 text-xs dark:text-neutral-400">
+          Nepal's diverse regions offer an array of attractions, from the
+          cultural wonders of the Himalayas to the stunning beauty of the Nepal.
+        </p>
+      </div>
 
       <div className={finalClassName}>
         {recommendData.map((service, index) => (

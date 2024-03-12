@@ -1,7 +1,7 @@
 import React from "react";
 import nepalRatings from "./data"; // Importing the dummy rating data
-import {  Modal, RatingStars } from "../../atoms";
-import { CrossIcon } from "../../svg";
+import { Modal, RatingStars } from "../../atoms";
+import { ArrowRight, CrossIcon } from "../../svg";
 
 const AboutRating = () => {
   return (
@@ -71,12 +71,14 @@ const Rating = () => {
         <h4 className="text-lg font-bold text-gray-800 uppercase tracking-wide py-5">
           What Our Customers Say
         </h4>
-        <p
-          onClick={() => setOpen(true)}
-          className="text-sm cursor-pointer underline font-bold text-purple-500 uppercase tracking-wide py-5"
-        >
-          See All
-        </p>
+        <div className="flex items-center justify-center">
+          <button
+            className=" animate-bounce  bg-pink-500 rounded-full  px-3 py-3 font-bold text-white hover:bg-pink-600 transition duration-300 uppercase"
+            onClick={() => setOpen(true)}
+          >
+            <ArrowRight color="white" className="w-3 h-3" />
+          </button>
+        </div>
       </div>
       {nepalRatings.slice(0, 2).map((rating, index) => (
         <RatingItem key={index} rating={rating} />
@@ -112,7 +114,6 @@ export const SeeAllModal = ({ onClose }: ModalProps) => (
 
 export const AboutContent = () => {
   const paragraph = `text-sm p-1  text-justify font-normal  cursor-pointer cursor-pointer leading-relaxed lg:leading-relaxed text-gray-700 `;
-
 
   return (
     <div className="w-full h-full">
