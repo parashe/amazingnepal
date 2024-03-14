@@ -130,7 +130,7 @@ export const ServiceDetails: React.FC = () => {
             <img
               src={service.imageUrl}
               alt={service.title}
-              className="object-contain w-full h-64 md:h-80 rounded-lg shadow-lg mb-8"
+              className="object-contain w-full h-64 md:h-80 rounded-lg mb-8"
             />
             <p className="text-sm text-neutral-600 font-semibold leading-relaxed mb-6">
               {service.content}
