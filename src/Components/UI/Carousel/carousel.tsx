@@ -38,8 +38,11 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
           >
             <img
               src={slide}
-              className="lg:brightness-50   h-[275px]  lg:h-full lg:w-full lg:max-h-[600px] w-full object-fill aspect-[19/10] object-center rounded-lg shadow-md"
+              className="lg:brightness-50 h-[275px] lg:h-full lg:w-full lg:max-h-[600px] w-full object-fill aspect-[19/10] object-center rounded-lg shadow-md"
               alt="slide"
+              onError={(e) => {
+                e.currentTarget.src = "https://via.placeholder.com/1920x1080";
+              }}
               loading="lazy"
             />
           </div>
@@ -136,27 +139,27 @@ const CarouselCard = () => {
           </span>
         </p>
         <Link to="/destination">
-        <Button
-          onClick={() => {}}
-          className="px-3 py-2 text-xs uppercase font-bold rounded-sm bg-gradient-to-r from-blue-400 via-red-400 to-pink-500   hover:from-pink-600 hover:via-red-400 hover:to-blue-500 transition duration-50 text-white cursor-pointer"
-        >
-          Explore more
-          <svg
-            className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
+          <Button
+            onClick={() => {}}
+            className="px-3 py-2 text-xs uppercase font-bold rounded-sm bg-gradient-to-r from-blue-400 via-red-400 to-pink-500   hover:from-pink-600 hover:via-red-400 hover:to-blue-500 transition duration-50 text-white cursor-pointer"
           >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
-        </Button>
+            Explore more
+            <svg
+              className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 10"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M1 5h12m0 0L9 1m4 4L9 9"
+              />
+            </svg>
+          </Button>
         </Link>
       </div>
     </>
