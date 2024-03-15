@@ -113,7 +113,7 @@ export const SeeAllModal = ({ onClose }: ModalProps) => (
 );
 
 export const AboutContent = () => {
-  const paragraph = `text-sm p-1  text-justify font-normal  cursor-pointer cursor-pointer leading-relaxed lg:leading-relaxed text-gray-700 `;
+  const paragraph = `text-sm p-3 text-justify font-normal  cursor-pointer cursor-pointer leading-relaxed lg:leading-relaxed text-gray-700 `;
 
   return (
     <div className="w-full h-full">

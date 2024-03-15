@@ -608,11 +608,13 @@ export const ContactPerson = () => {
                 Speak to a Nepal, the Himalayas & the best Tours Expert
               </p>
               <h5 className="mb-1 text-xl font-black  dark:text-white text-pink-500">
-                Bonnie Green
+                TEKRAJ KAFLE
               </h5>
               <h3 className="mb-3  text-sm font-normal text-gray-900 dark:text-gray-400">
-                020 7084 6504
+                +447411079563 ,
+                <br/>info@visitamazingnepal.com
               </h3>
+           
             </div>
           </div>
         </div>

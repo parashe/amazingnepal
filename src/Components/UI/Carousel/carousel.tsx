@@ -22,85 +22,38 @@ const CarouselLayout: React.FC<CarouselProps> = ({ slides }) => {
   };
 
   return (
-    <div className="relative w-full  ">
-      <div
-        className="relative w-full  h-[275px] lg:h-full lg:max-h-[700px]  transition duration-500"
-        data-carousel="static"
-        data-carousel-auto="true"
-      >
+    <div className="relative carousel w-full">
+      <div className="carousel-item relative w-full">
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`${
+            className={`carousel-item relative w-full ${
               index === activeSlide ? "block" : "hidden"
-            } duration-700 ease-out`}
-            data-carousel-item={index === activeSlide ? "active" : ""}
+            }`}
           >
             <img
               src={slide}
-              className="lg:brightness-50 h-[275px] lg:h-full lg:w-full lg:max-h-[600px] w-full object-fill aspect-[19/10] object-center rounded-lg shadow-md"
-              alt="slide"
-              onError={(e) => {
-                e.currentTarget.src = "https://via.placeholder.com/1920x1080";
-              }}
+              className="lg:brightness-50 h-[275px] lg:h-full lg:w-full lg:max-h-[600px] w-full object-fill aspect-[19/10] object-center  shadow-md"
+              alt={`carousel images ${index}`}
               loading="lazy"
+              style={{
+                objectFit: "cover",
+                transform: "scale(1)",
+                transition: "transform 0.5s ease",
+              }}
             />
+            <div className="absolute flex justify-between left-5 right-5 top-1/2 transform -translate-y-1/2">
+              <button onClick={prevSlide} className="btn btn-circle">
+                ❮
+              </button>
+              <button onClick={nextSlide} className="btn btn-circle">
+                ❯
+              </button>
+            </div>
           </div>
         ))}
-
-        <button
-          type="button"
-          className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-prev
-          onClick={prevSlide}
-        >
-          <span className="inline-flex items-center justify-center  lg:w-12 lg:h-12 w-10 h-10 rounded-full bg-pink-500 dark:bg-gray-800/30 group-hover:bg-pink-600 dark:group-hover:bg-pink-600 ">
-            <svg
-              className="lg:w-5 lg:h-5 w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M5 1 1 5l4 4"
-              />
-            </svg>
-            <span className="sr-only">Previous</span>
-          </span>
-        </button>
-        {/* Previous button content */}
-
-        <button
-          type="button"
-          className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-next
-          onClick={nextSlide}
-        >
-          <span className="inline-flex  lg:w-12 lg:h-12 items-center justify-center w-10 h-10 rounded-full bg-pink-500 dark:bg-gray-800/30 group-hover:bg-pink-600 dark:group-hover:bg-pink-600 ">
-            <svg
-              className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="m1 9 4-4-4-4"
-              />
-            </svg>
-            <span className="sr-only">Next</span>
-          </span>
-        </button>
       </div>
+
       <div className=" md:block absolute top-1/2 left-1/2  -translate-y-1/2 md:left-1/3 -translate-x-1/2">
         <CarouselCard />
       </div>

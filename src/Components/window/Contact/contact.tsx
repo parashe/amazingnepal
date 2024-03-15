@@ -1,9 +1,15 @@
 import React, { useState } from "react";
-import { Address, Alert, Input, LoadingSkeleton, Spinner, TextArea } from "../../atoms";
+import {
+  Address,
+  Alert,
+  Input,
+  LoadingSkeleton,
+  Spinner,
+  TextArea,
+} from "../../atoms";
 import { ContactPerson } from "../Destination/destinationDetails";
 
 const Contact = () => {
-
   const [showLoader, setShowLoader] = React.useState(true);
 
   React.useEffect(() => {
@@ -19,46 +25,49 @@ const Contact = () => {
   }, []);
   return (
     <>
-    {showLoader ? (
-      <div className="text-center">
-        <LoadingSkeleton />
-      </div>
-    ) : (
-    <div className="container mx-auto ">
-      <div className="text-center mx-auto max-w-4xl gap-6 mb-5 md:mb-10">
-        <div className="flex items-center justify-center ">
-          <h2 className="text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
-            <span className=" font-black lg:text-4xl  text-black lg:font-extrabold ">
-              Contact 
-             {" "} <span className=" font-black lg:text-4xl  text-pink-500 lg:font-extrabold ">Us</span>
-            </span>
-          </h2>
+      {showLoader ? (
+        <div className="text-center">
+          <LoadingSkeleton />
         </div>
+      ) : (
+        <div className="container mx-auto ">
+          <div className="text-center mx-auto max-w-4xl gap-6 mb-5 md:mb-10">
+            <div className="flex items-center justify-center ">
+              <h2 className="text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
+                <span className=" font-black lg:text-4xl  text-black lg:font-extrabold ">
+                  Contact{" "}
+                  <span className=" font-black lg:text-4xl  text-pink-500 lg:font-extrabold ">
+                    Us
+                  </span>
+                </span>
+              </h2>
+            </div>
 
-        <p className="text-neutral-600 md:mt-3 text-sm dark:text-neutral-400">
-        We'd love to hear from you! Get in touch with us using the information below. Please fill out the form below to contact us.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-3 py-2">
-        <div className="col-span-3 ">
-          <div className="w-full p-3 shadow-2xl">
-            <AboutContact />
+            <p className="text-neutral-600 md:mt-3 text-sm dark:text-neutral-400">
+              We'd love to hear from you! Get in touch with us using the
+              information below. Please fill out the form below to contact us.
+            </p>
           </div>
-          <div className="w-full p-2">
-            <div className="flex flex-col md:flex-row ">
-              <Address />
-              <ContactPerson />
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-3 py-2">
+            <div className="col-span-3 ">
+              <div className="w-full p-3 md:p-5 shadow-2xl">
+                <AboutContact />
+              </div>
+              <div className="w-full p-2">
+                <div className="flex flex-col md:flex-row ">
+                  <Address />
+                  <ContactPerson />
+                </div>
+              </div>
+            </div>
+            <div className="w-full cols-1 md:col-span-1">
+              <div className="w-full p-2 shadow-2xl">
+                <ContactForm />
+              </div>
             </div>
           </div>
         </div>
-        <div className="w-full cols-1 md:col-span-1">
-          <div className="w-full p-2 shadow-2xl">
-            <ContactForm />
-          </div>
-        </div>
-      </div>
-    </div>
-    )}
+      )}
     </>
   );
 };
@@ -138,7 +147,7 @@ export const ContactForm = () => {
       <div className="w-full justify-center shadow-sm p-5 border rounded-lg  ">
         <div>
           <h4 className="text-lg text-center p-5 font-bold text-pink-500 uppercase tracking-wide py-5">
-            Create Message 
+            Create Message
           </h4>
         </div>
         <div className="text-center p-2 w-full ">

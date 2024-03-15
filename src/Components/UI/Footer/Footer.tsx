@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-100 mt-24 dark:bg-gray-900 bottom-0 lg:pt-12 ">
+    <footer className="bg-gray-50 shadow-xl mt-24 dark:bg-gray-900 bottom-0 lg:pt-12 ">
       <div className="py-10 mx-auto w-full max-w-screen-xl p-4 lg:py-20 sticky">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0 text-center">
             <Link to="/" className="flex items-center justify-center">
-              <img src="logo.png" className="h-28 rounded-md me-3" alt="FlowBite Logo" />
-              {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white font-serif">
-                Amazing Nepal
-              </span> */}
+              <img
+                src="logofooter.png"
+                className="h-[300px] w-[300px]  rounded-full  object-cover mix-blend-multiply"
+                alt="Footer Logo"
+              />
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -31,6 +32,20 @@ export const Footer = () => {
                   </Link>
                 </li>
                 <li className="mb-4">
+                  <Link to="/services" className="hover:underline">
+                    Services
+                  </Link>
+                </li>
+              
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                UseFul Link
+              </h2>
+              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+               
+                <li className="mb-4">
                   <Link to="/contact" className="hover:underline">
                     Contact
                   </Link>
@@ -38,29 +53,6 @@ export const Footer = () => {
                 <li className="mb-4">
                   <Link to="/destination" className="hover:underline">
                     Top Destination
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Follow us
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <Link
-                    to="https://github.com/parashe"
-                    className="hover:underline "
-                  >
-                    Github
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="https://www.linkedin.com/in/parash-giri-5203a3179/"
-                    className="hover:underline"
-                  >
-                    LinkedIn
                   </Link>
                 </li>
               </ul>
