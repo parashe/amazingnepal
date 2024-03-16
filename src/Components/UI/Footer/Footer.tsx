@@ -3,36 +3,36 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-50 shadow-xl mt-24 dark:bg-gray-900 bottom-0 lg:pt-12 ">
+    <footer className="bg-[#0f172a] shadow-xl mt-24 dark:bg-gray-900 bottom-0 lg:pt-12 ">
       <div className="py-10 mx-auto w-full max-w-screen-xl p-4 lg:py-20 sticky">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0 text-center">
             <Link to="/" className="flex items-center justify-center">
               <img
-                src="logofooter.png"
-                className="h-[300px] w-[300px]  rounded-full  object-cover mix-blend-multiply"
+                src="logo.png"
+                className="h-[200px] w-[200px]  rounded-full  object-cover "
                 alt="Footer Logo"
               />
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-500  uppercase dark:text-white">
                 Useful Link
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <Link to="/nepal" className="hover:underline">
+                  <Link to="/nepal" className="hover:underline hover:text-pink-500 ">
                     Nepal
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link to="/gallery" className="hover:underline">
+                  <Link to="/gallery" className="hover:underline hover:text-pink-500">
                     Gallery
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link to="/services" className="hover:underline">
+                  <Link to="/services" className="hover:underline hover:text-pink-500">
                     Services
                   </Link>
                 </li>
@@ -40,35 +40,35 @@ export const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-white">
                 UseFul Link
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                
                 <li className="mb-4">
-                  <Link to="/contact" className="hover:underline">
+                  <Link to="/contact" className="hover:underline hover:text-pink-500">
                     Contact
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link to="/destination" className="hover:underline">
+                  <Link to="/destination" className="hover:underline hover:text-pink-500">
                     Top Destination
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-white">
                 Legal
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <Link to="/#" className="hover:underline">
+                  <Link to="/#" className="hover:underline hover:text-pink-500">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link to="/#" className="hover:underline">
+                  <Link to="/#" className="hover:underline hover:text-pink-500">
                     Terms &amp; Conditions
                   </Link>
                 </li>
@@ -80,7 +80,7 @@ export const Footer = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2023{" "}
-            <Link to="https://flowbite.com/" className="hover:underline">
+            <Link to="https://flowbite.com/" className="hover:underline hover:text-pink-500">
               Amazing Nepal
             </Link>
             . All Rights Reserved.
@@ -88,7 +88,7 @@ export const Footer = () => {
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <Link
               to="/#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              className="text-gray-500 hover:text-gray-500 dark:hover:text-white"
             >
               <svg
                 className="w-4 h-4"
@@ -107,7 +107,7 @@ export const Footer = () => {
             </Link>
             <Link
               to="/#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              className="text-gray-500 hover:text-gray-500 dark:hover:text-white ms-5"
             >
               <svg
                 className="w-4 h-4"
@@ -122,7 +122,7 @@ export const Footer = () => {
             </Link>
             <Link
               to="/#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              className="text-gray-500 hover:text-gray-500 dark:hover:text-white ms-5"
             >
               <svg
                 className="w-4 h-4"
@@ -141,7 +141,7 @@ export const Footer = () => {
             </Link>
             <Link
               to="/#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              className="text-gray-500 hover:text-gray-500 dark:hover:text-white ms-5"
             >
               <svg
                 className="w-4 h-4"
@@ -160,7 +160,7 @@ export const Footer = () => {
             </Link>
             <Link
               to="/#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              className="text-gray-500 hover:text-gray-500 dark:hover:text-white ms-5"
             >
               <svg
                 className="w-4 h-4"

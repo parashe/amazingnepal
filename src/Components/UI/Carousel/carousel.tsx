@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "../../atoms";
 import { Link } from "react-router-dom";
+import { MapPinIcon } from "../../svg";
 
 interface CarouselProps {
   slides: string[];
@@ -72,20 +73,21 @@ const CarouselCard = () => {
             Noteworthy technology acquisitions 2021 since th {}
           </h5>
         </a> */}
-        <p className=" text-center leading-relaxed  mb-3 md:pt-5  text-gray-900 lg:leading-10  ">
+        <p className="text-center leading-relaxed  mb-3 md:pt-5  font-black text-gray-900 lg:leading-10 dark:text-white ">
           <span className=" font-bold lg:text-5xl text-black  lg:font-extrabold ">
-            <span className=" bg-gradient-to-r from-blue-500 via-red-400 to-pink-500 inline-block text-transparent bg-clip-text font-extrabold">
+            <span className="  bg-gradient-to-r from-blue-500 via-red-400 to-pink-500 inline-block text-transparent bg-clip-text font-black">
               Discover{" "}
             </span>{" "}
-            stunning global destinations{" "}
-            <span className="bg-gradient-to-r from-pink-400 via-red-500 to-purple-500 inline-block text-transparent bg-clip-text font-extrabold">
+            stunning destinations{" "}
+            <span className="bg-gradient-to-r from-pink-400 via-red-500 to-purple-500 inline-block text-transparent bg-clip-text font-black">
               {" "}
-              with us.
+              with  us  {" "}
+             <MapPinIcon className="w-5 h-5 inline-block" color="#ec4899" />
             </span>{" "}
           </span>{" "}
           <span className="hidden lg:block text-xs leading-relaxed">
             Whether you seek{" "}
-            <span className="text-ui-purple-dark font-bold">
+            <span className="text-pink-500 font-bold">
               mountains, cultural landmarks, or thrilling adventures,{" "}
             </span>{" "}
             we have the perfect journey for you.

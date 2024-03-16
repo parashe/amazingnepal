@@ -8,7 +8,7 @@ export const Navbar = () => {
 
   const isActive = (path: string) => {
     return location.pathname === path
-      ? "bg-gray-100 text-pink-500"
+      ? " text-pink-500"
       : "text-gray-900";
   };
 
@@ -22,7 +22,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 bg-white shadow-xl font-semibold  dark:border-gray-600 dark:bg-gray-900 dark:text-white">
+      <nav className="sticky top-0 z-50 bg-white shadow-2xl font-semibold  dark:border-gray-600 dark:bg-gray-900 dark:text-white">
         <div className="flex flex-wrap container mx-auto justify-center items-center max-w-screen-xl px-4 text-sm">
           <Link
             to="/"
@@ -30,14 +30,14 @@ export const Navbar = () => {
           >
             <img
               src="/logo.png"
-              className="h-20  w-20 rounded-sm  object-cover"
+              className="h-16  w-16 brightness-100 rounded-full object-cover"
               alt="Amazing Logo"
             />
           </Link>
           <button
             data-collapse-toggle="navbar-dropdown"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:text-pink-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-dropdown"
             aria-expanded="false"
             onClick={handleNavList}
@@ -64,7 +64,7 @@ export const Navbar = () => {
               <li>
                 <Link
                   to="/"
-                  className={`block py-4 px-3 lg:px-6 lg:py-2 hover:bg-gray-100 rounded md:hover:bg-gray-100  md:border-0 md:p-0 dark:hover:text-white ${isActive(
+                  className={`block py-4 px-3 lg:px-6 lg:py-2 hover:text-pink-500 rounded md:hover:text-pink-500  md:border-0 md:p-0 dark:hover:text-white ${isActive(
                     "/"
                   )}`}
                 >
@@ -75,7 +75,7 @@ export const Navbar = () => {
               <li>
                 <Link
                   to="/destination"
-                  className={`block py-3 px-3 lg:px-6 lg:py-2 hover:bg-gray-100 rounded md:hover:bg-gray-100  md:border-0 md:p-0 dark:hover:text-white ${isActive(
+                  className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-pink-500 rounded md:hover:text-pink-500  md:border-0 md:p-0 dark:hover:text-white ${isActive(
                     "/destination"
                   )}`}
                 >
@@ -85,7 +85,7 @@ export const Navbar = () => {
               <li>
                 <Link
                   to="/nepal"
-                  className={`block py-3 px-3 lg:px-6 lg:py-2 hover:bg-gray-100 rounded md:hover:bg-gray-100  md:border-0 md:p-0 dark:hover:text-white ${isActive(
+                  className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-pink-500 rounded md:hover:text-pink-500  md:border-0 md:p-0 dark:hover:text-white ${isActive(
                     "/nepal"
                   )}`}
                 >
@@ -95,7 +95,7 @@ export const Navbar = () => {
               <li>
                 <Link
                   to="/service"
-                  className={`block py-3 px-3 lg:px-6 lg:py-2 hover:bg-gray-100 rounded md:hover:bg-gray-100  md:border-0 md:p-0 dark:hover:text-white ${isActive(
+                  className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-pink-500 rounded md:hover:text-pink-500  md:border-0 md:p-0 dark:hover:text-white ${isActive(
                     "/service"
                   )}`}
                 >
@@ -105,7 +105,7 @@ export const Navbar = () => {
               <li>
                 <Link
                   to="/gallery"
-                  className={`block py-3 px-3 lg:px-6 lg:py-2 hover:bg-gray-100 rounded md:hover:bg-gray-100  md:border-0 md:p-0 dark:hover:text-white ${isActive(
+                  className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-pink-500 rounded md:hover:text-pink-500  md:border-0 md:p-0 dark:hover:text-white ${isActive(
                     "/gallery"
                   )}`}
                 >
@@ -116,7 +116,7 @@ export const Navbar = () => {
               <li>
                 <Link
                   to="/contact"
-                  className={`block py-3 px-3 lg:px-6 lg:py-2 hover:bg-gray-100 rounded md:hover:bg-gray-100  md:border-0 md:p-0 dark:hover:text-white ${isActive(
+                  className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-pink-500 rounded md:hover:text-pink-500  md:border-0 md:p-0 dark:hover:text-white ${isActive(
                     "/contact"
                   )}`}
                 >
@@ -126,7 +126,7 @@ export const Navbar = () => {
               {/* <li>
                 <Link
                   to="/about"
-                  className={`block py-2 px-3 lg:px-5 lg:py-5 hover:bg-gray-100 rounded md:hover:bg-gray-100  md:border-0 md:p-0 dark:hover:text-white ${isActive(
+                  className={`block py-2 px-3 lg:px-5 lg:py-5 hover:text-pink-500 rounded md:hover:bg-gray-100  md:border-0 md:p-0 dark:hover:text-white ${isActive(
                     "/about"
                   )}`}
                 >
