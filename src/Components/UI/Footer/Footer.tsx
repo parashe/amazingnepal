@@ -9,7 +9,7 @@ export const Footer = () => {
           <div className="mb-6 md:mb-0 text-center">
             <Link to="/" className="flex items-center justify-center">
               <img
-                src="logo.png"
+                src="/logo.png"
                 className="h-[200px] w-[200px]  rounded-full  object-cover "
                 alt="Footer Logo"
               />
