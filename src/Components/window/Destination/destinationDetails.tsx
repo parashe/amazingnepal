@@ -45,20 +45,20 @@ const DestinationDetails = () => {
             <div className="flex flex-col md:flex-row  gap-1 ">
               <div className="  md:px-5  md:w-4/5 bg-white ">
                 <ImageViewer
-                  images={destination.imageUrl}
-                  title={destination.title}
-                  price={destination.price}
+                  images={destination?.imageUrl}
+                  title={destination?.title}
+                  price={destination?.price}
                 />
                 <div className="mt-5 md:mt-10  ">
                   <Information
-                    OverviewSubHeading={destination.OverviewSubHeading}
-                    OverviewDescription1={destination.OverviewDescription1}
-                    OverviewDescription2={destination.OverViewDescription2}
-                    listofHighlights={destination.listofHighlights}
-                    priceIncludes={destination.priceIncludes}
-                    priceExcludes={destination.priceExcludes}
-                    itinerary={destination.itinerary}
-                    usefulInformation={destination.usefulInformation}
+                    OverviewSubHeading={destination?.OverviewSubHeading}
+                    OverviewDescription1={destination?.OverviewDescription1}
+                    OverviewDescription2={destination?.OverViewDescription2}
+                    listofHighlights={destination?.listofHighlights}
+                    priceIncludes={destination?.priceIncludes}
+                    priceExcludes={destination?.priceExcludes}
+                    itinerary={destination?.itinerary}
+                    usefulInformation={destination?.usefulInformation}
                   />
                 </div>
               </div>
@@ -76,7 +76,7 @@ const DestinationDetails = () => {
           <div>
             <Destination
               title="Explore More Destinations"
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 xxl:grid-cols-5 gap-2 md:pt-20 p-5"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 xxl:grid-cols-5 gap-2 md:pt-20 p-5"
               CalledFromPage={true}
             />
           </div>
@@ -111,7 +111,7 @@ export const ImageViewer = ({ images, title, price }: ImageViewProps) => {
           </h4>
           <div className="flex items-center justify-between  rounded-lg  ">
             <div className="flex items-center">
-              <p className="mb-1 text-white text-lg font-bold">£{price}</p>{" "}
+              <p className="mb-1 text-white text-lg font-bold">{price}</p>{" "}
               &nbsp;
               <p className="text-white text-sm font-normal">Per Person</p>
             </div>
@@ -185,10 +185,10 @@ export const Information = ({
   return (
     <>
       <div className="bg-white md:p-4  ">
-        <div className="grid grid-cols-4 divide-x divide-ui-purple text-center">
+        <div className="grid grid-cols-4 divide-x divide-pink-500 text-center">
           <p
             className={`${paragraph} ${
-              showOverview ? "text-ui-purple border-b-2 border-ui-purple" : ""
+              showOverview ? "text-pink-500 border-b-2 border-pink-500" : ""
             }`}
             onClick={() => handleClick("overview")}
           >
@@ -196,7 +196,7 @@ export const Information = ({
           </p>
           <p
             className={`${paragraph} ${
-              showItinerary ? "text-ui-purple border-b-2 border-ui-purple" : ""
+              showItinerary ? "text-pink-500 border-b-2 border-pink-500" : ""
             }`}
             onClick={() => handleClick("itinerary")}
           >
@@ -205,7 +205,7 @@ export const Information = ({
           <p
             className={`${paragraph} ${
               showPriceIncluded
-                ? "text-ui-purple border-b-2 border-ui-purple"
+                ? "text-pink-500 border-b-2 border-pink-500"
                 : ""
             }`}
             onClick={() => handleClick("priceIncluded")}
@@ -214,7 +214,7 @@ export const Information = ({
           </p>
           <p
             className={`${paragraph} ${
-              showInfo ? "text-ui-purple border-b-2 border-ui-purple" : ""
+              showInfo ? "text-pink-500 border-b-2 border-pink-500" : ""
             }`}
             onClick={() => handleClick("usefulInformation")}
           >
@@ -431,6 +431,7 @@ const Overview: React.FC<ModalProps> = ({
   overviewDescription2,
   listofHighlights,
 }) => {
+  console.log(overviewDescription1, overviewDescription2,'list of highlights', listofHighlights);
   const paragraph =
     " text-sm p-3 text-justify  font-normal cursor-pointer leading-relaxed text-gray-500 text-break-all ";
   return (
@@ -498,7 +499,7 @@ const PriceIncludedExcluded: React.FC<PriceModalProps> = ({
               <h1 className="text-lg font-bold text-gray-900">Excluded</h1>
 
               <ul className="list-disc">
-                {priceExcluded.map((highlight, index) => (
+                {priceExcluded?.map((highlight, index) => (
                   <li key={index} className={paragraph}>
                     {highlight}
                   </li>
@@ -515,6 +516,7 @@ const PriceIncludedExcluded: React.FC<PriceModalProps> = ({
 type itenaryProps = {
   day: string;
   activity: string;
+  activitydetails?: string;
 };
 
 interface IternaryModalProps {
@@ -541,8 +543,10 @@ const IternaryContent: React.FC<IternaryModalProps> = ({
               <ul className="list-disc">
                 {iternary.map((highlight, index) => (
                   <li key={index} className={paragraph}>
-                    <span className="font-bold"> {highlight.day} </span> -{" "}
-                    {highlight.activity}
+                    <span className="font-bold"> {highlight?.day} </span> -{" "}
+                    {highlight?.activity}
+                    <br />
+                    <p>{highlight?.activitydetails}</p>
                   </li>
                 ))}
               </ul>

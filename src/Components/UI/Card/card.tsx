@@ -20,10 +20,10 @@ type image = {
 };
 
 interface DestinationCardProps {
-  destination_id: string;
-  price: string;
+  destination_id: string | number;
+  price?: string;  // Making price optional
   duration: string;
-  included: string;
+  included: string  ;
   title: string;
   imageUrl: image[];
   content?: string;
@@ -65,9 +65,9 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
           </h5>
           <div className="text-justify flex flex-wrap justify-center py-3">
             <div className="text-center p-1 pb-2 ">
-              <p className="mb-1  text-xs px-3 text-gray-900 dark:text-gray-400">
-                {description}
-              </p>
+            <p className="mb-1 text-xs px-3 text-gray-900 dark:text-gray-400">
+  {description?.split(' ').slice(0, 15).join(' ')}.
+</p>
             </div>
             <div className="flex flex-wrap justify-center  ">
               <CashIcon color="#f9a8d4" className="w-4 h-4" />

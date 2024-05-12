@@ -153,7 +153,7 @@ export const Alert: React.FC<AlertProps> = ({
   message,
   type,
   onClose,
-  onYes,
+
 }) => {
   const [isVisible, setIsVisible] = React.useState(true);
 
@@ -182,7 +182,7 @@ export const Alert: React.FC<AlertProps> = ({
     <>
       {isVisible && (
         <div
-          className={`border ${bgColor} ${borderColor} ${textColor} relative rounded border-l-4 `}
+          className={`border ${bgColor} ${borderColor} ${textColor} relative rounded border-l-4  min-w-[400px]`}
           role="alert"
         >
           <div className="flex  items-center justify-start p-2">

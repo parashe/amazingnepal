@@ -33,7 +33,21 @@ const nepalRatings = [
         "review": "My trip to Nepal was nothing short of amazing. The diverse landscapes, from lush valleys to snow-capped peaks, provided endless opportunities for adventure. I particularly enjoyed trekking in the Annapurna region, where I was surrounded by breathtaking scenery at every step. The local cuisine was also a highlight, with delicious flavors and unique dishes to try. Overall, Nepal left a lasting impression on me, and I can't wait to come back for more!",
         "image": "assets/user.avif",
         "date": "2024-02-20"
-      }
+      },
+      {
+        "name": "Emma",
+        "rating": 5,
+        "review": "Nepal exceeded all my expectations! The majestic Himalayas, the vibrant culture, and the warmth of the people made my trip unforgettable. Trekking in the Everest region was a dream come true, and the views from the top were breathtaking. I also loved exploring Kathmandu's bustling streets and discovering hidden gems around every corner. I highly recommend Nepal to anyone seeking adventure and inspiration!",
+        "image": "assets/user.avif",
+        "date": "2024-03-05"
+        },
+        {
+        "name": "Oliver",
+        "rating": 4,
+        "review": "My journey to Nepal was an incredible adventure! The natural beauty of the country, from the lush forests to the towering mountains, left me in awe. Trekking in the Annapurna Sanctuary was challenging but rewarding, with stunning views and a sense of accomplishment at every turn. The people of Nepal were incredibly welcoming, and I enjoyed learning about their rich culture and traditions. Nepal has a special place in my heart, and I hope to return soon!",
+        "image": "assets/user.avif",
+        "date": "2024-03-15"
+        }
   ];
   
   export default nepalRatings;

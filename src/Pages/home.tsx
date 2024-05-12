@@ -6,6 +6,7 @@ import Destination from "../Components/window/Destination/destination";
 import Rating from "../Components/window/Rating/rating";
 import Recommended from "../Components/window/Recommended/recommended";
 import {  HomeLoadingSkeleton,} from "../Components/atoms";
+import { FirstHomeScreen } from "../Components/window/home/home";
 
 export const HomePage = () => {
   const [showLoader, setShowLoader] = React.useState(true);
@@ -37,7 +38,8 @@ export const HomePage = () => {
         </>
       ) : (
         <Layout>
-          <Carousel />
+          <FirstHomeScreen/>
+          {/* <Carousel /> */}
 
           {/*      
       <Services/> */}
