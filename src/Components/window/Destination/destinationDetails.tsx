@@ -40,10 +40,10 @@ const DestinationDetails = () => {
           </div>
         </>
       ) : (
-        <div className="flex-content ">
-          <div className="container-xl mx-auto   md:px-5  ">
+        <div className="flex-content bg-gray-100">
+          <div className="container-xl mx-auto   p-5 ">
             <div className="flex flex-col md:flex-row  gap-1 ">
-              <div className="  md:px-5  md:w-4/5 bg-white ">
+              <div className="  md:px-5   bg-white ">
                 <ImageViewer
                   images={destination?.imageUrl}
                   title={destination?.title}
@@ -64,19 +64,19 @@ const DestinationDetails = () => {
               </div>
 
               <>
-                <div className="md:w-1/5 ">
+                {/* <div className="md:w-1/5 ">
                   <div className="text-right ">
                     <Quote />
                     <ContactPerson />
                   </div>
-                </div>
+                </div> */}
               </>
             </div>
           </div>
           <div>
             <Destination
               title="Explore More Destinations"
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 xxl:grid-cols-5 gap-2 md:pt-20 p-5"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 xxl:grid-cols-5 gap-2 md:pt-20 p-5 md:pb-20"
               CalledFromPage={true}
             />
           </div>
@@ -431,7 +431,12 @@ const Overview: React.FC<ModalProps> = ({
   overviewDescription2,
   listofHighlights,
 }) => {
-  console.log(overviewDescription1, overviewDescription2,'list of highlights', listofHighlights);
+  console.log(
+    overviewDescription1,
+    overviewDescription2,
+    "list of highlights",
+    listofHighlights
+  );
   const paragraph =
     " text-sm p-3 text-justify  font-normal cursor-pointer leading-relaxed text-gray-500 text-break-all ";
   return (
@@ -604,7 +609,7 @@ export const ContactPerson = () => {
           <div className="flex flex-wrap justify-center p-5 pb-10">
             <img
               className="w-20 h-20 mb-3 rounded-full shadow-lg"
-              src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              src="/assets/user.png"
               alt="Contact Person"
             />
             <div className="text-center">
@@ -616,9 +621,9 @@ export const ContactPerson = () => {
               </h5>
               <h3 className="mb-3  text-sm font-normal text-gray-900 dark:text-gray-400">
                 +447411079563 ,
-                <br/>info@visitamazingnepal.com
+                <br />
+                info@visitamazingnepal.com
               </h3>
-           
             </div>
           </div>
         </div>

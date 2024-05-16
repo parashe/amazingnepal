@@ -27,3 +27,27 @@ code {
   opacity: 1;
 }
 
+.carousel-container {
+  margin-bottom: 20px;
+}
+
+.carousel-item {
+  padding: 10px;
+}
+
+.custom-dot-list-style {
+  margin-top: 20px;
+}
+
+.react-multiple-carousel__arrow {
+  background-color: #ec4899 !important;
+  border: none !important;
+
+
+ 
+}
+
+
+.react-multiple-carousel__arrow :hover {
+  background: #732045 !important;
+}

@@ -21,9 +21,9 @@ type image = {
 
 interface DestinationCardProps {
   destination_id: string | number;
-  price?: string;  // Making price optional
+  price?: string; // Making price optional
   duration: string;
-  included: string  ;
+  included: string;
   title: string;
   imageUrl: image[];
   content?: string;
@@ -41,9 +41,13 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
   destination_id,
   description,
 }) => {
+
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
   return (
-    <Link to={`/destination/${destination_id}`}>
-      <div className="w-full   md:max-w-sm  bg-white  rounded-lg  shadow-lg cursor-pointer  hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 relative">
+    <Link to={`/destination/${destination_id}`}   onClick={handleClick} >
+      <div className="w-full  py-5  md:max-w-sm  bg-white  rounded-lg  shadow-lg cursor-pointer  hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 relative">
         <div className="w-full relative">
           <div className="relative ">
             <img
@@ -65,9 +69,9 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
           </h5>
           <div className="text-justify flex flex-wrap justify-center py-3">
             <div className="text-center p-1 pb-2 ">
-            <p className="mb-1 text-xs px-3 text-gray-900 dark:text-gray-400">
-  {description?.split(' ').slice(0, 15).join(' ')}.
-</p>
+              <p className="mb-1 text-xs px-3 text-gray-900 dark:text-gray-400">
+                {description?.split(" ").slice(0, 15).join(" ")}.
+              </p>
             </div>
             <div className="flex flex-wrap justify-center  ">
               <CashIcon color="#f9a8d4" className="w-4 h-4" />
@@ -106,7 +110,7 @@ export const RecommendedCard: React.FC<RecommendedCardProps> = ({
 }) => {
   return (
     <Link to={`/recommended/${id}`}>
-      <div className="relative w-full md:max-w-sm bg-white border border-gray-200 rounded-xs shadow-sm cursor-pointer overflow-hidden recommended-content">
+      <div className="relative w-full md:max-w-sm  bg-white border border-gray-200 rounded-xs shadow-sm cursor-pointer overflow-hidden recommended-content">
         <div className="relative">
           <img
             className="w-full h-full md:h-[400px] object-cover"

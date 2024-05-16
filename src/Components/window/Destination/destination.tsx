@@ -75,7 +75,7 @@ const Destination: React.FC<DestinationProps> = ({
         </div>
       </div>
       <div className={finalClassName}>
-        {destinationData?.slice(0, 6).map((service, index) => (
+        {destinationData?.map((service, index) => (
           <DestinationCard
             key={index}
             {...service}

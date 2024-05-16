@@ -94,8 +94,8 @@ interface ModalProps {
 
 export const SeeAllModal = ({ onClose }: ModalProps) => (
   <Modal onClose={onClose}>
-    <div className="bg-black bg-opacity-50 fixed inset-0 rounded-lg max-h-full  overflow-y-auto overflow-x-hidden z-50 justify-center items-center md:inset-0">
-      <div className="px-1 sm:px-10 py-5 w-full max-w-full max-h-full">
+    <div className="bg-black bg-opacity-90 fixed inset-0 rounded-lg max-h-full  overflow-y-auto overflow-x-hidden z-50 justify-center items-center md:inset-0">
+      <div className="px-1 sm:px-20 py-5 md:py-10 w-full max-w-full max-h-full">
         <div className="flex justify-end">
           <div
             className="justify-end cursor-pointer rounded-full bg-white px-2 py-2 hover:bg-yellow-50"
@@ -105,11 +105,11 @@ export const SeeAllModal = ({ onClose }: ModalProps) => (
           </div>
         </div>
         <div className="flex justify-center items-center min-w-[300px] max-w-[400px] py-5 px-5 rounded-full bg-gradient-to-r from-blue-500 via-yellow-500 to-pink-500 opacity-100">
-  <h4 className="text-lg font-bold uppercase tracking-wide text-white">
-    What Our Customers Say
-  </h4>
-  <PersonIcon className="w-5 h-5 mt-1 ml-2" color="white" />
-</div>
+          <h4 className="text-lg font-bold uppercase tracking-wide text-white">
+            What Our Customers Say
+          </h4>
+          <PersonIcon className="w-5 h-5 mt-1 ml-2" color="white" />
+        </div>
 
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
           {nepalRatings?.map((rating, index) => (

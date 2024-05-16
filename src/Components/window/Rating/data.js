@@ -34,13 +34,7 @@ const nepalRatings = [
         "image": "assets/user.avif",
         "date": "2024-02-20"
       },
-      {
-        "name": "Emma",
-        "rating": 5,
-        "review": "Nepal exceeded all my expectations! The majestic Himalayas, the vibrant culture, and the warmth of the people made my trip unforgettable. Trekking in the Everest region was a dream come true, and the views from the top were breathtaking. I also loved exploring Kathmandu's bustling streets and discovering hidden gems around every corner. I highly recommend Nepal to anyone seeking adventure and inspiration!",
-        "image": "assets/user.avif",
-        "date": "2024-03-05"
-        },
+      
         {
         "name": "Oliver",
         "rating": 4,

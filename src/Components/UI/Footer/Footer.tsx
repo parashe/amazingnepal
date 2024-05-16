@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { ContactPerson } from "../../window/Destination/destinationDetails";
 
 export const Footer = () => {
   return (
@@ -10,7 +11,7 @@ export const Footer = () => {
             <Link to="/" className="flex items-center justify-center">
               <img
                 src="/logo.png"
-                className="h-[200px] w-[200px]  rounded-full  object-cover "
+                className="h-32 w-40 rounded-full  object-cover "
                 alt="Footer Logo"
               />
             </Link>
@@ -22,21 +23,29 @@ export const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <Link to="/nepal" className="hover:underline hover:text-pink-500 ">
-                    Nepal
+                  <Link
+                    to="/nepal"
+                    className="hover:underline hover:text-pink-500 "
+                  >
+                   Explore Nepal
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link to="/gallery" className="hover:underline hover:text-pink-500">
+                  <Link
+                    to="/gallery"
+                    className="hover:underline hover:text-pink-500"
+                  >
                     Gallery
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link to="/services" className="hover:underline hover:text-pink-500">
+                  <Link
+                    to="/services"
+                    className="hover:underline hover:text-pink-500"
+                  >
                     Services
                   </Link>
                 </li>
-              
               </ul>
             </div>
             <div>
@@ -44,24 +53,22 @@ export const Footer = () => {
                 UseFul Link
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
-               
                 <li className="mb-4">
-                  <Link to="/contact" className="hover:underline hover:text-pink-500">
+                  <Link
+                    to="/contact"
+                    className="hover:underline hover:text-pink-500"
+                  >
                     Contact
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link to="/destination" className="hover:underline hover:text-pink-500">
+                  <Link
+                    to="/destination"
+                    className="hover:underline hover:text-pink-500"
+                  >
                     Top Destination
                   </Link>
                 </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-white">
-                Legal
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <Link to="/#" className="hover:underline hover:text-pink-500">
                     Privacy Policy
@@ -74,13 +81,34 @@ export const Footer = () => {
                 </li>
               </ul>
             </div>
+            <div>
+              {/* <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-white">
+               Contact Person
+              </h2> */}
+              <ContactPerson />
+              {/* <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <li className="mb-4">
+                  <Link to="/#" className="hover:underline hover:text-pink-500">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/#" className="hover:underline hover:text-pink-500">
+                    Terms &amp; Conditions
+                  </Link>
+                </li>
+              </ul> */}
+            </div>
           </div>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-16" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2023{" "}
-            <Link to="https://flowbite.com/" className="hover:underline hover:text-pink-500">
+            <Link
+              to="https://flowbite.com/"
+              className="hover:underline hover:text-pink-500"
+            >
               Amazing Nepal
             </Link>
             . All Rights Reserved.

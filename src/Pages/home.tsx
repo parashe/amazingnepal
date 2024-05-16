@@ -7,6 +7,7 @@ import Rating from "../Components/window/Rating/rating";
 import Recommended from "../Components/window/Recommended/recommended";
 import {  HomeLoadingSkeleton,} from "../Components/atoms";
 import { FirstHomeScreen } from "../Components/window/home/home";
+import HomeDestination from "../Components/window/Destination/home_destination";
 
 export const HomePage = () => {
   const [showLoader, setShowLoader] = React.useState(true);
@@ -43,7 +44,8 @@ export const HomePage = () => {
 
           {/*      
       <Services/> */}
-          <Destination />
+          {/* <Destination /> */}
+          <HomeDestination/>
           <Recommended />
           <div className="h-20"></div>
           <Whywe />
