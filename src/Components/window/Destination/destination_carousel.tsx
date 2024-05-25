@@ -11,7 +11,7 @@ interface DestinationProps {
   title?: string;
   CalledFromPage?: boolean;
 }
-const Home_Destination: React.FC<DestinationProps> = ({
+const DestinationCarousel: React.FC<DestinationProps> = ({
   className,
   title,
   CalledFromPage,
@@ -20,9 +20,8 @@ const Home_Destination: React.FC<DestinationProps> = ({
     console.log("see more");
   };
 
-  const staticClassName =
-    "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 gap-6 md:pt-20 p-5";
-  const finalClassName = className + " " + staticClassName;
+
+  
   return (
     <div className="mt-10 md:mt-20 container mx-auto">
       {CalledFromPage ? (
@@ -90,7 +89,7 @@ const Home_Destination: React.FC<DestinationProps> = ({
   );
 };
 
-export default Home_Destination;
+export default DestinationCarousel;
 
 export const MultipleCarousel = ({ data }: any) => {
   // Your responsive settings for the carousel

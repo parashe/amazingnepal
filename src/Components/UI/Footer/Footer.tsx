@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ContactPerson } from "../../window/Destination/destinationDetails";
+import { ContactPerson } from "../../window/Contact/contact_person";
+
 
 export const Footer = () => {
   return (

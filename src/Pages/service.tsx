@@ -3,6 +3,7 @@ import Layout from "../Components/layout";
 import { Services } from "../Components/window/Service/service";
 import AboutRating from "../Components/window/Rating/rating";
 import { Breadcrumb } from "../Components/window/Breadcrumb/breadcrumb";
+import DestinationCarousel from "../Components/window/Destination/destination_carousel";
 
 const ServicePage = () => {
 
@@ -25,6 +26,7 @@ const ServicePage = () => {
         <div className="container mx-auto px-4 py-10"></div>
         <Services />
         <div className="container mx-auto px-4 py-10"></div>
+        <DestinationCarousel/>
         <AboutRating />
       </Layout>
     </>

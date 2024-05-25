@@ -1,7 +1,5 @@
 import React from "react";
-import { destinationData } from "./data";
 import { DestinationCard } from "../../UI/Card/card";
-import { LoadingSkeleton } from "../../atoms";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "../../svg";
 

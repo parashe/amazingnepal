@@ -1,16 +1,17 @@
 import React from "react";
 import { servicesData } from "./data";
 import { Card } from "../../UI/Card/card";
-import { Button, LoadingSkeleton } from "../../atoms";
-import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Button, LoadingSkeleton, Modal } from "../../atoms";
+import { CrossIcon } from "../../svg";
 
 export const Services: React.FC = () => {
-  const navigate = useNavigate();
   const [showLoader, setShowLoader] = React.useState(true);
+  const [showServiceModal, setShowServiceModal] = React.useState(false);
+  const [serviceId, setServiceId] = React.useState<string>("");
 
-  const handleOnClickSeeMore = (service_id: string) => {
-    navigate(`/services/${service_id}`);
+  const handleOnClickSeeMore = (id: string) => {
+    setServiceId(id);
+    setShowServiceModal(true);
   };
 
   React.useEffect(() => {
@@ -32,7 +33,7 @@ export const Services: React.FC = () => {
           <LoadingSkeleton />
         </div>
       ) : (
-        <div className="mt-10 md:mt-16 container mx-auto">
+        <div className="mt-10 md:mt-16 container mx-auto ">
           <div className="flex items-center justify-center ">
             <h3
               className="text-3xl md:text-4xl max-w-4xl  font-extrabold  text-gray-900 "
@@ -87,50 +88,54 @@ export const Services: React.FC = () => {
           </div>
         </div>
       )}
+      {serviceId && showServiceModal && (
+        
+        <ServiceDetails
+          service_Id={serviceId as string}
+          onClose={() => setShowServiceModal(false)}
+        />
+      )}
     </>
   );
 };
 
-export const ServiceDetails: React.FC = () => {
-  const [showLoader, setShowLoader] = React.useState(true);
-
-  React.useEffect(() => {
-    // Set a timeout to hide the loader after 3 seconds
-    const timeoutId = setTimeout(() => {
-      setShowLoader(false);
-    }, 500);
-
-    // Clean up the timeout when the component unmounts
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, []);
-
-  const { id } = useParams<{ id: string }>(); // Get the service_id parameter from the URL
-  const service = servicesData.find((service) => service.service_id === id); // Find the corresponding service object
+export const ServiceDetails = ({
+  service_Id,
+  onClose,
+}: {
+  service_Id: string;
+  onClose: () => void;
+}) => {
+  const service = servicesData.find(
+    (service) => service.service_id === service_Id
+  ); // Find the corresponding service object
 
   if (!service) {
     return <div>Service not found</div>;
   }
 
   return (
-    <>
-      {showLoader ? (
-        <>
-          <div className="text-center">
-            <LoadingSkeleton />
+  <>
+     <Modal onClose={onClose}>
+     <div className="bg-white fixed inset-0 rounded-lg max-h-full  overflow-y-auto overflow-x-hidden z-100 justify-center items-center md:inset-0">
+      <div className="px-0 sm:px-20 py-5 md:py-10 w-full max-w-full max-h-full">
+        <div className="flex justify-end">
+          <div
+            className="justify-end cursor-pointer rounded-full bg-gray-200 px-2 py-2 hover:bg-yellow-50"
+            onClick={onClose}
+          >
+            <CrossIcon className="w-6 h-6" color="red" />
           </div>
-        </>
-      ) : (
-        <div className="container mx-auto px-4">
-          <div className="w-full h-full text-justify py-8 md:py-10">
-            <h4 className="text-xl text-center  font-black  uppercase tracking-wide py-5 md:py-10">
+        </div>
+        <div className="container mx-auto px-4 py-8 bg-white overflow-auto">
+          <div className="w-full h-full text-justify ">
+            <h4 className="text-2xl text-center  font-black  uppercase tracking-wide ">
               {service.title}
             </h4>
             <img
               src={service.imageUrl}
               alt={service.title}
-              className="object-contain w-full h-64 md:h-80 rounded-lg mb-8"
+              className="object-contain w-full h-48 md:h-64 rounded-lg mb-8"
             />
             <p className="text-sm text-neutral-600 font-semibold leading-relaxed mb-6">
               {service.content}
@@ -148,7 +153,9 @@ export const ServiceDetails: React.FC = () => {
             </ul>
           </div>
         </div>
-      )}
+      </div>
+      </div>
+    </Modal>
     </>
   );
 };

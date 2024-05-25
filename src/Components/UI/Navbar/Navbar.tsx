@@ -82,11 +82,21 @@ export const Navbar = () => {
                 }`}
               >
                 <span className="flex items-center">
-                  Destinations
+                Browse Destinations
                   <DropdownIcon className="w-5 h-5 ml-1" color="#ec4899" />
                 </span>
               </button>
               {showDropdown && <DropdownContent />}
+            </li>
+            <li>
+              <Link
+                to="/destination"
+                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-pink-500 rounded md:hover:text-pink-500 md:border-0 md:p-0 dark:hover:text-white ${isActive(
+                  "/destination"
+                )}`}
+              >
+                All Destinations
+              </Link>
             </li>
             <li>
               <Link

@@ -158,7 +158,7 @@ export const DestinationPageContent = () => {
                   placeholder="Search destinations..."
                   value={searchQuery}
                   onChange={handleSearchInputChange}
-                  className="block w-full p-3 min-w-[300px] max-w-[500px] text-center text-sm text-gray-900 border border-gray-300 rounded-md bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="block w-full p-3 min-w-[300px] max-w-[500px] text-center text-sm text-gray-900 border border-gray-300 rounded-full bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   required
                 />
               </div>

@@ -8,7 +8,7 @@ interface ServiceCardProps {
 
 export const Card: React.FC<ServiceCardProps> = ({ children }) => {
   return (
-    <div className="w-full relative  md:max-w-md  border border-gray-100  bg-white  rounded-lg shadow-lg cursor-pointer  shadow-ui-third-theme hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 ">
+    <div className="w-full relative  md:max-w-md  border border-gray-100  bg-gray-100  rounded-lg shadow-lg cursor-pointer  shadow-ui-third-theme hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 ">
       {children}
     </div>
   );

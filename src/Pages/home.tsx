@@ -1,14 +1,10 @@
 import React from "react";
 import Layout from "../Components/layout";
-import { Carousel } from "../Components/window/Carousel";
 import Whywe from "../Components/window/Whywe/whywe";
-import Destination from "../Components/window/Destination/destination";
 import Rating from "../Components/window/Rating/rating";
 import Recommended from "../Components/window/Recommended/recommended";
-import {  HomeLoadingSkeleton,} from "../Components/atoms";
-import { FirstHomeScreen } from "../Components/window/home/home";
-import HomeDestination from "../Components/window/Destination/home_destination";
-import { DestinationHomeContent } from "../Components/window/Destination/destination_home";
+import { HomeLoadingSkeleton } from "../Components/atoms";
+
 import { HomeFirstScreen } from "../Components/window/home/home_first_screen";
 
 export const HomePage = () => {
@@ -34,23 +30,13 @@ export const HomePage = () => {
     <>
       {showLoader ? (
         <>
-          <div >
-           
+          <div>
             <HomeLoadingSkeleton />
           </div>
         </>
       ) : (
         <Layout>
-          <HomeFirstScreen/>
-{/* <DestinationHomeContent/> */}
-
-          {/* <FirstHomeScreen/> */}
-          {/* <Carousel /> */}
-
-          {/*      
-      <Services/> */}
-          {/* <Destination /> */}
-          {/* <HomeDestination/> */}
+          <HomeFirstScreen />
           <Recommended />
           <div className="h-20"></div>
           <Whywe />

@@ -7,7 +7,8 @@ import {
   Spinner,
   TextArea,
 } from "../../atoms";
-import { ContactPerson } from "../Destination/destinationDetails";
+import { ContactPerson } from "./contact_person";
+
 
 const Contact = () => {
   const [showLoader, setShowLoader] = React.useState(true);
