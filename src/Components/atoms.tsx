@@ -149,12 +149,7 @@ interface AlertProps {
   onClose?: () => void;
   onYes?: () => void;
 }
-export const Alert: React.FC<AlertProps> = ({
-  message,
-  type,
-  onClose,
-
-}) => {
+export const Alert: React.FC<AlertProps> = ({ message, type, onClose }) => {
   const [isVisible, setIsVisible] = React.useState(true);
 
   let bgColor = "";
@@ -285,7 +280,7 @@ export const RatingStars = ({ rating }: RatingProps) => {
 };
 
 export const BoldText: React.FC<React.PropsWithChildren> = ({ children }) => (
-  <span className="font-bold text-ui-purple">{children}</span>
+  <span className="font-bold text-pink-500">{children}</span>
 );
 
 export const LoadingSkeleton = () => {
@@ -370,7 +365,6 @@ export const HomeLoadingSkeleton = () => {
         {/* Navbar Skeleton */}
         <div className="flex justify-between items-center mb-8 md:mt-64">
           <div className="w-full h-6 bg-gray-200 rounded-md animate-pulse"></div>
-         
         </div>
 
         {/* Slider Skeleton */}
@@ -381,7 +375,10 @@ export const HomeLoadingSkeleton = () => {
         {/* Card Skeleton */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {[...Array(8)].map((_, index) => (
-            <div key={index} className="bg-white rounded-md shadow-md animate-pulse">
+            <div
+              key={index}
+              className="bg-white rounded-md shadow-md animate-pulse"
+            >
               <div className="h-48 bg-gray-200 rounded-t-md"></div>
               <div className="p-4 flex flex-col justify-center items-center space-y-2 ">
                 <div className="w-24 text-center h-4 bg-gray-200 rounded-md"></div>
@@ -399,7 +396,6 @@ export const HomeLoadingSkeleton = () => {
   );
 };
 
-
 export const Address = () => {
   const paragraph =
     " text-sm p-3 text-center  cursor-pointer leading-normal text-gray-900 text-break-all ";
@@ -409,8 +405,8 @@ export const Address = () => {
         <h4 className="text-lg  font-black text-pink-500 uppercase tracking-wide ">
           Address
         </h4>
-        <p className={paragraph}> West Bromwich, Birmingham</p>
-        <p className={`${paragraph} font-bold `}>United Kingdom</p>
+
+        <p className={`${paragraph} font-bold `}>Birmingham, United Kingdom</p>
       </div>
     </div>
   );

@@ -1,352 +1,5 @@
 export const destinationData = [
   {
-    destination_id: "langtang_gosainkunda_and_helambu_trek",
-    title: "Langtang, Gosainkunda And Helambu Trek",
-    price: "$TBD", // Fill this with appropriate data if available
-    duration: "17 days",
-    description:
-      "Langtang Gosaikunda and Helambu Trekking combines three distinct locations for comprehensive coverage...",
-    available: "", // Fill this with appropriate data if available
-    included:
-      "All arrival and departure transfer in private vehicle, Hotels will be of tourist standard and during trekking will be local tea house/ guests house, All meals (lunch and dinner) as described in itinerary, A private vehicle as per group size, An English-speaking guide throughout the tour Trekking, TIMS and permit, 2 guests = 01 Porter, Tea House Trekking package (Room + Breakfast + Lunch + Dinner)",
-    imageUrl: [
-      {
-        id: 1,
-        url: "/assets/destination/gosaikunda.jpeg",
-      },
-      {
-        id: 11,
-        url: "/assets/destination/helicoptor.jpeg",
-        alt: "Helicoptor",
-      },
-      {
-        id: 2,
-        url: "/assets/destination/everest1.jpeg",
-        alt: "Everest",
-      },
-      {
-        id: 3,
-        url: "/assets/destination/everesthelicoptor.jpeg",
-        alt: "Everest by Helicoptor",
-      },
-      {
-        id: 4,
-        url: "/assets/destination/everest1.jpeg",
-        alt: "Everest",
-      },
-      {
-        id: 15,
-        url: "/assets/destination/helicoptor.jpeg",
-        alt: "Helicoptor",
-      },
-      {
-        id: 24,
-        url: "/assets/destination/everest1.jpeg",
-        alt: "Everest",
-      },
-    ],
-    OverviewSubHeading: "Some Trip Highlights",
-    OverviewDescription1: "Max. Altitude: Gosaikunda Lake (4460m/14632ft).",
-    OverViewDescription2: "Trek Grade: Fairly Strenuous.",
-    listofHighlights: [
-      "Tserko Ri to see a range of mountains.",
-      "Gosainkunda, a mythological lake.",
-      "Langtang National Park, home to 7000 m peaks and Red Panda.",
-      "Village of Helambu, where the culture is intact.",
-      "Kyanjin Gompa to enjoy yak cheese and a view of the glacier surrounded.",
-      "Transportation: Local Bus/Private Vehicles/Tourist Bus",
-    ],
-    itinerary: [
-      {
-        day: "Day 1",
-        activity: "Arrival in Kathmandu (1,350m/4,428ft)",
-        activitydetails:
-          "After landing at the Tribhuwan International Airport, you will be greeted by a representative of the Go Nepal...",
-      },
-      {
-        day: "Day 2",
-        activity: "Kathmandu: sightseeing and trek preparation",
-        activitydetails:
-          "Today, after early morning breakfast, we begin a tour to many of Kathmandu's most historical and spiritual attractions...",
-      },
-      {
-        day: "Day 3",
-        activity:
-          "Drive from Kathmandu to Syabrubesi (1,550m/5,100ft): 7-8 hours",
-        activitydetails:
-          "Today we leave Kathmandu in the morning for Syabrubesi, a village that is also the starting point for treks in the Langtang Valley...",
-      },
-      {
-        day: "Day 4",
-        activity:
-          "Trek from Syabrubesi to Lama Hotel (2,380m/7,830ft): 6 hours",
-        activitydetails:
-          "After breakfast, we start our trip to Syabrubesi along the Langtang Khola. We ascend and descend simultaneously through oak and rhododendron forests...",
-      },
-      {
-        day: "Day 5",
-        activity:
-          "Trek to Mundu (3543m/11,621ft) via Langtang village: 6-7 hours",
-        activitydetails:
-          "We continue our ascent from the hotel Lama and enjoy the mountainous landscape with its numerous waterfalls. When we arrive in the green pastures of Ghoda Tabela...",
-      },
-      {
-        day: "Day 6",
-        activity: "Mundu to Kyangjin Gompa (3,870m/12,697ft): 4-5 hours",
-        activitydetails:
-          "After breakfast, we will start our trip to Kyangjin Gompa, one of the main monasteries in the area...",
-      },
-      {
-        day: "Day 7",
-        activity:
-          "Acclimatization- Explore Tserko Ri (5000m/16,404ft) 7-8 hours",
-        activitydetails:
-          "We spend the whole day exploring Tserko Ri, which will also help us get used to the altitude. We start early in the morning...",
-      },
-      {
-        day: "Day 8",
-        activity: "Kyangjin Gompa to Lama Hotel: 6-7 hours",
-        activitydetails:
-          "We start our walk after breakfast and retrace our steps to the Lama Hotel. Most of today's hikes will be downhill...",
-      },
-      {
-        day: "Day 9",
-        activity: "Lama Hotel to Thulo Syabru (2,230m/ 7,316 ft): 5-6 hours",
-        activitydetails:
-          "We start our walk with a climb to the village of Rimche. From here we descend to the banks of Langtang Khola...",
-      },
-      {
-        day: "Day 10",
-        activity: "Thulo Syabru to Shin Gompa: 3-4 hours",
-        activitydetails:
-          "The stroll will be short today, but it is important not to go to Gosaikunda today, as the constant gain in altitude will help us acclimatize to this altitude...",
-      },
-      {
-        day: "Day 11",
-        activity: "Shin Gompa to Gosaikunda (4,460m/14,632ft): 5-6 hours",
-        activitydetails:
-          "Today we can enjoy fantastic panoramic views of the Himalayas, including the Annapurnas, Hiunchuli, Manaslu, Ganesh and Langtang...",
-      },
-      {
-        day: "Day 12",
-        activity: "Gosaikunda to Ghopte (3,440m/11,286ft): 6-8 hours",
-        activitydetails:
-          "We move around the lake before climbing to the Laurebina pass (4610 m). The region of Helambu begins at Lauribina La (walk) and descends into the Melamchi Valley...",
-      },
-      {
-        day: "Day 13",
-        activity: "Ghopte to Melamchigaon (2,560m/8,399ft): 6-7 hours",
-        activitydetails:
-          "We go up and down a path through dense forests. Walking on a path through the forest will take us to Thare Pati Village...",
-      },
-      {
-        day: "Day 14",
-        activity: "Melamchigaon to Tarkeghyang (2,590m/8,497ft): 5-6 hours",
-        activitydetails:
-          "We pass through a stupa and cross a small stream below Tarkeghyang...",
-      },
-      {
-        day: "Day 15",
-        activity: "Tarkeghyang to Sermathang (2,610m/8,563ft): 3-5 hours",
-        activitydetails:
-          "We start our walk after breakfast. The path is easy and passes through lush forests...",
-      },
-      {
-        day: "Day 16",
-        activity:
-          "Trek to Melamchi Bazaar, drive to Kathmandu: 3-4 hours trek, 2 hours’ drive",
-        activitydetails:
-          "We walk through meadows, fields and beautiful villages to reach the Melamchi Bazaar...",
-      },
-      {
-        day: "Day 17",
-        activity: "Final Departure",
-        activitydetails:
-          "Our trip to Nepal ends today. A Go Nepal representative will drop you off at the airport about 3 hours before our scheduled flight...",
-      },
-    ],
-
-    priceIncludes: [
-      "All arrival and departure transfer in private vehicle",
-      "Hotels will be of tourist standard and during trekking will be local tea house/ guests house",
-      "All meals (lunch and dinner) as described in itinerary",
-      "A private vehicle as per group size",
-      "An English-speaking guide throughout the tour Trekking",
-      "TIMS and permit",
-      "2 guests = 01 Porter",
-      "Tea House Trekking package (Room + Breakfast + Lunch + Dinner)",
-    ],
-    priceExcludes: [
-      "Any kind of medical and personal insurance",
-      "Any kind of personal nature items like bar and Laundry bills.",
-      "Evacuation in case of emergency",
-      "Domestic flights",
-      "Tips to the guide and driver",
-      "Entrance Fees",
-      "ANY ITEMS NOT MENTIONED ABOVE",
-    ],
-    usefulInformation: [
-      "Langtang Gosainkunda Helambu Trekking offers breathtaking mountain views, culture, flowers, and fauna as you progress from one area to another.",
-      "The Langtang Gosaikunda Helambu trek is a memorable adventure in Nepal's Himalayan region.",
-      "You can enjoy the Panoramic views from Kyanjin Gompa.",
-    ],
-  },
-  {
-    destination_id: "annapurna_base_camp_trek",
-    title: "Annapurna Base Camp Trek",
-    price: "$700",
-    description:
-      "Annapurna Base Camp (ABC) Trek is one of the most popular treks in Nepal. It is a fairly easy and shorter walk than other high-altitude walks in Nepal. This hike incorporates diverse terrains, culture and wildlife. Along with the most spectacular and close view of the range of Annapurna, Machhapuchhre, Hiunchuli and Dhaulagiri.",
-    duration: "11 days",
-    available: "Trekking & Hiking",
-    included: "N/A",
-    imageUrl: [
-    
-      {
-        id: 2,
-        url: "/assets/destination/annapurnabasecamp/annapurna1.jpeg",
-        alt: "Annapurna Base Camp",
-      },
-      {
-        id: 3,
-        url: "/assets/destination/annapurnabasecamp/annapurna2.webp",
-        alt: "Annapurna Base Camp",
-      }
-      ,{
-        id: 4,
-        url: "/assets/destination/annapurnabasecamp/annapurna3.jpeg",
-        alt: "Annapurna Base Camp",
-      },
-      {
-        id: 5,
-        url: "/assets/destination/annapurnabasecamp/annapurna4.jpeg",
-        alt: "Annapurna Base Camp",
-      },
-      {
-        id: 6,
-        url: "/assets/destination/annapurnabasecamp/annapurna5.jpeg",
-        alt: "Annapurna Base Camp",
-      }
-    ],
-    OverviewSubHeading: "Annapurna Base Camp Trek Overview:",
-    OverviewDescription1: `Annapurna Base Camp (ABC) Trek is one of the most popular treks in Nepal. It is a fairly easy and shorter walk than other high-altitude walks in Nepal. This hike incorporates diverse terrains, culture and wildlife. Along with the most spectacular and close view of the range of Annapurna, Machhapuchhre, Hiunchuli and Dhaulagiri. The Annapurna Base Camp shows you all the mountain ranges that are beautiful, colossal and covered with snow against the blue sky. Here, the air is pure and a hiker thrives in front of this impressive mountain range. The mountains are inextricably linked to you in the base camp and create such a unique environment. Only panoramic and scenic views of Annapurna II, III, IV, Annapurna South, Tent Peak, Hiunchuli, Gangapurna, and Annapurna South are visible. Its beauty is indescribable; they beckon your attention, and all you can do is take photos with your camera as much as you want and as far as you can get to the base camp's corners.`,
-    OverViewDescription2:
-      "It blooms with many beautiful flowers in the spring, including Nepal's national flower, the rhododendron. During the walk, you will be accompanied by orchids, the Machhapuchhre massif, and the Kali Gandaki's deepest gorge. You will notice high waterfalls along the way and will stop at the Ghandruk Museum to learn more about people of different ethnicities, particularly the Gurung community. The Annapurna base camp, located at 4130 meters above sea level, is unique and incredibly beautiful, surrounded by the majestic peaks of Annapurna South (7219 meters), Annapurna I (8091 meters), Hiunchuli (6441 meters), and Machapuchhre (6993 m). The Annapurna Base Camp Trek can take anywhere from 7 to 12 days to complete, depending on your itinerary and the length of your walking days. The itinerary presented here is designed for globetrotters who want to reach the spectacular mountain base camp in 11 days.",
-    listofHighlights: [
-      "From Pokhara, the Annapurna range whets your appetite for mountain views.",
-      "The Annapurna Base Camp is a small collection of lodges located directly across from the Annapurna glacier.",
-      "Annapurna I (8,091 m) has a lethal allure for mountaineers. Among the eight-thousanders, it has the highest fatality rate.",
-      "The best seasons to trek to Annapurna Base Camp are from mid-September to November (autumn) and March to May (spring).",
-    ],
-    itinerary: [
-      {
-        day: "Day 1",
-        activity: "Arrival in Kathmandu (1,300m/4,264ft)",
-        activitydetails:
-          "Once you arrive in Kathmandu, a representative from the Go Nepal will pick you up at the airport and drop you to the hotel. In the afternoon, you can rest, refresh yourself and have a good tea or coffee. In the evening, a welcome dinner will be held by the Go Nepal. For dinner, you can enjoy authentic Nepalese cuisine. Overnight in Kathmandu.",
-      },
-      {
-        day: "Day 2",
-        activity:
-          "Fly to Pokhara (827m/2,700ft), trek to Ghandruk (1940m/6360 ft): 30 minutes flight, 5 - 6 hours trek",
-        activitydetails:
-          "We take an early morning scheduled flight to Pokhara, the beautiful city of the lake, and where we can enjoy a breathtaking view of the Himalayas from the right side of our plane. After landing at the Pokhara airport, we will drive to Naya Pul (1 hour and 20 minutes) and begin the trek. From Birethanti, we walk to Ghandruk, a beautiful village inhabited mainly by the Gurung community. Weather permitting, we also visit the Gurung Museum today. Night in Ghandruk.",
-      },
-      {
-        day: "Day 3",
-        activity: "Ghandruk to Chhomrong (2170m/7120ft): 5 - 6 hours",
-        activitydetails:
-          "At this point, we will stroll for about an hour to Kimrungdanda. On the way, we can enjoy excellent views of Annapurna South, Hiunchuli, Fishtail Mountain (Machhapuchhre) and Ganggapurna. A strong descent takes us to Kimrong Khola. After another strong stroll from Kimrong Khola to Chere Danda, we descend for a while and then it is a smooth walk to Chhomrong. Chhomrong is a beautiful village located in the lap of the gigantic Annapurna. We will spend the night in Chhomrong.",
-      },
-      {
-        day: "Day 4",
-        activity: "Chhomrong to Bamboo (2310m/7578ft): 4 - 5 hours",
-        activitydetails:
-          "We descend by 2500 stone steps and cross the bridge over Chhomrong Khola. From there, it's a difficult climb for Sinuwa. Then we cross a beautiful forest to Kuldihar, then we descend easily to bamboo. Bamboo Night on this day.",
-      },
-      {
-        day: "Day 5",
-        activity: "Bamboo to Deurali (3230m/10,595ft): 3 - 4 hours",
-        activitydetails:
-          "We crossed a humid and cold bamboo forest, then climbed regularly with some steep slopes. Only after arriving at the Himalaya region, the forest opens up and we are again exposed to the sun with an impressive view of the glacier river. It is a steep climb through a much drier forest before reaching the Hinku cave. From there, we can see the trail descending closer to the river before returning to Deurali, the most picturesque part of the day. The vegetation is sparser, allowing magical views of the valley, the river below and steep cliffs at the top of the rocks covered with bands of waterfalls. Night in Deurali.",
-      },
-      {
-        day: "Day 6",
-        activity:
-          "Deurali to Annapurna Base Camp (4,130m/13,545ft) via Machhapuchhre Base Camp (3700m/12135ft): 5- 6 hours",
-        activitydetails:
-          "Climb gently up the riverbed and then up a steep path to the side of the mountain. The walk from Bagar to Machhapuchhre Base Camp is hard. From the base camp of Machhapuchhre, we have excellent views of the majestic Machhapuchhre and Mt. Hiunchuli, Annapurna South, Annapurna I, Annapurna III, Gandharvachuli and Gangapurna are certainly gratifying experiences. The vegetation disappears on our way to ABC and the road widens when we enter the Annapurna Sanctuary. From there, we have a sensational view of the almost vertical south face of the Annapurna that rises above us. The sanctuary has a dynamic view without anything preventing the 360 degree panorama. From the base camp, we once again can enjoy a fascinating view of Machhapuchhre, Annapurna South, Annapurna I, Hiunchuli and other peaks. Overnight at Annapurna base camp.",
-      },
-      {
-        day: "Day 7",
-        activity: "Annapurna Base Camp to Bamboo: 7 – 8 hours",
-        activitydetails:
-          "From the Annapurna base camp, we retrace our steps towards the bamboo. Today's descent is downhill, so it should not be very difficult. In addition, we will always have the company of this extraordinary landscape to cheer us up. Bamboo Night should be fun.",
-      },
-      {
-        day: "Day 8",
-        activity: "Bamboo to Jhinu Danda (1760m/5770 ft): 5 - 6 hours",
-        activitydetails:
-          "From Bamboo the journey is slightly uphill to Kuldighar, followed by a descent to Chhomrong Khola. Then we climb the stone steps that lead to Chhomrong. The path then descends to Jhinu Danda, where we will rest at night. Today we will have the opportunity to enjoy the hot springs, just 15-20 minutes walk from Jhinu Danda to soothe our aching body. We will spend the night in Jhinu Danda.",
-      },
-      {
-        day: "Day 9",
-        activity:
-          "Trek to Naya Pul then drive to Pokhara: 6 hours trek, 1 hour drive",
-        activitydetails:
-          "From Jhinu Danda to Naya Pul, we can enjoy the beautiful mountainous landscape of western Nepal. We can have lunch on the way to Naya Pul. Our walk will end at Naya Pul, where we will board Pokhara in our vehicle. Overnight in Pokhara.",
-      },
-      {
-        day: "Day 10",
-        activity: "Fly to Kathmandu",
-        activitydetails:
-          "We fly to Kathmandu in the afternoon. Once we land in Kathmandu, a representative will transfer you to the hotel. You can spend your day quietly or make last-minute purchases or explore the Kathmandu area upon time permits. To celebrate the success of our trip, we will have a farewell dinner at night. Overnight in Kathmandu.",
-      },
-      {
-        day: "Day 11",
-        activity: "Final Departure",
-        activitydetails:
-          "Our trip to Nepal ends today. A representative of the Go Nepal will drop you at the airport approximately 3 hours before your scheduled flight. On the way back, you have enough time to reflect on your journey back to Annapurna Basecamp and plan your next adventure in the wonderful country of Nepal.",
-      },
-    ],
-    priceIncludes: [
-      "Airport pickups and drops in a private vehicle",
-      "3-star hotel accommodation in Kathmandu with breakfast",
-      "3-star hotel accommodation in Pokhara with breakfast",
-      "Entrance fee during the sightseeing in Kathmandu.",
-      "Flight Ticket as per Itinerary.",
-      "All meals during the trek",
-      "Welcome and farewell dinners.",
-      "All ground transportation on a comfortable private vehicle as per the itinerary",
-      "An experienced, English-speaking and government-licensed trek leader and assistant trek leader (4 trekkers: 1 assistant guide)",
-      "Porter service (2 trekkers: 1 porter)",
-      "Staff costs including their salary, insurance, equipment, domestic airfare, food and accommodation.",
-      "Down jacket and sleeping bag  (to be returned after trip completion)",
-      "All necessary paperwork and trekking permits (National Park Permit, TIMS)",
-      "Medical kit (carried by your trek leader)",
-      "All government and local taxes",
-    ],
-    priceExcludes: [
-      "Nepal visa fee (bring small denomination cash USD and two passport photographs ).",
-      "International Airfare",
-      "Travel & Health Insurance – Emergency Helicopter Rescue Insurance (Most recommended)",
-      "Lunch & dinner in Kathmandu.",
-      "Any alcoholic drinks, cold drinks, boiled & mineral water, beverages etc during the trek.",
-      "Tipping for related staffs",
-      "Hot shower, battery charges (available in trek with extra cost or free in some lodges).",
-      "Extra night accommodation in Kathmandu and Pokhara because of early arrival, late departure, and early return from the mountain(due to any reason) than the scheduled itinerary",
-      "Any other cost, which is not mentioned in cost includes items as above.",
-      "Tips for Guide, Porter and Driver.",
-    ],
-    usefulInformation: [
-      "From Pokhara, the Annapurna range whets your appetite for mountain views.",
-      "The Annapurna Base Camp is a small collection of lodges located directly across from the Annapurna glacier.",
-      "Annapurna I (8,091 m) has a lethal allure for mountaineers. Among the eight-thousanders, it has the highest fatality rate.",
-      "The best seasons to trek to Annapurna Base Camp are from mid-September to November (autumn) and March to May (spring).",
-    ],
-  },
-
-  {
     destination_id: "annapurna_trek",
     title: "Round Annapurna Circuit Trek",
     price: "23000",
@@ -380,7 +33,7 @@ export const destinationData = [
       {
         id: 6,
         url: "/assets/destination/AnnapurnaRound/annapurna5.jpeg",
-      }
+      },
     ],
 
     OverviewSubHeading: "Highlights of the Annapurna Sanctuary Trek:",
@@ -495,121 +148,9 @@ export const destinationData = [
   },
 
   {
-    destination_id: "mardihimaltrek",
-    title: "Mardi Himal Trek",
-    price: "Rs.34500",
-    description:
-      "Experience the Mardi Himal Trek, a hdestination_idden gem in the Annapurna region, with stunning vistas.",
-    duration: "3 days",
-    available: "N/A",
-    included: "N/A",
-    imageUrl: [
-      {
-        id: 1,
-        url: "/assets/destination/mardi.jpeg",
-      },
-      {
-        id: 11,
-        url: "/assets/destination/mardi/mardi1.jpeg",
-        alt: "mardi himal",
-      },
-      {
-        id: 12,
-        url: "/assets/destination/mardi/mardi2.jpeg",
-        alt: "mardi himal",
-      },
-      {
-        id: 13,
-        url: "/assets/destination/mardi/mardi3.jpeg",
-        alt: "mardi himal",
-      },
-      {
-        id: 14,
-        url: "/assets/destination/mardi/mardi4.jpeg",
-        alt: "mardi himal",
-      },
-      {
-        id: 15,
-        url: "/assets/destination/mardi/mardi5.png",
-        alt: "mardi himal",
-      }
-
-    ],
-
-    OverviewSubHeading: "Highlights of the Annapurna Sanctuary Trek:",
-    OverviewDescription1: `The Mardi Himal Trek is an ideal place for, a hiking experience, hiking in the surroundings and scenery of the Annapurna region, Nepal. The Annapurna range, in central Nepal, is home to some of the most iconic mountain scenery in the world and is crisscrossed by some of the country's most popular hiking trails. For those looking for a less travelled and smoother journey of this spectacular terrain, the 9 to 10 day walk through the Mardi Himal is perfect. Slightly more rigorous than your average mountain hike, the trek consists of walking up to the ridge that reaches the Annapurna. A breath-taking view of the lesser-known side of one of the most famous peaks - the Machhapuchhre (fishtail), 6993 meters high alone make the trek worth doing.`,
-    OverViewDescription2: `Located just at the east of Nepal's, the most popular treks Mardi Himal is a hidden gem in the Annapurna region. Few hikers go to the Mardi Himal base camp located dramatically at the base of Mardi Himal and the impressive Machapuchhre. Another benefit of this trekking is that the trail has a small circuit to the Mardi Himal base camp so that we do not have to go back to the same terrain. The 10 day Mardi Himal trek is an easy and moderate level of travel for all travel enthusiasts. In conclusion, Mardi Himal trek is a short hike in the region of Annapurna in Nepal where we stay in lodges, try local dishes, enjoy the excellent landscape of hills and mountains; and awaken to the panoramic views of the massive Himalayan Mountains, including Annapurna, Machhapuchre, Hiunchuli and Mardi Himal.`,
-    listofHighlights: [
-      "Discover the city of Kathmandu and its heritage sites.",
-      "Panoramic and close-up views of the Annapurna massif, explore the city of Pokhara on the shores of Lake.",
-      "Unimpeded sunrise and sunset view from Poon Hill, picturesque villages.",
-      "Experiencing the lifestyle and culture of Gurung and Magar people, who are very famous for Gorkha arm.",
-      "Walk the narrow, cobbled path in the valley and the remote villages.",
-      "Visit the old monastery, ancient tradition of the Gurung museum and waterfalls.",
-      "Panoramic mountain flight to and from Pokhara.",
-      "Walk through the dense forest of Rhododendron which is even more beautiful in the spring.",
-    ],
-
-    itinerary: [
-      { day: "Day 01", activity: "Arrival, Transfer to hotel" },
-      {
-        day: "Day 02",
-        activity: "Kathmandu Sightseeing, Trekking Preparation",
-      },
-      {
-        day: "Day 03",
-        activity:
-          "Kathmandu - Lukla [2,800 m/9,184 ft]- Phakding (2,652 m/8,700 ft): 3-4 hrs",
-      },
-      {
-        day: "Day 04",
-        activity: "Phakding - Namche Bazaar [3,440 m/11,283 ft]: 5-6 hrs",
-      },
-      {
-        day: "Day 05",
-        activity:
-          "Hike to Everest View Hotel(3780m/12400ft), Khumjung then back to Namche: 5-6 hrs",
-      },
-      {
-        day: "Day 06",
-        activity: "Namche Bazaar to Lukla (2,800m/9,186ft): 3-4 hrs walk",
-      },
-      { day: "Day 07", activity: "Fly back to Kathmandu" },
-      { day: "Day 08", activity: "Departure" },
-    ],
-
-    priceIncludes: [
-      "All arrival and departure transfers in a private vehicle",
-      "Hotels will be of tourist standard, and during trekking will be local tea house/guest house",
-      "All meals (lunch and dinner) as described in the itinerary",
-      "A private vehicle as per group size",
-      "An English-speaking guide throughout the tour and trekking",
-      "TIMS and permit",
-      "For 2 guests, 1 porter will be provided",
-      "Tea House Trekking package (Room + Breakfast + Lunch + Dinner)",
-    ],
-
-    priceExcludes: [
-      "Any kind of medical and personal insurance",
-      "Any kind of personal nature items like bar and laundry bills",
-      "Evacuation in case of emergency",
-      "Domestic flights",
-      "Tips to the guide and driver",
-      "Entrance fees",
-      "ANY ITEMS NOT MENTIONED ABOVE",
-    ],
-    usefulInformation: [
-      "Discover the natural and cultural splendors of Nepal and Bhutan.",
-      "Explore Nepal's UNESCO World Heritage Sites.",
-      "Hike to Bhutan's enchanting Tiger's Nest Monastery.",
-      "Discover cultural and historical landmarks such as dzongs and temples.",
-      "Take in the breathtaking sunrise and sunset views from among the tall and mighty peaks.",
-    ],
-  },
-  {
     destination_id: "everest_base_camp_trek",
     title: "Everest Base Camp Trek",
-    price: "$1200",
+    price: "£1200",
     description:
       "A hike to Everest Base Camp is the adventure of a lifetime, a journey for those whose hopes and dreams float above the clouds. Trekking to Nepal's Everest Base Camp also allows us to embark on an epic journey that Sir Edmund Hillary and Tenzing Norgay embarked on in 1953.",
     duration: "16 days",
@@ -647,7 +188,7 @@ export const destinationData = [
       {
         id: 8,
         url: "/assets/destination/everest/everest5.jpeg",
-      }
+      },
     ],
     facts: [
       "Everest Base camp is in the lap of world highest mountain Mount Everest (Sagarmatha in Nepali and Chomolungma in Tibetan 8848 m).",
@@ -790,12 +331,165 @@ export const destinationData = [
     ],
   },
 
- 
+  {
+    destination_id: "annapurna_base_camp_trek",
+    title: "Annapurna Base Camp Trek",
+    price: "£700",
+    description:
+      "Annapurna Base Camp (ABC) Trek is one of the most popular treks in Nepal. It is a fairly easy and shorter walk than other high-altitude walks in Nepal. This hike incorporates diverse terrains, culture and wildlife. Along with the most spectacular and close view of the range of Annapurna, Machhapuchhre, Hiunchuli and Dhaulagiri.",
+    duration: "11 days",
+    available: "Trekking & Hiking",
+    included: "N/A",
+    imageUrl: [
+      {
+        id: 2,
+        url: "/assets/destination/annapurnabasecamp/annapurna1.jpeg",
+        alt: "Annapurna Base Camp",
+      },
+      {
+        id: 3,
+        url: "/assets/destination/annapurnabasecamp/annapurna2.webp",
+        alt: "Annapurna Base Camp",
+      },
+      {
+        id: 4,
+        url: "/assets/destination/annapurnabasecamp/annapurna3.jpeg",
+        alt: "Annapurna Base Camp",
+      },
+      {
+        id: 5,
+        url: "/assets/destination/annapurnabasecamp/annapurna4.jpeg",
+        alt: "Annapurna Base Camp",
+      },
+      {
+        id: 6,
+        url: "/assets/destination/annapurnabasecamp/annapurna5.jpeg",
+        alt: "Annapurna Base Camp",
+      },
+    ],
+    OverviewSubHeading: "Annapurna Base Camp Trek Overview:",
+    OverviewDescription1: `Annapurna Base Camp (ABC) Trek is one of the most popular treks in Nepal. It is a fairly easy and shorter walk than other high-altitude walks in Nepal. This hike incorporates diverse terrains, culture and wildlife. Along with the most spectacular and close view of the range of Annapurna, Machhapuchhre, Hiunchuli and Dhaulagiri. The Annapurna Base Camp shows you all the mountain ranges that are beautiful, colossal and covered with snow against the blue sky. Here, the air is pure and a hiker thrives in front of this impressive mountain range. The mountains are inextricably linked to you in the base camp and create such a unique environment. Only panoramic and scenic views of Annapurna II, III, IV, Annapurna South, Tent Peak, Hiunchuli, Gangapurna, and Annapurna South are visible. Its beauty is indescribable; they beckon your attention, and all you can do is take photos with your camera as much as you want and as far as you can get to the base camp's corners.`,
+    OverViewDescription2:
+      "It blooms with many beautiful flowers in the spring, including Nepal's national flower, the rhododendron. During the walk, you will be accompanied by orchids, the Machhapuchhre massif, and the Kali Gandaki's deepest gorge. You will notice high waterfalls along the way and will stop at the Ghandruk Museum to learn more about people of different ethnicities, particularly the Gurung community. The Annapurna base camp, located at 4130 meters above sea level, is unique and incredibly beautiful, surrounded by the majestic peaks of Annapurna South (7219 meters), Annapurna I (8091 meters), Hiunchuli (6441 meters), and Machapuchhre (6993 m). The Annapurna Base Camp Trek can take anywhere from 7 to 12 days to complete, depending on your itinerary and the length of your walking days. The itinerary presented here is designed for globetrotters who want to reach the spectacular mountain base camp in 11 days.",
+    listofHighlights: [
+      "From Pokhara, the Annapurna range whets your appetite for mountain views.",
+      "The Annapurna Base Camp is a small collection of lodges located directly across from the Annapurna glacier.",
+      "Annapurna I (8,091 m) has a lethal allure for mountaineers. Among the eight-thousanders, it has the highest fatality rate.",
+      "The best seasons to trek to Annapurna Base Camp are from mid-September to November (autumn) and March to May (spring).",
+    ],
+    itinerary: [
+      {
+        day: "Day 1",
+        activity: "Arrival in Kathmandu (1,300m/4,264ft)",
+        activitydetails:
+          "Once you arrive in Kathmandu, a representative from the Go Nepal will pick you up at the airport and drop you to the hotel. In the afternoon, you can rest, refresh yourself and have a good tea or coffee. In the evening, a welcome dinner will be held by the Go Nepal. For dinner, you can enjoy authentic Nepalese cuisine. Overnight in Kathmandu.",
+      },
+      {
+        day: "Day 2",
+        activity:
+          "Fly to Pokhara (827m/2,700ft), trek to Ghandruk (1940m/6360 ft): 30 minutes flight, 5 - 6 hours trek",
+        activitydetails:
+          "We take an early morning scheduled flight to Pokhara, the beautiful city of the lake, and where we can enjoy a breathtaking view of the Himalayas from the right side of our plane. After landing at the Pokhara airport, we will drive to Naya Pul (1 hour and 20 minutes) and begin the trek. From Birethanti, we walk to Ghandruk, a beautiful village inhabited mainly by the Gurung community. Weather permitting, we also visit the Gurung Museum today. Night in Ghandruk.",
+      },
+      {
+        day: "Day 3",
+        activity: "Ghandruk to Chhomrong (2170m/7120ft): 5 - 6 hours",
+        activitydetails:
+          "At this point, we will stroll for about an hour to Kimrungdanda. On the way, we can enjoy excellent views of Annapurna South, Hiunchuli, Fishtail Mountain (Machhapuchhre) and Ganggapurna. A strong descent takes us to Kimrong Khola. After another strong stroll from Kimrong Khola to Chere Danda, we descend for a while and then it is a smooth walk to Chhomrong. Chhomrong is a beautiful village located in the lap of the gigantic Annapurna. We will spend the night in Chhomrong.",
+      },
+      {
+        day: "Day 4",
+        activity: "Chhomrong to Bamboo (2310m/7578ft): 4 - 5 hours",
+        activitydetails:
+          "We descend by 2500 stone steps and cross the bridge over Chhomrong Khola. From there, it's a difficult climb for Sinuwa. Then we cross a beautiful forest to Kuldihar, then we descend easily to bamboo. Bamboo Night on this day.",
+      },
+      {
+        day: "Day 5",
+        activity: "Bamboo to Deurali (3230m/10,595ft): 3 - 4 hours",
+        activitydetails:
+          "We crossed a humid and cold bamboo forest, then climbed regularly with some steep slopes. Only after arriving at the Himalaya region, the forest opens up and we are again exposed to the sun with an impressive view of the glacier river. It is a steep climb through a much drier forest before reaching the Hinku cave. From there, we can see the trail descending closer to the river before returning to Deurali, the most picturesque part of the day. The vegetation is sparser, allowing magical views of the valley, the river below and steep cliffs at the top of the rocks covered with bands of waterfalls. Night in Deurali.",
+      },
+      {
+        day: "Day 6",
+        activity:
+          "Deurali to Annapurna Base Camp (4,130m/13,545ft) via Machhapuchhre Base Camp (3700m/12135ft): 5- 6 hours",
+        activitydetails:
+          "Climb gently up the riverbed and then up a steep path to the side of the mountain. The walk from Bagar to Machhapuchhre Base Camp is hard. From the base camp of Machhapuchhre, we have excellent views of the majestic Machhapuchhre and Mt. Hiunchuli, Annapurna South, Annapurna I, Annapurna III, Gandharvachuli and Gangapurna are certainly gratifying experiences. The vegetation disappears on our way to ABC and the road widens when we enter the Annapurna Sanctuary. From there, we have a sensational view of the almost vertical south face of the Annapurna that rises above us. The sanctuary has a dynamic view without anything preventing the 360 degree panorama. From the base camp, we once again can enjoy a fascinating view of Machhapuchhre, Annapurna South, Annapurna I, Hiunchuli and other peaks. Overnight at Annapurna base camp.",
+      },
+      {
+        day: "Day 7",
+        activity: "Annapurna Base Camp to Bamboo: 7 – 8 hours",
+        activitydetails:
+          "From the Annapurna base camp, we retrace our steps towards the bamboo. Today's descent is downhill, so it should not be very difficult. In addition, we will always have the company of this extraordinary landscape to cheer us up. Bamboo Night should be fun.",
+      },
+      {
+        day: "Day 8",
+        activity: "Bamboo to Jhinu Danda (1760m/5770 ft): 5 - 6 hours",
+        activitydetails:
+          "From Bamboo the journey is slightly uphill to Kuldighar, followed by a descent to Chhomrong Khola. Then we climb the stone steps that lead to Chhomrong. The path then descends to Jhinu Danda, where we will rest at night. Today we will have the opportunity to enjoy the hot springs, just 15-20 minutes walk from Jhinu Danda to soothe our aching body. We will spend the night in Jhinu Danda.",
+      },
+      {
+        day: "Day 9",
+        activity:
+          "Trek to Naya Pul then drive to Pokhara: 6 hours trek, 1 hour drive",
+        activitydetails:
+          "From Jhinu Danda to Naya Pul, we can enjoy the beautiful mountainous landscape of western Nepal. We can have lunch on the way to Naya Pul. Our walk will end at Naya Pul, where we will board Pokhara in our vehicle. Overnight in Pokhara.",
+      },
+      {
+        day: "Day 10",
+        activity: "Fly to Kathmandu",
+        activitydetails:
+          "We fly to Kathmandu in the afternoon. Once we land in Kathmandu, a representative will transfer you to the hotel. You can spend your day quietly or make last-minute purchases or explore the Kathmandu area upon time permits. To celebrate the success of our trip, we will have a farewell dinner at night. Overnight in Kathmandu.",
+      },
+      {
+        day: "Day 11",
+        activity: "Final Departure",
+        activitydetails:
+          "Our trip to Nepal ends today. A representative of the Go Nepal will drop you at the airport approximately 3 hours before your scheduled flight. On the way back, you have enough time to reflect on your journey back to Annapurna Basecamp and plan your next adventure in the wonderful country of Nepal.",
+      },
+    ],
+    priceIncludes: [
+      "Airport pickups and drops in a private vehicle",
+      "3-star hotel accommodation in Kathmandu with breakfast",
+      "3-star hotel accommodation in Pokhara with breakfast",
+      "Entrance fee during the sightseeing in Kathmandu.",
+      "Flight Ticket as per Itinerary.",
+      "All meals during the trek",
+      "Welcome and farewell dinners.",
+      "All ground transportation on a comfortable private vehicle as per the itinerary",
+      "An experienced, English-speaking and government-licensed trek leader and assistant trek leader (4 trekkers: 1 assistant guide)",
+      "Porter service (2 trekkers: 1 porter)",
+      "Staff costs including their salary, insurance, equipment, domestic airfare, food and accommodation.",
+      "Down jacket and sleeping bag  (to be returned after trip completion)",
+      "All necessary paperwork and trekking permits (National Park Permit, TIMS)",
+      "Medical kit (carried by your trek leader)",
+      "All government and local taxes",
+    ],
+    priceExcludes: [
+      "Nepal visa fee (bring small denomination cash USD and two passport photographs ).",
+      "International Airfare",
+      "Travel & Health Insurance – Emergency Helicopter Rescue Insurance (Most recommended)",
+      "Lunch & dinner in Kathmandu.",
+      "Any alcoholic drinks, cold drinks, boiled & mineral water, beverages etc during the trek.",
+      "Tipping for related staffs",
+      "Hot shower, battery charges (available in trek with extra cost or free in some lodges).",
+      "Extra night accommodation in Kathmandu and Pokhara because of early arrival, late departure, and early return from the mountain(due to any reason) than the scheduled itinerary",
+      "Any other cost, which is not mentioned in cost includes items as above.",
+      "Tips for Guide, Porter and Driver.",
+    ],
+    usefulInformation: [
+      "From Pokhara, the Annapurna range whets your appetite for mountain views.",
+      "The Annapurna Base Camp is a small collection of lodges located directly across from the Annapurna glacier.",
+      "Annapurna I (8,091 m) has a lethal allure for mountaineers. Among the eight-thousanders, it has the highest fatality rate.",
+      "The best seasons to trek to Annapurna Base Camp are from mid-September to November (autumn) and March to May (spring).",
+    ],
+  },
+
   {
     destination_id: "kathmandu_heritage_tour",
 
     title: "Kathmandu Heritage Tour",
-    price: "$45",
+    price: "£45",
     description:
       "Kathmandu is known as the 'City of Temples,' and it has five UNESCO World Heritage Sites. The Kathmandu Valley's cultural heritage is represented by seven groups of monuments and buildings that showcase the full range of historic and artistic achievements for which the Kathmandu Valley is world-famous.",
 
@@ -826,7 +520,7 @@ export const destinationData = [
       {
         id: 6,
         url: "/assets/destination/kathmandu/kathmandu5.jpeg",
-      }
+      },
     ],
 
     OverviewSubHeading: "Highlights of the Kathmandu Heritage Tour:",
@@ -893,173 +587,9 @@ export const destinationData = [
   },
 
   {
-    destination_id: "5",
-    title: "Annapurna Sanctuary Trek",
-    price: "$930",
-    description:
-      "The Annapurna Sanctuary Trek is a spectacular 14-day trip on the southern face of Annapurna I, offering a pleasant hike through the landscape and culture of Nepal. This trek leads to the fabulous amphitheater of highlands also known as Annapurna Base Camp. The route passes through waterfalls, impressive villages, terraced farmland, lush rhododendron forests, and remarkable mountain views before ascending to the steep Annapurna. This trek is an opportunity to witness the beautiful peaks of the Annapurna giants that surround the basin mountains in the Annapurna region.",
-    duration: "14 days",
-    available: "Trekking & Hiking",
-    included: "N/A",
-    imageUrl: [
-      {
-        id: 3,
-        url: "/assets/destination/annapurnasantuary/annapurna3.jpeg",
-         alt: "annapurna sanctuary",
-      },
-      {
-        id: 11,
-        url: "/assets/destination/annapurnasantuary/annapurna1.jpeg",
-        alt: "annapurna sanctuary",
-      },
-      
-      {
-        id: 2,
-        url: "/assets/destination/annapurnasantuary/annapurna2.jpeg",
-        alt: "annapurna sanctuary",
-        
-      },
-      
-      {
-        id: 4,
-        url: "/assets/destination/annapurnasantuary/annapurna4.webp",
-         alt: "annapurna sanctuary",
-      },
-      {
-        id: 15,
-        url: "/assets/destination/annapurnasantuary/annapurna5.webp",
-         alt: "annapurna sanctuary",
-      }
-
-    ],
-    OverviewSubHeading: "Annapurna Sanctuary Trek Overview:",
-    OverviewDescription1: `The Annapurna Sanctuary Trek is a spectacular 14 days trip on the southern face of Annapurna I, a pleasant hike through the landscape and culture of Nepal. This walk leads to the fabulous amphitheater of highlands also known as Annapurna Base Camp. The course passes through waterfalls, impressive villages, terraced farmland, lush rhododendron forests and remarkable mountain views before heading the steep Annapurna. This is a good time to witness the beautiful peaks of the Annapurna giants that surround the mountains of the basin in the Annapurna region of the imperative center. Furthermore, a trip to Annapurna Base Camp is synonymous with entertainment and fun, as well as an extraordinary view of Nepal's plant and cultural heritage. This is by far one of the most enjoyable walks through various ethnic groups' lifestyles as well as the types of woods, plants, trees, and wildlife.`,
-    OverViewDescription2: `The Annapurna Sanctuary is a high glacial basin located beneath a ring of eleven major peaks in Nepal. The Annapurna Sanctuary Trek takes you directly to the frozen heart of the Annapurna Range, a magnificent arena of rock and ice of epic proportions. The Annapurna Sanctuary Trek itinerary is designed for hikers who want to visit World Heritage sites and Poon Hill on their way to the Annapurna Base Camp in a relaxed manner. This allows enough time to admire the breathtaking peaks of all the Annapurna Giants that surround the Annapurna Basin Mountains from the center of the imperative, which includes Annapurna I, Hiunchuli, Annapurna II, Gangapurna, Annapurna III, Machhapuchhre, Annapurna IV, and others.`,
-    listofHighlights: [
-      "The Annapurna Sanctuary trek is an excellent introduction to Himalayan trekking.",
-      "It is categorized as moderate and requires a basic level of fitness.",
-      "Annapurna is the most dangerous 8000m peak to climb, with a fatality to successful climb ratio of 38%.",
-      "The Annapurna massif is protected in the Annapurna Conservation Area, the largest protected area in Nepal.",
-    ],
-    itinerary: [
-      {
-        day: "Day 1",
-        activity: "Arrival in Kathmandu (1,300m/4,264ft)",
-        activitydetails:
-          "Our trip to Nepal starts today. A representative of the Go Nepal will greet you at the airport. Then we drop at your hotel, where you can rest, refresh and drink local tea. In the evening you can enjoy a welcome dinner organized by the Go Nepal. During dinner you can enjoy Nepalese cuisine. Overnight in Kathmandu.",
-      },
-      {
-        day: "Day 2",
-        activity: "Kathmandu: sightseeing and trek preparation",
-        activitydetails:
-          "Today we visit the World Heritage sites of UNESCO. These sites highlight Nepal's cultural and religious heritages. Our first stop will be Kathmandu's Durbar Square, followed by Swayambhunath Stupa, Pashupatinath Temple, and Boudhanath. Finally, late in the evening, we gather for a brief orientation on our hike for the next day. Overnight in Kathmandu.",
-      },
-      {
-        day: "Day 3",
-        activity:
-          "Fly to Pokhara and trek to Ulleri (2050 m/6725 ft): 30 min flight and 6 hours trek",
-        activitydetails:
-          "We fly to Pokhara early in the morning. As soon as we land in Pokhara, we will notice the spectacular view of the Himalayas with which the city is adorned. From Pokhara, we head to Naya Pul and start the trek. We arrive in Ulleri in the evening. Overnight in Ulleri.",
-      },
-      {
-        day: "Day 4",
-        activity: "Ulleri to Ghorepani (2,750 m/ 9,020 ft): 4 - 5 hours trek",
-        activitydetails:
-          "After breakfast, we climb the village of Ghorepani by a stone staircase. As we ascend, we admire the spectacular scenery, while Annapurna South occupies an important place, which comes and goes from our point of view. Night in Ghorepani.",
-      },
-      {
-        day: "Day 5",
-        activity:
-          "Ghorepani to Tadapani (2,700m/8,860ft) with a visit to Poon Hill (3,210m/10,529ft): 6 - 7 hours",
-        activitydetails:
-          "We wake up early in the morning to get to Poon Hill just in time to see the sunrise over the Himalayas. After returning to Ghorepani, we walk to Tadapani through rhododendron forests and waterfalls. Night in Tadapani.",
-      },
-      {
-        day: "Day 6",
-        activity: "Tadapani to Chhomrong (2170m/7120ft): 6 hours trek",
-        activitydetails:
-          "The trail begins with a descent into a large forest of rhododendrons and then opens onto magnificent terraced fields. We arrive in Chhomrong in the evening. Overnight in Chhomrong.",
-      },
-      {
-        day: "Day 7",
-        activity: "Chhomrong to Bamboo (2310m/7578ft): 4 - 5 hours",
-        activitydetails:
-          "We leave Chhomrong and walk on a series of stone steps before arriving at Chhomrong Khola. After crossing a suspension bridge, we trek to Bamboo. Night in Bamboo.",
-      },
-      {
-        day: "Day 8",
-        activity: "Bamboo to Deurali (3230m/10,595ft): 3 - 4 hours",
-        activitydetails:
-          "We trek through a bamboo forest and climb to Deurali, where we enjoy spectacular views of the surrounding hills and Mt. Dhaulagiri. Night in Deurali.",
-      },
-      {
-        day: "Day 9",
-        activity:
-          "Deurali to Annapurna Base Camp (4,130m/13,545ft) via Machhapuchhre Base Camp (3700m/12135ft): 5- 6 hours",
-        activitydetails:
-          "We follow the valley path to Machhapuchhre Base Camp and then climb towards Annapurna Base Camp, where we are surrounded by beautiful peaks. Overnight at Annapurna base camp.",
-      },
-      {
-        day: "Day 10",
-        activity: "Annapurna Base Camp to Bamboo: 7 - 8 hours",
-        activitydetails:
-          "From Annapurna Base Camp, we descend to Bamboo. Today's descent is downhill, so it should not be very difficult. Night in Bamboo.",
-      },
-      {
-        day: "Day 11",
-        activity: "Bamboo to Jhinu Danda (1760m/5770 ft): 5 - 6 hours",
-        activitydetails:
-          "We return to Chhomrong and then descend to Jhinu Danda, where we can relax in natural hot springs. Overnight in Jhinu Danda.",
-      },
-      {
-        day: "Day 12",
-        activity:
-          "Trek to Naya Pul then drive to Pokhara: 6 hours trek, 1 hour drive",
-        activitydetails:
-          "We trek to Naya Pul and drive to Pokhara. The trek to the Annapurna Sanctuary ends today. Overnight in Pokhara.",
-      },
-      {
-        day: "Day 13",
-        activity: "Fly from Pokhara to Kathmandu",
-        activitydetails:
-          "We fly to Kathmandu early in the morning. After landing, you will be dropped to the hotel. We celebrate the end of our trip with a farewell dinner. Overnight in Kathmandu.",
-      },
-      {
-        day: "Day 14",
-        activity: "Final departure",
-        activitydetails:
-          "Our trip to Nepal ends today. A representative will drop you off at the airport 3 hours before the scheduled flight.",
-      },
-    ],
-    priceIncludes: [
-      "All arrival and departure transfer in private vehicle",
-      "3-star hotel in Kathmandu and Pokhara; tea houses/guest houses during trekking",
-      "All meals (lunch and dinner) as described in the itinerary",
-      "Private vehicle as per group size",
-      "English-speaking guide throughout the tour",
-      "Trekking TIMS and permit",
-      "Tea House Trekking package (Room + Breakfast + Lunch + Dinner)",
-    ],
-    priceExcludes: [
-      "Medical and personal insurance",
-      "Personal nature items like bar and laundry bills",
-      "Emergency evacuation",
-      "Domestic flights",
-      "Tips to the guide and driver",
-      "Entrance fees",
-      "Any items not mentioned above",
-    ],
-    usefulInformation: [
-      "The Annapurna Sanctuary trek is an excellent introduction to Himalayan trekking.",
-      "It is categorized as moderate and requires a basic level of fitness.",
-      "Annapurna is the most dangerous 8000m peak to climb, with a fatality to successful climb ratio of 38%.",
-      "The Annapurna massif is protected in the Annapurna Conservation Area, the largest protected area in Nepal.",
-    ],
-  },
-  {
     destination_id: "everest_basecamp_trek_via_gokyo_lake_and_cho_la_pass",
     title: "Everest Basecamp Trek Via Gokyo Lake And Cho La Pass",
-    price: "$940",
+    price: "£940",
     description:
       "If connecting with nature as well as conquering altitude is important to you, the Everest Basecamp Trekking via Gokyo Lake and Cho La Pass is for you. This is one of the best options for hikers seeking the best trekking experience in Everest Base Camp. The Everest base trek through the Gokyo Lakes and Cho La Pass, recognized by the series of beautiful turquoise lakes of the Gokyo Valley and the famous Cho La Pass, takes us through the Khumbu region in the company of majestic mountains, friendly Sherpas, colorful monasteries of Namche Bazaar, the Sagarmatha National Park, and, of course, the base of the mighty Everest. It's simply unbeatable and makes this detour (west of Everest) more picturesque, serene, challenging and worthy of your time and your efforts.",
     duration: "18 days",
@@ -1072,30 +602,30 @@ export const destinationData = [
         alt: "everest gokyo",
       },
       {
-         id:2,
-         url: "/assets/destination/everestgokyo/everest2.jpeg",
-         alt: "everest gokyo",
+        id: 2,
+        url: "/assets/destination/everestgokyo/everest2.jpeg",
+        alt: "everest gokyo",
       },
       {
-        id:3,
+        id: 3,
         url: "/assets/destination/everestgokyo/everest3.jpeg",
         alt: "everest gokyo",
       },
       {
-        id:4,
+        id: 4,
         url: "/assets/destination/everestgokyo/everest4.jpeg",
         alt: "everest gokyo",
       },
       {
-        id:5,
+        id: 5,
         url: "/assets/destination/everestgokyo/everest5.jpeg",
         alt: "everest gokyo",
       },
       {
-        id:6,
+        id: 6,
         url: "/assets/destination/everestgokyo/everest6.jpeg",
         alt: "everest gokyo",
-      }
+      },
     ],
     OverviewSubHeading:
       "Everest Basecamp Trek Via Gokyo Lake And Cho La Pass Overview",
@@ -1261,40 +791,40 @@ export const destinationData = [
   {
     destination_id: "makalu_base_camp_trek",
     title: "Makalu Base Camp Trek",
-    price: "$TBD",
+    price: "£TBD",
     imageUrl: [
       {
         id: 1,
         url: "/assets/destination/makalu/makalu1.jpeg",
-        alt:"makalu basecamp trek",
+        alt: "makalu basecamp trek",
       },
 
       {
         id: 2,
         url: "/assets/destination/makalu/makalu2.jpeg",
-        alt:"makalu basecamp trek",
+        alt: "makalu basecamp trek",
       },
 
       {
         id: 3,
         url: "/assets/destination/makalu/makalu3.jpeg",
-        alt:"makalu basecamp Trek",
+        alt: "makalu basecamp Trek",
       },
       {
         id: 4,
         url: "/assets/destination/makalu/makalu4.jpeg",
-        alt:"makalu basecamp Trek",
+        alt: "makalu basecamp Trek",
       },
       {
         id: 5,
         url: "/assets/destination/makalu/makalu5.avif",
-        alt:"makalu basecamp Trek",
+        alt: "makalu basecamp Trek",
       },
       {
         id: 6,
         url: "/assets/destination/makalu/makalu6.jpeg",
-        alt:"makalu basecamp Trek",
-      }
+        alt: "makalu basecamp Trek",
+      },
     ],
     description:
       "Makalu is the fifth highest mountain in the world (8,481 m), but the trek to its base camp is a less travelled route due to its relative inaccessibility",
@@ -1495,9 +1025,284 @@ export const destinationData = [
   },
 
   {
+    destination_id: "mardihimaltrek",
+    title: "Mardi Himal Trek",
+    price: "£34500",
+    description:
+      "Experience the Mardi Himal Trek, a hdestination_idden gem in the Annapurna region, with stunning vistas.",
+    duration: "3 days",
+    available: "N/A",
+    included: "N/A",
+    imageUrl: [
+      {
+        id: 1,
+        url: "/assets/destination/mardi.jpeg",
+      },
+      {
+        id: 11,
+        url: "/assets/destination/mardi/mardi1.jpeg",
+        alt: "mardi himal",
+      },
+      {
+        id: 12,
+        url: "/assets/destination/mardi/mardi2.jpeg",
+        alt: "mardi himal",
+      },
+      {
+        id: 13,
+        url: "/assets/destination/mardi/mardi3.jpeg",
+        alt: "mardi himal",
+      },
+      {
+        id: 14,
+        url: "/assets/destination/mardi/mardi4.jpeg",
+        alt: "mardi himal",
+      },
+      {
+        id: 15,
+        url: "/assets/destination/mardi/mardi5.png",
+        alt: "mardi himal",
+      },
+    ],
+
+    OverviewSubHeading: "Highlights of the Annapurna Sanctuary Trek:",
+    OverviewDescription1: `The Mardi Himal Trek is an ideal place for, a hiking experience, hiking in the surroundings and scenery of the Annapurna region, Nepal. The Annapurna range, in central Nepal, is home to some of the most iconic mountain scenery in the world and is crisscrossed by some of the country's most popular hiking trails. For those looking for a less travelled and smoother journey of this spectacular terrain, the 9 to 10 day walk through the Mardi Himal is perfect. Slightly more rigorous than your average mountain hike, the trek consists of walking up to the ridge that reaches the Annapurna. A breath-taking view of the lesser-known side of one of the most famous peaks - the Machhapuchhre (fishtail), 6993 meters high alone make the trek worth doing.`,
+    OverViewDescription2: `Located just at the east of Nepal's, the most popular treks Mardi Himal is a hidden gem in the Annapurna region. Few hikers go to the Mardi Himal base camp located dramatically at the base of Mardi Himal and the impressive Machapuchhre. Another benefit of this trekking is that the trail has a small circuit to the Mardi Himal base camp so that we do not have to go back to the same terrain. The 10 day Mardi Himal trek is an easy and moderate level of travel for all travel enthusiasts. In conclusion, Mardi Himal trek is a short hike in the region of Annapurna in Nepal where we stay in lodges, try local dishes, enjoy the excellent landscape of hills and mountains; and awaken to the panoramic views of the massive Himalayan Mountains, including Annapurna, Machhapuchre, Hiunchuli and Mardi Himal.`,
+    listofHighlights: [
+      "Discover the city of Kathmandu and its heritage sites.",
+      "Panoramic and close-up views of the Annapurna massif, explore the city of Pokhara on the shores of Lake.",
+      "Unimpeded sunrise and sunset view from Poon Hill, picturesque villages.",
+      "Experiencing the lifestyle and culture of Gurung and Magar people, who are very famous for Gorkha arm.",
+      "Walk the narrow, cobbled path in the valley and the remote villages.",
+      "Visit the old monastery, ancient tradition of the Gurung museum and waterfalls.",
+      "Panoramic mountain flight to and from Pokhara.",
+      "Walk through the dense forest of Rhododendron which is even more beautiful in the spring.",
+    ],
+
+    itinerary: [
+      { day: "Day 01", activity: "Arrival, Transfer to hotel" },
+      {
+        day: "Day 02",
+        activity: "Kathmandu Sightseeing, Trekking Preparation",
+      },
+      {
+        day: "Day 03",
+        activity:
+          "Kathmandu - Lukla [2,800 m/9,184 ft]- Phakding (2,652 m/8,700 ft): 3-4 hrs",
+      },
+      {
+        day: "Day 04",
+        activity: "Phakding - Namche Bazaar [3,440 m/11,283 ft]: 5-6 hrs",
+      },
+      {
+        day: "Day 05",
+        activity:
+          "Hike to Everest View Hotel(3780m/12400ft), Khumjung then back to Namche: 5-6 hrs",
+      },
+      {
+        day: "Day 06",
+        activity: "Namche Bazaar to Lukla (2,800m/9,186ft): 3-4 hrs walk",
+      },
+      { day: "Day 07", activity: "Fly back to Kathmandu" },
+      { day: "Day 08", activity: "Departure" },
+    ],
+
+    priceIncludes: [
+      "All arrival and departure transfers in a private vehicle",
+      "Hotels will be of tourist standard, and during trekking will be local tea house/guest house",
+      "All meals (lunch and dinner) as described in the itinerary",
+      "A private vehicle as per group size",
+      "An English-speaking guide throughout the tour and trekking",
+      "TIMS and permit",
+      "For 2 guests, 1 porter will be provided",
+      "Tea House Trekking package (Room + Breakfast + Lunch + Dinner)",
+    ],
+
+    priceExcludes: [
+      "Any kind of medical and personal insurance",
+      "Any kind of personal nature items like bar and laundry bills",
+      "Evacuation in case of emergency",
+      "Domestic flights",
+      "Tips to the guide and driver",
+      "Entrance fees",
+      "ANY ITEMS NOT MENTIONED ABOVE",
+    ],
+    usefulInformation: [
+      "Discover the natural and cultural splendors of Nepal and Bhutan.",
+      "Explore Nepal's UNESCO World Heritage Sites.",
+      "Hike to Bhutan's enchanting Tiger's Nest Monastery.",
+      "Discover cultural and historical landmarks such as dzongs and temples.",
+      "Take in the breathtaking sunrise and sunset views from among the tall and mighty peaks.",
+    ],
+  },
+
+  {
+    destination_id: "5",
+    title: "Annapurna Sanctuary Trek",
+    price: "£930",
+    description:
+      "The Annapurna Sanctuary Trek is a spectacular 14-day trip on the southern face of Annapurna I, offering a pleasant hike through the landscape and culture of Nepal. This trek leads to the fabulous amphitheater of highlands also known as Annapurna Base Camp. The route passes through waterfalls, impressive villages, terraced farmland, lush rhododendron forests, and remarkable mountain views before ascending to the steep Annapurna. This trek is an opportunity to witness the beautiful peaks of the Annapurna giants that surround the basin mountains in the Annapurna region.",
+    duration: "14 days",
+    available: "Trekking & Hiking",
+    included: "N/A",
+    imageUrl: [
+      {
+        id: 3,
+        url: "/assets/destination/annapurnasantuary/annapurna3.jpeg",
+        alt: "annapurna sanctuary",
+      },
+      {
+        id: 11,
+        url: "/assets/destination/annapurnasantuary/annapurna1.jpeg",
+        alt: "annapurna sanctuary",
+      },
+
+      {
+        id: 2,
+        url: "/assets/destination/annapurnasantuary/annapurna2.jpeg",
+        alt: "annapurna sanctuary",
+      },
+
+      {
+        id: 4,
+        url: "/assets/destination/annapurnasantuary/annapurna4.webp",
+        alt: "annapurna sanctuary",
+      },
+      {
+        id: 15,
+        url: "/assets/destination/annapurnasantuary/annapurna5.webp",
+        alt: "annapurna sanctuary",
+      },
+    ],
+    OverviewSubHeading: "Annapurna Sanctuary Trek Overview:",
+    OverviewDescription1: `The Annapurna Sanctuary Trek is a spectacular 14 days trip on the southern face of Annapurna I, a pleasant hike through the landscape and culture of Nepal. This walk leads to the fabulous amphitheater of highlands also known as Annapurna Base Camp. The course passes through waterfalls, impressive villages, terraced farmland, lush rhododendron forests and remarkable mountain views before heading the steep Annapurna. This is a good time to witness the beautiful peaks of the Annapurna giants that surround the mountains of the basin in the Annapurna region of the imperative center. Furthermore, a trip to Annapurna Base Camp is synonymous with entertainment and fun, as well as an extraordinary view of Nepal's plant and cultural heritage. This is by far one of the most enjoyable walks through various ethnic groups' lifestyles as well as the types of woods, plants, trees, and wildlife.`,
+    OverViewDescription2: `The Annapurna Sanctuary is a high glacial basin located beneath a ring of eleven major peaks in Nepal. The Annapurna Sanctuary Trek takes you directly to the frozen heart of the Annapurna Range, a magnificent arena of rock and ice of epic proportions. The Annapurna Sanctuary Trek itinerary is designed for hikers who want to visit World Heritage sites and Poon Hill on their way to the Annapurna Base Camp in a relaxed manner. This allows enough time to admire the breathtaking peaks of all the Annapurna Giants that surround the Annapurna Basin Mountains from the center of the imperative, which includes Annapurna I, Hiunchuli, Annapurna II, Gangapurna, Annapurna III, Machhapuchhre, Annapurna IV, and others.`,
+    listofHighlights: [
+      "The Annapurna Sanctuary trek is an excellent introduction to Himalayan trekking.",
+      "It is categorized as moderate and requires a basic level of fitness.",
+      "Annapurna is the most dangerous 8000m peak to climb, with a fatality to successful climb ratio of 38%.",
+      "The Annapurna massif is protected in the Annapurna Conservation Area, the largest protected area in Nepal.",
+    ],
+    itinerary: [
+      {
+        day: "Day 1",
+        activity: "Arrival in Kathmandu (1,300m/4,264ft)",
+        activitydetails:
+          "Our trip to Nepal starts today. A representative of the Go Nepal will greet you at the airport. Then we drop at your hotel, where you can rest, refresh and drink local tea. In the evening you can enjoy a welcome dinner organized by the Go Nepal. During dinner you can enjoy Nepalese cuisine. Overnight in Kathmandu.",
+      },
+      {
+        day: "Day 2",
+        activity: "Kathmandu: sightseeing and trek preparation",
+        activitydetails:
+          "Today we visit the World Heritage sites of UNESCO. These sites highlight Nepal's cultural and religious heritages. Our first stop will be Kathmandu's Durbar Square, followed by Swayambhunath Stupa, Pashupatinath Temple, and Boudhanath. Finally, late in the evening, we gather for a brief orientation on our hike for the next day. Overnight in Kathmandu.",
+      },
+      {
+        day: "Day 3",
+        activity:
+          "Fly to Pokhara and trek to Ulleri (2050 m/6725 ft): 30 min flight and 6 hours trek",
+        activitydetails:
+          "We fly to Pokhara early in the morning. As soon as we land in Pokhara, we will notice the spectacular view of the Himalayas with which the city is adorned. From Pokhara, we head to Naya Pul and start the trek. We arrive in Ulleri in the evening. Overnight in Ulleri.",
+      },
+      {
+        day: "Day 4",
+        activity: "Ulleri to Ghorepani (2,750 m/ 9,020 ft): 4 - 5 hours trek",
+        activitydetails:
+          "After breakfast, we climb the village of Ghorepani by a stone staircase. As we ascend, we admire the spectacular scenery, while Annapurna South occupies an important place, which comes and goes from our point of view. Night in Ghorepani.",
+      },
+      {
+        day: "Day 5",
+        activity:
+          "Ghorepani to Tadapani (2,700m/8,860ft) with a visit to Poon Hill (3,210m/10,529ft): 6 - 7 hours",
+        activitydetails:
+          "We wake up early in the morning to get to Poon Hill just in time to see the sunrise over the Himalayas. After returning to Ghorepani, we walk to Tadapani through rhododendron forests and waterfalls. Night in Tadapani.",
+      },
+      {
+        day: "Day 6",
+        activity: "Tadapani to Chhomrong (2170m/7120ft): 6 hours trek",
+        activitydetails:
+          "The trail begins with a descent into a large forest of rhododendrons and then opens onto magnificent terraced fields. We arrive in Chhomrong in the evening. Overnight in Chhomrong.",
+      },
+      {
+        day: "Day 7",
+        activity: "Chhomrong to Bamboo (2310m/7578ft): 4 - 5 hours",
+        activitydetails:
+          "We leave Chhomrong and walk on a series of stone steps before arriving at Chhomrong Khola. After crossing a suspension bridge, we trek to Bamboo. Night in Bamboo.",
+      },
+      {
+        day: "Day 8",
+        activity: "Bamboo to Deurali (3230m/10,595ft): 3 - 4 hours",
+        activitydetails:
+          "We trek through a bamboo forest and climb to Deurali, where we enjoy spectacular views of the surrounding hills and Mt. Dhaulagiri. Night in Deurali.",
+      },
+      {
+        day: "Day 9",
+        activity:
+          "Deurali to Annapurna Base Camp (4,130m/13,545ft) via Machhapuchhre Base Camp (3700m/12135ft): 5- 6 hours",
+        activitydetails:
+          "We follow the valley path to Machhapuchhre Base Camp and then climb towards Annapurna Base Camp, where we are surrounded by beautiful peaks. Overnight at Annapurna base camp.",
+      },
+      {
+        day: "Day 10",
+        activity: "Annapurna Base Camp to Bamboo: 7 - 8 hours",
+        activitydetails:
+          "From Annapurna Base Camp, we descend to Bamboo. Today's descent is downhill, so it should not be very difficult. Night in Bamboo.",
+      },
+      {
+        day: "Day 11",
+        activity: "Bamboo to Jhinu Danda (1760m/5770 ft): 5 - 6 hours",
+        activitydetails:
+          "We return to Chhomrong and then descend to Jhinu Danda, where we can relax in natural hot springs. Overnight in Jhinu Danda.",
+      },
+      {
+        day: "Day 12",
+        activity:
+          "Trek to Naya Pul then drive to Pokhara: 6 hours trek, 1 hour drive",
+        activitydetails:
+          "We trek to Naya Pul and drive to Pokhara. The trek to the Annapurna Sanctuary ends today. Overnight in Pokhara.",
+      },
+      {
+        day: "Day 13",
+        activity: "Fly from Pokhara to Kathmandu",
+        activitydetails:
+          "We fly to Kathmandu early in the morning. After landing, you will be dropped to the hotel. We celebrate the end of our trip with a farewell dinner. Overnight in Kathmandu.",
+      },
+      {
+        day: "Day 14",
+        activity: "Final departure",
+        activitydetails:
+          "Our trip to Nepal ends today. A representative will drop you off at the airport 3 hours before the scheduled flight.",
+      },
+    ],
+    priceIncludes: [
+      "All arrival and departure transfer in private vehicle",
+      "3-star hotel in Kathmandu and Pokhara; tea houses/guest houses during trekking",
+      "All meals (lunch and dinner) as described in the itinerary",
+      "Private vehicle as per group size",
+      "English-speaking guide throughout the tour",
+      "Trekking TIMS and permit",
+      "Tea House Trekking package (Room + Breakfast + Lunch + Dinner)",
+    ],
+    priceExcludes: [
+      "Medical and personal insurance",
+      "Personal nature items like bar and laundry bills",
+      "Emergency evacuation",
+      "Domestic flights",
+      "Tips to the guide and driver",
+      "Entrance fees",
+      "Any items not mentioned above",
+    ],
+    usefulInformation: [
+      "The Annapurna Sanctuary trek is an excellent introduction to Himalayan trekking.",
+      "It is categorized as moderate and requires a basic level of fitness.",
+      "Annapurna is the most dangerous 8000m peak to climb, with a fatality to successful climb ratio of 38%.",
+      "The Annapurna massif is protected in the Annapurna Conservation Area, the largest protected area in Nepal.",
+    ],
+  },
+
+  {
     destination_id: "9",
     title: "Muktinath Yatra",
-    price: "$600",
+    price: "£600",
     imageUrl: [
       {
         id: 1,
@@ -1543,7 +1348,7 @@ export const destinationData = [
         id: 9,
         url: "/assets/destination/muktinath/muktinath9.jpeg",
         alt: "Muktinath",
-      }
+      },
     ],
     description:
       "Embark on a spiritual journey to Muktinath, a sacred site revered by both Hindus and Buddhists as a place of liberation. This 7-day tour takes you through the historic city of Kathmandu, the tranquil lakeside town of Pokhara, and the mystical Mustang region where Muktinath Temple stands. Explore ancient temples, witness breathtaking mountain views, and immerse yourself in the rich cultural tapestry of Nepal.",
@@ -1634,7 +1439,6 @@ export const destinationData = [
       "Weather conditions vary depending on the season, with autumn and spring being the most favorable for visiting Muktinath.",
     ],
   },
-
   {
     destination_id: "10",
     title: "Manaslu Circuit Trek",
@@ -1665,14 +1469,12 @@ export const destinationData = [
         url: "/assets/destination/manaslu/manaslu4.jpeg",
         alt: "manaslu circuit Trek",
       },
-      
+
       {
         id: 6,
         url: "/assets/destination/manaslu/manaslu6.jpeg",
         alt: "manaslu circuit Trek",
       },
-     
-
     ],
     description:
       "Embark on an adventurous journey through the breathtaking landscapes and rich cultural heritage of the Manaslu region with the Manaslu Circuit Trek. This 18-day trekking adventure takes you through remote villages, lush forests, and rugged mountain passes, offering stunning views of the Himalayas. Encounter diverse wildlife and immerse yourself in the unique blend of Tibetan and Nepalese culture as you traverse this challenging yet rewarding trek.",
@@ -1840,6 +1642,199 @@ export const destinationData = [
   },
 
   {
+    destination_id: "langtang_gosainkunda_and_helambu_trek",
+    title: "Langtang, Gosainkunda And Helambu Trek",
+    price: "£TBD", // Fill this with appropriate data if available
+    duration: "17 days",
+    description:
+      "Langtang Gosaikunda and Helambu Trekking combines three distinct locations for comprehensive coverage...",
+    available: "", // Fill this with appropriate data if available
+    included:
+      "All arrival and departure transfer in private vehicle, Hotels will be of tourist standard and during trekking will be local tea house/ guests house, All meals (lunch and dinner) as described in itinerary, A private vehicle as per group size, An English-speaking guide throughout the tour Trekking, TIMS and permit, 2 guests = 01 Porter, Tea House Trekking package (Room + Breakfast + Lunch + Dinner)",
+    imageUrl: [
+      {
+        id: 1,
+        url: "/assets/destination/gosaikunda.jpeg",
+      },
+      {
+        id: 11,
+        url: "/assets/destination/helicoptor.jpeg",
+        alt: "Helicoptor",
+      },
+      {
+        id: 2,
+        url: "/assets/destination/everest1.jpeg",
+        alt: "Everest",
+      },
+      {
+        id: 3,
+        url: "/assets/destination/everesthelicoptor.jpeg",
+        alt: "Everest by Helicoptor",
+      },
+      {
+        id: 4,
+        url: "/assets/destination/everest1.jpeg",
+        alt: "Everest",
+      },
+      {
+        id: 15,
+        url: "/assets/destination/helicoptor.jpeg",
+        alt: "Helicoptor",
+      },
+      {
+        id: 24,
+        url: "/assets/destination/everest1.jpeg",
+        alt: "Everest",
+      },
+    ],
+    OverviewSubHeading: "Some Trip Highlights",
+    OverviewDescription1: "Max. Altitude: Gosaikunda Lake (4460m/14632ft).",
+    OverViewDescription2: "Trek Grade: Fairly Strenuous.",
+    listofHighlights: [
+      "Tserko Ri to see a range of mountains.",
+      "Gosainkunda, a mythological lake.",
+      "Langtang National Park, home to 7000 m peaks and Red Panda.",
+      "Village of Helambu, where the culture is intact.",
+      "Kyanjin Gompa to enjoy yak cheese and a view of the glacier surrounded.",
+      "Transportation: Local Bus/Private Vehicles/Tourist Bus",
+    ],
+    itinerary: [
+      {
+        day: "Day 1",
+        activity: "Arrival in Kathmandu (1,350m/4,428ft)",
+        activitydetails:
+          "After landing at the Tribhuwan International Airport, you will be greeted by a representative of the Go Nepal...",
+      },
+      {
+        day: "Day 2",
+        activity: "Kathmandu: sightseeing and trek preparation",
+        activitydetails:
+          "Today, after early morning breakfast, we begin a tour to many of Kathmandu's most historical and spiritual attractions...",
+      },
+      {
+        day: "Day 3",
+        activity:
+          "Drive from Kathmandu to Syabrubesi (1,550m/5,100ft): 7-8 hours",
+        activitydetails:
+          "Today we leave Kathmandu in the morning for Syabrubesi, a village that is also the starting point for treks in the Langtang Valley...",
+      },
+      {
+        day: "Day 4",
+        activity:
+          "Trek from Syabrubesi to Lama Hotel (2,380m/7,830ft): 6 hours",
+        activitydetails:
+          "After breakfast, we start our trip to Syabrubesi along the Langtang Khola. We ascend and descend simultaneously through oak and rhododendron forests...",
+      },
+      {
+        day: "Day 5",
+        activity:
+          "Trek to Mundu (3543m/11,621ft) via Langtang village: 6-7 hours",
+        activitydetails:
+          "We continue our ascent from the hotel Lama and enjoy the mountainous landscape with its numerous waterfalls. When we arrive in the green pastures of Ghoda Tabela...",
+      },
+      {
+        day: "Day 6",
+        activity: "Mundu to Kyangjin Gompa (3,870m/12,697ft): 4-5 hours",
+        activitydetails:
+          "After breakfast, we will start our trip to Kyangjin Gompa, one of the main monasteries in the area...",
+      },
+      {
+        day: "Day 7",
+        activity:
+          "Acclimatization- Explore Tserko Ri (5000m/16,404ft) 7-8 hours",
+        activitydetails:
+          "We spend the whole day exploring Tserko Ri, which will also help us get used to the altitude. We start early in the morning...",
+      },
+      {
+        day: "Day 8",
+        activity: "Kyangjin Gompa to Lama Hotel: 6-7 hours",
+        activitydetails:
+          "We start our walk after breakfast and retrace our steps to the Lama Hotel. Most of today's hikes will be downhill...",
+      },
+      {
+        day: "Day 9",
+        activity: "Lama Hotel to Thulo Syabru (2,230m/ 7,316 ft): 5-6 hours",
+        activitydetails:
+          "We start our walk with a climb to the village of Rimche. From here we descend to the banks of Langtang Khola...",
+      },
+      {
+        day: "Day 10",
+        activity: "Thulo Syabru to Shin Gompa: 3-4 hours",
+        activitydetails:
+          "The stroll will be short today, but it is important not to go to Gosaikunda today, as the constant gain in altitude will help us acclimatize to this altitude...",
+      },
+      {
+        day: "Day 11",
+        activity: "Shin Gompa to Gosaikunda (4,460m/14,632ft): 5-6 hours",
+        activitydetails:
+          "Today we can enjoy fantastic panoramic views of the Himalayas, including the Annapurnas, Hiunchuli, Manaslu, Ganesh and Langtang...",
+      },
+      {
+        day: "Day 12",
+        activity: "Gosaikunda to Ghopte (3,440m/11,286ft): 6-8 hours",
+        activitydetails:
+          "We move around the lake before climbing to the Laurebina pass (4610 m). The region of Helambu begins at Lauribina La (walk) and descends into the Melamchi Valley...",
+      },
+      {
+        day: "Day 13",
+        activity: "Ghopte to Melamchigaon (2,560m/8,399ft): 6-7 hours",
+        activitydetails:
+          "We go up and down a path through dense forests. Walking on a path through the forest will take us to Thare Pati Village...",
+      },
+      {
+        day: "Day 14",
+        activity: "Melamchigaon to Tarkeghyang (2,590m/8,497ft): 5-6 hours",
+        activitydetails:
+          "We pass through a stupa and cross a small stream below Tarkeghyang...",
+      },
+      {
+        day: "Day 15",
+        activity: "Tarkeghyang to Sermathang (2,610m/8,563ft): 3-5 hours",
+        activitydetails:
+          "We start our walk after breakfast. The path is easy and passes through lush forests...",
+      },
+      {
+        day: "Day 16",
+        activity:
+          "Trek to Melamchi Bazaar, drive to Kathmandu: 3-4 hours trek, 2 hours’ drive",
+        activitydetails:
+          "We walk through meadows, fields and beautiful villages to reach the Melamchi Bazaar...",
+      },
+      {
+        day: "Day 17",
+        activity: "Final Departure",
+        activitydetails:
+          "Our trip to Nepal ends today. A Go Nepal representative will drop you off at the airport about 3 hours before our scheduled flight...",
+      },
+    ],
+
+    priceIncludes: [
+      "All arrival and departure transfer in private vehicle",
+      "Hotels will be of tourist standard and during trekking will be local tea house/ guests house",
+      "All meals (lunch and dinner) as described in itinerary",
+      "A private vehicle as per group size",
+      "An English-speaking guide throughout the tour Trekking",
+      "TIMS and permit",
+      "2 guests = 01 Porter",
+      "Tea House Trekking package (Room + Breakfast + Lunch + Dinner)",
+    ],
+    priceExcludes: [
+      "Any kind of medical and personal insurance",
+      "Any kind of personal nature items like bar and Laundry bills.",
+      "Evacuation in case of emergency",
+      "Domestic flights",
+      "Tips to the guide and driver",
+      "Entrance Fees",
+      "ANY ITEMS NOT MENTIONED ABOVE",
+    ],
+    usefulInformation: [
+      "Langtang Gosainkunda Helambu Trekking offers breathtaking mountain views, culture, flowers, and fauna as you progress from one area to another.",
+      "The Langtang Gosaikunda Helambu trek is a memorable adventure in Nepal's Himalayan region.",
+      "You can enjoy the Panoramic views from Kyanjin Gompa.",
+    ],
+  },
+
+  {
     destination_id: "1111",
     title: "Ghorepani - Poon-Hill Trek",
     duration: "9 days",
@@ -1877,8 +1872,7 @@ export const destinationData = [
         id: 6,
         url: "/assets/destination/ghorepani/ghorepani6.jpeg",
         alt: "ghorepani",
-      }
-
+      },
     ],
 
     description:
@@ -1909,11 +1903,12 @@ export const destinationData = [
       { day: "Pokhara Trek to Tikhedhunga" },
       { day: "Tikhedhunga to Ghorepani" },
       { day: "Ghorepani to Poon Hill and Trek to Tadapani" },
-      { day: "Tadapani Trek to Ghandruk, Trekking to Nayapul and Drive to Pokhara" },
+      {
+        day: "Tadapani Trek to Ghandruk, Trekking to Nayapul and Drive to Pokhara",
+      },
       { day: "Drive from Pokhara to Kathmandu" },
       { day: "Final departure" },
-  ],
-  
+    ],
 
     priceIncludes: [
       "All arrival and departure transfer in private vehicle",
@@ -1941,9 +1936,10 @@ export const destinationData = [
       "The main attraction is reaching the summit of Poon Hill at sunrise and seeing panoramic views of the famous Annapurna region, including Annapurna South, Annapurna I, Annapurna II, III, and IV, Dhaulagiri, Lamjung Himal, Gangapurna, Machhapuchhare, and Manaslu",
     ],
   },
+
   {
     destination_id: "kathmandu_nagarkot_3_nights_4_days",
-price :"price on request",
+    price: "price on request",
     title: "Kathmandu  Nagarkot Tour 3 Nights 4 Days",
     duration: "4 days",
     activity: "Multiple Activities",
@@ -1959,8 +1955,7 @@ price :"price on request",
         id: 2,
         url: "/assets/destination/nagarkot/nagarkot2.jpeg",
         alt: "Nagarkot",
-      }
-      ,
+      },
       {
         id: 3,
         url: "/assets/destination/nagarkot/nagarkot3.jpeg",
@@ -1980,45 +1975,44 @@ price :"price on request",
         id: 6,
         url: "/assets/destination/nagarkot/nagarkot6.jpeg",
         alt: "Nagarkot",
-      }
+      },
     ],
 
     description:
       "Explore the cultural heartland of Nepal with the Kathmandu – Nagarkot Tour. This tour combines visits to UNESCO World Heritage Sites in Kathmandu Valley with a scenic excursion to Nagarkot, offering breathtaking views of the Himalayas.",
-   OverviewSubHeading: "Overview:",
-   OverviewDescription1:`The Kathmandu valley, which covers an area of 257 square miles, is Nepal's cultural heartland. Newars still have their age-old mystic festivals on the grounds of historic palaces and temples in the backstreets of the bustling metropolis. Kathmandu contains around 130 nationally recognized monuments, organized into seven groupings, making it a UNESCO World Heritage Site. 
+    OverviewSubHeading: "Overview:",
+    OverviewDescription1: `The Kathmandu valley, which covers an area of 257 square miles, is Nepal's cultural heartland. Newars still have their age-old mystic festivals on the grounds of historic palaces and temples in the backstreets of the bustling metropolis. Kathmandu contains around 130 nationally recognized monuments, organized into seven groupings, making it a UNESCO World Heritage Site. 
    A Kathmandu tour includes cultural attractions, Himalayan vistas, and hiking or a short trip. The surrounding green hills provide a backdrop for Himalayan sightseeing and a short and scenic cultural trek.
    `,
-   OverViewDescription2:`Nagarkot tour is 32 kilometers east of Kathmandu valley, on a hilltop at an elevation of 2175 meters above sea level. It is one of the most beautiful scenic sites in Nepal's countryside. The excursion to Nagarkot, the valley's second highest peak, is known for its sunrise and sunset views of the Himalayas. Highlights for 2022 and 2023 are us. Nagarkot is bordered by densely forested slopes of pine trees and gives beautiful views of the Langtang ranges, Dorje Lakpa, Manaslu range, Ganesh Himal, and Gaurishankar. This is a beautiful getaway into nature, away from the bustling and concrete jungle of the capital city, where only the wind and the rustling sound of leaves disturb you.
+    OverViewDescription2: `Nagarkot tour is 32 kilometers east of Kathmandu valley, on a hilltop at an elevation of 2175 meters above sea level. It is one of the most beautiful scenic sites in Nepal's countryside. The excursion to Nagarkot, the valley's second highest peak, is known for its sunrise and sunset views of the Himalayas. Highlights for 2022 and 2023 are us. Nagarkot is bordered by densely forested slopes of pine trees and gives beautiful views of the Langtang ranges, Dorje Lakpa, Manaslu range, Ganesh Himal, and Gaurishankar. This is a beautiful getaway into nature, away from the bustling and concrete jungle of the capital city, where only the wind and the rustling sound of leaves disturb you.
    From Nagarkot, one can enjoy a beautiful view of the Indravati River valley in the east and the Kathmandu valley in the west. From the tower, the Nagarkot excursion provides the greatest view of the Himalayas. 
    `,
-   listofHighlights: [
-    "Exploration of Kathmandu's cultural attractions, Himalayan vistas, and scenic trekking",
-    "Visiting UNESCO World Heritage Sites like Pashupati Nath Temple, Bouddhanath Stupa, Swaymbhu, and Patan Durbar Square",
-    "Excursion to Nagarkot for stunning sunrise and sunset views of the Himalayas",
-    "Exploring Bhaktapur Durbar Square, a UNESCO World Heritage Site, known for its ancient royal palace and temples"
-  ],
+    listofHighlights: [
+      "Exploration of Kathmandu's cultural attractions, Himalayan vistas, and scenic trekking",
+      "Visiting UNESCO World Heritage Sites like Pashupati Nath Temple, Bouddhanath Stupa, Swaymbhu, and Patan Durbar Square",
+      "Excursion to Nagarkot for stunning sunrise and sunset views of the Himalayas",
+      "Exploring Bhaktapur Durbar Square, a UNESCO World Heritage Site, known for its ancient royal palace and temples",
+    ],
 
-
-  itinerary: [
-    {
+    itinerary: [
+      {
         day: "Day 1",
-        activity: "Arrival at Kathmandu airport, transfer to hotel"
-    },
-    {
+        activity: "Arrival at Kathmandu airport, transfer to hotel",
+      },
+      {
         day: "Day 2",
-        activity: "Full Day Kathmandu Valley Sightseeing Including Swayambhunath Stupa, Patan Durbar Square, Pasupatinath Temple and Bouddhanath Stupa"
-    },
-    {
+        activity:
+          "Full Day Kathmandu Valley Sightseeing Including Swayambhunath Stupa, Patan Durbar Square, Pasupatinath Temple and Bouddhanath Stupa",
+      },
+      {
         day: "Day 3",
-        activity: "Drive to Nagarkot via Bhaktapur"
-    },
-    {
+        activity: "Drive to Nagarkot via Bhaktapur",
+      },
+      {
         day: "Day 4",
-        activity: "Drive Back to Kathmandu airport for next destination"
-    }
-],
-
+        activity: "Drive Back to Kathmandu airport for next destination",
+      },
+    ],
 
     priceIncludes: [
       "All ground transportation during the trip",
@@ -2032,7 +2026,7 @@ price :"price on request",
       "Other costs not mentioned in 'cost including' field",
       "Extra nights in Kathmandu and Nagarkot",
     ],
- 
+
     usefulInformation: [
       "Kathmandu is the 17th highest capital in the world standing at an elevation of 1400m above sea level",
       "Best time to visit Kathmandu valley is from September to November for dry weather, clear skies, and cultural events",
@@ -2040,14 +2034,16 @@ price :"price on request",
       "The original inhabitants of Kathmandu are Newars, known for their unique culture and lifestyle",
       "Newari khaja, particularly samaybaji, is a signature dish of Newar culture, consisting of various delicious items served in a leaf bowl",
       "Nagarkot offers outstanding views of the Himalayas, breathtaking mountain scenery, and is famous for its sunrise and sunset views",
-      "In ancient times, Nagarkot was a fort of the Kathmandu valley, built to monitor the activities of neighboring kingdoms"
-    ]
+      "In ancient times, Nagarkot was a fort of the Kathmandu valley, built to monitor the activities of neighboring kingdoms",
+    ],
   },
+
   {
     destination_id: "8_days_nepal_tour",
     title: "8 Days Nepal Tour",
-    price: "$400",
-    description: "Nepal is a very beautiful country with a fascinating history. Nepal is a country has it everything, whether it's sacred temples, historical sites, or scenic mountains. Nepal, as one of the most popular destinations for travelers from all over the world, awaits your visit. The 7 Nights 8 Days Nepal Tour is a fantastic way to see Nepal's four most gorgeous cities: Kathmandu, Pokhara and Jomsom.",
+    price: "£400",
+    description:
+      "Nepal is a very beautiful country with a fascinating history. Nepal is a country has it everything, whether it's sacred temples, historical sites, or scenic mountains. Nepal, as one of the most popular destinations for travelers from all over the world, awaits your visit. The 7 Nights 8 Days Nepal Tour is a fantastic way to see Nepal's four most gorgeous cities: Kathmandu, Pokhara and Jomsom.",
     duration: "8 days",
     available: "Multiple Activities",
     included: "Multiple Activities",
@@ -2056,123 +2052,124 @@ price :"price on request",
         id: 2,
         url: "/assets/destination/nepal/nepal2.jpeg",
         alt: "8 Days Nepal Tour",
-    },
+      },
       {
         id: 1,
         url: "/assets/destination/nepal/nepal.avif",
         alt: "8 Days Nepal Tour",
-    },
-        {
-            id: 1,
-            url: "/assets/destination/nepal/nepal1.webp",
-            alt: "8 Days Nepal Tour",
-        }
-        ,
-       
-        {
-            id: 3,
-            url: "/assets/destination/nepal/nepal3.jpeg",
-            alt: "8 Days Nepal Tour",
-        },
-        {
-            id: 4,
-            url: "/assets/destination/nepal/nepal4.jpeg",
-            alt: "8 Days Nepal Tour",
-        },
-        {
-            id: 5,
-            url: "/assets/destination/nepal/nepal5.jpeg",
-            alt: "8 Days Nepal Tour",
-        },
-        {
-            id: 6,
-            url: "/assets/destination/nepal/nepal6.jpeg",
-            alt: "8 Days Nepal Tour",
-        },
-        {
-            id: 7,
-            url: "/assets/destination/nepal/nepal7.jpeg",
-            alt: "8 Days Nepal Tour",
-        },
-        {
-            id: 8,
-            url: "/assets/destination/nepal/nepal8.jpeg",
-            alt: "8 Days Nepal Tour",
-        },
-        {
-            id: 9,
-            url: "/assets/destination/nepal/nepal9.jpeg",
-            alt: "8 Days Nepal Tour",
-        }
+      },
+      {
+        id: 1,
+        url: "/assets/destination/nepal/nepal1.webp",
+        alt: "8 Days Nepal Tour",
+      },
+      {
+        id: 3,
+        url: "/assets/destination/nepal/nepal3.jpeg",
+        alt: "8 Days Nepal Tour",
+      },
+      {
+        id: 4,
+        url: "/assets/destination/nepal/nepal4.jpeg",
+        alt: "8 Days Nepal Tour",
+      },
+      {
+        id: 5,
+        url: "/assets/destination/nepal/nepal5.jpeg",
+        alt: "8 Days Nepal Tour",
+      },
+      {
+        id: 6,
+        url: "/assets/destination/nepal/nepal6.jpeg",
+        alt: "8 Days Nepal Tour",
+      },
+      {
+        id: 7,
+        url: "/assets/destination/nepal/nepal7.jpeg",
+        alt: "8 Days Nepal Tour",
+      },
+      {
+        id: 8,
+        url: "/assets/destination/nepal/nepal8.jpeg",
+        alt: "8 Days Nepal Tour",
+      },
+      {
+        id: 9,
+        url: "/assets/destination/nepal/nepal9.jpeg",
+        alt: "8 Days Nepal Tour",
+      },
     ],
     OverviewSubHeading: "Experience the Best of Nepal in 8 Days",
-    OverviewDescription1: "The 7 Nights 8 Days Nepal Tour is one of the most popular Nepal local tour packages from Kathmandu, offering a mix of natural beauty, cultural significance, and wildlife. From exploring the vibrant city of Kathmandu to experiencing the serene beauty of Pokhara and the adventurous spirit of Jomsom, this tour promises an unforgettable journey through the heart of Nepal.",
-    OverViewDescription2: "The tour includes visits to UNESCO World Heritage Sites, scenic flights, sightseeing tours, and cultural experiences, providing a comprehensive overview of Nepal's diverse attractions.",
+    OverviewDescription1:
+      "The 7 Nights 8 Days Nepal Tour is one of the most popular Nepal local tour packages from Kathmandu, offering a mix of natural beauty, cultural significance, and wildlife. From exploring the vibrant city of Kathmandu to experiencing the serene beauty of Pokhara and the adventurous spirit of Jomsom, this tour promises an unforgettable journey through the heart of Nepal.",
+    OverViewDescription2:
+      "The tour includes visits to UNESCO World Heritage Sites, scenic flights, sightseeing tours, and cultural experiences, providing a comprehensive overview of Nepal's diverse attractions.",
     listofHighlights: [
-        "Visit Kathmandu, Pokhara, and Jomsom - Nepal's most gorgeous cities",
-        "Explore UNESCO World Heritage Sites in Kathmandu",
-        "Experience a scenic flight to Jomsom with views of the Annapurna and Dhaulagiri peaks",
-        "Discover the cultural heritage of Nepal through sightseeing tours and cultural experiences",
-        "Enjoy outdoor adventures like paragliding and boating in Pokhara",
-        "Witness breathtaking sunrise views over the Himalayas from Nagarkot",
-        "Immerse yourself in the natural beauty and tranquility of Nepal's landscapes",
-        "Experience the warmth and hospitality of Nepalese people throughout the journey"
+      "Visit Kathmandu, Pokhara, and Jomsom - Nepal's most gorgeous cities",
+      "Explore UNESCO World Heritage Sites in Kathmandu",
+      "Experience a scenic flight to Jomsom with views of the Annapurna and Dhaulagiri peaks",
+      "Discover the cultural heritage of Nepal through sightseeing tours and cultural experiences",
+      "Enjoy outdoor adventures like paragliding and boating in Pokhara",
+      "Witness breathtaking sunrise views over the Himalayas from Nagarkot",
+      "Immerse yourself in the natural beauty and tranquility of Nepal's landscapes",
+      "Experience the warmth and hospitality of Nepalese people throughout the journey",
     ],
     itinerary: [
-        {
-            day: "Day 1",
-            activity: "Arrival and transfer to Hotel",
-            activitydetails: "Upon arrival at Kathmandu International Airport, a Go Nepal representative will meet and transfer you to the hotel. Rest of the day at leisure."
-        },
-        {
-            day: "Day 2",
-            activity: "Drive from Kathmandu to Pokhara"
-        },
-        {
-            day: "Day 3",
-            activity: "Fly to Jomsom, Sightseeing"
-        },
-        {
-            day: "Day 4",
-            activity: "Fly back to Pokhara, Explore Pokhara"
-        },
-        {
-            day: "Day 5",
-            activity: "Paragliding, Drive to Kathmandu"
-        },
-        {
-            day: "Day 6",
-            activity: "Kathmandu City Tour, Drive to Nagarkot"
-        },
-        {
-            day: "Day 7",
-            activity: "Sunrise, back to Kathmandu via Bhaktapur"
-        },
-        {
-            day: "Day 8",
-            activity: "Departure to Airport"
-        }
+      {
+        day: "Day 1",
+        activity: "Arrival and transfer to Hotel",
+        activitydetails:
+          "Upon arrival at Kathmandu International Airport, a Go Nepal representative will meet and transfer you to the hotel. Rest of the day at leisure.",
+      },
+      {
+        day: "Day 2",
+        activity: "Drive from Kathmandu to Pokhara",
+      },
+      {
+        day: "Day 3",
+        activity: "Fly to Jomsom, Sightseeing",
+      },
+      {
+        day: "Day 4",
+        activity: "Fly back to Pokhara, Explore Pokhara",
+      },
+      {
+        day: "Day 5",
+        activity: "Paragliding, Drive to Kathmandu",
+      },
+      {
+        day: "Day 6",
+        activity: "Kathmandu City Tour, Drive to Nagarkot",
+      },
+      {
+        day: "Day 7",
+        activity: "Sunrise, back to Kathmandu via Bhaktapur",
+      },
+      {
+        day: "Day 8",
+        activity: "Departure to Airport",
+      },
     ],
     priceIncludes: [
-        "All ground transportation by private vehicle as per itinerary",
-        "Domestic flight ticket Pokhara – Jomsom – Pokhara",
-        "Hotel accommodation in Kathmandu, Pokhara, and Jomsom",
-        "Annapurna Conservation Permit"
+      "All ground transportation by private vehicle as per itinerary",
+      "Domestic flight ticket Pokhara – Jomsom – Pokhara",
+      "Hotel accommodation in Kathmandu, Pokhara, and Jomsom",
+      "Annapurna Conservation Permit",
     ],
     priceExcludes: [
-        "Personal Nature expenses",
-        "Monuments entrance fee in Kathmandu and Pokhara",
-        "All sorts of drinks",
-        "Extra nights in Kathmandu, Pokhara, Jomsom, and Nagarkot",
-        "Tips for Guide and Driver",
-        "Other expenses not mentioned in 'Includes' section"
+      "Personal Nature expenses",
+      "Monuments entrance fee in Kathmandu and Pokhara",
+      "All sorts of drinks",
+      "Extra nights in Kathmandu, Pokhara, Jomsom, and Nagarkot",
+      "Tips for Guide and Driver",
+      "Other expenses not mentioned in 'Includes' section",
     ],
     usefulInformation: [
-        "Kathmandu is the 17th highest capital in the world, standing at an elevation of 1400m above sea level",
-        "Best time to visit Kathmandu valley is from September to November for dry weather and clear skies",
-        "Kathmandu is the center of Nepal's history, art, culture, and economy, with over 300 temples, monasteries, and monuments to explore",
-        "Nagarkot offers outstanding views of the Himalayas and is famous for its sunrise and sunset views",
-        "Bhaktapur Durbar Square is a UNESCO World Heritage Site, known for its stunning architecture and cultural significance"
-    ]
+      "Kathmandu is the 17th highest capital in the world, standing at an elevation of 1400m above sea level",
+      "Best time to visit Kathmandu valley is from September to November for dry weather and clear skies",
+      "Kathmandu is the center of Nepal's history, art, culture, and economy, with over 300 temples, monasteries, and monuments to explore",
+      "Nagarkot offers outstanding views of the Himalayas and is famous for its sunrise and sunset views",
+      "Bhaktapur Durbar Square is a UNESCO World Heritage Site, known for its stunning architecture and cultural significance",
+    ],
   },
 ];
