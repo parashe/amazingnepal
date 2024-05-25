@@ -142,7 +142,7 @@ const DropdownContent = () => {
         <li key={destination?.destination_id}>
           <Link
             to={`/destination/${destination?.destination_id}`}
-            className="block px-5 py-2 text-xs text-gray-800 hover:bg-gray-100 hover:text-pink-500 dark:text-white dark:hover:bg-gray-600"
+            className="block px-5 py-3 rounded-lg  text-xs text-gray-800 hover:bg-gray-100 hover:text-pink-500 dark:text-white dark:hover:bg-gray-600"
           >
             {destination?.title}
           </Link>

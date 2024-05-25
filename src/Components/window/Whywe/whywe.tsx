@@ -26,7 +26,7 @@ const Whywe = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-blue-500 via-white  to-pink-500 opacity-100 dark:bg-gray-900">
+    <div className=" bg-gradient-to-r from-blue-500 via-white to-pink-500 dark:bg-gray-900">
       <div className="mt-0 md:pt-28 md:pb-24 container mx-auto pt-5 ">
         <div className="text-center mx-auto max-w-4xl gap-6">
           <div className="flex items-center justify-center ">

@@ -30,7 +30,7 @@ const Contact = () => {
           <LoadingSkeleton />
         </div>
       ) : (
-        <div className="container mx-auto ">
+        <div className="container mx-auto  bg-gray-50 py-5 px-5">
           <div className="text-center mx-auto max-w-4xl gap-6 mb-5 md:mb-10">
             <div className="flex items-center justify-center ">
               <h2 className="text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
@@ -50,7 +50,7 @@ const Contact = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-3 py-2">
             <div className="col-span-3 ">
-              <div className="w-full p-3 md:p-5 shadow-2xl">
+              <div className="w-full p-3 md:p-5 bg-white shadow-xl">
                 <AboutContact />
               </div>
               <div className="w-full p-2">
@@ -229,7 +229,7 @@ const AboutContact = () => {
 
   return (
     <>
-      <div className="w-full h-full">
+      <div className="w-full h-full bg-white ">
         <div className="text-center">
           <h4 className="text-lg  font-bold text-gray-800 uppercase tracking-wide py-5">
             About Amazing Nepal

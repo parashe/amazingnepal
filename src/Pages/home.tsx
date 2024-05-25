@@ -8,6 +8,8 @@ import Recommended from "../Components/window/Recommended/recommended";
 import {  HomeLoadingSkeleton,} from "../Components/atoms";
 import { FirstHomeScreen } from "../Components/window/home/home";
 import HomeDestination from "../Components/window/Destination/home_destination";
+import { DestinationHomeContent } from "../Components/window/Destination/destination_home";
+import { HomeFirstScreen } from "../Components/window/home/home_first_screen";
 
 export const HomePage = () => {
   const [showLoader, setShowLoader] = React.useState(true);
@@ -39,13 +41,16 @@ export const HomePage = () => {
         </>
       ) : (
         <Layout>
-          <FirstHomeScreen/>
+          <HomeFirstScreen/>
+{/* <DestinationHomeContent/> */}
+
+          {/* <FirstHomeScreen/> */}
           {/* <Carousel /> */}
 
           {/*      
       <Services/> */}
           {/* <Destination /> */}
-          <HomeDestination/>
+          {/* <HomeDestination/> */}
           <Recommended />
           <div className="h-20"></div>
           <Whywe />
