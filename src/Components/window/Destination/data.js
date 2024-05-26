@@ -157,18 +157,18 @@ export const destinationData = [
     available: "N/A",
     included: "N/A",
     imageUrl: [
-      {
-        id: 1,
-        url: "/assets/destination/helicoptor.jpeg",
-      },
-      {
-        id: 2,
-        url: "/assets/destination/everest1.jpeg",
-      },
-      {
-        id: 3,
-        url: "/assets/destination/everesthelicoptor.jpeg",
-      },
+      // {
+      //   id: 1,
+      //   url: "/assets/destination/helicoptor.jpeg",
+      // },
+      // {
+      //   id: 2,
+      //   url: "/assets/destination/everest1.jpeg",
+      // },
+      // {
+      //   id: 3,
+      //   url: "/assets/destination/everesthelicoptor.jpeg",
+      // },
       {
         id: 4,
         url: "/assets/destination/everest/everest1.jpeg",

@@ -1,9 +1,52 @@
 export const galleryData = [
+  
   {
-    id: 1,
-    src: "/assets/destination/helicoptor.jpeg",
-    alt: "Helicoptor",
+    id: 103,
+    src: "/assets/gallery/gallery1.jpeg",
+    alt: "paragliding",
   },
+  {
+    id: 104,
+    src: "/assets/gallery/gallery2.jpeg",
+    alt: "paragliding",
+  },
+  {
+    id: 105,
+    src: "/assets/gallery/gallery3.jpeg",
+    alt: "paragliding",
+  },
+  {
+    id: 106,
+    src: "/assets/gallery/gallery4.jpeg",
+    alt: "paragliding",
+  },
+  {
+    id: 107,
+    src: "/assets/gallery/gallery5.jpeg",
+    alt: "paragliding",
+  },
+  {
+    id: 108,
+    src: "/assets/gallery/gallery6.jpeg",
+    alt: "paragliding",
+  },
+  {
+    id: 109,
+    src: "/assets/gallery/gallery7.jpeg",
+    alt: "paragliding",
+  },
+  {
+    id: 110,
+    src: "/assets/gallery/gallery8.jpeg",
+    alt: "paragliding",
+  },
+  {
+    id: 111,
+    src: "/assets/gallery/gallery9.jpeg",
+    alt: "paragliding",
+  },
+  
+ 
   {
     id: 2,
     src: "/assets/destination/everest1.jpeg",
@@ -25,17 +68,13 @@ export const galleryData = [
     alt: "Helicoptor",
   },
   {
-    id: 2,
+    id: 8,
     src: "/assets/destination/mardi.jpeg",
     alt: "Everest",
   },
  
  
-  {
-    id: 11,
-    src: "/assets/destination/helicoptor.jpeg",
-    alt: "Helicopter",
-  },
+  
 
   {
     id: 32,
@@ -82,5 +121,7 @@ export const galleryData = [
     src: "/assets/nepal/himalaya.webp",
     alt: "himalayn",
   }
+ 
+  
 
 ];
