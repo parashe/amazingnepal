@@ -36,7 +36,7 @@ export const HomeTopContent = ({
         ></div>
         {/* Actual Image */}
         <img
-          className="absolute top-0 left-0 w-full h-full object-cover brightness-50 transition duration-500 ease-in-out transform hover:scale-105"
+          className="absolute top-0 left-0 w-full h-full object-fill brightness-75 transition duration-500 ease-in-out transform hover:scale-105"
           src={imageUrl}
           alt="Amazing Nepal"
           loading="lazy"
