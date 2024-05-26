@@ -1,5 +1,4 @@
 import React from "react";
-import { MapPinIcon, SearchIcon } from "../../svg";
 
 import { DestinationHomeContent } from "../Destination/destination_home";
 
