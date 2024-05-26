@@ -2,7 +2,7 @@ export const destinationData = [
   {
     destination_id: "annapurna_trek",
     title: "Round Annapurna Circuit Trek",
-    price: "23000",
+    price: "£23000",
     description:
       "Embark on the classic Annapurna Circuit Trek, offering breathtaking views and diverse landscapes.",
     duration: "21 days",

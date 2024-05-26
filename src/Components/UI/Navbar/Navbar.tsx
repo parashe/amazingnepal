@@ -158,7 +158,7 @@ const DropdownContent = () => {
           >
             {destination?.title}
           </Link>
-          <div className="absolute bottom-0 left-0 w-full h-0.5 bg-pink-500 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+          <div className="absolute bottom-0 left-0 w-full h-0.5 bg-pink-500 opacity-0  transition duration-300"></div>
         </li>
       ))}
     

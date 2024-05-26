@@ -8,7 +8,8 @@ export const HomeFirstScreen = () => {
       <div className="w-full h-full flex flex-col items-center">
         <div className="relative w-full">
           <HomeTopContent
-            imageUrl="/assets/home.webp"
+            // imageUrl="/assets/home.webp"
+         imageUrl=   "/assets/nepal/himalaya.webp"
             description="Amazing Nepal"
           />
         </div>

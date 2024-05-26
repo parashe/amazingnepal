@@ -53,7 +53,7 @@ export const DestinationHomeContent = () => {
         <div
           className={`flex ${
             isSearchActive ? "flex-col" : "flex-row"
-          } sm:flex-row justify-between items-center px-5`}
+          } sm:flex-row justify-between items-center px-5 mb-2`}
         >
           <h4 className="text-xl sm:text-3xl font-bold text-gray-800 uppercase tracking-wide py-5">
             <span className="text-pink-500">Explore</span> Top Destinations

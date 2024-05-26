@@ -40,7 +40,7 @@ const DestinationDetails = () => {
           </div>
         </>
       ) : (
-        <div className="flex-content bg-gray-100">
+        <div className="flex-content bg-white">
           <div className="container-xl mx-auto   p-5 ">
             <div className="flex flex-col md:flex-row  gap-1 ">
               <div className="  md:px-5   bg-white ">
