@@ -104,20 +104,21 @@ export const ImageViewer = ({ images, title, price }: ImageViewProps) => {
     "aspect-[16/9] bg-white w-full h-full cursor-pointer lg:object-cover p-1  shadow-sm  rounded-lg  lg:h-[300px] lg:max-w-[350px] ";
   return (
     <>
-      <div className="text-center ml-2 relative mb-10 bg-gradient-to-r from-blue-400 via-red-400 to-pink-500 py-3 md:py-5">
-        <div className="flex flex-wrap justify-around mb-2">
-          <h4 className="text-lg font-black text-white uppercase tracking-wide">
-            {title}
-          </h4>
-          <div className="flex items-center justify-between  rounded-lg  ">
-            <div className="flex items-center">
-              <p className="mb-1 text-white text-lg font-bold">{price}</p>{" "}
-              &nbsp;
-              <p className="text-white text-sm font-normal">Per Person</p>
-            </div>
-          </div>
-        </div>
+   <div className="text-center relative mb-10 bg-gradient-to-r from-blue-500 via-red-500 to-pink-500 py-3 md:py-5 rounded-lg shadow-lg">
+  <div className="flex flex-col justify-center items-center mb-2">
+    <h4 className="text-lg md:text-xl font-black text-white uppercase tracking-wide">
+      {title}
+    </h4>
+    <div className="flex items-center justify-center">
+      <div className="flex items-center">
+        <p className="mb-1 text-white text-lg md:text-xl font-bold">{price}</p>{" "}
+        &nbsp;
+        <p className="text-white text-sm font-normal">/Per Person</p>
       </div>
+    </div>
+  </div>
+</div>
+
 
       <div className="">
         <PhotoProvider>
@@ -181,7 +182,7 @@ export const Information = ({
     setShowOverview(true);
   }, []);
 
-  const paragraph = ` font-bold md:p-5  shadow-md   text-xs md:text-sm cursor-pointer  cursor-pointer leading-relaxed   hover:bg-gray-100`;
+  const paragraph = ` font-bold md:p-5  text-gray-900 shadow-md   text-sm md:text-sm cursor-pointer  cursor-pointer leading-relaxed   hover:bg-gray-100`;
   return (
     <>
       <div className="bg-white md:p-4  ">
@@ -438,7 +439,7 @@ const Overview: React.FC<ModalProps> = ({
     listofHighlights
   );
   const paragraph =
-    " text-sm p-3 text-justify  font-normal cursor-pointer leading-relaxed text-gray-500 text-break-all ";
+    " text-sm p-3 text-justify   font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all ";
   return (
     <div>
       <div className="bg-white  py-5    h-full overflow-hidden transform transition-all ">
@@ -483,7 +484,7 @@ const PriceIncludedExcluded: React.FC<PriceModalProps> = ({
   priceIncluded,
 }) => {
   const paragraph =
-    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-500 text-break-all ";
+    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all ";
   return (
     <div>
       <div className="bg-white  py-5    h-full overflow-hidden transform transition-all ">
@@ -534,7 +535,7 @@ const IternaryContent: React.FC<IternaryModalProps> = ({
   iternary,
 }) => {
   const paragraph =
-    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-500 text-break-all ";
+    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all ";
   return (
     <div>
       <div className="bg-white  py-5    h-full overflow-hidden transform transition-all ">
@@ -573,7 +574,7 @@ const UsefulInformationContent: React.FC<UsefulModalProps> = ({
   usefulInformation,
 }) => {
   const paragraph =
-    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-500 text-break-all ";
+    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all ";
   return (
     <div>
       <div className="bg-white  py-5    h-full overflow-hidden transform transition-all ">

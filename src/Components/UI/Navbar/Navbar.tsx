@@ -74,15 +74,15 @@ export const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li className="relative">
+            <li className="flex justify-center">
               <button
                 onClick={handleDropdown}
-                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-pink-500 rounded md:hover:text-pink-500 md:border-0 md:p-0 dark:hover:text-white ${
+                className={`block py-3 text-center  px-3 lg:px-6 lg:py-2 hover:text-pink-500 rounded md:hover:text-pink-500 md:border-0 md:p-0 dark:hover:text-white ${
                   showDropdown ? "text-pink-500" : "text-gray-900"
                 }`}
               >
-                <span className="flex items-center">
-                Browse Destinations
+                <span className="flex justify-center items-center ">
+                  Browse Destinations
                   <DropdownIcon className="w-5 h-5 ml-1" color="#ec4899" />
                 </span>
               </button>
@@ -147,17 +147,23 @@ export const Navbar = () => {
 
 const DropdownContent = () => {
   return (
-    <ul className="absolute left-1/2 transform -translate-x-1/2 mt-3 w-full md:py-12 md:px-10 xl:mt-3   sm:w-auto sm:min-w-[700px] md:min-w-[800px] lg:min-w-[900px] xl:min-w-[1000px] bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-700 dark:border-gray-600 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 overflow-auto max-h-[70vh]">
+    <ul className="absolute bg-gray-50 mt-10 left-1/2 transform -translate-x-1/2 w-full md:py-12 md:px-10 sm:mt-10 md:mt-10 lg:mt-12 xl:mt-12 sm:w-auto sm:min-w-[700px] md:min-w-[800px] lg:min-w-[900px] xl:min-w-[1000px]  border border-gray-200 rounded-lg shadow-lg dark:bg-gray-700 dark:border-gray-600 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 overflow-auto max-h-[70vh]">
+
+      {/* Destination Items */}
       {destinationData?.map((destination) => (
-        <li key={destination?.destination_id}>
+        <li key={destination?.destination_id} className="relative group">
           <Link
             to={`/destination/${destination?.destination_id}`}
-            className="block px-5 py-3 rounded-lg  text-xs text-gray-800 hover:bg-gray-100 hover:text-pink-500 dark:text-white dark:hover:bg-gray-600"
+            className="block border-b border-gray-200 md:border-none px-5 py-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 hover:text-pink-500 dark:text-white dark:hover:bg-gray-600 transition duration-300"
           >
             {destination?.title}
           </Link>
+          <div className="absolute bottom-0 left-0 w-full h-0.5 bg-pink-500 opacity-0 group-hover:opacity-100 transition duration-300"></div>
         </li>
       ))}
+    
     </ul>
   );
 };
+
+

@@ -37,7 +37,7 @@ const Recommended: React.FC<RecommendedProps> = ({
           </h2>
         </div>
 
-        <p className="text-neutral-600 p-2 md:mt-3 text-xs dark:text-neutral-400">
+        <p className="text-neutral-800 p-2 md:mt-3 text-sm dark:text-neutral-400">
           Nepal's diverse regions offer an array of attractions, from the
           cultural wonders of the Himalayas to the stunning beauty of the Nepal.
         </p>

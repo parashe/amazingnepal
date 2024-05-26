@@ -129,7 +129,7 @@ export const DestinationPageContent = () => {
         </>
       ) : (
         <div className="md:mt-10 container mx-auto   ">
-          <div className=" mb-4 flex flex-wrap justify-center md:justify-between py-5 px-5 bg-gradient-to-r from-blue-400 via-red-400 to-pink-500">
+          <div className=" mb-4 flex flex-wrap justify-center md:justify-between py-5 px-5 bg-gradient-to-r from-blue-500 via-red-500 to-pink-500">
             <h4 className="text-2xl font-bold text-white uppercase tracking-wide py-5 md:w-1/2">
               <span> Explore </span>Our Top Destinations
             </h4>

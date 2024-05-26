@@ -41,12 +41,11 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
   destination_id,
   description,
 }) => {
-
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
   return (
-    <Link to={`/destination/${destination_id}`}   onClick={handleClick} >
+    <Link to={`/destination/${destination_id}`} onClick={handleClick}>
       <div className="w-full  py-5  md:max-w-sm  bg-white  rounded-lg  shadow-lg cursor-pointer  hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 relative">
         <div className="w-full relative">
           <div className="relative ">
@@ -64,28 +63,21 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
         </div>
 
         <div className="p-5">
-          <h5 className="mb-0 text-auto font-bold tracking-tight text-gray-900 leading-relaxed dark:text-white">
+          <h5 className="mb-4 text-lg font-bold text-gray-900 dark:text-white">
             {title}
           </h5>
-          <div className="text-justify flex flex-wrap justify-center py-3">
-            <div className="text-center p-1 pb-2 ">
-              <p className="mb-1 text-xs px-3 text-gray-900 dark:text-gray-400">
-                {description?.split(" ").slice(0, 15).join(" ")}.
-              </p>
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
+            {description?.split(" ").slice(0, 15).join(" ")}.
+          </p>
+          <div className="flex justify-center gap-2 px-2 items-center text-gray-700 dark:text-gray-300">
+            <div className="flex items-center">
+              <CashIcon className="w-5 h-5 mr-1" color="#d1d5db" />
+              <span className="text-pink-500 font-bold">{price}</span>
+              <span className="text-xs ml-1">/ Per Person</span>
             </div>
-            <div className="flex flex-wrap justify-center  ">
-              <CashIcon color="#f9a8d4" className="w-4 h-4" />
-
-              <p className="mb-1  text-[10px]  px-3 text-gray-900 dark:text-gray-400">
-                <span className="text-pink-500 font-bold">{price} </span>/ Per
-                Person
-              </p>
-            </div>
-            <div className="flex flex-wrap justify-center ">
-              <ClockIcon color="#f9a8d4" className="w-2 h-2" />
-              <p className="mb-1  text-xs px-3 text-gray-900 dark:text-gray-400">
-                <span className="text-pink-500 font-bold">{duration}</span>
-              </p>
+            <div className="flex items-center">
+              <ClockIcon className="w-4 h-4 mr-1" color="#d1d5db" />
+              <span className="text-pink-500 font-bold">{duration}</span>
             </div>
           </div>
         </div>

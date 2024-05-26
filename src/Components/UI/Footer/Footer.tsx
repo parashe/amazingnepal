@@ -59,7 +59,7 @@ export const Footer = () => {
                     to="/contact"
                     className="hover:underline hover:text-pink-500"
                   >
-                    Contact
+                    Contact Us
                   </Link>
                 </li>
                 <li className="mb-4">
@@ -70,7 +70,7 @@ export const Footer = () => {
                     Top Destination
                   </Link>
                 </li>
-                <li className="mb-4">
+                {/* <li className="mb-4">
                   <Link to="/#" className="hover:underline hover:text-pink-500">
                     Privacy Policy
                   </Link>
@@ -79,7 +79,7 @@ export const Footer = () => {
                   <Link to="/#" className="hover:underline hover:text-pink-500">
                     Terms &amp; Conditions
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div>
@@ -103,7 +103,7 @@ export const Footer = () => {
           </div>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-16" />
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <div className="sm:flex sm:items-center sm:justify-center">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2023{" "}
             <Link
@@ -114,7 +114,7 @@ export const Footer = () => {
             </Link>
             . All Rights Reserved.
           </span>
-          <div className="flex mt-4 sm:justify-center sm:mt-0">
+          {/* <div className="flex mt-4 sm:justify-center sm:mt-0">
             <Link
               to="/#"
               className="text-gray-500 hover:text-gray-500 dark:hover:text-white"
@@ -206,7 +206,7 @@ export const Footer = () => {
               </svg>
               <span className="sr-only">Dribbble account</span>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
