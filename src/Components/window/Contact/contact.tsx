@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import {
   Address,
   Alert,
+  CenteralSpinner,
   Input,
   LoadingSkeleton,
-  Spinner,
+  Modal,
   TextArea,
 } from "../../atoms";
 import { ContactPerson } from "./contact_person";
-
 
 const Contact = () => {
   const [showLoader, setShowLoader] = React.useState(true);
@@ -31,40 +31,36 @@ const Contact = () => {
           <LoadingSkeleton />
         </div>
       ) : (
-        <div className="container mx-auto  bg-gray-50 py-5 px-5">
+        <div className="container mx-auto  py-5 px-5">
           <div className="text-center mx-auto max-w-4xl gap-6 mb-5 md:mb-10">
             <div className="flex items-center justify-center ">
-              <h2 className="text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
+              {/* <h2 className="text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
                 <span className=" font-black lg:text-4xl  text-black lg:font-extrabold ">
                   Contact{" "}
                   <span className=" font-black lg:text-4xl  text-pink-500 lg:font-extrabold ">
                     Us
                   </span>
                 </span>
-              </h2>
+              </h2> */}
+              <p className="text-gray-700 max-w-xl text-center  text-lg md:mt-3  dark:text-neutral-400">
+                We'd love to hear from you! Get in touch with us using the
+                information below. Please fill out the form below to contact us.
+              </p>
+            </div>
+          </div>
+          <div className="w-full ">
+            <div className="mb-10">
+              <ContactForm />
+            </div>
+          </div>
+          <div className="flex flex-row gap-3 py-2">
+            <div className="w-full p-3 md:p-5 bg-white shadow-2xl">
+              <AboutContact />
             </div>
 
-            <p className="text-neutral-600 md:mt-3 text-sm dark:text-neutral-400">
-              We'd love to hear from you! Get in touch with us using the
-              information below. Please fill out the form below to contact us.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-3 py-2">
-            <div className="col-span-3 ">
-              <div className="w-full p-3 md:p-5 bg-white shadow-xl">
-                <AboutContact />
-              </div>
-              <div className="w-full p-2">
-                <div className="flex flex-col md:flex-row ">
-                  <Address />
-                  <ContactPerson />
-                </div>
-              </div>
-            </div>
-            <div className="w-full cols-1 md:col-span-1">
-              <div className="w-full p-2 shadow-2xl">
-                <ContactForm />
-              </div>
+            <div className="flex flex-col">
+              <ContactPerson />
+              <Address />
             </div>
           </div>
         </div>
@@ -103,6 +99,9 @@ export const ContactForm = () => {
   };
 
   const handleOnSubmit = async () => {
+    console.log('data', QuoteData);
+    // Prevent default form submission
+  
     // Check if any required field is empty
     const requiredFields = ["name", "email", "phone", "address", "message"];
     const missingFields = requiredFields.filter((field) => !QuoteData[field]);
@@ -114,6 +113,7 @@ export const ContactForm = () => {
       setAlertMessage(`Please provide ${missingFieldNames}.`);
       setAlertType("error");
       setShowAlert(true);
+      
       return;
     }
 
@@ -142,17 +142,18 @@ export const ContactForm = () => {
       }, 1500); // Hide spinner after 1.5 seconds
     }
   };
+  console.log('show alert',showAlert);
+  console.log('alert message',alertMessage);
+  console.log('alert type',alertType);
 
   return (
     <>
-      <div className="w-full justify-center shadow-sm p-5 border rounded-lg  ">
-        <div>
-          <h4 className="text-lg text-center p-5 font-bold text-pink-500 uppercase tracking-wide py-5">
-            Create Message
-          </h4>
-        </div>
-        <div className="text-center p-2 w-full ">
-          <form className="max-w-md mx-auto space-y-2 ">
+      <div className="max-w-md mx-auto shadow-2xl p-5  rounded-lg bg-white">
+        <h4 className="text-lg text-center font-bold text-pink-500 uppercase tracking-wide">
+          Get in touch
+        </h4>
+        <div className="p-3 ">
+          <form onSubmit={(e) => e.preventDefault()}>
             <Input
               value={QuoteData.name}
               label="Your Name"
@@ -160,7 +161,6 @@ export const ContactForm = () => {
               placeholder="Enter your name"
               onChange={(e) => handleOnChange(e.target.value, "name")}
             />
-
             <Input
               value={QuoteData.email}
               label="Enter your email"
@@ -168,15 +168,13 @@ export const ContactForm = () => {
               placeholder="Enter your email"
               onChange={(e) => handleOnChange(e.target.value, "email")}
             />
-
             <Input
               value={QuoteData.phone}
               label="Phone Number"
-              type="number"
+              type="tel"
               placeholder="Enter phone number"
               onChange={(e) => handleOnChange(e.target.value, "phone")}
             />
-
             <Input
               value={QuoteData.address}
               label="Address"
@@ -184,41 +182,40 @@ export const ContactForm = () => {
               placeholder="Enter your address"
               onChange={(e) => handleOnChange(e.target.value, "address")}
             />
-
             <TextArea
               value={QuoteData.message}
               label="Message"
               type="message"
-              className="h-32"
               placeholder="Enter your message"
               onChange={(e) => handleOnChange(e.target.value, "message")}
             />
           </form>
-          {alertMessage && (
-            <div className="w-full pt-2">
+          {showAlert && alertMessage && (
+            <div className="mt-4">
               <Alert
                 type={alertType}
                 message={alertMessage}
-                onClose={() => setShowAlert(!showAlert)}
+                onClose={() => setShowAlert(false)}
               />
             </div>
           )}
-          <div className=" md:mt-5 w-full text-center">
+          <div className="mt-4">
             <button
-              className="bg-green-600 font-bold hover:bg-green-700 w-full text-center   rounded-sm text-sm text-white  py-1"
-              onClick={() => handleOnSubmit()}
+              className="w-full bg-gradient-to-r from-blue-500 to-pink-500 text-white py-2 rounded-md font-semibold shadow-md hover:from-blue-600 hover:to-pink-600 transition duration-300"
+              onClick={handleOnSubmit}
+              
             >
-              {isSaving ? (
-                <div className="w-full flex justify-center items-center">
-                  Saving &nbsp; <Spinner />
-                </div>
-              ) : (
-                <span className="text-white py-1">Submit</span>
-              )}
+              Submit
             </button>
           </div>
         </div>
       </div>
+
+      {isSaving && (
+        <Modal>
+          <CenteralSpinner />
+        </Modal>
+      )}
     </>
   );
 };

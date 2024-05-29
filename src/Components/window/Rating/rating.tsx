@@ -1,7 +1,9 @@
 import React from "react";
 import nepalRatings from "./data"; // Importing the dummy rating data
 import { Modal, RatingStars } from "../../atoms";
-import { ArrowRight, CrossIcon, PersonIcon } from "../../svg";
+import { ArrowRight, CrossIcon, PencilIcon, PersonIcon } from "../../svg";
+import { AboutContent } from "../About/about";
+import AddRatingForm from "./create_rating";
 
 const AboutRating = () => {
   return (
@@ -64,6 +66,7 @@ const RatingItem = ({ rating }: RatingProps) => {
 
 const Rating = () => {
   const [open, setOpen] = React.useState(false);
+  const [openCreateRating, setOpenCreateRating] = React.useState(false);
 
   return (
     <div className="w-full h-full">
@@ -71,7 +74,14 @@ const Rating = () => {
         <h4 className="text-lg font-bold text-gray-800 uppercase tracking-wide py-5">
           What Our Customers Say
         </h4>
-        <div className="flex items-center justify-center">
+        <div className="flex gap-2 items-center justify-center">
+          <button
+            onClick={() => setOpenCreateRating(true)}
+            className="bg-green-500 rounded-full px-3 py-3 font-bold text-white hover:bg-green-600 transition duration-300 uppercase"
+          >
+            <PencilIcon className="w-3 h-3" color="white" />
+          </button>
+
           <button
             className=" animate-bounce  bg-pink-500 rounded-full  px-3 py-3 font-bold text-white hover:bg-pink-600 transition duration-300 uppercase"
             onClick={() => setOpen(true)}
@@ -84,6 +94,10 @@ const Rating = () => {
         <RatingItem key={index} rating={rating} />
       ))}
       {open && <SeeAllModal onClose={() => setOpen(false)} />}
+
+      {openCreateRating && (
+        <AddRatingForm onClose={() => setOpenCreateRating(false)} />
+      )}
     </div>
   );
 };
@@ -120,62 +134,3 @@ export const SeeAllModal = ({ onClose }: ModalProps) => (
     </div>
   </Modal>
 );
-
-export const AboutContent = () => {
-  const paragraph = `text-sm  p-3 text-justify font-normal  cursor-pointer cursor-pointer leading-relaxed lg:leading-relaxed text-gray-700 `;
-
-  return (
-    <div className="w-full h-full ">
-      <div className="text-center">
-        <h4 className="text-lg  font-bold text-gray-800 uppercase tracking-wide py-5">
-          About Amazing Nepal
-        </h4>
-      </div>
-
-      <p className={paragraph}>
-        Welcome to Amazing Nepal, your gateway to exploring the breathtaking
-        beauty of the Himalayas and experiencing the rich cultural heritage of
-        Nepal. Based in the United Kingdom, Amazing Nepal is dedicated to
-        providing unparalleled tourism experiences that showcase the wonders of
-        this Himalayan nation.
-        <br />
-        <br />
-        At Amazing Nepal, we are passionate about sharing the magic of Nepal
-        with travelers from around the world. Our team at Amazing Nepal is
-        committed to delivering top-notch travel services, ensuring that every
-        journey with us is nothing short of extraordinary. From the majestic
-        peaks of the Himalayas to the vibrant streets of Kathmandu, Amazing
-        Nepal offers a wide range of meticulously crafted tours and expeditions
-        that cater to every traveler's preferences. Whether you're seeking a
-        thrilling trekking adventure, a cultural immersion experience, or a
-        spiritual journey, we have the perfect itinerary for you.
-        <br />
-        <br />
-        Our team comprises experienced and enthusiastic leaders who are experts
-        in organizing tours, treks, and expeditions across Nepal. With our
-        in-depth knowledge of the region and dedication to customer
-        satisfaction, we guarantee an unforgettable travel experience for our
-        clients. At Amazing Nepal, we prioritize customer satisfaction above all
-        else. We provide personalized trip itineraries tailored to your
-        preferences, ensuring that every aspect of your journey exceeds your
-        expectations.
-        <br />
-        <br />
-        {/* <div className="  ">
-          <Button
-            onClick={handleClick}
-            className="px-6 py-2 rounded-sm text-xs bg-gradient-to-r from-pink-600 to-purple-500  font-medium hover:from-pink-600 hover:to-purple-600 transition duration-50 text-white cursor-pointer"
-          >
-            Read More
-          </Button>
-        </div> */}
-        {/* From arranging accommodations to organizing transportation, we take care
-        of every detail so that you can focus on enjoying your adventure.
-        Whether you're a seasoned traveler or embarking on your first trip to
-        Nepal, Amazing Nepal is here to make your travel dreams a reality.
-        Contact us today to start planning your unforgettable journey to the
-        Land of the Himalayas. */}
-      </p>
-    </div>
-  );
-};
