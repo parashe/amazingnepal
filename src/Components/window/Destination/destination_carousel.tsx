@@ -34,16 +34,16 @@ const DestinationCarousel: React.FC<DestinationProps> = ({
           <div className="flex"></div>
           <div className="flex items-center justify-center ">
             <h2 className="text-2xl lg:text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
-              <span className=" font-black   text-pink-500 lg:font-extrabold ">
+              <span className=" font-black   text-ui-primary lg:font-extrabold ">
                 EXPLORE{" "}
               </span>{" "}
               <span>
                 THE UNPARALLELED{" "}
-                <span className=" font-black  text-pink-500 lg:font-extrabold ">
+                <span className=" font-black  text-ui-primary lg:font-extrabold ">
                   BEAUTY{" "}
                 </span>{" "}
                 OF OUR PREMIER{" "}
-                <span className=" font-black  text-pink-500 lg:font-extrabold ">
+                <span className=" font-black  text-ui-primary lg:font-extrabold ">
                   DESTINATIONS{" "}
                 </span>{" "}
               </span>
@@ -64,7 +64,7 @@ const DestinationCarousel: React.FC<DestinationProps> = ({
         <div className="text-center relative group ">
           <Link to="/destination">
             <button
-              className=" animate-bounce mx-auto bg-pink-500 rounded-full  px-3 py-3 font-bold text-white hover:bg-pink-600 transition duration-300 uppercase"
+              className=" animate-bounce mx-auto bg-ui-primary rounded-full  px-3 py-3 font-bold text-white hover:bg-ui-secondary transition duration-300 uppercase"
               onClick={handleOnClickSeeMore}
             >
               <ArrowRight color="white" className="w-6 h-6" />

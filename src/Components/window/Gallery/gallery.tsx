@@ -34,11 +34,11 @@ const Gallery = () => {
             <div className=" py-2 lg:py-10">
               <div className="text-center mx-auto max-w-2xl gap-6  ">
                 <h2 className="text-5xl font-black text-black uppercase dark:text-white  ">
-                  <span className="bg-pink-500 inline-block text-transparent bg-clip-text font-black">
+                  <span className="bg-ui-primary inline-block text-transparent bg-clip-text font-black">
                     EXPLORE{" "}
                   </span>{" "}
                   OUR STUNNING{" "}
-                  <span className="bg-pink-500 inline-block text-transparent bg-clip-text font-black">
+                  <span className="bg-ui-primary inline-block text-transparent bg-clip-text font-black">
                     {" "}
                     Gallery
                   </span>

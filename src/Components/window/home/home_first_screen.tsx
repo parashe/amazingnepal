@@ -46,7 +46,7 @@ export const HomeTopContent = ({
         <h1 className="text-xl md:text-5xl font-black mb-4">
           Explore the Beauty of Nepal
         </h1>
-        <p className="text-xs md:text-xl">
+        <p className="text-xs text-light-000 md:text-xl">
           Discover breathtaking landscapes, vibrant cultures, and unforgettable
           adventures
         </p>

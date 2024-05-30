@@ -37,7 +37,7 @@ const Contact = () => {
               {/* <h2 className="text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
                 <span className=" font-black lg:text-4xl  text-black lg:font-extrabold ">
                   Contact{" "}
-                  <span className=" font-black lg:text-4xl  text-pink-500 lg:font-extrabold ">
+                  <span className=" font-black lg:text-4xl  text-ui-primary lg:font-extrabold ">
                     Us
                   </span>
                 </span>
@@ -149,7 +149,7 @@ export const ContactForm = () => {
   return (
     <>
       <div className="max-w-md mx-auto shadow-2xl p-5  rounded-lg bg-white">
-        <h4 className="text-lg text-center font-bold text-pink-500 uppercase tracking-wide">
+        <h4 className="text-lg text-center font-bold text-ui-primary uppercase tracking-wide">
           Get in touch
         </h4>
         <div className="p-3 ">

@@ -27,11 +27,11 @@ const Recommended: React.FC<RecommendedProps> = ({
         <div className="flex items-center justify-center "  >
           <h2 className="text-2xl  lg:text-4xl  max-w-2xl font-black text-black uppercase dark:text-white leading-relaxed" style={{ lineHeight: "1.2" }}>
             Top{" "}
-            <span className=" font-black   text-pink-500 ">
+            <span className=" font-black   text-ui-primary ">
               Attractions{" "} &nbsp;
             </span>
             to Experience In{" "}
-            <span className=" font-black  text-pink-500">
+            <span className=" font-black  text-ui-primary">
               NEPAL{" "}
             </span>{" "}
           </h2>

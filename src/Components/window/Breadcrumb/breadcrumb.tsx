@@ -60,7 +60,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
                     {item.href ? (
                       <a
                         href={item.href}
-                        className="ms-1 text-sm font-medium text-pink-500 hover:text-pink-600 md:ms-2 dark:text-gray-400 dark:hover:text-white"
+                        className="ms-1 text-sm font-medium text-ui-primary hover:text-ui-secondary md:ms-2 dark:text-gray-400 dark:hover:text-white"
                       >
                         {item.label}
                       </a>

@@ -129,7 +129,7 @@ export const ServiceDetails = ({
         </div>
         <div className="container mx-auto px-4 py-8 bg-white overflow-auto">
           <div className="w-full h-full text-justify ">
-            <h4 className="text-2xl text-center  font-black  uppercase tracking-wide ">
+            <h4 className="text-2xl text-center text-ui-primary  font-black  uppercase tracking-wide ">
               {service.title}
             </h4>
             <img
@@ -141,7 +141,7 @@ export const ServiceDetails = ({
               {service.content}
             </p>
             <hr className="border-t-2 border-gray-300 my-8" /> {/* Divider */}
-            <h2 className="text-xl font-black text-neutral-600 mb-4">
+            <h2 className="text-xl font-black mb-4 text-ui-primary">
               Our Areas of Assistance:
             </h2>
             <ul className="list-disc pl-6 text-sm text-gray-800">

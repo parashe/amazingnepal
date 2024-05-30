@@ -245,7 +245,7 @@ export const CenteralSpinner: React.FC = () => {
     <div role="status" className="z-[100] ">
       <svg
         aria-hidden="true"
-        className="w-24 h-24 text-gray-500 animate-spin dark:text-gray-600 fill-pink-500"
+        className="w-24 h-24 text-gray-500 animate-spin dark:text-gray-600 fill-ui-primary"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -260,7 +260,7 @@ export const CenteralSpinner: React.FC = () => {
         />
       </svg>
       <p>
-        <span className="text-pink-500 text-lg">Saving...</span>
+        <span className="text-ui-primary text-lg">Saving...</span>
       </p>
     </div>
   );
@@ -352,7 +352,7 @@ export const CrateRatingStars = ({ rating, setRating }: CreateRatingProps) => {
 };
 
 export const BoldText: React.FC<React.PropsWithChildren> = ({ children }) => (
-  <span className="font-bold text-pink-500">{children}</span>
+  <span className="font-bold text-ui-primary">{children}</span>
 );
 
 export const LoadingSkeleton = () => {
@@ -474,7 +474,7 @@ export const Address = () => {
   return (
     <div className="mt-1 w-full relative h-full  md:max-w-md  border border-gray-100  bg-white  rounded-lg shadow-2xl cursor-pointer  hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 ">
       <div className="w-full p-5 ">
-        <h4 className="text-lg  font-black text-pink-500 uppercase tracking-wide ">
+        <h4 className="text-lg  font-black text-ui-primary uppercase tracking-wide ">
           Address
         </h4>
 

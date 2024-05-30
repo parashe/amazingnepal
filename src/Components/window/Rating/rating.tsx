@@ -83,7 +83,7 @@ const Rating = () => {
           </button>
 
           <button
-            className=" animate-bounce  bg-pink-500 rounded-full  px-3 py-3 font-bold text-white hover:bg-pink-600 transition duration-300 uppercase"
+            className=" animate-bounce  bg-ui-button-color rounded-full  px-3 py-3 font-bold text-white hover:bg-ui-button-hover transition duration-300 uppercase"
             onClick={() => setOpen(true)}
           >
             <ArrowRight color="white" className="w-3 h-3" />

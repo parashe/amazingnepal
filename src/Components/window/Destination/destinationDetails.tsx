@@ -104,21 +104,22 @@ export const ImageViewer = ({ images, title, price }: ImageViewProps) => {
     "aspect-[16/9] bg-white w-full h-full cursor-pointer lg:object-cover p-1  shadow-sm  rounded-lg  lg:h-[300px] lg:max-w-[350px] ";
   return (
     <>
-   <div className="text-center relative mb-10 bg-gradient-to-r from-blue-500 via-red-500 to-pink-500 py-3 md:py-5 rounded-lg shadow-lg">
-  <div className="flex flex-col justify-center items-center mb-2">
-    <h4 className="text-lg md:text-xl font-black text-white uppercase tracking-wide">
-      {title}
-    </h4>
-    <div className="flex items-center justify-center">
-      <div className="flex items-center">
-        <p className="mb-1 text-white text-lg md:text-xl font-bold">{price}</p>{" "}
-        &nbsp;
-        <p className="text-white text-sm font-normal">/Per Person</p>
+      <div className="text-center relative mb-10 bg-gradient-to-r from-blue-500 via-red-500 to-pink-500 py-3 md:py-5 rounded-lg shadow-lg">
+        <div className="flex flex-col justify-center items-center mb-2">
+          <h4 className="text-lg md:text-xl font-black text-white uppercase tracking-wide">
+            {title}
+          </h4>
+          <div className="flex items-center justify-center">
+            <div className="flex items-center">
+              <p className="mb-1 text-white text-lg md:text-xl font-bold">
+                {price}
+              </p>{" "}
+              &nbsp;
+              <p className="text-white text-sm font-normal">/Per Person</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
 
       <div className="">
         <PhotoProvider>
@@ -182,14 +183,16 @@ export const Information = ({
     setShowOverview(true);
   }, []);
 
-  const paragraph = ` font-bold md:p-5  text-gray-900 shadow-md   text-sm md:text-sm cursor-pointer  cursor-pointer leading-relaxed   hover:bg-gray-100`;
+  const paragraph = ` font-bold md:p-5  text-gray-900 shadow-md  text-sm md:text-sm cursor-pointer  cursor-pointer leading-relaxed   hover:shadow-lg hover:shadow-ui-light-blue  `;
   return (
     <>
-      <div className="bg-white md:p-4  ">
-        <div className="grid grid-cols-4 divide-x divide-pink-500 text-center">
+      <div className="bg-white md:p-4   ">
+        <div className="grid grid-cols-4 divide-x divide-ui-primary text-center shadow-full">
           <p
             className={`${paragraph} ${
-              showOverview ? "text-pink-500 border-b-2 border-pink-500" : ""
+              showOverview
+                ? "text-ui-primary border-b-2 border-ui-primary shadow-lg shadow-ui-light-blue  "
+                : ""
             }`}
             onClick={() => handleClick("overview")}
           >
@@ -197,7 +200,9 @@ export const Information = ({
           </p>
           <p
             className={`${paragraph} ${
-              showItinerary ? "text-pink-500 border-b-2 border-pink-500" : ""
+              showItinerary
+                ? "text-ui-primary border-b-2 border-ui-primary shadow-lg shadow-ui-light-blue "
+                : ""
             }`}
             onClick={() => handleClick("itinerary")}
           >
@@ -206,7 +211,7 @@ export const Information = ({
           <p
             className={`${paragraph} ${
               showPriceIncluded
-                ? "text-pink-500 border-b-2 border-pink-500"
+                ? "text-ui-primary border-b-2 border-ui-primary shadow-lg shadow-ui-light-blue"
                 : ""
             }`}
             onClick={() => handleClick("priceIncluded")}
@@ -215,7 +220,9 @@ export const Information = ({
           </p>
           <p
             className={`${paragraph} ${
-              showInfo ? "text-pink-500 border-b-2 border-pink-500" : ""
+              showInfo
+                ? "text-ui-primary border-b-2 border-ui-primary shadow-lg shadow-ui-light-blue"
+                : ""
             }`}
             onClick={() => handleClick("usefulInformation")}
           >
@@ -334,7 +341,7 @@ export const Quote = () => {
     <>
       <div className="w-full justify-center p-2 shadow-2xl ">
         <div>
-          <h1 className={`${heading} text-pink-500 text-center p-2 `}>
+          <h1 className={`${heading} text-ui-primary text-center p-2 `}>
             Request a Quote
           </h1>
         </div>

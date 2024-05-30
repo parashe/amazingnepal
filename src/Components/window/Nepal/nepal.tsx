@@ -41,13 +41,13 @@ const Vision = () => {
                 >
                   <p>
                     {" "}
-                    <span className="text-pink-500 font-extrabold leading-10">
+                    <span className="text-ui-primary font-extrabold leading-10">
                       Discover{" "}
                     </span>{" "}
                     <span className=" font-extrabold">the Magic of</span> <br />
                   </p>
 
-                  <span className="text-pink-500 mb-0 ">Nepal</span>
+                  <span className="text-ui-primary mb-0 ">Nepal</span>
 
                   <p className="text-neutral-600 md:mt-3 p-2  text-xs md:text-sm dark:text-neutral-400">
                     Embrace the boundless allure of adventure as you journey

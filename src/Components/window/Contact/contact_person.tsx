@@ -17,16 +17,16 @@ export const ContactPerson = () => {
               <p className={paragraph}>
                 Speak to a Nepal, the Himalayas & the best Tours Expert
               </p>
-              <h5 className="mb-1 text-xl font-black  dark:text-white text-pink-500">
+              <h5 className="mb-1 text-lg font-black  dark:text-white text-ui-primary">
                 TEKRAJ KAFLE
               </h5>
               <h3 className="mb-3  text-sm font-normal text-gray-900 dark:text-gray-400">
-                <span className=" font-black text-pink-500">
-                  <PhoneIcon className="w-4 h-4 inline-block" color="#ec4899" />
+                <span className=" font-black text-ui-primary">
+                  <PhoneIcon className="w-4 h-4 inline-block" color="#0097f3" />
                 </span>{" "}
-                +44-7411079563 ,
+                +44-7411079563 
                 <br />
-                <span className=" font-black text-pink-500">
+                <span className=" font-black text-ui-primary">
                   <WhatsAppIcon
                     className="w-4 h-4 inline-block"
                     color="#25D366"
@@ -35,7 +35,7 @@ export const ContactPerson = () => {
                 +44-7411079563 ,
                 <br />
                 <span>
-                  <MailIcon className="w-4 h-4 inline-block" color="#ec4899" />
+                  <MailIcon className="w-4 h-4 inline-block" color="#0097f3" />
                 </span>{" "}
                 info@visitamazingnepal.com
               </h3>

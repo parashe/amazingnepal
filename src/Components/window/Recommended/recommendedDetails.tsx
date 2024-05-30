@@ -125,7 +125,7 @@ const CardDetails = (attraction: any) => {
         />
 
         <div className="p-4 text-center md:text-justify">
-          <h3 className="text-lg font-black text-pink-500 mb-1">
+          <h3 className="text-lg font-black text-ui-button-color mb-1">
             {attraction.place}
           </h3>
           <p className="text-sm mt-2 md:mt-5 text-justify text-gray-600 leading-relaxed   ">
@@ -134,7 +134,7 @@ const CardDetails = (attraction: any) => {
           <div className="py-1 md:py-5 ">
             <button
               onClick={() => handleDetails(attraction)}
-              className="px-6  py-3 text-center uppercase   text-xs font-bold  bg-pink-500 text-white hover:bg-pink-600 transition duration-300 cursor-pointer rounded-full "
+              className="px-6  py-3 text-center uppercase   text-xs font-bold  bg-ui-button-color text-white hover:bg-ui-button-hover transition duration-300 cursor-pointer rounded-full "
             >
               View Details
             </button>
@@ -159,7 +159,7 @@ export const SeeAllModal = ({ onClose, attraction }: ModalProps) => (
       <div className=" p-1 md:px-10 pt-5 w-full max-w-4xl max-h-full">
         <div className="text-center flex justify-end">
           <div className="justify-end cursor-pointer" onClick={onClose}>
-            <CrossIcon className="w-6 h-6" />
+            <CrossIcon className="w-6 h-6" color="red" />
           </div>
         </div>
 
@@ -185,7 +185,7 @@ export const SeeAllModal = ({ onClose, attraction }: ModalProps) => (
             </div>
 
             <div className="p-4 text-center md:text-justify">
-              <h3 className="text-lg font-black text-pink-500 mb-1">
+              <h3 className="text-lg font-black text-ui-button-color mb-1">
                 {attraction.place}
               </h3>
               <p className="text-sm mt-2 md:mt-5 text-justify text-gray-600 leading-relaxed   ">

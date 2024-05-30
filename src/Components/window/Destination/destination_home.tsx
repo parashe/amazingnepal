@@ -56,7 +56,7 @@ export const DestinationHomeContent = () => {
           } sm:flex-row justify-between items-center px-5 mb-2`}
         >
           <h4 className="text-xl sm:text-3xl font-bold text-gray-800 uppercase tracking-wide py-5">
-            <span className="text-pink-500">Explore</span> Top Destinations
+            <span className="text-ui-primary">Explore</span> Top Destinations
           </h4>
           <div className="flex items-center space-x-4">
             {isSearchActive ? (
@@ -89,10 +89,10 @@ export const DestinationHomeContent = () => {
           <Link to="/destination">
             <Button
               onClick={() => window.scrollTo(0, 0)}
-              className="bg-white border border-pink-500 px-10 py-2 mt-10 rounded-md text-pink-500 hover:bg-pink-500 hover:text-white transition duration-300"
+              className="bg-white border border-ui-primary px-10 py-2 mt-10 rounded-md text-ui-primary hover:bg-ui-primary hover:text-white transition duration-300"
             >
               Explore More &nbsp;
-              <ArrowRight color="#ec4899" className="w-3 h-3" />
+              <ArrowRight color="#0097f3" className="w-3 h-3" />
             </Button>
           </Link>
         </div>
@@ -125,7 +125,7 @@ const Search: React.FC<SearchProps> = ({
             type="search"
             autoComplete="off"
             id="default-search"
-            className="block w-full border border-pink-500 p-1.5 pl-10 pr-10 text-base text-gray-900 rounded-full bg-white focus:ring-2 focus:ring-pink-500"
+            className="block w-full border border-ui-primary p-1.5 pl-10 pr-10 text-base text-gray-900 rounded-full bg-white focus:ring-2 focus:ring-ui-primary"
             placeholder="Search for destinations"
             value={searchQuery}
             onChange={handleSearchInputChange}
@@ -136,7 +136,7 @@ const Search: React.FC<SearchProps> = ({
               onClick={toggleSearch}
               className="absolute inset-y-0 right-0 flex items-center pr-3"
             >
-              <CrossIcon className="w-3 h-3 text-pink-500" />
+              <CrossIcon className="w-3 h-3 text-ui-primary" />
             </button>
           )}
         </div>

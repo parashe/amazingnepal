@@ -25,26 +25,21 @@ const Destination: React.FC<DestinationProps> = ({
   const finalClassName = className + " " + staticClassName;
   return (
     <div className="mt-10 md:mt-20 container mx-auto">
-      {CalledFromPage ? (
-        <h1 className="text-2xl lg:text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
-          {" "}
-          More Destinations
-        </h1>
-      ) : (
+     
         <div className="text-center mx-auto w-full md:max-w-4xl gap-6">
           <div className="flex"></div>
           <div className="flex items-center justify-center ">
             <h2 className="text-2xl lg:text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
-              <span className=" font-black   text-pink-500 lg:font-extrabold ">
+              <span className=" font-black   text-ui-primary lg:font-extrabold ">
                 EXPLORE{" "}
               </span>{" "}
               <span>
                 THE UNPARALLELED{" "}
-                <span className=" font-black  text-pink-500 lg:font-extrabold ">
+                <span className=" font-black  text-ui-primary lg:font-extrabold ">
                   BEAUTY{" "}
                 </span>{" "}
                 OF OUR PREMIER{" "}
-                <span className=" font-black  text-pink-500 lg:font-extrabold ">
+                <span className=" font-black  text-ui-primary lg:font-extrabold ">
                   DESTINATIONS{" "}
                 </span>{" "}
               </span>
@@ -59,14 +54,14 @@ const Destination: React.FC<DestinationProps> = ({
             vibrant cultures, and create memories that will last a lifetime.
           </p>
         </div>
-      )}
+     
 
       {/* <div className="flex flex-wrap flex-1 gap-6 mt-5 md:mt-20  mx-auto p-3 "> */}
       <div className="flex flex-row justify-end px-5">
         <div className="text-center relative group ">
           <Link to="/destination">
             <button
-              className=" animate-bounce mx-auto bg-pink-500 rounded-full  px-3 py-3 font-bold text-white hover:bg-pink-600 transition duration-300 uppercase"
+              className=" animate-bounce mx-auto bg-ui-primary rounded-full  px-3 py-3 font-bold text-white hover:bg-ui-secondary transition duration-300 uppercase"
               onClick={handleOnClickSeeMore}
             >
               <ArrowRight color="white" className="w-6 h-6" />

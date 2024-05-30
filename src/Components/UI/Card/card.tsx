@@ -57,7 +57,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
             />
           </div>
 
-          {/* <div className="absolute top-0 left-0 ml-0 bg-pink-500 rounded-lg shadow-lg">
+          {/* <div className="absolute top-0 left-0 ml-0 bg-ui-primary rounded-lg shadow-lg">
   <p className="text-white px-5 py-2 text-xs font-semibold">Nepal</p>
 </div> */}
         </div>
@@ -72,12 +72,12 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
           <div className="flex justify-center gap-2 px-2 items-center text-gray-700 dark:text-gray-300">
             <div className="flex items-center">
               <CashIcon className="w-5 h-5 mr-1" color="#d1d5db" />
-              <span className="text-pink-500 font-bold">{price}</span>
+              <span className="text-ui-primary text-sm font-bold">{price}</span>
               <span className="text-xs ml-1">/ Per Person</span>
             </div>
             <div className="flex items-center">
               <ClockIcon className="w-4 h-4 mr-1" color="#d1d5db" />
-              <span className="text-pink-500 font-bold">{duration}</span>
+              <span className="text-ui-primary font-bold">{duration}</span>
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@ export const RecommendedCard: React.FC<RecommendedCardProps> = ({
             <p className="mb-4 md:px-4 md:py-1 text-white text-sm  dark:text-gray-400">
               {description}
             </p>
-            <button className="px-5 py-3 text-center uppercase text-xs font-bold bg-pink-500 text-white hover:bg-pink-600 transition duration-300 cursor-pointer rounded-sm">
+            <button className="px-5 py-3 text-center uppercase text-xs font-bold bg-ui-primary text-white hover:bg-ui-secondary transition duration-300 cursor-pointer rounded-sm">
               View Details
             </button>
           </div>
