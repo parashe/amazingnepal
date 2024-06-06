@@ -439,12 +439,7 @@ const Overview: React.FC<ModalProps> = ({
   overviewDescription2,
   listofHighlights,
 }) => {
-  console.log(
-    overviewDescription1,
-    overviewDescription2,
-    "list of highlights",
-    listofHighlights
-  );
+  
   const paragraph =
     " text-sm p-3 text-justify   font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all ";
   return (

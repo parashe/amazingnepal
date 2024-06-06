@@ -55,7 +55,7 @@ export const Services: React.FC = () => {
           {/* <div className="flex flex-wrap flex-1 gap-6 mt-5 md:mt-20  mx-auto p-3 "> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:pt-20 p-5">
             {servicesData.map((service, index) => (
-              <Card>
+              <Card key={index}>
                 <div className="absolute top-0 right-0 bg-gradient-to-r from-blue-400 via-red-400 to-pink-500 text-white font-bold py-1 px-5 rounded-tr-lg rounded-bl-full transform hover:scale-105 transition-transform">
                   <span className="text-xs">Features</span>
                 </div>

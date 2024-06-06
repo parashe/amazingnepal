@@ -53,7 +53,7 @@ const Contact = () => {
               <ContactForm />
             </div>
           </div>
-          <div className="flex flex-row gap-3 py-2">
+          <div className="flex flex-wrap sm:flex-nowrap flex-row gap-3 py-2">
             <div className="w-full p-3 md:p-5 bg-white shadow-2xl">
               <AboutContact />
             </div>
@@ -99,7 +99,7 @@ export const ContactForm = () => {
   };
 
   const handleOnSubmit = async () => {
-    console.log('data', QuoteData);
+    
     // Prevent default form submission
   
     // Check if any required field is empty
@@ -142,9 +142,7 @@ export const ContactForm = () => {
       }, 1500); // Hide spinner after 1.5 seconds
     }
   };
-  console.log('show alert',showAlert);
-  console.log('alert message',alertMessage);
-  console.log('alert type',alertType);
+
 
   return (
     <>

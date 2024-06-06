@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { DropdownIcon } from "../../svg";
 import { destinationData } from "../../window/Destination/data";
+
 export const Navbar = () => {
   const [showlist, setShowlist] = React.useState(false);
   const [showDropdown, setShowDropdown] = React.useState(false);
@@ -27,17 +28,14 @@ export const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-2xl font-semibold dark:border-gray-600 dark:bg-gray-900 dark:text-white">
       <div className="flex flex-wrap container mx-auto justify-center items-center max-w-screen-xl px-4 text-sm">
-        <Link
-          to="/"
-          // className={`flex items-center justify-center space-x-3 rtl:space-x-reverse px-5`}
-        >
-          <div className="h-20 md:h-16 w-full rounded-sm overflow-hidden bg-white flex items-center justify-center">
-                <img
-                  src="/logo.png"
-                  className="h-full  w-full object-contain "
-                  alt="Footer Logo"
-                />
-              </div>
+        <Link to="/">
+          <div className="h-24 w-24 md:h-20 md:w-full rounded-sm overflow-hidden bg-white flex items-center justify-center">
+            <img
+              src="/logo.png"
+              className="h-full w-full object-contain p-1 sm:p-2"
+              alt="Logo"
+            />
+          </div>
         </Link>
         <button
           data-collapse-toggle="navbar-dropdown"
@@ -146,10 +144,9 @@ export const Navbar = () => {
     </nav>
   );
 };
-
 const DropdownContent = () => {
   return (
-    <ul className="absolute bg-gray-50 mt-10 left-1/2 transform -translate-x-1/2 w-full md:py-12 md:px-10 sm:mt-10 md:mt-10 lg:mt-12 xl:mt-12 sm:w-auto sm:min-w-[700px] md:min-w-[800px] lg:min-w-[900px] xl:min-w-[1000px]  border border-gray-200 rounded-lg shadow-lg dark:bg-gray-700 dark:border-gray-600 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 overflow-auto max-h-[70vh]">
+    <ul className="absolute bg-gray-50 mt-10 left-1/2 top-1/2 transform -translate-x-1/2 w-full md:py-12 md:px-16 sm:w-auto sm:min-w-[700px] md:min-w-[800px] lg:min-w-[900px] xl:min-w-[1000px]  border border-gray-200 rounded-lg shadow-lg dark:bg-gray-700 dark:border-gray-600 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 overflow-auto max-h-[70vh]">
       {/* Destination Items */}
       {destinationData?.map((destination) => (
         <li key={destination?.destination_id} className="relative group">

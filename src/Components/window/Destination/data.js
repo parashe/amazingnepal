@@ -2,7 +2,7 @@ export const destinationData = [
   {
     destination_id: "annapurna_trek",
     title: "Round Annapurna Circuit Trek",
-    price: "£23000",
+    price: "N/A",
     description:
       "Embark on the classic Annapurna Circuit Trek, offering breathtaking views and diverse landscapes.",
     duration: "21 days",
@@ -10,6 +10,10 @@ export const destinationData = [
     included: "N/A",
 
     imageUrl: [
+      {
+        id: 6,
+        url: "/assets/destination/AnnapurnaRound/annapurna5.jpeg",
+      },
       {
         id: 1,
         url: "/assets/destination/annapurna.jpeg",
@@ -31,7 +35,7 @@ export const destinationData = [
         url: "/assets/destination/AnnapurnaRound/annapurna4.jpeg",
       },
       {
-        id: 6,
+        id: 60,
         url: "/assets/destination/AnnapurnaRound/annapurna5.jpeg",
       },
     ],
@@ -589,7 +593,7 @@ export const destinationData = [
   {
     destination_id: "everest_basecamp_trek_via_gokyo_lake_and_cho_la_pass",
     title: "Everest Basecamp Trek Via Gokyo Lake And Cho La Pass",
-    price: "£940",
+    price: "£1400",
     description:
       "If connecting with nature as well as conquering altitude is important to you, the Everest Basecamp Trekking via Gokyo Lake and Cho La Pass is for you. This is one of the best options for hikers seeking the best trekking experience in Everest Base Camp. The Everest base trek through the Gokyo Lakes and Cho La Pass, recognized by the series of beautiful turquoise lakes of the Gokyo Valley and the famous Cho La Pass, takes us through the Khumbu region in the company of majestic mountains, friendly Sherpas, colorful monasteries of Namche Bazaar, the Sagarmatha National Park, and, of course, the base of the mighty Everest. It's simply unbeatable and makes this detour (west of Everest) more picturesque, serene, challenging and worthy of your time and your efforts.",
     duration: "18 days",
@@ -791,7 +795,7 @@ export const destinationData = [
   {
     destination_id: "makalu_base_camp_trek",
     title: "Makalu Base Camp Trek",
-    price: "£TBD",
+    price: "N/A",
     imageUrl: [
       {
         id: 1,
@@ -1027,7 +1031,7 @@ export const destinationData = [
   {
     destination_id: "mardihimaltrek",
     title: "Mardi Himal Trek",
-    price: "£34500",
+    price: "N/A",
     description:
       "Experience the Mardi Himal Trek, a hdestination_idden gem in the Annapurna region, with stunning vistas.",
     duration: "3 days",
@@ -1442,7 +1446,7 @@ export const destinationData = [
   {
     destination_id: "10",
     title: "Manaslu Circuit Trek",
-    price: "Price on request",
+    price: "N/A",
     imageUrl: [
       {
         id: 5,
@@ -1644,7 +1648,7 @@ export const destinationData = [
   {
     destination_id: "langtang_gosainkunda_and_helambu_trek",
     title: "Langtang, Gosainkunda And Helambu Trek",
-    price: "£TBD", // Fill this with appropriate data if available
+    price: "N/A", // Fill this with appropriate data if available
     duration: "17 days",
     description:
       "Langtang Gosaikunda and Helambu Trekking combines three distinct locations for comprehensive coverage...",
@@ -1839,7 +1843,7 @@ export const destinationData = [
     title: "Ghorepani - Poon-Hill Trek",
     duration: "9 days",
     activity: "Trekking & Hiking",
-    price: "Price on request",
+    price: "N/A",
     included: "Trekking & Hiking",
 
     imageUrl: [
@@ -1939,7 +1943,7 @@ export const destinationData = [
 
   {
     destination_id: "kathmandu_nagarkot_3_nights_4_days",
-    price: "price on request",
+    price: "N/A",
     title: "Kathmandu  Nagarkot Tour 3 Nights 4 Days",
     duration: "4 days",
     activity: "Multiple Activities",

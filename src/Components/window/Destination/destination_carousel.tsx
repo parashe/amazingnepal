@@ -17,7 +17,7 @@ const DestinationCarousel: React.FC<DestinationProps> = ({
   CalledFromPage,
 }) => {
   const handleOnClickSeeMore = () => {
-    console.log("see more");
+    return ;
   };
 
 

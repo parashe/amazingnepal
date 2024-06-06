@@ -13,7 +13,7 @@ const Recommended: React.FC<RecommendedProps> = ({
   CalledFromPage,
 }) => {
   const handleOnClickSeeMore = () => {
-    console.log("see more");
+   return ;
   };
 
   const staticClassName =
