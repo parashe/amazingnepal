@@ -20,7 +20,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
           description={items && items[0].description}
         />
         <div className="absolute inset-x-0 bottom-[-30px] flex justify-center">
-          <nav className="w-full bg-white shadow-lg py-5 px-5 max-w-xl rounded-b-lg">
+          <nav className="w-full bg-white shadow-lg py-5 px-5 max-w-xl rounded-b-lg dark:bg-gray-900">
             <ol className="inline-flex items-center">
               {items.map((item, index) => (
                 <li key={index} className="inline-flex items-center">

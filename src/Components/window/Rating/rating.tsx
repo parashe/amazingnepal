@@ -37,7 +37,7 @@ interface RatingProps {
 }
 const RatingItem = ({ rating }: RatingProps) => {
   const paragraph =
-    "text-xs p-1 text-justify text-center leading-relaxed text-gray-500 text-break-all";
+    "text-xs p-1 text-justify text-center leading-relaxed text-gray-500 text-break-all dark:text-gray-900";
 
   return (
     <div className="flex flex-wrap mt-2 px-0 sm:px-5 py-3 bg-white bg-opacity-90 rounded-lg shadow-lg">
@@ -71,7 +71,7 @@ const Rating = () => {
   return (
     <div className="w-full h-full">
       <div className="text-center flex flex-wrap justify-between">
-        <h4 className="text-lg font-bold text-gray-800 uppercase tracking-wide py-5">
+        <h4 className="text-lg font-bold text-gray-800 uppercase tracking-wide py-5 dark:text-white">
           What Our Customers Say
         </h4>
         <div className="flex gap-2 items-center justify-center">

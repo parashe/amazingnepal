@@ -55,7 +55,7 @@ export const DestinationHomeContent = () => {
             isSearchActive ? "flex-col" : "flex-row"
           } sm:flex-row justify-between items-center px-5 mb-2`}
         >
-          <h4 className="text-xl sm:text-3xl font-bold text-gray-800 uppercase tracking-wide py-5">
+          <h4 className="text-xl sm:text-3xl font-bold text-gray-800 uppercase tracking-wide py-5 dark:text-white">
             <span className="text-ui-primary">Explore</span> Top Destinations
           </h4>
           <div className="flex items-center space-x-4">

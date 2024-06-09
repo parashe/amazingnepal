@@ -33,10 +33,10 @@ export const recommendData = [
             url: "/assets/recommended/pashupati1.jpeg",
             id: 1,
           },
-          {
-            url: "/assets/recommended/pashupati2.webp",
-            id: 2,
-          },
+          // {
+          //   url: "/assets/recommended/pashupati2.webp",
+          //   id: 2,
+          // },
         ],
       },
 
@@ -91,10 +91,10 @@ export const recommendData = [
             url: "/assets/recommended/bhaktapur1.jpeg",
             id: 1,
           },
-          {
-            url: "/assets/recommended/bhaktapur2.webp",
-            id: 2,
-          },
+          // {
+          //   url: "/assets/recommended/bhaktapur2.webp",
+          //   id: 2,
+          // },
         ],
       },
       {
@@ -180,7 +180,7 @@ export const recommendData = [
     "id": 3,
     "place": "Pokhara",
     "description": "Nestled amidst the Himalayas, Pokhara is a serene city blessed with tranquil lakes, lush forests, and majestic mountain views.",
-    "imageUrl": "/assets/recommended/pokhara.webp",
+    "imageUrl": "/assets/recommended/sarang1.jpeg",
     "attractions": [
       {
         "id": 1,
@@ -218,7 +218,7 @@ export const recommendData = [
         "imageUrl": [
           { "url": "/assets/recommended/peace1.jpeg", "id": 1 },
           { "url": "/assets/recommended/peace2.jpeg", "id": 2 },
-          { "url": "/assets/recommended/peace3.webp", "id": 3 }
+          // { "url": "/assets/recommended/peace3.webp", "id": 3 }
         ]
       },
       {
@@ -256,7 +256,7 @@ export const recommendData = [
         "description": "Visit the Elephant Breeding Center to learn about these majestic animals and see baby elephants up close. The center is dedicated to the conservation and breeding of elephants, providing a safe haven for these gentle giants. Visitors can observe the daily routines of the elephants, including feeding and bathing, and gain insights into their behavior and care. The center also educates the public about the importance of elephant conservation and the challenges they face in the wild. It's a heartwarming experience that highlights the bond between humans and elephants and the efforts to ensure their survival.",
         "imageUrl": [
           { "url": "/assets/recommended/elephantbreeding1.jpeg", "id": 1 },
-          { "url": "/assets/recommended/elephantbreeding2.webp", "id": 2 }
+          // { "url": "/assets/recommended/elephantbreeding2.webp", "id": 2 }
         ]
       },
       {
@@ -305,10 +305,10 @@ export const recommendData = [
             "url": "/assets/destination/annapurnabasecamp/annapurna1.jpeg",
             "id": 1
           },
-          {
-            "url": "/assets/destination/annapurnabasecamp/annapurna2.webp",
-            "id": 2
-          }
+          // {
+          //   "url": "/assets/destination/annapurnabasecamp/annapurna2.webp",
+          //   "id": 2
+          // }
         ]
       },
       {
@@ -325,7 +325,7 @@ export const recommendData = [
         "place": "Jomsom",
         "description": "Jomsom is a gateway to the Mustang region and offers stunning landscapes and unique Tibetan culture. The area is known for its picturesque villages, monasteries, and dramatic mountain views. Located along the banks of the Kali Gandaki River, Jomsom is a bustling town that serves as a starting point for treks to Upper Mustang and Muktinath. The journey to Jomsom can be made by flight, jeep, or on foot, each providing different perspectives of the region's beauty. The town itself boasts traditional stone houses, vibrant local markets, and a backdrop of the Nilgiri and Dhaulagiri mountains. Visitors can explore nearby monasteries, interact with the local Thakali people, and enjoy the unique blend of natural beauty and cultural heritage.",
         "imageUrl": [
-          { "url": "/assets/recommended/jomsom1.webp", "id": 1 },
+          // { "url": "/assets/recommended/jomsom1.webp", "id": 1 },
           { "url": "/assets/recommended/jomsom2.jpeg", "id": 2 }
         ]
       }
@@ -344,7 +344,7 @@ export const recommendData = [
         "description": "The Maya Devi Temple is the exact birthplace of Lord Buddha and a central pilgrimage site in Lumbini. This sacred temple stands as a testament to the profound historical and spiritual significance of Lumbini. Enclosed within a tranquil park, the temple houses the Marker Stone, pinpointing the exact location of Buddha's birth, and the Nativity Sculpture, depicting the scene of his birth. Surrounding the temple are ancient ruins of stupas and monasteries, reflecting centuries of reverence. The serene atmosphere of the Maya Devi Temple, combined with the echoes of ancient chants and the presence of pilgrims from around the world, creates a deeply moving experience for all visitors.",
         "imageUrl": [
           { "url": "/assets/recommended/mayadevi1.jpeg", "id": 1 },
-          { "url": "/assets/recommended/mayadevi2.webp", "id": 2 }
+          // { "url": "/assets/recommended/mayadevi2.webp", "id": 2 }
         ]
       },
       {
@@ -431,7 +431,7 @@ export const recommendData = [
         description:
           "The heart of Bandipur is its bustling bazaar, a lively market area where visitors can immerse themselves in the local culture. The bazaar is lined with well-preserved buildings showcasing traditional Newari architecture, complete with ornate windows and carved wooden doors. Here, you can sample delicious local cuisine, browse for handmade crafts and souvenirs, and interact with friendly locals. The vibrant atmosphere of Bandipur Bazaar, with its mix of sights, sounds, and aromas, offers a unique and memorable experience. It's the perfect place to get a taste of daily life in Bandipur and to appreciate the town's rich cultural heritage.",
         imageUrl: [
-          { url: "/assets/recommended/bandipur1.webp", id: 1 },
+          // { url: "/assets/recommended/bandipur1.webp", id: 1 },
           { url: "/assets/recommended/bandipur.jpeg", id: 2 },
         ],
       },

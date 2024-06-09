@@ -1,10 +1,10 @@
 export const AboutContent = () => {
-  const paragraph = `text-sm  p-3 text-justify font-normal  cursor-pointer cursor-pointer leading-relaxed lg:leading-relaxed text-gray-700 `;
+  const paragraph = `text-sm  p-3 text-justify font-normal  cursor-pointer cursor-pointer leading-relaxed lg:leading-relaxed text-gray-700 dark:text-gray-300 `;
 
   return (
     <div className="w-full h-full ">
       <div className="text-center">
-        <h4 className="text-lg  font-bold text-gray-800 uppercase tracking-wide py-5">
+        <h4 className="text-lg  font-bold text-gray-800 uppercase tracking-wide py-5 dark:text-white">
           About Amazing Nepal
         </h4>
       </div>

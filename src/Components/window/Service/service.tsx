@@ -36,12 +36,12 @@ export const Services: React.FC = () => {
         <div className="mt-10 md:mt-16 container mx-auto ">
           <div className="flex items-center justify-center ">
             <h3
-              className="text-3xl md:text-4xl max-w-4xl  font-extrabold  text-gray-900 "
+              className="text-3xl md:text-4xl max-w-4xl  font-extrabold  text-gray-900  dark:text-white"
               style={{ lineHeight: "1.2" }}
             >
               <p>
                 {" "}
-                <span className="text-gray-800  uppercase font-extrabold leading-10">
+                <span className="text-gray-800  uppercase font-extrabold leading-10 dark:text-white">
                   Our Services{" "}
                 </span>
               </p>

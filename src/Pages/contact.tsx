@@ -13,7 +13,7 @@ export const ContactPage= () => {
     {
       label: "Contact",
       href: "/contact",
-      imageUrl: "/assets/breadcrumb/breadcrumbdestination.webp",
+      imageUrl: "/assets/breadcrumb/breadcrumbdestination.png",
       alt: "contactus",
       description: "Contact Us",
     },

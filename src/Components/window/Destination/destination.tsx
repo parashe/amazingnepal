@@ -29,7 +29,7 @@ const Destination: React.FC<DestinationProps> = ({
         <div className="text-center mx-auto w-full md:max-w-4xl gap-6">
           <div className="flex"></div>
           <div className="flex items-center justify-center ">
-            <h2 className="text-2xl lg:text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
+            <h2 className="text-2xl lg:text-4xl font-black text-black uppercase dark:text-dark-900 leading-relaxed ">
               <span className=" font-black   text-ui-primary lg:font-extrabold ">
                 EXPLORE{" "}
               </span>{" "}

@@ -146,7 +146,7 @@ export const ContactForm = () => {
 
   return (
     <>
-      <div className="max-w-md mx-auto shadow-2xl p-5  rounded-lg bg-white">
+      <div className="max-w-md mx-auto shadow-2xl p-5  rounded-lg bg-white dark:bg-gray-900">
         <h4 className="text-lg text-center font-bold text-ui-primary uppercase tracking-wide">
           Get in touch
         </h4>

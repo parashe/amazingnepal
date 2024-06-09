@@ -50,7 +50,7 @@ const AddRatingForm = ({ onClose }: Props) => {
     <>
       <Modal>
         <div className="bg-black bg-opacity-50 fixed inset-0 rounded-lg max-h-full overflow-y-auto overflow-x-hidden z-50 flex justify-center items-center md:inset-0">
-          <div className="relative px-1 sm:px-10 py-5 md:pb-10 md:pt-5 w-full max-w-lg bg-white rounded-lg shadow-lg">
+          <div className="relative px-1 sm:px-10 py-5 md:pb-10 md:pt-5 w-full max-w-lg bg-white dark:bg-gray-800 rounded-lg shadow-lg">
             <div className="flex justify-end">
               <button
                 className="justify-end cursor-pointer rounded-full bg-gray-100 px-2 py-2 hover:bg-yellow-50"

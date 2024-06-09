@@ -6,7 +6,7 @@ const Vision = () => {
     "h-full w-full object-cover rounded-lg bg-neutral-200 lg:mx-12 lg:w-[100%] lg:h-[400px] lg:max-w-[520px] lg:rounded-xl";
   const linearSectionClassName = "space-y-8 md:space-y-12";
   const paragraph =
-    "text-justify leading-relaxed font-normal text-sm lg:leading-7 lg:text-md text-gray-900";
+    "text-justify leading-relaxed font-normal text-sm lg:leading-7 lg:text-md text-gray-900 dark:text-gray-300";
 
   const [showLoader, setShowLoader] = React.useState(true);
 
@@ -36,7 +36,7 @@ const Vision = () => {
             <div className="text-center mx-auto  gap-6 py-5">
               <div className="flex items-center justify-center ">
                 <h3
-                  className="text-5xl md:text-6xl max-w-4xl  font-extrabold uppercase  text-gray-900 "
+                  className="text-5xl md:text-6xl max-w-4xl  font-extrabold uppercase  text-gray-900 dark:text-gray-300 "
                   style={{ lineHeight: "1.2" }}
                 >
                   <p>
@@ -125,7 +125,7 @@ const Vision = () => {
                   alt="Himalayan"
                 />
                 <div className="ml-4 flex flex-col">
-                  <h3 className="mb-3 text-2xl font-bold text-gray-900 lg:mb-5 ">
+                  <h3 className="mb-3 text-2xl font-bold text-gray-900 lg:mb-5  dark:text-white">
                     Majestic Himalayas
                   </h3>
                   <p className={paragraph}>
@@ -157,7 +157,7 @@ const Vision = () => {
                   alt="cultural heritage"
                 />
                 <div className="ml-4 flex flex-col">
-                  <h3 className="mb-3 text-2xl font-bold text-gray-900 lg:mb-5 ">
+                  <h3 className="mb-3 text-2xl font-bold text-gray-900 lg:mb-5 dark:text-white ">
                     Rich Cultural Heritage
                   </h3>
                   <p className={paragraph}>
@@ -188,7 +188,7 @@ const Vision = () => {
                   alt="Spiritual Sanctuaries"
                 />
                 <div className="ml-4 flex flex-col">
-                  <h3 className="mb-3 text-2xl font-bold text-gray-900  ">
+                <h3 className="mb-3 text-2xl font-bold text-gray-900 lg:mb-5 dark:text-white ">
                     Spiritual Sanctuaries
                   </h3>
                   <p className={paragraph}>

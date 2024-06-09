@@ -8,7 +8,7 @@ export const GalleryPage = () => {
     {
       label: "Gallery",
       href: "/gallery",
-      imageUrl: "/assets/breadcrumb/breadcrumbdestination.webp",
+      imageUrl: "/assets/home.png",
       alt: "gallery",
       description: "Discover Our Gallery",
     },

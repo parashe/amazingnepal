@@ -29,7 +29,7 @@ export const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-white shadow-2xl font-semibold dark:border-gray-600 dark:bg-gray-900 dark:text-white">
       <div className="flex flex-wrap container mx-auto justify-center items-center max-w-screen-xl px-4 text-sm">
         <Link to="/">
-          <div className="h-24 w-24 md:h-20 md:w-full rounded-sm overflow-hidden bg-white flex items-center justify-center">
+          <div className="h-24 w-24 md:h-20 md:w-full rounded-sm overflow-hidden bg-white flex items-center justify-center dark:bg-gray-900">
             <img
               src="/logo.png"
               className="h-full w-full object-contain p-1 sm:p-2"
@@ -63,11 +63,11 @@ export const Navbar = () => {
           </svg>
         </button>
         <div className={navListClassName} id="navbar-dropdown">
-          <ul className="flex flex-col p-6 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-5 md:mt-0 md:border-0 md:bg-white py-5 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="flex flex-col p-6 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-5 md:mt-0 md:border-0 md:bg-white py-5 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 dark:text-white">
             <li>
               <Link
                 to="/"
-                className={`block py-4 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white ${isActive(
+                className={`block py-4 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white ${isActive(
                   "/"
                 )}`}
               >
@@ -77,7 +77,7 @@ export const Navbar = () => {
             <li className="flex justify-center">
               <button
                 onClick={handleDropdown}
-                className={`block py-3 text-center  px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white ${
+                className={`block py-3 text-center  px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white  dark:text-white${
                   showDropdown ? "text-ui-primary" : "text-gray-900"
                 }`}
               >
@@ -91,7 +91,7 @@ export const Navbar = () => {
             <li>
               <Link
                 to="/destination"
-                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white ${isActive(
+                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white ${isActive(
                   "/destination"
                 )}`}
               >
@@ -101,7 +101,7 @@ export const Navbar = () => {
             <li>
               <Link
                 to="/nepal"
-                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white ${isActive(
+                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white ${isActive(
                   "/nepal"
                 )}`}
               >
@@ -111,7 +111,7 @@ export const Navbar = () => {
             <li>
               <Link
                 to="/service"
-                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white ${isActive(
+                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white ${isActive(
                   "/service"
                 )}`}
               >
@@ -121,7 +121,7 @@ export const Navbar = () => {
             <li>
               <Link
                 to="/gallery"
-                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white ${isActive(
+                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white ${isActive(
                   "/gallery"
                 )}`}
               >
@@ -131,7 +131,7 @@ export const Navbar = () => {
             <li>
               <Link
                 to="/contact"
-                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white ${isActive(
+                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white  dark:text-white${isActive(
                   "/contact"
                 )}`}
               >

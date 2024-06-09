@@ -9,7 +9,7 @@ export const HomeFirstScreen = () => {
         <div className="relative w-full">
           <HomeTopContent
             // imageUrl="/assets/home.webp"
-            imageUrl="/assets/nepal/himalaya.webp"
+            imageUrl="/assets/nepal/himalaya.png"
             description="Amazing Nepal"
           />
         </div>

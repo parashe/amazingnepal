@@ -8,7 +8,7 @@ export const DestinationDetailsPage = () => {
     {
       label: "Destination",
       href: "/destination",
-      imageUrl: "/assets/breadcrumb/breadcrumbdestination.webp",
+      imageUrl: "/assets/breadcrumb/breadcrumbdestination.png",
       alt: "Breadcrumb Destination",
       description: "Explore more details",
     },
