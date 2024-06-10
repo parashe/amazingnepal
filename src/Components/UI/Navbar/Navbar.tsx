@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { DropdownIcon } from "../../svg";
 import { destinationData } from "../../window/Destination/data";
 
-export const Navbar = () => {
-  const [showlist, setShowlist] = React.useState(false);
-  const [showDropdown, setShowDropdown] = React.useState(false);
+export const Navbar: React.FC = () => {
+  const [showlist, setShowlist] = useState<boolean>(false);
+  const [showDropdown, setShowDropdown] = useState<boolean>(false);
+  const dropdownRef = useRef<HTMLUListElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const location = useLocation();
 
-  const isActive = (path: string) => {
-    return location.pathname === path ? " text-ui-primary" : "text-gray-900";
+  const isActive = (path: string): string => {
+    return location.pathname === path ? "text-ui-primary" : "text-gray-900";
   };
 
   const navListClassName = `w-full md:block md:w-auto text-center items-center ${
@@ -21,9 +23,32 @@ export const Navbar = () => {
     setShowlist(!showlist);
   };
 
-  const handleDropdown = () => {
-    setShowDropdown(!showDropdown);
+  const handleDropdown = (event: React.MouseEvent) => {
+    event.stopPropagation();
+    setShowDropdown((prev) => !prev);
   };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node) &&
+      buttonRef.current &&
+      !buttonRef.current.contains(event.target as Node)
+    ) {
+      setShowDropdown(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log("showDropdown state changed:", showDropdown);
+  }, [showDropdown]);
 
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-2xl font-semibold dark:border-gray-600 dark:bg-gray-900 dark:text-white">
@@ -76,8 +101,9 @@ export const Navbar = () => {
             </li>
             <li className="flex justify-center">
               <button
+                ref={buttonRef}
                 onClick={handleDropdown}
-                className={`block py-3 text-center  px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white  dark:text-white${
+                className={`block py-3 text-center px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white ${
                   showDropdown ? "text-ui-primary" : "text-gray-900"
                 }`}
               >
@@ -86,7 +112,7 @@ export const Navbar = () => {
                   <DropdownIcon className="w-5 h-5 ml-1" color="#ec4899" />
                 </span>
               </button>
-              {showDropdown && <DropdownContent />}
+              {showDropdown && <DropdownContent setShowDropdown={setShowDropdown} ref={dropdownRef} />}
             </li>
             <li>
               <Link
@@ -131,7 +157,7 @@ export const Navbar = () => {
             <li>
               <Link
                 to="/contact"
-                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white  dark:text-white${isActive(
+                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white ${isActive(
                   "/contact"
                 )}`}
               >
@@ -144,21 +170,33 @@ export const Navbar = () => {
     </nav>
   );
 };
-const DropdownContent = () => {
+
+type DropdownContentProps = {
+  setShowDropdown: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const DropdownContent = React.forwardRef<HTMLUListElement, DropdownContentProps>(({ setShowDropdown }, ref) => {
   return (
-    <ul className="absolute bg-gray-50 mt-10 left-1/2 top-1/2 transform -translate-x-1/2 w-full md:py-12 md:px-16 sm:w-auto sm:min-w-[700px] md:min-w-[800px] lg:min-w-[900px] xl:min-w-[1000px]  border border-gray-200 rounded-lg shadow-lg dark:bg-gray-700 dark:border-gray-600 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 overflow-auto max-h-[70vh]">
-      {/* Destination Items */}
+    <ul
+      ref={ref}
+      className="absolute w-[90vw] bg-gray-50 mt-10 top-1/2 left-1/2 transform -translate-x-1/2 md:py-12 md:px-16 sm:w-auto sm:min-w-[700px] md:min-w-[800px] lg:min-w-[900px] xl:min-w-[1000px] border border-gray-200 rounded-lg shadow-lg dark:bg-gray-700 dark:border-gray-600 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 overflow-auto max-h-[70vh]"
+    >
       {destinationData?.map((destination) => (
         <li key={destination?.destination_id} className="relative group">
           <Link
             to={`/destination/${destination?.destination_id}`}
             className="block border-b border-gray-200 md:border-none px-5 py-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 hover:text-ui-primary dark:text-white dark:hover:bg-gray-600 transition duration-300"
+            onClick={() => setShowDropdown(false)}
           >
             {destination?.title}
           </Link>
-          <div className="absolute bottom-0 left-0 w-full h-0.5 bg-ui-primary opacity-0  transition duration-300"></div>
+          <div className="absolute bottom-0 left-0 w-full h-0.5 bg-ui-primary opacity-0 transition duration-300"></div>
         </li>
       ))}
     </ul>
   );
-};
+});
+
+DropdownContent.displayName = "DropdownContent";
+
+export default Navbar;
