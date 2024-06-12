@@ -53,10 +53,10 @@ const AddRatingForm = ({ onClose }: Props) => {
           <div className="relative px-1 sm:px-10 py-5 md:pb-10 md:pt-5 w-full max-w-lg bg-white dark:bg-gray-800 rounded-lg shadow-lg">
             <div className="flex justify-end">
               <button
-                className="justify-end cursor-pointer rounded-full bg-gray-100 px-2 py-2 hover:bg-yellow-50"
+                className="justify-end cursor-pointer rounded-full bg-gray-100 sm:p-2 p-1 hover:bg-yellow-50"
                 onClick={onClose}
               >
-                <CrossIcon className="w-6 h-6" color="red" />
+                <CrossIcon className="w-4 h-4 sm:w-6 sm:h-6" color="red" />
               </button>
             </div>
             <div className="px-5 py-3">

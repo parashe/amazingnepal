@@ -36,7 +36,7 @@ const Vision = () => {
             <div className="text-center mx-auto  gap-6 py-5">
               <div className="flex items-center justify-center ">
                 <h3
-                  className="text-5xl md:text-6xl max-w-4xl  font-extrabold uppercase  text-gray-900 dark:text-gray-300 "
+                  className="text-3xl md:text-6xl max-w-4xl  font-extrabold uppercase  text-gray-900 dark:text-gray-300 "
                   style={{ lineHeight: "1.2" }}
                 >
                   <p>
@@ -121,7 +121,7 @@ const Vision = () => {
               >
                 <img
                   className={picture}
-                  src="/assets/nepal/himalaya.webp"
+                  src="/assets/nepal/himalaya.png"
                   alt="Himalayan"
                 />
                 <div className="ml-4 flex flex-col">

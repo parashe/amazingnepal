@@ -44,7 +44,7 @@ const RecommendedDetails: React.FC<RecommendedProps> = () => {
           <div className="text-center mx-auto max-w-4xl gap-6">
             <div className="flex items-center justify-center p-2 ">
               <h2 className="font-black text-black uppercase dark:text-white leading-relaxed">
-                <span className="text-3xl  font-black lg:text-4xl  text-black lg:font-extrabold ">
+                <span className="text-3xl  font-black lg:text-4xl  text-black lg:font-extrabold dark:text-white ">
                   {recommendedDataByID?.place}
                 </span>{" "}
                 <p className="text-neutral-600 mt-2 md:mt-3 text-xs  dark:text-neutral-400">
@@ -111,7 +111,7 @@ const CardDetails = (attraction: any) => {
     setDetails({});
   };
   return (
-    <div className="bg-white rounded-lg shadow-md p-1 md:p-5 mt-5">
+    <div className="bg-white rounded-lg shadow-md p-1 md:p-5 mt-5 dark:bg-gray-500">
       <div className="flex flex-col sm:flex-col md:flex-row ">
         <img
           src={
@@ -125,10 +125,10 @@ const CardDetails = (attraction: any) => {
         />
 
         <div className="p-4 text-center md:text-justify">
-          <h3 className="text-lg font-black text-ui-button-color mb-1">
+          <h3 className="text-lg font-black text-ui-button-color mb-1 dark:text-white">
             {attraction.place}
           </h3>
-          <p className="text-sm mt-2 md:mt-5 text-justify text-gray-600 leading-relaxed   ">
+          <p className="text-sm mt-2 md:mt-5 text-justify text-gray-600 leading-relaxed  dark:text-white  ">
             {sliceDescription(attraction.description)}...
           </p>
           <div className="py-1 md:py-5 ">
@@ -155,7 +155,7 @@ interface ModalProps {
 
 export const SeeAllModal = ({ onClose, attraction }: ModalProps) => (
   <Modal>
-    <div className="bg-white  rounded-lg max-h-full md:max-h-[700px]  overflow-y-auto overflow-x-hidden z-50 justify-center items-center md:inset-0">
+    <div className="bg-white dark:bg-gray-800  rounded-lg max-h-full md:max-h-[700px]  overflow-y-auto overflow-x-hidden z-50 justify-center items-center md:inset-0">
       <div className=" p-1 md:px-10 pt-5 w-full max-w-4xl max-h-full">
         <div className="text-center flex justify-end">
           <div className="justify-end cursor-pointer" onClick={onClose}>
@@ -163,7 +163,7 @@ export const SeeAllModal = ({ onClose, attraction }: ModalProps) => (
           </div>
         </div>
 
-        <div className="w-full bg-white rounded-lg pb-5 ">
+        <div className="w-full bg-white rounded-lg pb-5  dark:bg-gray-800">
           <h4 className="text-lg font-bold text-gray-800 uppercase tracking-wide pb-5">
             {attraction.place}
           </h4>
@@ -185,10 +185,10 @@ export const SeeAllModal = ({ onClose, attraction }: ModalProps) => (
             </div>
 
             <div className="p-4 text-center md:text-justify">
-              <h3 className="text-lg font-black text-ui-button-color mb-1">
+              <h3 className="text-lg font-black text-ui-button-color mb-1 dark:text-white">
                 {attraction.place}
               </h3>
-              <p className="text-sm mt-2 md:mt-5 text-justify text-gray-600 leading-relaxed   ">
+              <p className="text-sm mt-2 md:mt-5 text-justify text-gray-600 leading-relaxed dark:text-white   ">
                 {attraction.description}
               </p>
             </div>

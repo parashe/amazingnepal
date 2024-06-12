@@ -15,9 +15,11 @@ export const Navbar: React.FC = () => {
     return location.pathname === path ? "text-ui-primary" : "text-gray-900";
   };
 
-  const navListClassName = `w-full md:block md:w-auto text-center items-center ${
-    showlist ? "block" : "hidden"
-  }`;
+  const navListClassName = `
+    fixed top-0 left-0 w-full h-full bg-gray-50 dark:bg-gray-900 z-50 transition-transform transform
+    ${showlist ? "translate-x-0" : "-translate-x-full"}
+    md:relative md:top-auto md:left-auto md:w-auto md:h-auto md:bg-transparent md:translate-x-0
+  `;
 
   const handleNavList = () => {
     setShowlist(!showlist);
@@ -51,10 +53,10 @@ export const Navbar: React.FC = () => {
   }, [showDropdown]);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-2xl font-semibold dark:border-gray-600 dark:bg-gray-900 dark:text-white">
+    <nav className="sticky top-0 z-50 bg-white shadow-2xl font-semibold dark:border-gray-900 dark:bg-gray-900 dark:text-white">
       <div className="flex flex-wrap container mx-auto justify-center items-center max-w-screen-xl px-4 text-sm">
         <Link to="/">
-          <div className="h-24 w-24 md:h-20 md:w-full rounded-sm overflow-hidden bg-white flex items-center justify-center dark:bg-gray-900">
+          <div className="h-24 w-24 md:h-20 md:w-auto rounded-sm overflow-hidden bg-white flex items-center justify-center dark:bg-gray-900">
             <img
               src="/logo.png"
               className="h-full w-full object-contain p-1 sm:p-2"
@@ -62,62 +64,96 @@ export const Navbar: React.FC = () => {
             />
           </div>
         </Link>
-        <button
-          data-collapse-toggle="navbar-dropdown"
-          type="button"
-          className="inline-flex items-center justify-end p-2 w-10 h-10 text-sm text-gray-500 rounded-lg md:hidden hover:text-ui-primary focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-dropdown"
-          aria-expanded="false"
-          onClick={handleNavList}
-        >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
+        <div className="flex items-center md:hidden">
+          <button
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:text-ui-primary focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-dropdown"
+            aria-expanded="false"
+            onClick={handleNavList}
           >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
+            <span className="sr-only">Open main menu</span>
+            <svg
+              className="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
         <div className={navListClassName} id="navbar-dropdown">
-          <ul className="flex flex-col p-6 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-5 md:mt-0 md:border-0 md:bg-white py-5 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 dark:text-white">
+          <div className="flex justify-between items-center p-4 md:hidden">
+            <span className="font-semibold text-lg">Menu</span>
+            <button
+              type="button"
+              className="inline-flex items-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:text-ui-primary focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-dropdown"
+              aria-expanded="false"
+              onClick={handleNavList}
+            >
+              <span className="sr-only">Close main menu</span>
+              <svg
+                className="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 1l15 15M1 16L16 1"
+                />
+              </svg>
+            </button>
+          </div>
+          <ul className="flex flex-col py-6 px-2 md:p-0 mt-4 gap-3 text-lg sm:text-sm rounded-lg bg-gray-50 md:flex-row md:space-x-5 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-900 md:dark:bg-transparent dark:border-gray-700 dark:text-white">
             <li>
               <Link
                 to="/"
-                className={`block py-4 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white ${isActive(
+                className={`block py-2  border-b border-gray-200 dark:border-gray-50 rounded-sm sm:border-none px-3 md:px-3 xl:px-6 lg:py-2 hover:text-ui-primary sm:rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white ${isActive(
                   "/"
                 )}`}
               >
                 Home
               </Link>
             </li>
-            <li className="flex justify-center">
+            <li className="flex justify-center relative border-b border-gray-200  sm:border-none dark:border-gray-50">
               <button
                 ref={buttonRef}
                 onClick={handleDropdown}
-                className={`block py-3 text-center px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white ${
+                className={`block py-2 text-center px-3 md:px-3 xl:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-none md:p-0 dark:hover:text-white dark:text-white focus:border-none focus:ring-none ${
                   showDropdown ? "text-ui-primary" : "text-gray-900"
                 }`}
               >
-                <span className="flex justify-center items-center ">
+                <span className="flex justify-center items-center">
                   Browse Destinations
                   <DropdownIcon className="w-5 h-5 ml-1" color="#ec4899" />
                 </span>
               </button>
-              {showDropdown && <DropdownContent setShowDropdown={setShowDropdown} ref={dropdownRef} />}
+
+              {showDropdown && (
+                <DropdownContent
+                  setShowDropdown={setShowDropdown}
+                  ref={dropdownRef}
+                />
+              )}
             </li>
             <li>
               <Link
                 to="/destination"
-                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white ${isActive(
+                className={`block py-2 border-b border-gray-200 dark:border-gray-50 rounded-sm sm:border-none px-3 md:px-3 xl:px-6 lg:py-2 hover:text-ui-primary sm:rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white${isActive(
                   "/destination"
                 )}`}
               >
@@ -127,7 +163,7 @@ export const Navbar: React.FC = () => {
             <li>
               <Link
                 to="/nepal"
-                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white ${isActive(
+                className={`block py-2 border-b border-gray-200 dark:border-gray-50 rounded-sm sm:border-none px-3  md:px-3 xl:px-6 lg:py-2 hover:text-ui-primary sm:rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white${isActive(
                   "/nepal"
                 )}`}
               >
@@ -137,7 +173,7 @@ export const Navbar: React.FC = () => {
             <li>
               <Link
                 to="/service"
-                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white ${isActive(
+                className={`block py-2 border-b border-gray-200 dark:border-gray-50 rounded-sm sm:border-none px-3 md:px-3 xl:px-6 lg:py-2 hover:text-ui-primary sm:rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white${isActive(
                   "/service"
                 )}`}
               >
@@ -147,7 +183,7 @@ export const Navbar: React.FC = () => {
             <li>
               <Link
                 to="/gallery"
-                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white ${isActive(
+                className={`block py-2 border-b border-gray-200 dark:border-gray-50 rounded-sm sm:border-none px-3 md:px-3 xl:px-6 lg:py-2 hover:text-ui-primary sm:rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white${isActive(
                   "/gallery"
                 )}`}
               >
@@ -157,7 +193,7 @@ export const Navbar: React.FC = () => {
             <li>
               <Link
                 to="/contact"
-                className={`block py-3 px-3 lg:px-6 lg:py-2 hover:text-ui-primary rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white ${isActive(
+                className={`block py-2 border-b border-gray-200 dark:border-gray-50 rounded-sm sm:border-none px-3 md:px-3 xl:px-6 lg:py-2 hover:text-ui-primary sm:rounded md:hover:text-ui-primary md:border-0 md:p-0 dark:hover:text-white dark:text-white${isActive(
                   "/contact"
                 )}`}
               >
@@ -175,17 +211,20 @@ type DropdownContentProps = {
   setShowDropdown: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const DropdownContent = React.forwardRef<HTMLUListElement, DropdownContentProps>(({ setShowDropdown }, ref) => {
+const DropdownContent = React.forwardRef<
+  HTMLUListElement,
+  DropdownContentProps
+>(({ setShowDropdown }, ref) => {
   return (
     <ul
       ref={ref}
-      className="absolute w-[90vw] bg-gray-50 mt-10 top-1/2 left-1/2 transform -translate-x-1/2 md:py-12 md:px-16 sm:w-auto sm:min-w-[700px] md:min-w-[800px] lg:min-w-[900px] xl:min-w-[1000px] border border-gray-200 rounded-lg shadow-lg dark:bg-gray-700 dark:border-gray-600 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 overflow-auto max-h-[70vh]"
+      className="absolute w-full sm:p-6 sm:w-[70vw] lg:w-[55vw] bg-gray-50 sm:mt-0 lg:mt-5 py-2 sm:py-5 md:py-0 top-full left-1/2 sm:left-auto  md:left-0 transform -translate-x-1/2 sm:translate-x-0 md:translate-x-0 border-none border sm:border-gray-400 rounded-lg shadow-lg dark:bg-gray-900 dark:border-gray-900 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-auto max-h-[70vh]"
     >
       {destinationData?.map((destination) => (
         <li key={destination?.destination_id} className="relative group">
           <Link
             to={`/destination/${destination?.destination_id}`}
-            className="block border-b border-gray-200 md:border-none px-5 py-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 hover:text-ui-primary dark:text-white dark:hover:bg-gray-600 transition duration-300"
+            className="block px-4 py-3 sm:rounded-lg text-sm text-gray-800 hover:bg-gray-100 hover:text-ui-primary dark:text-white dark:hover:bg-gray-600 transition duration-300"
             onClick={() => setShowDropdown(false)}
           >
             {destination?.title}

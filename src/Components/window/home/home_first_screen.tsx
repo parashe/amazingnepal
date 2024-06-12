@@ -43,10 +43,10 @@ export const HomeTopContent = ({
       />
       {/* Content */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-        <h1 className="text-xl md:text-5xl font-black mb-4">
+        <h1 className="text-2xl md:text-5xl font-black mb-4">
           Explore the Beauty of Nepal
         </h1>
-        <p className="text-xs text-light-000 md:text-xl">
+        <p className="text-sm text-white md:text-xl ">
           Discover breathtaking landscapes, vibrant cultures, and unforgettable
           adventures
         </p>

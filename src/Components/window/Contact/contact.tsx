@@ -54,7 +54,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex flex-wrap sm:flex-nowrap flex-row gap-3 py-2">
-            <div className="w-full p-3 md:p-5 bg-white shadow-2xl">
+            <div className="w-full p-3 md:p-5 bg-white shadow-2xl dark:bg-gray-800">
               <AboutContact />
             </div>
 
@@ -221,13 +221,13 @@ export const ContactForm = () => {
 export default Contact;
 
 const AboutContact = () => {
-  const paragraph = `text-sm p-1  text-justify font-normal  cursor-pointer cursor-pointer leading-relaxed lg:leading-relaxed text-gray-700 `;
+  const paragraph = `text-sm p-1  dark:text-gray-300 text-justify font-normal  cursor-pointer cursor-pointer leading-relaxed lg:leading-relaxed text-gray-700 `;
 
   return (
     <>
-      <div className="w-full h-full bg-white ">
+      <div className="w-full h-full bg-white  dark:bg-gray-800">
         <div className="text-center">
-          <h4 className="text-lg  font-bold text-gray-800 uppercase tracking-wide py-5">
+          <h4 className="text-lg  font-bold text-gray-800 uppercase tracking-wide py-5 dark:text-white">
             About Amazing Nepal
           </h4>
         </div>

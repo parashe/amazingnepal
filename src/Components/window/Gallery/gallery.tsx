@@ -33,7 +33,7 @@ const Gallery = () => {
           <div className="w-full h-full py-10 lg:py-10 lg:px-10 ">
             <div className=" py-2 lg:py-10">
               <div className="text-center mx-auto max-w-2xl gap-6  ">
-                <h2 className="text-5xl font-black text-black uppercase dark:text-white  ">
+                <h2 className="text-2xl sm:text-5xl font-black text-black uppercase dark:text-white  ">
                   <span className="bg-ui-primary inline-block text-transparent bg-clip-text font-black">
                     EXPLORE{" "}
                   </span>{" "}

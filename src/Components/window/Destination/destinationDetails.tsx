@@ -40,10 +40,10 @@ const DestinationDetails = () => {
           </div>
         </>
       ) : (
-        <div className="flex-content bg-white">
+        <div className="flex-content bg-white dark:bg-gray-800">
           <div className="container-xl mx-auto   p-5 ">
             <div className="flex flex-col md:flex-row  gap-1 ">
-              <div className="  md:px-5   bg-white ">
+              <div className="  md:px-5   bg-white dark:bg-gray-800 ">
                 <ImageViewer
                   images={destination?.imageUrl}
                   title={destination?.title}
@@ -186,7 +186,7 @@ export const Information = ({
   const paragraph = ` font-bold md:p-5  text-gray-900 shadow-md  text-sm md:text-sm cursor-pointer  cursor-pointer leading-relaxed   hover:shadow-lg hover:shadow-ui-light-blue  `;
   return (
     <>
-      <div className="bg-white md:p-4   ">
+      <div className="bg-white md:p-4 dark:bg-gray-300  ">
         <div className="grid grid-cols-4 divide-x divide-ui-primary text-center shadow-full">
           <p
             className={`${paragraph} ${
@@ -439,23 +439,22 @@ const Overview: React.FC<ModalProps> = ({
   overviewDescription2,
   listofHighlights,
 }) => {
-  
   const paragraph =
-    " text-sm p-3 text-justify   font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all ";
+    " text-sm p-3 text-justify   font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all dark:text-white ";
   return (
     <div>
-      <div className="bg-white  py-5    h-full overflow-hidden transform transition-all ">
+      <div className="bg-white  dark:bg-gray-800 py-5  dark:text-white   h-full overflow-hidden transform transition-all ">
         <div className="md:px-10 py-4 leading-relaxed">
           <div className="text-center p-2 ">
             <div className="flex flex-wrap justify-between">
-              <h1 className="text-xl font-bold text-gray-900">
+              <h1 className="text-xl font-bold text-gray-900 dark:text-white">
                 Package Details
               </h1>
             </div>
             <p className={paragraph}>{overviewDescription1}</p>
             <p className={paragraph}>{overviewDescription2}</p>
             <div className="p-2 md:p-6 text-justify">
-              <h1 className="text-lg font-bold text-gray-900">
+              <h1 className="text-lg font-bold text-gray-900 dark:text-white">
                 {overviewSubHeading}
               </h1>
 
@@ -486,14 +485,16 @@ const PriceIncludedExcluded: React.FC<PriceModalProps> = ({
   priceIncluded,
 }) => {
   const paragraph =
-    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all ";
+    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all dark:text-white ";
   return (
     <div>
-      <div className="bg-white  py-5    h-full overflow-hidden transform transition-all ">
+      <div className="bg-white  py-5    h-full overflow-hidden transform transition-all dark:bg-gray-800 ">
         <div className="md:px-10 py-4 leading-relaxed">
           <div className="text-center p-2 ">
             <div className="p-2 md:p-6 text-justify">
-              <h1 className="text-lg font-bold text-gray-900">Included</h1>
+              <h1 className="text-lg font-bold text-gray-900 dark:text-white">
+                Included
+              </h1>
 
               <ul className="list-disc">
                 {priceIncluded.map((highlight, index) => (
@@ -504,7 +505,9 @@ const PriceIncludedExcluded: React.FC<PriceModalProps> = ({
               </ul>
             </div>
             <div className="p-2 md:p-6 text-justify">
-              <h1 className="text-lg font-bold text-gray-900">Excluded</h1>
+              <h1 className="text-lg font-bold text-gray-900 text-white">
+                Excluded
+              </h1>
 
               <ul className="list-disc">
                 {priceExcluded?.map((highlight, index) => (
@@ -537,14 +540,14 @@ const IternaryContent: React.FC<IternaryModalProps> = ({
   iternary,
 }) => {
   const paragraph =
-    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all ";
+    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all dark:text-white dark:bg-gray-800 ";
   return (
     <div>
-      <div className="bg-white  py-5    h-full overflow-hidden transform transition-all ">
+      <div className="bg-white  py-5    h-full overflow-hidden transform transition-all dark:bg-gray-800 ">
         <div className="md:px-10 py-4 leading-relaxed">
           <div className="text-center p-2 ">
             <div className="p-2 md:p-6 text-justify">
-              <h1 className="text-lg font-bold text-gray-900">
+              <h1 className="text-lg font-bold text-gray-900 dark:text-white">
                 Detail Itineries
               </h1>
 
@@ -576,15 +579,15 @@ const UsefulInformationContent: React.FC<UsefulModalProps> = ({
   usefulInformation,
 }) => {
   const paragraph =
-    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all ";
+    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all dark:text-white dark:bg-gray-800 ";
   return (
     <div>
-      <div className="bg-white  py-5    h-full overflow-hidden transform transition-all ">
+      <div className="bg-white  py-5    h-full overflow-hidden transform transition-all dark:bg-gray-800 ">
         <div className="md:px-10 py-4 leading-relaxed">
           <div className="text-center p-2 ">
             <div className="p-2 md:p-6 text-justify">
-              <h1 className="text-lg font-bold text-gray-900">
-                Detail Itineries
+              <h1 className="text-lg font-bold text-gray-900 dark:text-white">
+                Useful Itineries
               </h1>
 
               <ul className="list-disc">

@@ -505,14 +505,8 @@ export const destinationData = [
         id: 1,
         url: "/assets/destination/heritage.jpeg",
       },
-      {
-        id: 2,
-        url: "/assets/destination/kathmandu/kathmandu1.avif",
-      },
-      {
-        id: 3,
-        url: "/assets/destination/kathmandu/kathmandu2.avif",
-      },
+     
+     
       {
         id: 4,
         url: "/assets/destination/kathmandu/kathmandu3.jpeg",
@@ -524,6 +518,10 @@ export const destinationData = [
       {
         id: 6,
         url: "/assets/destination/kathmandu/kathmandu5.jpeg",
+      },
+      {
+        id: 7,
+        url: "/assets/destination/kathmandu/kathmandu6.jpeg",
       },
     ],
 
@@ -1657,39 +1655,31 @@ export const destinationData = [
       "All arrival and departure transfer in private vehicle, Hotels will be of tourist standard and during trekking will be local tea house/ guests house, All meals (lunch and dinner) as described in itinerary, A private vehicle as per group size, An English-speaking guide throughout the tour Trekking, TIMS and permit, 2 guests = 01 Porter, Tea House Trekking package (Room + Breakfast + Lunch + Dinner)",
     imageUrl: [
       {
+        id: 5,
+        url: "/assets/destination/ghosaikunda/ghosaikunda2.jpeg",
+      },
+      {
         id: 1,
         url: "/assets/destination/gosaikunda.jpeg",
       },
+      
       {
-        id: 11,
-        url: "/assets/destination/helicoptor.jpeg",
-        alt: "Helicoptor",
-      },
-      {
-        id: 2,
-        url: "/assets/destination/everest1.jpeg",
-        alt: "Everest",
+        id: 4,
+        url: "/assets/destination/ghosaikunda/ghosaikunda.jpeg",
       },
       {
         id: 3,
-        url: "/assets/destination/everesthelicoptor.jpeg",
-        alt: "Everest by Helicoptor",
+        url: "/assets/destination/ghosaikunda/ghosaikunda3.jpeg",
       },
       {
-        id: 4,
-        url: "/assets/destination/everest1.jpeg",
-        alt: "Everest",
-      },
-      {
-        id: 15,
-        url: "/assets/destination/helicoptor.jpeg",
-        alt: "Helicoptor",
-      },
-      {
-        id: 24,
-        url: "/assets/destination/everest1.jpeg",
-        alt: "Everest",
-      },
+        id: 2,
+        url: "/assets/destination/ghosaikunda/ghosaikunda4.jpeg",
+      }
+
+      
+    
+      
+     
     ],
     OverviewSubHeading: "Some Trip Highlights",
     OverviewDescription1: "Max. Altitude: Gosaikunda Lake (4460m/14632ft).",
@@ -1955,11 +1945,7 @@ export const destinationData = [
         url: "/assets/destination/nagarkot/nagarkot1.jpeg",
         alt: "Nagarkot",
       },
-      {
-        id: 2,
-        url: "/assets/destination/nagarkot/nagarkot2.jpeg",
-        alt: "Nagarkot",
-      },
+      
       {
         id: 3,
         url: "/assets/destination/nagarkot/nagarkot3.jpeg",
@@ -1970,16 +1956,7 @@ export const destinationData = [
         url: "/assets/destination/nagarkot/nagarkot4.jpeg",
         alt: "Nagarkot",
       },
-      {
-        id: 5,
-        url: "/assets/destination/nagarkot/nagarkot5.jpeg",
-        alt: "Nagarkot",
-      },
-      {
-        id: 6,
-        url: "/assets/destination/nagarkot/nagarkot6.jpeg",
-        alt: "Nagarkot",
-      },
+      
     ],
 
     description:
@@ -2057,11 +2034,7 @@ export const destinationData = [
         url: "/assets/destination/nepal/nepal2.jpeg",
         alt: "8 Days Nepal Tour",
       },
-      {
-        id: 1,
-        url: "/assets/destination/nepal/nepal.avif",
-        alt: "8 Days Nepal Tour",
-      },
+     
       // {
       //   id: 1,
       //   url: "/assets/destination/nepal/nepal1.webp",

@@ -1,21 +1,23 @@
-import React from 'react'
-import { Navbar } from './UI/Navbar/Navbar'
-import { Footer } from './UI/Footer/Footer'
-
+import React from 'react';
+import { Navbar } from './UI/Navbar/Navbar';
+import { Footer } from './UI/Footer/Footer';
 
 interface Props {
-    children: React.ReactNode
+    children: React.ReactNode;
 }
 
-const Layout = ( {children}: Props) => {
+const Layout = ({ children }: Props) => {
   return (
-    
     <>
-   
-    <Navbar/>
-    {children}
-    <Footer/>
+      <div className='fixed top-0 left-0 w-full z-50'>
+        <Navbar />
+      </div>
+      {/* Adjust the padding-top value based on the height of your Navbar */}
+        {children}
+     
+      <Footer />
     </>
-  )
-}
+  );
+};
+
 export default Layout;

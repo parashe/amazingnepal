@@ -106,21 +106,13 @@ export const galleryData = [
     src: "/assets/recommended/lumbini.jpeg",
     alt: "Lumbini",
   },
-  {
-    id: 91,
-    src: "/assets/recommended/pokhara.webp",
-    alt: "Pokhara",
-  },
+  
   {
     id: 101,
     src: "/assets/nepal/heritage.jpg",
     alt: "heritage",
   },
-  {
-    id: 102,
-    src: "/assets/nepal/himalaya.webp",
-    alt: "himalayn",
-  }
+  
  
   
 

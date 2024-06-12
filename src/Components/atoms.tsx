@@ -470,15 +470,15 @@ export const HomeLoadingSkeleton = () => {
 
 export const Address = () => {
   const paragraph =
-    " text-sm p-3 text-center  cursor-pointer leading-normal text-gray-900 text-break-all ";
+    " text-sm p-3 text-center  cursor-pointer leading-normal text-gray-900 text-break-all dark:text-white dark:bg-gray-800 ";
   return (
-    <div className="mt-1 w-full relative h-full  md:max-w-md  border border-gray-100  bg-white  rounded-lg shadow-2xl cursor-pointer  hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 ">
+    <div className="mt-1 w-full relative h-full  md:max-w-md  border border-gray-100  bg-white  rounded-lg shadow-2xl cursor-pointer  hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 dark:border-gray-700 ">
       <div className="w-full p-5 ">
         <h4 className="text-lg  font-black text-ui-primary uppercase tracking-wide ">
           Address
         </h4>
 
-        <p className={`${paragraph} font-bold `}>Birmingham, United Kingdom</p>
+        <p className={`${paragraph} font-bold  `}>Birmingham, United Kingdom</p>
       </div>
     </div>
   );
