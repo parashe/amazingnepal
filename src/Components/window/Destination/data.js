@@ -181,10 +181,10 @@ export const destinationData = [
         id: 5,
         url: "/assets/destination/everest/everest2.jpg",
       },
-      // {
-      //   id: 6,
-      //   url: "/assets/destination/everest/everest3.webp",
-      // },
+      {
+        id: 6,
+        url: "/assets/destination/everest/everest3.webp",
+      },
       {
         id: 7,
         url: "/assets/destination/everest/everest4.jpeg",
@@ -350,11 +350,11 @@ export const destinationData = [
         url: "/assets/destination/annapurnabasecamp/annapurna1.jpeg",
         alt: "Annapurna Base Camp",
       },
-      // {
-      //   id: 3,
-      //   url: "/assets/destination/annapurnabasecamp/annapurna2.webp",
-      //   alt: "Annapurna Base Camp",
-      // },
+      {
+        id: 3,
+        url: "/assets/destination/annapurnabasecamp/annapurna2.webp",
+        alt: "Annapurna Base Camp",
+      },
       {
         id: 4,
         url: "/assets/destination/annapurnabasecamp/annapurna3.jpeg",
@@ -1165,16 +1165,16 @@ export const destinationData = [
         alt: "annapurna sanctuary",
       },
 
-      // {
-      //   id: 4,
-      //   url: "/assets/destination/annapurnasantuary/annapurna4.webp",
-      //   alt: "annapurna sanctuary",
-      // },
-      // {
-      //   id: 15,
-      //   url: "/assets/destination/annapurnasantuary/annapurna5.webp",
-      //   alt: "annapurna sanctuary",
-      // },
+      {
+        id: 4,
+        url: "/assets/destination/annapurnasantuary/annapurna4.webp",
+        alt: "annapurna sanctuary",
+      },
+      {
+        id: 15,
+        url: "/assets/destination/annapurnasantuary/annapurna5.webp",
+        alt: "annapurna sanctuary",
+      },
     ],
     OverviewSubHeading: "Annapurna Sanctuary Trek Overview:",
     OverviewDescription1: `The Annapurna Sanctuary Trek is a spectacular 14 days trip on the southern face of Annapurna I, a pleasant hike through the landscape and culture of Nepal. This walk leads to the fabulous amphitheater of highlands also known as Annapurna Base Camp. The course passes through waterfalls, impressive villages, terraced farmland, lush rhododendron forests and remarkable mountain views before heading the steep Annapurna. This is a good time to witness the beautiful peaks of the Annapurna giants that surround the mountains of the basin in the Annapurna region of the imperative center. Furthermore, a trip to Annapurna Base Camp is synonymous with entertainment and fun, as well as an extraordinary view of Nepal's plant and cultural heritage. This is by far one of the most enjoyable walks through various ethnic groups' lifestyles as well as the types of woods, plants, trees, and wildlife.`,
@@ -1446,11 +1446,11 @@ export const destinationData = [
     title: "Manaslu Circuit Trek",
     price: "N/A",
     imageUrl: [
-      // {
-      //   id: 5,
-      //   url: "/assets/destination/manaslu/manaslu5.webp",
-      //   alt: "manaslu circuit Trek",
-      // },
+      {
+        id: 5,
+        url: "/assets/destination/manaslu/manaslu5.webp",
+        alt: "manaslu circuit Trek",
+      },
       {
         id: 1,
         url: "/assets/destination/manaslu/mansalu1.jpeg",
@@ -2035,11 +2035,11 @@ export const destinationData = [
         alt: "8 Days Nepal Tour",
       },
      
-      // {
-      //   id: 1,
-      //   url: "/assets/destination/nepal/nepal1.webp",
-      //   alt: "8 Days Nepal Tour",
-      // },
+      {
+        id: 1,
+        url: "/assets/destination/nepal/nepal1.webp",
+        alt: "8 Days Nepal Tour",
+      },
       {
         id: 3,
         url: "/assets/destination/nepal/nepal3.jpeg",

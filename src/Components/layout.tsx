@@ -9,9 +9,11 @@ interface Props {
 const Layout = ({ children }: Props) => {
   return (
     <>
-      <div className='fixed top-0 left-0 w-full z-50'>
+      {/* <div className='fixed top-0 left-0 w-full z-50 '> */}
+      <div>
         <Navbar />
       </div>
+      <div className='mt-'></div>
       {/* Adjust the padding-top value based on the height of your Navbar */}
         {children}
      

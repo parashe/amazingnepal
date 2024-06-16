@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    console.log("showDropdown state changed:", showDropdown);
+    return
   }, [showDropdown]);
 
   return (
