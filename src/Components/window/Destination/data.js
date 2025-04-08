@@ -795,11 +795,11 @@ export const destinationData = [
     title: "Makalu Base Camp Trek",
     price: "N/A",
     imageUrl: [
-      {
-        id: 1,
-        url: "/assets/destination/makalu/makalu1.jpeg",
-        alt: "makalu basecamp trek",
-      },
+      // {
+      //   id: 1,
+      //   url: "/assets/destination/makalu/makalu1.jpeg",
+      //   alt: "makalu basecamp trek",
+      // },
 
       {
         id: 2,

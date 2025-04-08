@@ -1,5 +1,3 @@
-
-
 import { DestinationHomeContent } from "../Destination/destination_home";
 
 export const HomeFirstScreen = () => {
