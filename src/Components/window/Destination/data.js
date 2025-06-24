@@ -1,5 +1,240 @@
 export const destinationData = [
   {
+    destination_id: "PASHUPATINATH-MUKTINATH-KAILASH-MANASAROVER_ID",
+    title: "PASHUPATINATH-MUKTINATH-KAILASH-MANASAROVER",
+    price: "£3000",
+    description:
+      "Pashupatinath–Muktinath–Kailash Manasarovar is a sacred pilgrimage circuit revered by Hindus and Buddhists, symbolizing the journey from life to liberation. It connects Nepal’s holiest Shiva temple (Pashupatinath), the liberation shrine (Muktinath), and the divine abode of Lord Shiva (Mount Kailash and Lake Manasarovar) in Tibet.",
+    duration: "18 days",
+    available: "N/A",
+    included: "N/A",
+
+    imageUrl: [
+      {
+        id: 90,
+        url: "/assets/destination/pashupatinath/merge1.jpg",
+      },
+      {
+        id: 6,
+        url: "/assets/destination/pashupatinath/pashupatinath1.jpg",
+      },
+      {
+        id: 1,
+        url: "/assets/destination/pashupatinath/pashupatinath2.jpg",
+      },
+      {
+        id: 2,
+        url: "/assets/destination/pashupatinath/pashupatinath3.jpg",
+      },
+      {
+        id: 3,
+        url: "/assets/destination/pashupatinath/pashupatinath4.jpg",
+      },
+      {
+        id: 4,
+        url: "/assets/destination/pashupatinath/pashupatinath5.jpeg",
+      },
+      {
+        id: 5,
+        url: "/assets/destination/pashupatinath/manasarover1.jpg",
+      },
+      {
+        id: 60,
+        url: "/assets/destination/pashupatinath/manasarover2.jpg",
+      },
+      {
+        id: 62,
+        url: "/assets/destination/pashupatinath/manasarover3.jpg",
+      },
+      {
+        id: 63,
+        url: "/assets/destination/pashupatinath/muktinath1.png",
+      },
+      {
+        id: 64,
+        url: "/assets/destination/pashupatinath/muktinath2.jpeg",
+      },
+      {
+        id: 65,
+        url: "/assets/destination/pashupatinath/muktinath3.webp",
+      },
+    ],
+
+    OverviewSubHeading:
+      "Highlights of the PASHUPATINATH-MUKTINATH-KAILASH-MANASAROVER:",
+    OverviewDescription1:
+      "Pashupatinath–Muktinath–Kailash Manasarovar Yatra is a sacred pilgrimage connecting major Shiva temples and spiritual sites in Nepal and Tibet. It symbolizes the journey from life to liberation, drawing devotees seeking blessings, purification, and moksha.",
+
+    OverViewDescription2:
+      "The Pashupatinath–Muktinath–Kailash Manasarovar Yatra is a sacred journey that takes pilgrims to three of the most revered spiritual sites in Nepal and Tibet. The journey begins at Pashupatinath Temple in Kathmandu, dedicated to Lord Shiva, where people pray for peace and blessings. From there, they travel to Muktinath Temple in Mustang, a place believed to offer liberation and spiritual cleansing. The final destination is Kailash Manasarovar in Tibet, where Mount Kailash, considered the home of Lord Shiva, and the holy Lake Manasarovar offer pilgrims a path to spiritual fulfillment and salvation.",
+    listofHighlights: [
+      "Visit three of the most sacred pilgrimage sites: Pashupatinath, Muktinath, and Mount Kailash.",
+      "Experience spiritual rituals including Puja, Havan, and holy bath at Lake Manasarovar and Muktinath.",
+      "Witness the majestic view of Mount Kailash, considered the abode of Lord Shiva.",
+      "Cross Dolma La Pass (5600m) – the highest and most sacred point of the Kailash Parikrama.",
+      "Perform the sacred Parikrama (circumambulation) of Mount Kailash on foot.",
+      "Explore UNESCO heritage sites in Kathmandu including Pashupatinath and Guhyeshwari Temple.",
+      "Enjoy scenic drives through Himalayan landscapes and Tibetan plateaus.",
+      "Fly to Jomsom and visit Muktinath Temple with its 108 water spouts and eternal flame.",
+      "View stunning Himalayan peaks including Mt. Shishapangma and Gauri Shankar en route to Saga.",
+      "Participate in the evening Arati at Pashupatinath Temple for a soul-stirring experience.",
+      "Ride a cable car to Manakamana Temple and enjoy panoramic views (ticket not included).",
+      "Relax and rejuvenate in Pokhara with sightseeing at Davis Falls and Gupteshwor Cave.",
+      "Lake Manasarovar Parikrama by vehicle along its serene, sacred shoreline.",
+      "Comfortable accommodation and full vegetarian meals throughout the journey.",
+      "Support from experienced Nepali and Chinese guides, Sherpas, and a logistics team.",
+    ],
+
+    itinerary: [
+      {
+        day: "Day 01",
+        activity: "Arrival in Kathmandu",
+        activitydetails:
+          "Upon arrival in Kathmandu, our representative will warmly welcome you and transfer you to the hotel. Rest after your journey or explore the nearby surroundings. In the evening, attend a welcome dinner with a trek briefing session. Overnight in Kathmandu.",
+      },
+      {
+        day: "Day 02",
+        activity: "Kathmandu Sightseeing & Trek Preparation",
+        activitydetails:
+          "Visit Swayambhunath (Monkey Temple), Pashupatinath Temple, Boudhanath Stupa, and Kathmandu Durbar Square. Meet your trekking guide, go through a gear check, and get ready for the trek. Overnight in Kathmandu.",
+      },
+      {
+        day: "Day 03",
+        activity: "Drive Kathmandu to Khudi via Besisahar",
+        activitydetails:
+          "Embark on a scenic drive through Trishuli River valley and terraced hills. Continue via Mugling and Dumre to Besisahar, then proceed to Khudi — the starting point of your trek. Overnight in Khudi.",
+      },
+      {
+        day: "Day 04",
+        activity: "Trek from Khudi to Sirung",
+        activitydetails:
+          "Begin trekking through forests and rice terraces. Cross suspension bridges and pass beautiful waterfalls. Reach the Gurung village of Sirung with views of nearby peaks. Overnight in Sirung.",
+      },
+      {
+        day: "Day 05",
+        activity: "Trek from Sirung to Jagat",
+        activitydetails:
+          "Walk through lush forests and cross rivers and small settlements. Enjoy serene waterfalls and countryside views. Arrive at the stone-paved village of Jagat. Overnight in Jagat.",
+      },
+      {
+        day: "Day 06",
+        activity: "Trek from Jagat to Dharapani",
+        activitydetails:
+          "Descend through rocky trails to the river, pass through Chyamje and continue uphill to Tal. Walk alongside waterfalls and cross bridges to reach Dharapani. Overnight in Dharapani.",
+      },
+      {
+        day: "Day 07",
+        activity: "Trek from Dharapani to Chame",
+        activitydetails:
+          "Climb through pine and fir forests, admire Lamjung Himal and Annapurna II. Stop by small hot springs to relax. Chame is the headquarters of the Manang district. Overnight in Chame.",
+      },
+      {
+        day: "Day 08",
+        activity: "Trek from Chame to Lower Pisang",
+        activitydetails:
+          "Trek through forested paths and cross bridges. Witness Paungda Danda rock face and enjoy panoramic mountain views as the valley opens. Reach Lower Pisang village. Overnight in Pisang.",
+      },
+      {
+        day: "Day 09",
+        activity: "Trek from Pisang to Manang",
+        activitydetails:
+          "Take the scenic high route via Upper Pisang and Geru, with magnificent Annapurna views. Visit Buddhist monasteries including Barge Monastery. Arrive in Manang. Overnight in Manang.",
+      },
+      {
+        day: "Day 10",
+        activity: "Manang Acclimatization Day",
+        activitydetails:
+          "Go for a short hike to Gangapurna Lake or Bhojo Gumba for acclimatization. Optionally visit Vraga village and the Himalayan Rescue Association. Overnight in Manang.",
+      },
+      {
+        day: "Day 11",
+        activity: "Trek from Manang to Yak Kharka",
+        activitydetails:
+          "Cross a stream and ascend to Tenki village, then continue to the valley of Jarsang Khola. The trail ascends gradually as you pass through pastures to reach Yak Kharka. Overnight in Yak Kharka.",
+      },
+      {
+        day: "Day 12",
+        activity: "Trek from Yak Kharka to Thorong Phedi",
+        activitydetails:
+          "Climb up to a ridge, then descend and cross the Marsyangdi River. A final steep climb leads you to Thorong Phedi, a small busy settlement at the base of Thorong La Pass. Overnight in Thorong Phedi.",
+      },
+      {
+        day: "Day 13",
+        activity: "Cross Thorong La Pass to Muktinath [5,416 m]",
+        activitydetails:
+          "Start early to cross the highest point of the trek — Thorong La Pass. Admire breathtaking views of the Annapurna range and descend to the sacred temple town of Muktinath. Overnight in Muktinath.",
+      },
+      {
+        day: "Day 14",
+        activity: "Trek from Muktinath to Jomsom via Kagbeni",
+        activitydetails:
+          "Visit Muktinath Temple, then descend through the Kaligandaki valley. Walk through the ancient village of Kagbeni before reaching Jomsom. Enjoy the dry, windy landscape of the Mustang region. Overnight in Jomsom.",
+      },
+      {
+        day: "Day 15",
+        activity: "Fly from Jomsom to Pokhara",
+        activitydetails:
+          "Take an early morning scenic flight to Pokhara. Enjoy lakeside leisure or visit Devis Fall, Peace Stupa, and the International Mountain Museum. Overnight in Pokhara.",
+      },
+      {
+        day: "Day 16",
+        activity: "Drive from Pokhara to Kathmandu",
+        activitydetails:
+          "Drive back to Kathmandu via Prithvi Highway, enjoying river and mountain views along the way. Check in to your hotel and relax. Overnight in Kathmandu.",
+      },
+      {
+        day: "Day 17",
+        activity: "Leisure Day in Kathmandu",
+        activitydetails:
+          "A free day in Kathmandu to explore local markets, buy souvenirs, or relax at your hotel. Optional tours available. Farewell dinner in the evening. Overnight in Kathmandu.",
+      },
+      {
+        day: "Day 18",
+        activity: "Final Departure",
+        activitydetails:
+          "Our representative will transfer you to Tribhuvan International Airport for your final departure. Bid farewell with memories of a lifetime.",
+      },
+    ],
+
+    priceIncludes: [
+      "Deluxe hotel in Kathmandu with full board meals",
+      "Guided sightseeing tours and all surface transfers",
+      "Tibet Visa, Entry Permits, and Kailash Parikrama Fee",
+      "Best available accommodations during the entire trip, including 2 nights during Parikrama",
+      "All pure vegetarian meals (Breakfast, Lunch, Dinner)",
+      "Packed lunch during long drives and Parikrama",
+      "Experienced Nepali and Chinese guides",
+      "Supporting Sherpa team, luggage truck, and luxury bus",
+      "Yaks and yak men during Parikrama for luggage transport",
+      "First aid kit and oxygen cylinder for emergencies",
+      "Lake Manasarovar Parikrama by private vehicle",
+      "Kathmandu to Pokhara transfer by road",
+      "1 night hotel accommodation in Pokhara and 1 night in Jomsom",
+      "Domestic flights: Pokhara–Jomsom–Pokhara–Kathmandu",
+      "Private jeep transportation for Jomsom–Muktinath–Jomsom route",
+      "Experienced Nepali tour guide throughout the trip",
+      "Souvenir gifts including a duffle bag, jacket, and day pack",
+    ],
+
+    priceExcludes: [
+      "Tips and personal expenses (phone calls, drinks, mineral water, etc.)",
+      "Additional services not mentioned in the program",
+      "Rescue and emergency evacuation charges",
+      "Extra hotel nights due to flight delays or cancellations",
+      "International flights and travel insurance",
+      "Manakamana Cable Car ticket",
+    ],
+
+
+    usefulInformation: [
+      "Full Moon & Other Departure Dates for Kailash Yatra Itinerary:",
+      "July: 4th July (arrival in Kathmandu) → Full Moon 10th July at Manasarovar, 6th July, 13th July, 20th July, 27th July.",
+      "August: 3rd August (arrival in Kathmandu) → Full Moon 9th August at Manasarovar, 10th August, 17th August, 24th August, 31st August.",
+      "September: 1st September (arrival in Kathmandu) → Full Moon 7th September at Manasarovar, 7th September, 14th September → Last departure date of the season.",
+    ],
+  },
+
+  {
     destination_id: "annapurna_trek",
     title: "Round Annapurna Circuit Trek",
     price: "N/A",
@@ -505,8 +740,7 @@ export const destinationData = [
         id: 1,
         url: "/assets/destination/heritage.jpeg",
       },
-     
-     
+
       {
         id: 4,
         url: "/assets/destination/kathmandu/kathmandu3.jpeg",
@@ -1662,7 +1896,7 @@ export const destinationData = [
         id: 1,
         url: "/assets/destination/gosaikunda.jpeg",
       },
-      
+
       {
         id: 4,
         url: "/assets/destination/ghosaikunda/ghosaikunda.jpeg",
@@ -1674,12 +1908,7 @@ export const destinationData = [
       {
         id: 2,
         url: "/assets/destination/ghosaikunda/ghosaikunda4.jpeg",
-      }
-
-      
-    
-      
-     
+      },
     ],
     OverviewSubHeading: "Some Trip Highlights",
     OverviewDescription1: "Max. Altitude: Gosaikunda Lake (4460m/14632ft).",
@@ -1945,7 +2174,7 @@ export const destinationData = [
         url: "/assets/destination/nagarkot/nagarkot1.jpeg",
         alt: "Nagarkot",
       },
-      
+
       {
         id: 3,
         url: "/assets/destination/nagarkot/nagarkot3.jpeg",
@@ -1956,7 +2185,6 @@ export const destinationData = [
         url: "/assets/destination/nagarkot/nagarkot4.jpeg",
         alt: "Nagarkot",
       },
-      
     ],
 
     description:
@@ -2034,7 +2262,7 @@ export const destinationData = [
         url: "/assets/destination/nepal/nepal2.jpeg",
         alt: "8 Days Nepal Tour",
       },
-     
+
       {
         id: 1,
         url: "/assets/destination/nepal/nepal1.webp",
