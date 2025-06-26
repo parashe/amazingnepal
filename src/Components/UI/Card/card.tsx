@@ -49,7 +49,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
   const contactMeOnWhatsApp = () => {
     const url = `${window.location.origin}/destination/${destination_id}`;
     const message = `Hi, I'm interested in ${title}! Can you help me book this?\n${url}`;
-    const phoneNumber = "YOUR_PHONE_NUMBER"; // e.g., "+1234567890"
+    const phoneNumber = "+44-7411079563<"; // e.g., "+1234567890"
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
       "_blank"
