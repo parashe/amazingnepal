@@ -36,12 +36,13 @@ export const HomePage = () => {
         </>
       ) : (
         <Layout>
-          <HomeFirstScreen />
-          <Recommended />
-          <div className="h-20"></div>
-          <Whywe />
-          <Rating />
-        </Layout>
+        <HomeFirstScreen />
+        <div style={{ marginTop: '2rem' }} /> {/* Add this line */}
+        <Recommended />
+        <div className="h-20"></div>
+        <Whywe />
+        <Rating />
+      </Layout>
       )}
     </>
   );
