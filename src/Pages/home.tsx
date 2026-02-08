@@ -42,9 +42,9 @@ export const HomePage = () => {
       ) : (
         <Layout>
           <HomeFirstScreen />
-          <WhatWeDoStrip />
           <div className="mt-6 md:mt-8" />
           <Recommended />
+          <WhatWeDoStrip />
           <HowItWorks />
           <div className="h-12" />
           <AboutOnlySection variant="home" />
