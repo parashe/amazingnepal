@@ -36,7 +36,7 @@ interface TitleProps {
 }
 export const Title = ({ title }: TitleProps) => (
   <div className="text-center relative mb-10">
-    <h4 className="text-3xl font-bold text-gray-800 uppercase tracking-wide">
+    <h4 className="font-bold text-gray-800 uppercase tracking-wide">
       {title}
     </h4>
     <div
@@ -52,8 +52,10 @@ interface ModalProps extends PropsWithChildren {
 
 export const Modal: React.FC<ModalProps> = ({ onClose, children }) => (
   <div
-    className="fixed bottom-0 left-0 right-0 top-0 z-[100] flex items-center justify-center bg-dark-000 bg-opacity-40"
+    className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 dark:bg-black/70 backdrop-blur-sm"
     onClick={onClose}
+    role="dialog"
+    aria-modal="true"
   >
     {children}
   </div>
@@ -78,7 +80,7 @@ export const Input: React.FC<InputProps> = ({
 }) => {
   return (
     <div className="">
-      <label className=" text-justify block mb-2 text-xs font-medium text-gray-900 dark:text-white">
+      <label className=" text-justify block mb-2 text-sm font-medium text-gray-900 dark:text-white">
         {label}
       </label>
       <input
@@ -86,8 +88,7 @@ export const Input: React.FC<InputProps> = ({
         onChange={onChange}
         type={type}
         placeholder={placeholder}
-        className={`
-        h-9 border mb-3 min-w-[200px] max-w-full w-full text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
+        className="h-10 border border-gray-300 dark:border-gray-600 mb-3 min-w-[200px] max-w-full w-full text-gray-900 text-base rounded-lg focus:ring-2 focus:ring-ui-primary focus:border-ui-primary block p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-ui-primary dark:focus:border-ui-primary transition-colors"
         required
       />
     </div>
@@ -113,7 +114,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
     <div className="">
       <label
         htmlFor="message"
-        className="text-justify block mb-2 text-xs font-medium text-gray-900 dark:text-white"
+        className="text-justify block mb-2 text-sm font-medium text-gray-900 dark:text-white"
       >
         {label}
       </label>
@@ -121,7 +122,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
         onChange={onChange}
         id="message"
         rows={4}
-        className="block p-2.5 w-full text-sm text-gray-900 rounded-sm border focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        className="block p-2.5 w-full text-base text-gray-900 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-ui-primary focus:border-ui-primary dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-ui-primary dark:focus:border-ui-primary transition-colors mb-3"
         placeholder={placeholder}
         value={value}
       ></textarea>
@@ -157,13 +158,13 @@ export const Alert: React.FC<AlertProps> = ({ message, type, onClose }) => {
   let borderColor = "";
 
   if (type === "success") {
-    bgColor = "bg-green-100";
-    textColor = "text-ui-green";
-    borderColor = "border-teal-500";
+    bgColor = "bg-green-100 dark:bg-green-900/30";
+    textColor = "text-ui-green dark:text-green-300";
+    borderColor = "border-teal-500 dark:border-green-700";
   } else if (type === "error") {
-    bgColor = "bg-red-100";
-    textColor = "text-ui-red";
-    borderColor = "border-ui-red";
+    bgColor = "bg-red-100 dark:bg-red-900/30";
+    textColor = "text-ui-red dark:text-red-300";
+    borderColor = "border-ui-red dark:border-red-700";
   }
 
   const handleClose = () => {
@@ -191,7 +192,7 @@ export const Alert: React.FC<AlertProps> = ({ message, type, onClose }) => {
                 <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
               </svg>
             )}
-            <span className="py-2 font-bold text-justify font-small text-xs sm:inline">
+            <span className="py-2 font-bold text-justify font-small text-sm sm:inline">
               {message}
             </span>
           </div>
@@ -240,12 +241,12 @@ export const Spinner: React.FC = () => {
   );
 };
 
-export const CenteralSpinner: React.FC = () => {
+export const CentralSpinner: React.FC = () => {
   return (
-    <div role="status" className="z-[100] ">
+    <div role="status" className="z-[100]">
       <svg
         aria-hidden="true"
-        className="w-24 h-24 text-gray-500 animate-spin dark:text-gray-600 fill-ui-primary"
+        className="w-24 h-24 text-gray-500 animate-spin dark:text-gray-400 fill-ui-primary"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -274,7 +275,7 @@ export const RatingStars = ({ rating }: RatingProps) => {
   const filledStars = Array.from({ length: rating }, (_, index) => (
     <svg
       key={index}
-      className="w-4 h-4 text-pink-500 ms-1"
+      className="w-4 h-4 text-ui-primary ms-1"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
@@ -310,7 +311,7 @@ interface CreateRatingProps {
   setRating: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export const CrateRatingStars = ({ rating, setRating }: CreateRatingProps) => {
+export const CreateRatingStars = ({ rating, setRating }: CreateRatingProps) => {
   const handleRatingClick = (index: number) => {
     setRating(index + 1);
   };
@@ -319,7 +320,7 @@ export const CrateRatingStars = ({ rating, setRating }: CreateRatingProps) => {
     <svg
       key={index}
       onClick={() => handleRatingClick(index)}
-      className="w-6 h-6 text-pink-500 ms-1 cursor-pointer"
+      className="w-6 h-6 text-ui-primary ms-1 cursor-pointer"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
@@ -469,17 +470,17 @@ export const HomeLoadingSkeleton = () => {
 };
 
 export const Address = () => {
-  const paragraph =
-    " text-sm p-3 text-center  cursor-pointer leading-normal text-gray-900 text-break-all dark:text-white dark:bg-gray-800 ";
   return (
-    <div className="mt-1 w-full relative h-full  md:max-w-md  border border-gray-100  bg-white  rounded-lg shadow-2xl cursor-pointer  hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 dark:border-gray-700 ">
-      <div className="w-full p-5 ">
-        <h4 className="text-lg  font-black text-ui-primary uppercase tracking-wide ">
-          Address
-        </h4>
-
-        <p className={`${paragraph} font-bold  `}>Birmingham, United Kingdom</p>
-      </div>
-    </div>
+    <section>
+      <h2 className="text-xs font-semibold text-ui-primary uppercase tracking-widest mb-3">
+        Our office
+      </h2>
+      <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed">
+        Birmingham, United Kingdom
+      </p>
+      <p className="mt-1 text-gray-500 dark:text-gray-400 text-sm">
+        Based in the UK — we help travellers worldwide plan their Nepal adventures.
+      </p>
+    </section>
   );
 };

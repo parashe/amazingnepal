@@ -11,13 +11,14 @@ export const destinationData = [
 
     imageUrl: [
       {
-        id: 90,
-        url: "/assets/destination/pashupatinath/merge1.jpg",
-      },
-      {
         id: 6,
         url: "/assets/destination/pashupatinath/pashupatinath1.jpg",
       },
+      {
+        id: 90,
+        url: "/assets/destination/pashupatinath/merge1.jpg",
+      },
+     
       {
         id: 1,
         url: "/assets/destination/pashupatinath/pashupatinath2.jpg",

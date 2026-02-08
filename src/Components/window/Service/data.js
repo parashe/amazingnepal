@@ -2,7 +2,8 @@ export const servicesData = [
   {
     service_id: "service_id_1",
     title: "Travel Packages",
-    imageUrl: "/assets/travel.png", // Replace with actual image paths
+    tagline: "Curated trips & itineraries",
+    imageUrl: "/assets/travel.jpeg",
     content:
       "Explore the wonders of far-off lands, savor local flavors, and create lasting connections with the people and places you encounter.",
     readMoreLink: "/travel",
@@ -22,7 +23,8 @@ export const servicesData = [
   {
     service_id: "service_id_2",
     title: "Travel Insurance",
-    imageUrl: "/assets/insurance.png", // Replace with actual image paths
+    tagline: "Coverage for your journey",
+    imageUrl: "/assets/insurance.jpeg",
     content:
       "Our Travel Insurance plans offer comprehensive coverage for your adventures, business trips, leisure getaways, or planning a relaxing vacation.",
     readMoreLink: "/insurance",
@@ -42,7 +44,8 @@ export const servicesData = [
   {
     service_id: "service_id_3",
     title: "Immigration Assistance",
-    imageUrl: "/assets/immigration.png", // Replace with actual image paths
+    tagline: "Visa & relocation support",
+    imageUrl: "/assets/immigration.jpeg",
     content:
       "Navigate the immigration process seamlessly with our expert guidance. Overcome complexities and achieve your goals confidently with our dedicated assistance.",
     readMoreLink: "/immigration",

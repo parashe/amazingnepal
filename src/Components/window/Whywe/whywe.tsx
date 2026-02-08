@@ -26,41 +26,52 @@ const Whywe = () => {
   ];
 
   return (
-    <div className=" bg-gradient-to-r from-blue-500 via-red-500 to-pink-500 dark:bg-gray-900">
-      <div className="mt-0 md:pt-28 md:pb-24 container mx-auto pt-5 ">
-        <div className="text-center mx-auto max-w-4xl gap-6">
-          <div className="flex items-center justify-center ">
-            <h2 className="text-2xl md:text-5xl font-black text-black uppercase dark:text-white leading-relaxed">
-              <span className=" font-black  text-white inline-block bg-clip-text lg:text-4xl   lg:font-black ">
-                WHY WE ARE THE  <span className="text-white"> BEST ?</span>{" "}
-              </span>
-              <p className="text-[#cbd5e1] md:mt-3 p-2  text-xs  dark:text-neutral-400">
-                {" "}
-               we pride ourselves on delivering unparalleled travel experiences
-                that set us apart from the rest. Our dedication to excellence is
-                evident in every aspect of our service.
-              </p>
-            </h2>
-          </div>
+    <section className="relative py-12 md:py-20 overflow-hidden">
+      {/* Soft background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50/80 to-gray-100/60 dark:from-gray-900 dark:via-gray-900/95 dark:to-gray-800/80" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-ui-primary/20 to-transparent" />
 
-          <p className="text-neutral-600 md:mt-3 text-sm dark:text-neutral-400"></p>
+      <div className="relative container mx-auto px-5 max-w-6xl">
+        {/* Header */}
+        <div className="text-center mb-10 md:mb-14">
+          <span className="inline-block text-ui-primary font-semibold uppercase tracking-widest mb-3">
+            Why choose us
+          </span>
+          <h2 className="text-gray-900 dark:text-white tracking-tight mb-4">
+            Why we are the best
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            We pride ourselves on delivering unparalleled travel experiences that set us apart.
+            Our dedication to excellence is evident in every aspect of our service.
+          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:pt-24 md:pb-24 w-full p-5">
-          {data.map((item) => (
+
+        {/* Cards - bento-style with distinct layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          {data.map((item, index) => (
             <div
               key={item.id}
-              className="max-w-md items-center   flex justify-between p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700"
+              className="group relative bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-1"
             >
-              <img
-                className="rounded-lg mb-4 object-contain h-[200px] w-full"
-                src={item.imgUrl}
-                alt={item.title}
-              />
-              <div>
-                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+              {/* Accent bar on hover */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-ui-primary to-ui-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              <div className="p-8 md:p-9">
+                {/* Icon in soft circle */}
+                <div className="mb-6 flex justify-center">
+                  <div className="relative flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-ui-primary/10 dark:bg-ui-primary/20 group-hover:bg-ui-primary/15 dark:group-hover:bg-ui-primary/25 transition-colors duration-300">
+                    <img
+                      className="object-contain w-12 h-12 md:w-14 md:h-14"
+                      src={item.imgUrl}
+                      alt={`${item.title} – Nepal travel, Amazing Nepal`}
+                    />
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 text-center">
                   {item.title}
-                </h5>
-                <p className="mb-3 text-xs text-gray-600 dark:text-gray-300">
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-center">
                   {item.description}
                 </p>
               </div>
@@ -68,7 +79,7 @@ const Whywe = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

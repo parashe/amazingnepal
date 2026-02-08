@@ -25,7 +25,7 @@ const DestinationCarousel: React.FC<DestinationProps> = ({
   return (
     <div className="mt-10 md:mt-20 container mx-auto">
       {CalledFromPage ? (
-        <h1 className="text-2xl lg:text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
+        <h1 className="font-black text-black uppercase dark:text-white leading-relaxed">
           {" "}
           More Destinations
         </h1>
@@ -33,7 +33,7 @@ const DestinationCarousel: React.FC<DestinationProps> = ({
         <div className="text-center mx-auto w-full md:max-w-4xl gap-6">
           <div className="flex"></div>
           <div className="flex items-center justify-center ">
-            <h2 className="text-2xl lg:text-4xl font-black text-black uppercase dark:text-white leading-relaxed ">
+            <h2 className="font-black text-black uppercase dark:text-white leading-relaxed">
               <span className=" font-black   text-ui-primary lg:font-extrabold ">
                 EXPLORE{" "}
               </span>{" "}
@@ -50,7 +50,7 @@ const DestinationCarousel: React.FC<DestinationProps> = ({
             </h2>
           </div>
 
-          <p className="text-neutral-600 p-2 md:mt-3 text-xs dark:text-neutral-400">
+          <p className="text-neutral-600 p-2 md:mt-3 dark:text-neutral-400">
             Take an unforgettable trip to our carefully chosen top destinations,
             where luxury meets exciting adventure. Enjoy the best of comfort as
             you explore stunning landscapes, experience lively cultures, and
@@ -73,7 +73,7 @@ const DestinationCarousel: React.FC<DestinationProps> = ({
         </div>
       </div>
 
-      <div className="md:mt-20 mt-5 md:mb-32 px-5 md:px-0">
+      <div className="md:mt-12 mt-4 md:mb-20 px-5 md:px-0">
         <MultipleCarousel data={destinationData} />
       </div>
       {/* <div className={finalClassName}>

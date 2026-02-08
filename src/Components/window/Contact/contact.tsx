@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {
   Address,
   Alert,
-  CenteralSpinner,
+  CentralSpinner,
   Input,
   LoadingSkeleton,
   Modal,
@@ -31,36 +31,30 @@ const Contact = () => {
           <LoadingSkeleton />
         </div>
       ) : (
-        <div className="container mx-auto  py-5 px-5">
-          <div className="text-center mx-auto max-w-4xl gap-6 mb-5 md:mb-10">
-            <div className="flex items-center justify-center ">
-              {/* <h2 className="text-4xl font-black text-black uppercase dark:text-white leading-relaxed">
-                <span className=" font-black lg:text-4xl  text-black lg:font-extrabold ">
-                  Contact{" "}
-                  <span className=" font-black lg:text-4xl  text-ui-primary lg:font-extrabold ">
-                    Us
-                  </span>
-                </span>
-              </h2> */}
-              <p className="text-gray-700 max-w-xl text-center  text-lg md:mt-3  dark:text-neutral-400">
-                We'd love to hear from you! Get in touch with us using the
-                information below. Please fill out the form below to contact us.
-              </p>
-            </div>
-          </div>
-          <div className="w-full ">
-            <div className="mb-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 md:py-10">
+          <header className="text-center mb-8 md:mb-10">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+              Contact <span className="text-ui-primary">Us</span>
+            </h1>
+            <p className="text-gray-600 dark:text-gray-400 max-w-lg mx-auto">
+              Have a question or ready to plan your trip? Send us a message and we’ll get back to you soon.
+            </p>
+          </header>
+
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-10">
+            <div className="lg:col-span-2">
               <ContactForm />
             </div>
-          </div>
-          <div className="flex flex-wrap sm:flex-nowrap flex-row gap-3 py-2">
-            <div className="w-full p-3 md:p-5 bg-white shadow-2xl dark:bg-gray-800">
-              <AboutContact />
-            </div>
-
-            <div className="flex flex-col">
-              <ContactPerson />
-              <Address />
+            <div className="lg:col-span-3 space-y-6">
+              <section>
+                <h2 className="text-xs font-semibold text-ui-primary uppercase tracking-widest mb-2">
+                  Speak with the expert
+                </h2>
+                <ContactPerson />
+              </section>
+              <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+                <Address />
+              </div>
             </div>
           </div>
         </div>
@@ -146,45 +140,50 @@ export const ContactForm = () => {
 
   return (
     <>
-      <div className="max-w-md mx-auto shadow-2xl p-5  rounded-lg bg-white dark:bg-gray-900">
-        <h4 className="text-lg text-center font-bold text-ui-primary uppercase tracking-wide">
-          Get in touch
-        </h4>
-        <div className="p-3 ">
-          <form onSubmit={(e) => e.preventDefault()}>
+      <div className="w-full max-w-md rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-lg shadow-gray-200/50 dark:shadow-none overflow-hidden">
+        <div className="px-6 pt-6 pb-1 border-b border-gray-100 dark:border-gray-800">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+            Get in touch
+          </h3>
+          <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            Send us a message and we’ll get back to you soon.
+          </p>
+        </div>
+        <div className="p-6">
+          <form onSubmit={(e) => e.preventDefault()} className="space-y-1">
             <Input
               value={QuoteData.name}
-              label="Your Name"
+              label="Your name"
               type="text"
-              placeholder="Enter your name"
+              placeholder="Your name"
               onChange={(e) => handleOnChange(e.target.value, "name")}
             />
             <Input
               value={QuoteData.email}
-              label="Enter your email"
+              label="Email"
               type="email"
-              placeholder="Enter your email"
+              placeholder="you@example.com"
               onChange={(e) => handleOnChange(e.target.value, "email")}
             />
             <Input
               value={QuoteData.phone}
-              label="Phone Number"
+              label="Phone"
               type="tel"
-              placeholder="Enter phone number"
+              placeholder="Your phone number"
               onChange={(e) => handleOnChange(e.target.value, "phone")}
             />
             <Input
               value={QuoteData.address}
               label="Address"
               type="text"
-              placeholder="Enter your address"
+              placeholder="Your address"
               onChange={(e) => handleOnChange(e.target.value, "address")}
             />
             <TextArea
               value={QuoteData.message}
               label="Message"
               type="message"
-              placeholder="Enter your message"
+              placeholder="How can we help?"
               onChange={(e) => handleOnChange(e.target.value, "message")}
             />
           </form>
@@ -197,13 +196,13 @@ export const ContactForm = () => {
               />
             </div>
           )}
-          <div className="mt-4">
+          <div className="mt-6">
             <button
-              className="w-full bg-gradient-to-r from-blue-500 to-pink-500 text-white py-2 rounded-md font-semibold shadow-md hover:from-blue-600 hover:to-pink-600 transition duration-300"
+              type="button"
+              className="w-full py-3 px-4 rounded-lg bg-ui-primary hover:bg-ui-secondary text-white font-semibold text-base transition-colors focus:outline-none focus:ring-2 focus:ring-ui-primary focus:ring-offset-2 dark:focus:ring-offset-gray-900"
               onClick={handleOnSubmit}
-              
             >
-              Submit
+              Send message
             </button>
           </div>
         </div>
@@ -211,7 +210,7 @@ export const ContactForm = () => {
 
       {isSaving && (
         <Modal>
-          <CenteralSpinner />
+          <CentralSpinner />
         </Modal>
       )}
     </>
@@ -219,65 +218,3 @@ export const ContactForm = () => {
 };
 
 export default Contact;
-
-const AboutContact = () => {
-  const paragraph = `text-sm p-1  dark:text-gray-300 text-justify font-normal  cursor-pointer cursor-pointer leading-relaxed lg:leading-relaxed text-gray-700 `;
-
-  return (
-    <>
-      <div className="w-full h-full bg-white  dark:bg-gray-800">
-        <div className="text-center">
-          <h4 className="text-lg  font-bold text-gray-800 uppercase tracking-wide py-5 dark:text-white">
-            About Amazing Nepal
-          </h4>
-        </div>
-
-        <p className={paragraph}>
-          Welcome to Amazing Nepal, your gateway to exploring the breathtaking
-          beauty of the Himalayas and experiencing the rich cultural heritage of
-          Nepal. Based in the United Kingdom, Amazing Nepal is dedicated to
-          providing unparalleled tourism experiences that showcase the wonders
-          of this Himalayan nation.
-          <br />
-          <br />
-          At Amazing Nepal, we are passionate about sharing the magic of Nepal
-          with travelers from around the world. Our team at Amazing Nepal is
-          committed to delivering top-notch travel services, ensuring that every
-          journey with us is nothing short of extraordinary. From the majestic
-          peaks of the Himalayas to the vibrant streets of Kathmandu, Amazing
-          Nepal offers a wide range of meticulously crafted tours and
-          expeditions that cater to every traveler's preferences. Whether you're
-          seeking a thrilling trekking adventure, a cultural immersion
-          experience, or a spiritual journey, we have the perfect itinerary for
-          you.
-          <br />
-          <br />
-          Our team comprises experienced and enthusiastic leaders who are
-          experts in organizing tours, treks, and expeditions across Nepal. With
-          our in-depth knowledge of the region and dedication to customer
-          satisfaction, we guarantee an unforgettable travel experience for our
-          clients. At Amazing Nepal, we prioritize customer satisfaction above
-          all else. We provide personalized trip itineraries tailored to your
-          preferences, ensuring that every aspect of your journey exceeds your
-          expectations.
-          <br />
-          <br />
-          {/* <div className="  ">
-          <Button
-            onClick={handleClick}
-            className="px-6 py-2 rounded-sm text-xs bg-gradient-to-r from-pink-600 to-purple-500  font-medium hover:from-pink-600 hover:to-purple-600 transition duration-50 text-white cursor-pointer"
-          >
-            Read More
-          </Button>
-        </div> */}
-          {/* From arranging accommodations to organizing transportation, we take care
-        of every detail so that you can focus on enjoying your adventure.
-        Whether you're a seasoned traveler or embarking on your first trip to
-        Nepal, Amazing Nepal is here to make your travel dreams a reality.
-        Contact us today to start planning your unforgettable journey to the
-        Land of the Himalayas. */}
-        </p>
-      </div>
-    </>
-  );
-};

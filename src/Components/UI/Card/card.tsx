@@ -45,78 +45,57 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
     window.scrollTo(0, 0);
   };
 
-  // Contact Me on WhatsApp (direct to your number)
-  const contactMeOnWhatsApp = () => {
-    const url = `${window.location.origin}/destination/${destination_id}`;
-    const message = `Hi, I'm interested in ${title}! Can you help me book this?\n${url}`;
-    const phoneNumber = "+44-7411079563<"; // e.g., "+1234567890"
-    window.open(
-      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
-  };
+  const shortDescription = description
+    ? description.split(" ").slice(0, 12).join(" ") + (description.split(" ").length > 12 ? "…" : "")
+    : "";
 
   return (
-    <Link to={`/destination/${destination_id}`} onClick={handleClick}>
-      <div className="w-full py-5 md:max-w-sm bg-white rounded-lg shadow-lg cursor-pointer hover:shadow-sm hover:shadow-pink-200 dark:bg-gray-800 relative">
-        <div className="w-full relative">
-          <div className="relative">
-            <img
-              className="aspect-[16/9] object-cover w-full h-full max-h-[300px] brightness-75 hover:transform hover:scale-105 hover:transition hover:duration-300"
-              src={imageUrl && imageUrl[0]?.url}
-              alt=""
-              loading="lazy"
-            />
-            {/* Social sharing buttons */}
-            <div className="absolute bottom-2 right-2 flex gap-2">
-              {/* Share buttons (grouped) */}
-              <div className="flex gap-2  dark:bg-gray-900/80 p-1 rounded-full">
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    contactMeOnWhatsApp();
-                  }}
-                  className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-4 rounded-full shadow-lg hover:scale-105 hover:shadow-emerald-500 transition-all duration-300 ease-in-out"
-                  aria-label="Contact via WhatsApp"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-                  </svg>
-                  {/* <span className="text-sm font-semibold">WhatsApp Us</span> */}
-                </button>
-              </div>
-            </div>
+    <Link
+      to={`/destination/${destination_id}`}
+      onClick={handleClick}
+      className="block group focus:outline-none focus-visible:ring-2 focus-visible:ring-ui-primary focus-visible:ring-offset-2 rounded-xl"
+    >
+      <article className="h-full flex flex-col bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg hover:border-ui-primary/30 dark:hover:border-ui-primary/40 transition-all duration-300 overflow-hidden">
+        {/* Image */}
+        <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-gray-700 flex-shrink-0">
+          <img
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-400"
+            src={imageUrl?.[0]?.url}
+            alt={title}
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+          <div className="absolute top-2 right-2 rounded-md bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-2 py-0.5 text-[10px] font-semibold text-gray-800 dark:text-gray-200 flex items-center gap-1">
+            <ClockIcon className="w-3 h-3" color="currentColor" />
+            {duration}
           </div>
         </div>
 
-        {/* Card content (unchanged) */}
-        <div className="p-5">
-          <h5 className="mb-4 text-lg font-bold text-gray-900 dark:text-white">
+        {/* Content */}
+        <div className="flex flex-col flex-1 p-3 min-w-0">
+          <h3 className="text-base font-bold text-gray-900 dark:text-white leading-tight line-clamp-2 mb-1.5">
             {title}
-          </h5>
-          <p className="text-gray-700 dark:text-gray-300 mb-4">
-            {description?.split(" ").slice(0, 15).join(" ")}.
-          </p>
-          <div className="flex justify-center gap-2 px-2 items-center text-gray-700 dark:text-gray-300">
-            <div className="flex items-center">
-              <CashIcon className="w-5 h-5 mr-1" color="#d1d5db" />
-              <span className="text-ui-primary text-sm font-bold">{price}</span>
-              <span className="text-xs ml-1">/ Per Person</span>
+          </h3>
+          {shortDescription && (
+            <p className="text-gray-600 dark:text-gray-400 text-xs leading-relaxed line-clamp-2 mb-3 flex-1">
+              {shortDescription}
+            </p>
+          )}
+          <div className="flex items-center justify-between pt-3 mt-auto border-t border-gray-100 dark:border-gray-700">
+            <div className="flex items-center gap-1 text-ui-primary font-semibold text-sm">
+              <CashIcon className="w-3.5 h-3.5 shrink-0" color="currentColor" />
+              <span>{price}</span>
+              <span className="text-[10px] font-normal text-gray-500 dark:text-gray-400">/ person</span>
             </div>
-            <div className="flex items-center">
-              <ClockIcon className="w-4 h-4 mr-1" color="#d1d5db" />
-              <span className="text-ui-primary font-bold">{duration}</span>
-            </div>
+            <span className="inline-flex items-center gap-0.5 text-xs font-medium text-ui-primary group-hover:gap-1 transition-all">
+              View
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
           </div>
         </div>
-      </div>
+      </article>
     </Link>
   );
 };
@@ -135,31 +114,41 @@ export const RecommendedCard: React.FC<RecommendedCardProps> = ({
   id,
 }) => {
   return (
-    <Link to={`/recommended/${id}`}>
-      <div className="relative w-full md:max-w-sm  bg-white border border-gray-200 rounded-xs shadow-sm cursor-pointer overflow-hidden recommended-content">
-        <div className="relative">
+    <Link
+      to={`/recommended/${id}`}
+      className="block group focus:outline-none focus-visible:ring-2 focus-visible:ring-ui-primary focus-visible:ring-offset-2 rounded-2xl"
+    >
+      <article className="relative w-full bg-white dark:bg-gray-800 border border-gray-200/80 dark:border-gray-700 rounded-2xl shadow-lg hover:shadow-2xl hover:border-ui-primary/30 dark:hover:border-ui-primary/40 transition-all duration-300 overflow-hidden recommended-content">
+        <div className="relative aspect-[3/4] overflow-hidden">
           <img
-            className="w-full h-full md:h-[400px] object-cover"
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
             src={imageUrl}
-            alt=""
+            alt={`${place} – Nepal attraction, Amazing Nepal`}
           />
-          <div className="absolute inset-0 bg-black opacity-60"></div>
-        </div>
-        <div className="absolute inset-0 flex flex-col justify-end p-5">
-          <h5 className="mb-2 text-lg font-bold text-white uppercase tracking-tight leading-snug">
-            {place}
-          </h5>
-
-          <div className="recommended-details px-3 py-3 transition-opacity duration-300 opacity-0 h-full absolute inset-0 top-1/3 bg-black bg-opacity-50">
-            <p className="mb-4 md:px-4 md:py-1 text-white text-sm  dark:text-gray-400">
-              {description}
-            </p>
-            <button className="px-5 py-3 text-center uppercase text-xs font-bold bg-ui-primary text-white hover:bg-ui-secondary transition duration-300 cursor-pointer rounded-sm">
-              View Details
-            </button>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+          <div className="absolute top-4 left-4">
+            <span className="inline-block rounded-lg bg-white/20 dark:bg-black/30 backdrop-blur-sm px-3 py-1 text-xs font-semibold text-white uppercase tracking-wider">
+              Attraction
+            </span>
           </div>
         </div>
-      </div>
+        <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-6">
+          <h3 className="text-xl font-bold text-white tracking-tight leading-snug drop-shadow-lg">
+            {place}
+          </h3>
+          <div className="recommended-details mt-3 px-0 py-0 transition-all duration-300 opacity-0 group-hover:opacity-100 absolute inset-0 flex flex-col justify-end p-5 md:p-6 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+            <p className="text-white text-sm leading-relaxed line-clamp-4 mb-5 drop-shadow-md">
+              {description}
+            </p>
+            <span className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-ui-primary hover:bg-ui-secondary text-white text-sm font-semibold w-fit transition-all shadow-lg shadow-ui-primary/30 group-hover:shadow-ui-primary/40">
+              View details
+              <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </article>
     </Link>
   );
 };

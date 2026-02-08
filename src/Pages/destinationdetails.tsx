@@ -4,25 +4,21 @@ import DestinationDetails from "../Components/window/Destination/destinationDeta
 import { Breadcrumb } from "../Components/window/Breadcrumb/breadcrumb";
 
 export const DestinationDetailsPage = () => {
-  const breadcrumbItems = [
-    {
-      label: "Destination",
-      href: "/destination",
-      imageUrl: "/assets/breadcrumb/breadcrumbdestination.png",
-      alt: "Breadcrumb Destination",
-      description: "Explore more details",
-    },
-  ];
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
-    <>
-      <Layout>
-        <Breadcrumb items={breadcrumbItems} />
-        <div className="container mx-auto px-4 py-5"></div>
+    <Layout>
+      <Breadcrumb
+        items={[
+          { label: "Destinations", href: "/destination" },
+          { label: "Trip details" },
+        ]}
+      />
+      <div className="pt-4 md:pt-6">
         <DestinationDetails />
-      </Layout>
-    </>
+      </div>
+    </Layout>
   );
 };

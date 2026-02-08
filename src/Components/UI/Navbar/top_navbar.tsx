@@ -10,7 +10,7 @@ export const TopNavbar = () => {
             <img
               src="/logo.png"
               className="h-20 w-full object-contain"
-              alt="Logo"
+              alt="Amazing Nepal – Nepal travel and tours logo"
             />
           </Link>
           <span className="hidden sm:block">Your Company Slogan Here</span>

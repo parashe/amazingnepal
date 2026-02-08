@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { CrossIcon } from "../../svg";
 import {
-  CenteralSpinner,
-  CrateRatingStars,
+  CentralSpinner,
+  CreateRatingStars,
   Modal,
   Alert,
   TextArea,
@@ -53,14 +53,14 @@ const AddRatingForm = ({ onClose }: Props) => {
           <div className="relative px-1 sm:px-10 py-5 md:pb-10 md:pt-5 w-full max-w-lg bg-white dark:bg-gray-800 rounded-lg shadow-lg">
             <div className="flex justify-end">
               <button
-                className="justify-end cursor-pointer rounded-full bg-gray-100 sm:p-2 p-1 hover:bg-yellow-50"
+                className="justify-end cursor-pointer rounded-full bg-gray-100 sm:p-2 p-1 hover:bg-gray-200 dark:hover:bg-gray-700"
                 onClick={onClose}
               >
-                <CrossIcon className="w-4 h-4 sm:w-6 sm:h-6" color="red" />
+                <CrossIcon className="w-4 h-4 sm:w-6 sm:h-6 text-gray-600 dark:text-gray-400" color="#6b7280" />
               </button>
             </div>
             <div className="px-5 py-3">
-              <h2 className="text-xl font-medium text-center mb-6 text-gray-800">
+              <h2 className="font-medium text-center mb-6 text-gray-800">
                 Add Your Rating
               </h2>
               <form
@@ -87,11 +87,11 @@ const AddRatingForm = ({ onClose }: Props) => {
                 </div>
 
                 <div className="mb-6  md:gap-5">
-                  <label className="text-justify block mb-2 text-xs font-medium text-gray-900 dark:text-white ">
+                  <label className="text-justify block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Your Rating
                   </label>
                   <div className="">
-                    <CrateRatingStars rating={rating} setRating={setRating} />
+                    <CreateRatingStars rating={rating} setRating={setRating} />
                   </div>
                 </div>
                 {showAlert && (
@@ -106,7 +106,7 @@ const AddRatingForm = ({ onClose }: Props) => {
                 <button
                   onClick={handleSubmit}
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-pink-500 text-white py-2 rounded-md font-semibold shadow-md hover:from-blue-600 hover:to-pink-600 transition duration-300"
+                  className="w-full bg-ui-primary hover:bg-ui-secondary text-white py-2.5 rounded-xl font-semibold transition-colors"
                 >
                   Submit
                 </button>
@@ -117,7 +117,7 @@ const AddRatingForm = ({ onClose }: Props) => {
       </Modal>
       {saving && (
         <Modal>
-          <CenteralSpinner />
+          <CentralSpinner />
         </Modal>
       )}
     </>

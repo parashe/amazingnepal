@@ -3,8 +3,7 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 
 import { Alert, Input, LoadingSkeleton, Spinner, TextArea } from "../../atoms";
-import Destination from "./destination";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { destinationData } from "./data";
 
 const DestinationDetails = () => {
@@ -31,25 +30,29 @@ const DestinationDetails = () => {
     return <Alert message="Destination not found" type="error" />;
   }
 
+  const otherDestinations = destinationData.filter(
+    (d) => d.destination_id !== id
+  );
+
   return (
     <>
       {showLoader ? (
-        <>
-          <div className="container mx-auto py-2">
-            <LoadingSkeleton />
-          </div>
-        </>
+        <div className="max-w-5xl mx-auto px-4 py-8">
+          <LoadingSkeleton />
+        </div>
       ) : (
-        <div className="flex-content bg-white dark:bg-gray-800">
-          <div className="container-xl mx-auto   p-5 ">
-            <div className="flex flex-col md:flex-row  gap-1 ">
-              <div className="  md:px-5   bg-white dark:bg-gray-800 ">
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 md:py-10">
+            <div className="lg:grid lg:grid-cols-[1fr,320px] lg:gap-8 xl:gap-10">
+              {/* Main content */}
+              <div className="min-w-0 order-1">
                 <ImageViewer
-                  images={destination?.imageUrl}
+                  images={destination?.imageUrl ?? []}
                   title={destination?.title}
                   price={destination?.price}
+                  duration={destination?.duration}
                 />
-                <div className="mt-5 md:mt-10  ">
+                <div className="mt-6 md:mt-8">
                   <Information
                     OverviewSubHeading={destination?.OverviewSubHeading}
                     OverviewDescription1={destination?.OverviewDescription1}
@@ -61,24 +64,72 @@ const DestinationDetails = () => {
                     usefulInformation={destination?.usefulInformation}
                   />
                 </div>
+                <div className="mt-6 text-center lg:text-left">
+                  <p className="text-gray-600 dark:text-gray-400 mb-3">
+                    Interested in this trip? We’d love to help you plan it.
+                  </p>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-ui-primary hover:bg-ui-secondary text-white font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ui-primary focus:ring-offset-2"
+                  >
+                    Contact us
+                  </Link>
+                </div>
               </div>
 
-              <>
-                {/* <div className="md:w-1/5 ">
-                  <div className="text-right ">
-                    <Quote />
-                    <ContactPerson />
+              {/* Right sidebar: Other destinations (desktop) / Below content (mobile) */}
+              <aside className="mt-8 lg:mt-0 lg:order-2">
+                <div className="lg:sticky lg:top-6">
+                  <h2 className="text-sm font-semibold text-ui-primary uppercase tracking-widest mb-4">
+                    Other destinations
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+                    {otherDestinations.slice(0, 6).map((d) => (
+                      <Link
+                        key={d.destination_id}
+                        to={`/destination/${d.destination_id}`}
+                        onClick={() => window.scrollTo(0, 0)}
+                        className={`block rounded-xl border overflow-hidden bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow border-gray-200 dark:border-gray-700 ${
+                          d.destination_id === id
+                            ? "ring-2 ring-ui-primary"
+                            : ""
+                        }`}
+                      >
+                        <div className="flex sm:block">
+                          <div className="shrink-0 w-24 h-24 sm:w-full sm:aspect-[16/10] bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                            <img
+                              src={d.imageUrl?.[0]?.url}
+                              alt={`${d.title} – Nepal trek or tour, Amazing Nepal`}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div className="flex-1 p-3 sm:p-4 min-w-0">
+                            <p className="text-sm font-medium text-gray-900 dark:text-white line-clamp-2">
+                              {d.title}
+                            </p>
+                            <p className="mt-1 text-sm text-ui-primary font-semibold">
+                              {d.price}
+                              <span className="text-gray-500 dark:text-gray-400 font-normal">
+                                {" "}
+                                / person
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
                   </div>
-                </div> */}
-              </>
+                  <Link
+                    to="/destination"
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="mt-4 block text-center text-sm font-medium text-ui-primary hover:text-ui-secondary transition-colors"
+                  >
+                    View all destinations →
+                  </Link>
+                </div>
+              </aside>
             </div>
-          </div>
-          <div>
-            <Destination
-              title="Explore More Destinations"
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 xxl:grid-cols-5 gap-2 md:pt-20 p-5 md:pb-20"
-              CalledFromPage={true}
-            />
           </div>
         </div>
       )}
@@ -97,46 +148,67 @@ interface ImageViewProps {
   images: Image[];
   title: string;
   price: string;
+  duration?: string;
 }
 
-export const ImageViewer = ({ images, title, price }: ImageViewProps) => {
-  const picture =
-    "aspect-[16/9] bg-white w-full h-full cursor-pointer lg:object-cover p-1  shadow-sm  rounded-lg  lg:h-[300px] lg:max-w-[350px] ";
+export const ImageViewer = ({ images, title, price, duration }: ImageViewProps) => {
+  const firstImage = images?.[0]?.url;
+
   return (
-    <>
-      <div className="text-center relative mb-10 bg-gradient-to-r from-blue-500 via-red-500 to-pink-500 py-3 md:py-5 rounded-lg shadow-lg">
-        <div className="flex flex-col justify-center items-center mb-2">
-          <h4 className="text-lg md:text-xl font-black text-white uppercase tracking-wide">
-            {title}
-          </h4>
-          <div className="flex items-center justify-center">
-            <div className="flex items-center">
-              <p className="mb-1 text-white text-lg md:text-xl font-bold">
-                {price}
-              </p>{" "}
-              &nbsp;
-              <p className="text-white text-sm font-normal">/Per Person</p>
+    <div className="space-y-8">
+      {/* Hero: featured image + title & price */}
+      <div className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg">
+        {firstImage && (
+          <div className="relative aspect-[21/9] md:aspect-[3/1] bg-gray-200 dark:bg-gray-700">
+            <img
+              src={firstImage}
+              alt={`${title} – Nepal trek or tour, Amazing Nepal`}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white">
+              <h1 className="text-2xl md:text-3xl font-bold leading-tight max-w-3xl">
+                {title}
+              </h1>
+              <div className="mt-3 flex flex-wrap items-center gap-4 text-white/95">
+                <span className="font-semibold text-lg">{price} <span className="font-normal text-white/80">/ person</span></span>
+                {duration && (
+                  <span className="text-white/90">· {duration}</span>
+                )}
+              </div>
             </div>
           </div>
-        </div>
+        )}
+        {!firstImage && (
+          <div className="aspect-[21/9] flex flex-col justify-end p-6 md:p-8 bg-gray-200 dark:bg-gray-700 rounded-t-2xl">
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">{title}</h1>
+            <p className="mt-2 text-gray-700 dark:text-gray-300 font-medium">{price} / person {duration && `· ${duration}`}</p>
+          </div>
+        )}
       </div>
 
-      <div className="">
-        <PhotoProvider>
-          <div className="flex flex-wrap justify-center mx-auto">
-            {images.map((image, index) => (
-              <PhotoView key={image.id} src={image.url}>
-                <img
-                  src={image.url}
-                  alt="Destination images"
-                  className={picture}
-                />
-              </PhotoView>
-            ))}
-          </div>
-        </PhotoProvider>
-      </div>
-    </>
+      {/* Gallery */}
+      {images && images.length > 1 && (
+        <div>
+          <h2 className="text-sm font-semibold text-ui-primary uppercase tracking-widest mb-4">Gallery</h2>
+          <PhotoProvider>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+              {images.map((image) => (
+                <PhotoView key={image.id} src={image.url}>
+                  <button type="button" className="block w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-ui-primary focus:ring-offset-2">
+                    <img
+                      src={image.url}
+                      alt=""
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </button>
+                </PhotoView>
+              ))}
+            </div>
+          </PhotoProvider>
+        </div>
+      )}
+    </div>
   );
 };
 
@@ -183,52 +255,32 @@ export const Information = ({
     setShowOverview(true);
   }, []);
 
-  const paragraph = ` font-bold md:p-5  text-gray-900 shadow-md  text-sm md:text-sm cursor-pointer  cursor-pointer leading-relaxed   hover:shadow-lg hover:shadow-ui-light-blue  `;
+  const tabs = [
+    { id: "overview", label: "Overview", active: showOverview },
+    { id: "itinerary", label: "Itinerary", active: showItinerary },
+    { id: "priceIncluded", label: "Price & Included", active: showPriceIncluded },
+    { id: "usefulInformation", label: "Useful Information", active: showInfo },
+  ] as const;
+
   return (
     <>
-      <div className="bg-white md:p-4 dark:bg-gray-300  ">
-        <div className="grid grid-cols-4 divide-x divide-ui-primary text-center shadow-full">
-          <p
-            className={`${paragraph} ${
-              showOverview
-                ? "text-ui-primary border-b-2 border-ui-primary shadow-lg shadow-ui-light-blue  "
-                : ""
-            }`}
-            onClick={() => handleClick("overview")}
-          >
-            Overview
-          </p>
-          <p
-            className={`${paragraph} ${
-              showItinerary
-                ? "text-ui-primary border-b-2 border-ui-primary shadow-lg shadow-ui-light-blue "
-                : ""
-            }`}
-            onClick={() => handleClick("itinerary")}
-          >
-            Itinerary
-          </p>
-          <p
-            className={`${paragraph} ${
-              showPriceIncluded
-                ? "text-ui-primary border-b-2 border-ui-primary shadow-lg shadow-ui-light-blue"
-                : ""
-            }`}
-            onClick={() => handleClick("priceIncluded")}
-          >
-            Price & Included
-          </p>
-          <p
-            className={`${paragraph} ${
-              showInfo
-                ? "text-ui-primary border-b-2 border-ui-primary shadow-lg shadow-ui-light-blue"
-                : ""
-            }`}
-            onClick={() => handleClick("usefulInformation")}
-          >
-            Useful Information
-          </p>
-        </div>
+      <div className="border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 rounded-t-xl overflow-hidden">
+        <nav className="flex flex-wrap gap-1 -mb-px px-2" aria-label="Trip details">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => handleClick(tab.id)}
+              className={`py-3 px-4 text-sm font-medium border-b-2 transition-colors ${
+                tab.active
+                  ? "border-ui-primary text-ui-primary"
+                  : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </nav>
       </div>
 
       {showOverview && (
@@ -336,7 +388,7 @@ export const Quote = () => {
     }
   };
 
-  const heading = `text-lg uppercase cursor-pointer font-semibold cursor-pointer leading-relaxed lg:leading-8 text-gray-700 hover:bg-gray-100`;
+  const heading = `uppercase cursor-pointer font-semibold cursor-pointer leading-relaxed lg:leading-8 text-gray-700 hover:bg-gray-100`;
   return (
     <>
       <div className="w-full justify-center p-2 shadow-2xl ">
@@ -407,7 +459,7 @@ export const Quote = () => {
           )}
           <div className=" md:mt-5 w-full text-center">
             <button
-              className="bg-green-600 font-bold hover:bg-green-700 w-full text-center   rounded-sm text-sm text-white  py-1"
+              className="bg-green-600 font-bold hover:bg-green-700 w-full text-center rounded-sm text-white py-1"
               onClick={() => handleOnSubmit()}
             >
               {isSaving ? (
@@ -439,35 +491,29 @@ const Overview: React.FC<ModalProps> = ({
   overviewDescription2,
   listofHighlights,
 }) => {
-  const paragraph =
-    " text-sm p-3 text-justify   font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all dark:text-white ";
+  const list = Array.isArray(listofHighlights) ? listofHighlights : [];
   return (
-    <div>
-      <div className="bg-white  dark:bg-gray-800 py-5  dark:text-white   h-full overflow-hidden transform transition-all ">
-        <div className="md:px-10 py-4 leading-relaxed">
-          <div className="text-center p-2 ">
-            <div className="flex flex-wrap justify-between">
-              <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-                Package Details
-              </h1>
-            </div>
-            <p className={paragraph}>{overviewDescription1}</p>
-            <p className={paragraph}>{overviewDescription2}</p>
-            <div className="p-2 md:p-6 text-justify">
-              <h1 className="text-lg font-bold text-gray-900 dark:text-white">
-                {overviewSubHeading}
-              </h1>
-
-              <ul className="list-disc">
-                {listofHighlights.map((highlight, index) => (
-                  <li key={index} className={paragraph}>
-                    {highlight}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+    <div className="bg-white dark:bg-gray-800 rounded-b-xl border border-t-0 border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+      <div className="p-6 md:p-8">
+        <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+          Package details
+        </h2>
+        <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+          {overviewDescription1 && <p className="text-justify">{overviewDescription1}</p>}
+          {overviewDescription2 && <p className="text-justify">{overviewDescription2}</p>}
         </div>
+        {overviewSubHeading && list.length > 0 && (
+          <div className="mt-8">
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-3">
+              {overviewSubHeading}
+            </h3>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 text-justify pl-2">
+              {list.map((highlight, index) => (
+                <li key={index}>{highlight}</li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -480,44 +526,33 @@ interface PriceModalProps {
 }
 
 const PriceIncludedExcluded: React.FC<PriceModalProps> = ({
-  onClose,
   priceExcluded,
   priceIncluded,
 }) => {
-  const paragraph =
-    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all dark:text-white ";
+  const included = Array.isArray(priceIncluded) ? priceIncluded : [];
+  const excluded = Array.isArray(priceExcluded) ? priceExcluded : [];
   return (
-    <div>
-      <div className="bg-white  py-5    h-full overflow-hidden transform transition-all dark:bg-gray-800 ">
-        <div className="md:px-10 py-4 leading-relaxed">
-          <div className="text-center p-2 ">
-            <div className="p-2 md:p-6 text-justify">
-              <h1 className="text-lg font-bold text-gray-900 dark:text-white">
-                Included
-              </h1>
-
-              <ul className="list-disc">
-                {priceIncluded.map((highlight, index) => (
-                  <li key={index} className={paragraph}>
-                    {highlight}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="p-2 md:p-6 text-justify">
-              <h1 className="text-lg font-bold text-gray-900 text-white">
-                Excluded
-              </h1>
-
-              <ul className="list-disc">
-                {priceExcluded?.map((highlight, index) => (
-                  <li key={index} className={paragraph}>
-                    {highlight}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+    <div className="bg-white dark:bg-gray-800 rounded-b-xl border border-t-0 border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+      <div className="p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-3">
+            Included
+          </h3>
+          <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 text-justify pl-2">
+            {included.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-3">
+            Excluded
+          </h3>
+          <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 text-justify pl-2">
+            {excluded.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
@@ -535,35 +570,31 @@ interface IternaryModalProps {
   iternary: itenaryProps[];
 }
 
-const IternaryContent: React.FC<IternaryModalProps> = ({
-  onClose,
-  iternary,
-}) => {
-  const paragraph =
-    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all dark:text-white dark:bg-gray-800 ";
+const IternaryContent: React.FC<IternaryModalProps> = ({ iternary }) => {
+  const list = Array.isArray(iternary) ? iternary : [];
   return (
-    <div>
-      <div className="bg-white  py-5    h-full overflow-hidden transform transition-all dark:bg-gray-800 ">
-        <div className="md:px-10 py-4 leading-relaxed">
-          <div className="text-center p-2 ">
-            <div className="p-2 md:p-6 text-justify">
-              <h1 className="text-lg font-bold text-gray-900 dark:text-white">
-                Detail Itineries
-              </h1>
-
-              <ul className="list-disc">
-                {iternary.map((highlight, index) => (
-                  <li key={index} className={paragraph}>
-                    <span className="font-bold"> {highlight?.day} </span> -{" "}
-                    {highlight?.activity}
-                    <br />
-                    <p>{highlight?.activitydetails}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
+    <div className="bg-white dark:bg-gray-800 rounded-b-xl border border-t-0 border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+      <div className="p-6 md:p-8">
+        <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-4">
+          Detailed itinerary
+        </h3>
+        <ul className="space-y-5">
+          {list.map((day, index) => (
+            <li key={index} className="flex gap-4">
+              <span className="shrink-0 font-semibold text-ui-primary text-sm w-16">
+                {day?.day}
+              </span>
+              <div className="flex-1 min-w-0">
+                <p className="font-medium text-gray-900 dark:text-white">{day?.activity}</p>
+                {day?.activitydetails && (
+                  <p className="mt-1 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    {day.activitydetails}
+                  </p>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
@@ -575,31 +606,20 @@ interface UsefulModalProps {
 }
 
 const UsefulInformationContent: React.FC<UsefulModalProps> = ({
-  onClose,
   usefulInformation,
 }) => {
-  const paragraph =
-    " text-sm p-3 text-justify font-normal cursor-pointer leading-relaxed text-gray-900 text-break-all dark:text-white dark:bg-gray-800 ";
+  const list = Array.isArray(usefulInformation) ? usefulInformation : [];
   return (
-    <div>
-      <div className="bg-white  py-5    h-full overflow-hidden transform transition-all dark:bg-gray-800 ">
-        <div className="md:px-10 py-4 leading-relaxed">
-          <div className="text-center p-2 ">
-            <div className="p-2 md:p-6 text-justify">
-              <h1 className="text-lg font-bold text-gray-900 dark:text-white">
-                Useful Itineries
-              </h1>
-
-              <ul className="list-disc">
-                {usefulInformation.map((highlight, index) => (
-                  <li key={index} className={paragraph}>
-                    {highlight}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
+    <div className="bg-white dark:bg-gray-800 rounded-b-xl border border-t-0 border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+      <div className="p-6 md:p-8">
+        <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-3">
+          Useful information
+        </h3>
+        <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 text-justify pl-2">
+          {list.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );
