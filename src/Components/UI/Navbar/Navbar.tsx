@@ -8,9 +8,11 @@ export const Navbar: React.FC = () => {
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
   const [mobileSearchQuery, setMobileSearchQuery] = useState<string>("");
   const [mobileSearchFocused, setMobileSearchFocused] = useState<boolean>(false);
+  const [mobileSearchOpen, setMobileSearchOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLUListElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const mobileSearchRef = useRef<HTMLDivElement>(null);
+  const mobileSearchInputRef = useRef<HTMLInputElement>(null);
 
   const location = useLocation();
 
@@ -69,7 +71,21 @@ export const Navbar: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    return
+    if (mobileSearchOpen) {
+      mobileSearchInputRef.current?.focus();
+      document.body.style.overflow = "hidden";
+    } else {
+      setMobileSearchQuery("");
+      setMobileSearchFocused(false);
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileSearchOpen]);
+
+  useEffect(() => {
+    return;
   }, [showDropdown]);
 
   const showMobileSearchResults =
@@ -88,13 +104,27 @@ export const Navbar: React.FC = () => {
           </div>
         </Link>
 
-        {/* Spacer: pushes search to center on desktop */}
-        <div className="flex-1 min-w-0 hidden md:block" aria-hidden="true" />
+        {/* Spacer: on mobile pushes search + menu to the right; on desktop pushes search to center */}
+        <div className="flex-1 min-w-0" aria-hidden="true" />
 
-        {/* Search bar - centered on desktop, full width on mobile */}
+        {/* Mobile: search icon only – opens full-screen search overlay */}
+        <div className="flex-shrink-0 md:hidden flex items-center gap-1">
+          <button
+            type="button"
+            onClick={() => setMobileSearchOpen(true)}
+            className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gray-100 hover:bg-ui-primary/15 text-gray-600 hover:text-ui-primary transition-colors focus:outline-none focus:ring-2 focus:ring-ui-primary focus:ring-offset-2"
+            aria-label="Search destinations"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Desktop: full search bar */}
         <div
           ref={mobileSearchRef}
-          className="flex-1 min-w-0 md:flex-initial md:w-56 lg:w-64 md:max-w-[280px] relative"
+          className="hidden md:block flex-initial md:w-56 lg:w-64 md:max-w-[280px] relative"
         >
           <label htmlFor="navbar-destination-search" className="sr-only">
             Search destinations
@@ -167,6 +197,85 @@ export const Navbar: React.FC = () => {
             </div>
           )}
         </div>
+
+        {/* Mobile search overlay – full-screen, only when open */}
+        {mobileSearchOpen && (
+          <div
+            className="fixed inset-0 z-[100] md:hidden flex flex-col bg-white"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Search destinations"
+          >
+            <div className="flex items-center gap-3 p-4 border-b border-gray-100">
+              <div className="flex-1 relative">
+                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </span>
+                <input
+                  ref={mobileSearchInputRef}
+                  type="search"
+                  value={mobileSearchQuery}
+                  onChange={(e) => setMobileSearchQuery(e.target.value)}
+                  onKeyDown={(e) => e.key === "Escape" && setMobileSearchOpen(false)}
+                  placeholder="Search destinations..."
+                  className="w-full pl-10 pr-10 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-500 text-base focus:ring-2 focus:ring-ui-primary focus:border-ui-primary focus:bg-white"
+                  autoComplete="off"
+                />
+                {mobileSearchQuery && (
+                  <button
+                    type="button"
+                    onClick={() => setMobileSearchQuery("")}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 p-1"
+                    aria-label="Clear search"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+              <button
+                type="button"
+                onClick={() => setMobileSearchOpen(false)}
+                className="flex-shrink-0 p-2.5 rounded-xl text-gray-500 hover:bg-gray-100 hover:text-gray-800 font-medium"
+                aria-label="Close search"
+              >
+                Cancel
+              </button>
+            </div>
+            <div className="flex-1 overflow-y-auto px-4 py-3">
+              <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                {mobileSearchQuery.trim() ? "Results" : "Popular destinations"}
+              </p>
+              {filteredDestinations.length > 0 ? (
+                <ul className="space-y-0.5">
+                  {filteredDestinations.map((d) => (
+                    <li key={d.destination_id}>
+                      <Link
+                        to={`/destination/${d.destination_id}`}
+                        onClick={() => setMobileSearchOpen(false)}
+                        className="block py-3 px-3 rounded-lg text-gray-800 hover:bg-ui-primary/10 hover:text-ui-primary font-medium text-base"
+                      >
+                        {d.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="py-4 text-base text-gray-500">No destinations match. Try another keyword.</p>
+              )}
+              <Link
+                to="/destination"
+                onClick={() => setMobileSearchOpen(false)}
+                className="block py-3 px-3 mt-2 rounded-lg border border-gray-200 text-ui-primary font-semibold text-base hover:bg-ui-primary/10 text-center"
+              >
+                View all destinations →
+              </Link>
+            </div>
+          </div>
+        )}
 
         {/* Spacer: keeps search centered on desktop (nav items come after) */}
         <div className="flex-1 min-w-0 hidden md:block" aria-hidden="true" />

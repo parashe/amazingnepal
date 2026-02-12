@@ -90,9 +90,6 @@ const CarouselLayout: React.FC<CarouselProps> = ({
               ))}
             </div>
           </div>
-          <div className="bg-white px-4 py-3 shadow-sm border-b border-gray-100">
-            <p className="text-gray-900 font-bold text-center text-lg md:text-xl">Discover stunning destinations with us</p>
-          </div>
         </div>
       )}
       {slides?.length === 0 && (
@@ -202,10 +199,7 @@ const HeroTextContent = ({ className = "" }: { className?: string }) => (
         Amazing Nepal
       </p>
     </div>
-    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-tight mb-3">
-      Discover stunning destinations with us
-    </h2>
-    <p className="text-gray-600 leading-relaxed mb-6 max-w-md md:max-w-none">
+    <p className="text-gray-600 leading-relaxed mt-1 mb-6 max-w-md md:max-w-none">
       Mountains, cultural landmarks, and unforgettable adventures — we have the perfect journey for you.
     </p>
     <Link

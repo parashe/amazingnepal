@@ -11,6 +11,10 @@ export const destinationData = [
 
     imageUrl: [
       {
+        id: 5,
+        url: "/assets/destination/pashupatinath/manasarover1.jpg",
+      },
+      {
         id: 6,
         url: "/assets/destination/pashupatinath/pashupatinath1.jpg",
       },
@@ -35,10 +39,7 @@ export const destinationData = [
         id: 4,
         url: "/assets/destination/pashupatinath/pashupatinath5.jpeg",
       },
-      {
-        id: 5,
-        url: "/assets/destination/pashupatinath/manasarover1.jpg",
-      },
+    
       {
         id: 60,
         url: "/assets/destination/pashupatinath/manasarover2.jpg",

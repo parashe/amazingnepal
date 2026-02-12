@@ -14,17 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Dark mode base – follows system preference (prefers-color-scheme: dark) */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #111827;
-    color: #f3f4f6;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    color: #f9fafb;
-  }
-}
+/* Dark mode disabled – app uses light theme only */
 
 /* Consistent heading sizes app-wide */
 h1 {

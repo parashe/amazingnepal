@@ -48,16 +48,16 @@ export const WhatWeDoStrip: React.FC = () => {
   return (
     <section
       id="what-we-do"
-      className="relative py-12 md:py-16 overflow-hidden"
+      className="relative py-16 md:py-32 overflow-hidden"
       aria-label="What we do"
     >
       {/* Light band: soft primary tint, left accent – distinct but friendly */}
-      <div className="relative bg-gradient-to-r from-ui-primary/5 via-white to-ui-primary/5 dark:from-ui-primary/10 dark:via-gray-900 dark:to-ui-primary/10">
+      <div className="relative  py-16 md:py-24 bg-gradient-to-r from-ui-primary/5 via-white to-ui-primary/5 dark:from-ui-primary/10 dark:via-gray-900 dark:to-ui-primary/10">
         <div className="absolute left-0 top-0 bottom-0 w-1 sm:w-1.5 bg-gradient-to-b from-ui-primary to-ui-secondary pointer-events-none" aria-hidden />
 
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative">
-          {/* Left-aligned headline block */}
-          <div className="mb-8 md:mb-10 max-w-xl">
+          {/* Centered on mobile, left-aligned from sm */}
+          <div className="mb-8 md:mb-10 max-w-xl mx-auto sm:mx-0 text-center sm:text-left">
             <p className="text-ui-primary font-semibold uppercase tracking-widest text-xs mb-2">
               What we do
             </p>
@@ -78,12 +78,12 @@ export const WhatWeDoStrip: React.FC = () => {
                 )}
                 <Link
                   to={item.to}
-                  className="group flex-1 min-w-0 flex items-start gap-4 py-4 sm:py-0 sm:min-h-[5rem] sm:px-4 hover:bg-white/60 dark:hover:bg-gray-800/60 rounded-lg transition-colors -mx-2 px-2 sm:mx-0"
+                  className="group flex-1 min-w-0 flex flex-col sm:flex-row items-center sm:items-start gap-4 py-4 sm:py-0 sm:min-h-[5rem] sm:px-4 hover:bg-white/60 dark:hover:bg-gray-800/60 rounded-lg transition-colors -mx-2 px-2 sm:mx-0 text-center sm:text-left"
                 >
                   <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-ui-primary/15 dark:bg-ui-primary/25 text-ui-primary shrink-0 group-hover:bg-ui-primary group-hover:text-white transition-colors">
                     {item.icon}
                   </span>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex flex-col items-center sm:items-start">
                     <h3 className="font-bold text-gray-900 dark:text-white text-base group-hover:text-ui-primary dark:group-hover:text-ui-primary transition-colors">
                       {item.label}
                     </h3>
