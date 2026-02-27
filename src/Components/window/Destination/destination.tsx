@@ -1,4 +1,5 @@
 import React from "react";
+import { useSearchParams } from "react-router-dom";
 import { LoadingSkeleton } from "../../atoms";
 import { destinationData } from "./data";
 import { DestinationCard } from "../../UI/Card/card";
@@ -65,9 +66,39 @@ const Destination: React.FC<DestinationProps> = ({
 
 export default Destination;
 
+/** Parse price string e.g. "£3000" or "£1,200" to number (per person). */
+function parsePrice(priceStr: string | undefined): number {
+  if (!priceStr || typeof priceStr !== "string") return 0;
+  const cleaned = priceStr.replace(/[£,$\s]/g, "");
+  const n = parseFloat(cleaned);
+  return Number.isNaN(n) ? 0 : n;
+}
+
+const BUDGET_OPTIONS: { value: number; label: string }[] = [
+  { value: 0, label: "Any budget" },
+  { value: 500, label: "Under £500" },
+  { value: 1000, label: "Under £1,000" },
+  { value: 2000, label: "Under £2,000" },
+  { value: 3000, label: "Under £3,000" },
+  { value: 5000, label: "Under £5,000" },
+  { value: 10000, label: "Under £10,000" },
+];
+
 export const DestinationPageContent = () => {
+  const [searchParams] = useSearchParams();
+  const qFromUrl = searchParams.get("q") ?? "";
+  const budgetFromUrl = Math.max(0, Number(searchParams.get("budget")) || 0);
   const [showLoader, setShowLoader] = React.useState(true);
-  const [searchQuery, setSearchQuery] = React.useState("");
+  const [searchQuery, setSearchQuery] = React.useState(qFromUrl);
+  const [maxBudget, setMaxBudget] = React.useState(budgetFromUrl);
+
+  React.useEffect(() => {
+    setSearchQuery(qFromUrl);
+  }, [qFromUrl]);
+
+  React.useEffect(() => {
+    setMaxBudget(budgetFromUrl);
+  }, [budgetFromUrl]);
 
   React.useEffect(() => {
     const timeoutId = setTimeout(() => setShowLoader(false), 500);
@@ -75,14 +106,20 @@ export const DestinationPageContent = () => {
   }, []);
 
   const filteredDestinations = React.useMemo(() => {
-    if (!searchQuery.trim()) return destinationData;
-    const q = searchQuery.toLowerCase().trim();
-    return destinationData.filter(
-      (d) =>
-        d.title.toLowerCase().includes(q) ||
-        (d.description && d.description.toLowerCase().includes(q))
-    );
-  }, [searchQuery]);
+    let list = destinationData;
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase().trim();
+      list = list.filter(
+        (d) =>
+          d.title.toLowerCase().includes(q) ||
+          (d.description && d.description.toLowerCase().includes(q))
+      );
+    }
+    if (maxBudget > 0) {
+      list = list.filter((d) => parsePrice(d.price) <= maxBudget);
+    }
+    return list;
+  }, [searchQuery, maxBudget]);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
@@ -107,7 +144,24 @@ export const DestinationPageContent = () => {
         </p>
       </header>
 
-      <div className="mb-6 md:mb-8">
+      <div className="mb-6 md:mb-8 space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-3 sm:gap-4">
+          <label htmlFor="budget-filter" className="text-sm font-medium text-gray-700 shrink-0">
+            Show destinations within budget:
+          </label>
+          <select
+            id="budget-filter"
+            value={maxBudget}
+            onChange={(e) => setMaxBudget(Number(e.target.value))}
+            className="px-4 py-2.5 rounded-lg border border-gray-300 text-gray-900 bg-white focus:ring-2 focus:ring-ui-primary focus:border-ui-primary text-sm font-medium"
+          >
+            {BUDGET_OPTIONS.map((opt) => (
+              <option key={opt.value} value={opt.value}>
+                {opt.label}
+              </option>
+            ))}
+          </select>
+        </div>
         <label htmlFor="destination-search" className="sr-only">
           Search destinations by name or description
         </label>
@@ -150,26 +204,26 @@ export const DestinationPageContent = () => {
           )}
         </div>
         <p className="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">
-          {filteredDestinations.length === destinationData.length
+          {filteredDestinations.length === destinationData.length && !searchQuery && maxBudget === 0
             ? `${destinationData.length} destinations`
-            : `${filteredDestinations.length} result${filteredDestinations.length !== 1 ? "s" : ""}`}
+            : `${filteredDestinations.length} destination${filteredDestinations.length !== 1 ? "s" : ""} within your criteria`}
         </p>
       </div>
 
       {filteredDestinations.length === 0 ? (
         <div className="text-center py-10 px-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
           <p className="text-gray-600 dark:text-gray-400 font-medium">
-            No destinations match &quot;{searchQuery}&quot;
+            No destinations match your budget or search.
           </p>
           <p className="mt-1 text-gray-500 dark:text-gray-500 text-sm">
-            Try a different keyword or clear the search to see all destinations.
+            Try a higher budget, a different keyword, or clear filters to see all destinations.
           </p>
           <button
             type="button"
-            onClick={() => setSearchQuery("")}
+            onClick={() => { setSearchQuery(""); setMaxBudget(0); }}
             className="mt-4 px-5 py-2.5 rounded-lg bg-ui-primary hover:bg-ui-secondary text-white font-semibold transition-colors"
           >
-            Clear search
+            Clear filters
           </button>
         </div>
       ) : (

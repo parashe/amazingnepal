@@ -1267,7 +1267,7 @@ export const destinationData = [
     title: "Mardi Himal Trek",
     price: "N/A",
     description:
-      "Experience the Mardi Himal Trek, a hdestination_idden gem in the Annapurna region, with stunning vistas.",
+      "Experience the Mardi Himal Trek, a hidden gem in the Annapurna region, with stunning vistas.",
     duration: "3 days",
     available: "N/A",
     included: "N/A",
