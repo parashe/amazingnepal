@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Address,
   Alert,
@@ -93,10 +94,6 @@ export const ContactForm = () => {
   };
 
   const handleOnSubmit = async () => {
-    
-    // Prevent default form submission
-  
-    // Check if any required field is empty
     const requiredFields = ["name", "email", "phone", "address", "message"];
     const missingFields = requiredFields.filter((field) => !QuoteData[field]);
 
@@ -107,33 +104,67 @@ export const ContactForm = () => {
       setAlertMessage(`Please provide ${missingFieldNames}.`);
       setAlertType("error");
       setShowAlert(true);
-      
       return;
     }
 
-    // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(QuoteData.email)) {
       setAlertMessage("Please enter a valid email address.");
       setAlertType("error");
       setShowAlert(true);
-      return; // Stop further execution
-    } else {
-      setIsSaving(true);
-      setTimeout(() => {
-        setIsSaving(false); // Hide spinner
-        setAlertMessage("Request submitted successfully.");
-        setAlertType("success");
-        setShowAlert(true);
-        setQuoteData({
-          name: "",
-          email: "",
-          phone: "",
-          address: "",
-          message: "",
-          date: "",
-        });
-      }, 1500); // Hide spinner after 1.5 seconds
+      return;
+    }
+
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID?.trim();
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID?.trim();
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY?.trim();
+
+    if (!serviceId || !templateId || !publicKey) {
+      const missing = [
+        !serviceId && "Service ID",
+        !templateId && "Template ID",
+        !publicKey && "Public Key",
+      ].filter(Boolean);
+      setAlertMessage(
+        `Email not configured (missing: ${missing.join(", ")}). Add them to .env.local in the project root, then restart the dev server: stop it and run npm start again.`
+      );
+      setAlertType("error");
+      setShowAlert(true);
+      return;
+    }
+
+    setIsSaving(true);
+    setShowAlert(false);
+
+    const templateParams = {
+      name: QuoteData.name,
+      email: QuoteData.email,
+      message: QuoteData.message,
+      phone: QuoteData.phone,
+      address: QuoteData.address,
+    };
+
+    try {
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      setAlertMessage("Message sent successfully. We'll get back to you soon.");
+      setAlertType("success");
+      setShowAlert(true);
+      setQuoteData({
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+        message: "",
+        date: "",
+      });
+    } catch (err) {
+      setAlertMessage(
+        err instanceof Error ? err.message : "Failed to send. Please try again or contact us by phone/email."
+      );
+      setAlertType("error");
+      setShowAlert(true);
+    } finally {
+      setIsSaving(false);
     }
   };
 
@@ -199,10 +230,11 @@ export const ContactForm = () => {
           <div className="mt-6">
             <button
               type="button"
-              className="w-full py-3 px-4 rounded-lg bg-ui-primary hover:bg-ui-secondary text-white font-semibold text-base transition-colors focus:outline-none focus:ring-2 focus:ring-ui-primary focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+              disabled={isSaving}
+              className="w-full py-3 px-4 rounded-lg bg-ui-primary hover:bg-ui-secondary text-white font-semibold text-base transition-colors focus:outline-none focus:ring-2 focus:ring-ui-primary focus:ring-offset-2 dark:focus:ring-offset-gray-900 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:bg-ui-primary"
               onClick={handleOnSubmit}
             >
-              Send message
+              {isSaving ? "Sending…" : "Send message"}
             </button>
           </div>
         </div>

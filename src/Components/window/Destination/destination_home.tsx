@@ -20,7 +20,7 @@ export const DestinationHomeContent = () => {
             Explore top destinations
           </h2>
           <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm max-w-xl sm:max-w-none">
-            Curated trips — treks, pilgrimages, and cultural journeys.
+            Pesonalized trips — treks, pilgrimages, and cultural journeys.
           </p>
         </div>
         <Link
