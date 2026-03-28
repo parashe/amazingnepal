@@ -118,6 +118,7 @@ export const HomeScreen: React.FC = () => {
                 <input
                   id="home-search"
                   type="search"
+                  role="combobox"
                   value={searchQuery}
                   onChange={(e) => {
                     setSearchQuery(e.target.value);
@@ -127,8 +128,9 @@ export const HomeScreen: React.FC = () => {
                   placeholder="Search by name or keyword..."
                   className="w-full h-full min-h-[44px] sm:min-h-0 py-2.5 sm:py-0 sm:h-full pl-10 sm:pl-2 pr-3 rounded-xl sm:rounded-none border-0 bg-transparent text-gray-900 placeholder-gray-500 text-sm sm:text-base focus:ring-0 outline-none min-w-0"
                   autoComplete="off"
-                  aria-expanded={showPanel ? true : false}
+                  aria-expanded={showPanel}
                   aria-controls="home-search-results"
+                  aria-autocomplete="list"
                 />
               </div>
               <button
@@ -168,6 +170,7 @@ export const HomeScreen: React.FC = () => {
                           onClick={() => handleSelectDestination(d.destination_id)}
                           className="w-full flex items-center gap-3 p-3 sm:p-4 text-left hover:bg-ui-primary/5 transition-colors focus:outline-none focus:bg-ui-primary/5 focus-visible:ring-2 focus-visible:ring-ui-primary focus-visible:ring-inset"
                           role="option"
+                          aria-selected={false}
                         >
                           <div className="shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-lg overflow-hidden bg-gray-100">
                             {d.imageUrl?.[0]?.url ? (
